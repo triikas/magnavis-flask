@@ -3,7 +3,7 @@
 {% block title %}MAGNAVIS{% endblock %}
 
 {% block content %}
-    <section>
+    <section class="mb-5">
         <table style="width: 100%;height:100%;display: flex;justify-content: center;">
             <tr>
                 <td class="td1">
@@ -17,7 +17,7 @@
             </tr>
         </table>
     </section>
-    <div class="tablo-light tablo-big mt-5">
+    <div class="tablo-light tablo-big mt-3">
         <h3 class="text-center">О нас</h3>
         <div class="container-fluid">
             <div class="row">
@@ -63,7 +63,7 @@
             </div>
         </div>
     </div>
-    <div class="tablo-big tablo-light mt-5">
+    <div class="tablo-light tablo-big mt-3">
         <h3 class="text-center">Услуги</h3>
         <div class="container-fluid">
             <div class="row">
@@ -80,7 +80,7 @@
             </div>
         </div>
     </div>
-    <div class="tablo-big tablo-color mt-5">
+    <div class="tablo-big tablo-color mt-3">
         <h3 class="text-center">Цены</h3>
         <div class="container-fluid">
             <div class="row">
@@ -123,7 +123,7 @@
             </div>
         </div>
     </div>
-    <div class="tablo-big tablo-light mt-5">
+    <div class="tablo-big tablo-light mt-3">
         <h3 class="text-center">Почему выбирают нас</h3>
         <div class="container-fluid">
             <div class="row">
@@ -176,13 +176,13 @@
             </div>
         </div>
     </div>
-    <div class="tablo-big tablo-light mt-5">
+    <div class="tablo-big tablo-light mt-3">
         <h3 class="text-center">Виды транспорта</h3>
         <div class="container-fluid">
             <div class="row">
                 <div class="col tablo-light">
                     <table>
-                        <tr><td><img src="{{ url_for('static', filename='img/train.png') }}"> </td></tr>
+                        <tr><td class="d-flex justify-content-center"><img src="{{ url_for('static', filename='img/train.png') }}"> </td></tr>
                         <tr><td>
                             <h4>Железнодорожный транспорт</h4>
                             <p>Железнодорожные перевозки - это оптимальное решение для доставки грузов на длительные расстояния с учетом экономической эффективности. Наша компания предоставляет широкий спектр железнодорожных услуг, включая контейнерные перевозки, полуприцепные вагоны и мультимодальные решения. Этот вариант обеспечивает стабильность в перевозке грузов и идеально подходит для больших объемов товаров.</p>
@@ -191,7 +191,7 @@
                 </div>
                 <div class="col tablo-light">
                     <table>
-                        <tr><td><img src="{{ url_for('static', filename='img/plane.png') }}"> </td></tr>
+                        <tr><td class="d-flex justify-content-center"><img src="{{ url_for('static', filename='img/plane.png') }}"> </td></tr>
                         <tr><td>
                             <h4>Воздушный транспорт</h4>
                             <p>Воздушные перевозки - это превосходный способ обеспечить быструю и межконтинентальную доставку грузов. Наша компания предоставляет вам доступ к мировой сети авиакомпаний и логистических решений, что позволяет минимизировать время в пути и уверенно справляться с срочными поставками. Скорость доставки воздушным транспортом сокращает временные рамки производства и обеспечивает гибкость в управлении запасами.</p>
@@ -200,7 +200,7 @@
                 </div>
                 <div class="col tablo-light">
                     <table>
-                        <tr><td><img src="{{ url_for('static', filename='img/car.png') }}"> </td></tr>
+                        <tr><td class="d-flex justify-content-center"><img src="{{ url_for('static', filename='img/car.png') }}"> </td></tr>
                         <tr><td>
                             <h4>Автомобильный транспорт</h4>
                             <p>Автомобильные перевозки - это универсальный способ доставки, который обеспечивает гибкость и точность в планировании маршрутов. Наша компания предоставляет высококачественные услуги автомобильных перевозок, включая грузовики разных типов и габаритов. Этот вариант особенно подходит для мелких и средних грузов, а также для доставки в отдаленные или плохо доступные места.</p>

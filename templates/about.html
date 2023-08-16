@@ -3,8 +3,48 @@
 {% block title %}О нас{% endblock %}
 
 {% block content %}
-    <style>body{background-image: none;}</style>
+    <style>body{background-image: none;}nav{margin-bottom: 30px;}</style>
     <div class="tablo-big tablo-light">
         <h3 class="text-center">О нас</h3>
     </div>
+    <div class="tablo-big tablo-light">
+        <p>Мы молодая, динамично развивающаяся компания в мире логистики, готовая взять на себя перевозку даже самых необычных грузов. Несмотря на наш юный возраст, мы уверены в своих силах и предлагаем качественные решения для перемещения товаров по всему миру.</p>
+        <p>"Магнавис" - это не просто компания, а команда молодых профессионалов, готовых доказать свою способность в мире логистики. Мы готовы расти вместе с вашим бизнесом и сделать все, чтобы каждая доставка была успешной и эффективной</p>
+    </div>
+    <div class="tablo-big tablo-light">
+        <h3 class="text-center">Преимущества работы с нашей компанией</h3>
+    </div>
+    <div class="tablo-big tablo-color">
+        <h3 class="text-center">Мы в цифрах</h3>
+        <div class="d-flex justify-content-around">
+            <div>
+                <h5>Договоров подписано</h5>
+                <p style="font-size: 3em;">139</p>
+            </div>
+            <div>
+                <h5>Постоянных клиентов</h5>
+                <p style="font-size: 3em;">57</p>
+            </div>
+            <div>
+                <h5>Количество сотрудников</h5>
+                <p style="font-size: 3em;">хуй его знает</p>
+            </div>
+            <div>
+                <h5>Грузов перевезено</h5>
+                <p style="font-size: 3em;">478</p>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-light">
+        <h3 class="text-center">Наши партнёры</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col logo d-flex align-items-center" STYLE="height: 155px"><img src="{{ url_for('static', filename='img/dns.png') }}"> </div>
+                <div class="col logo d-flex align-items-center" STYLE="height: 155px"><img src="{{ url_for('static', filename='img/Gazprom.png') }}"> </div>
+                <div class="col logo d-flex align-items-center" STYLE="height: 155px"><img src="{{ url_for('static', filename='img/logo-sber.png') }}"> </div>
+                <div class="col logo d-flex align-items-center" STYLE="height: 155px"><img src="{{ url_for('static', filename='img/yandex.png') }}"> </div>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}

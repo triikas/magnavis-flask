@@ -12,6 +12,9 @@ body{
 img{
     width: 100%;
 }
+td>img{
+    width: 40%;
+}
 footer{
     padding-left: 10vw;
     padding-right: 10vw;
@@ -28,11 +31,10 @@ footer{
     padding-top: 40px;
     margin-left: 20px;
     margin-right: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: rgb(0, 0, 0);
 }
 .tablo-color{
-    background-color: #df0111;
     background-color: #ab2524;
     box-shadow: 3px 5px 10px rgba(1, 1, 2, 0.79);
     padding: 20px;
@@ -40,13 +42,13 @@ footer{
     padding-top: 40px;
     margin-left: 20px;
     margin-right: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: #dad3d3;
 }
 /*#117e71*/
 .tablo-invis{
-    background-color: #010102;
-    padding: 20px;
+    background-color: #161617;
+    /*padding: 20px;*/
 }
 .tablo-img{
     /*background-image: ;*/
@@ -55,6 +57,7 @@ footer{
     width: 90vw;
     margin-left: 5vw;
     margin-right: 5vw;
+    padding-bottom: 60px;
 }
 .p-up{
     height: 80vh;
@@ -69,7 +72,7 @@ h1{
     font-size: 4em;
 }
 h3{
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 .nav1{
     width: 100%;
@@ -174,4 +177,14 @@ section{
 /* reset input */
 .form__field{
   &:required,&:invalid { box-shadow:none; }
+}
+a{
+    color: rgb(0, 0, 0);
+    &:hover{
+        color: rgb(0, 0, 0);
+    }
+}
+.logo{
+    height: 60px;
+    min-width: 10vw;
 }
