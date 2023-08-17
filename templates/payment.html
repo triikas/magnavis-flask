@@ -3,42 +3,73 @@
 {% block title %}Оплата{% endblock %}
 
 {% block content %}
-    <style>body{background-image: none;}nav{margin-bottom: 30px;}</style>
+    <style>body{background-image: none;}section>div{display: none;}section{background-image: none; min-height: 0;}</style>
     <div class="tablo-big tablo-light">
         <h3 class="text-center">Оплата</h3>
     </div>
     <div class="tablo-big tablo-light">
+        <h3 class="text-center">Способы оплаты</h3>
         <div class="container-fluid">
             <div class="row">
-                <div class="col tablo-color"></div>
-                <div class="col tablo-light"></div>
+                <div class="col tablo-color">
+                    <h4>Для юридического лица</h4>
+                    <ul>
+                        <li>Безналичная форма в рублях на ООО/ИП (НДС/УСН). Клиенту предоставляется полный комплект закрывающих бухгалтерских документов</li>
+                        <li>Наличная форма</li>
+                        <li>Оплата онлайн на сайте</li>
+                    </ul>
+                </div>
+
+                <div class="col tablo-light">
+                    <h4>Для физического лица</h4>
+                    <ul>
+                        <li>Банк Тинькофф QR</li>
+                        <li>Наличная форма</li>
+                        <li>Оплата онлайн на сайте</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-    <div class="tablo-big tablo-light">
-        <h3 class="text-center">Сроки</h3>
-    </div>
-    <div class="tablo-big tablo-light">
-        <h3 class="text-center">Оплатить онлайн</h3>
-            <form class="text-light">
-
+    <div class="tablo-big tablo-invis p-0">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col tablo-light" style="margin-left: 0; margin-right: 10px; padding-left: 40px; padding-right: 40px;">
+                    <h3>Сроки</h3>
+                    <div class="tablo-light" style="min-height: 187px;">
+                        <p>В день прихода груза на склад мы выставляем вам счёт</p>
+                    </div>
+                    <div class="tablo-light" style="min-height: 187px;">
+                        <p>Для постоянных клиентов возможна договорённость на иные сроки оплаты.</p>
+                    </div>
+                </div>
+                <div class="col tablo-light" style="margin-right: 0; margin-left: 10px; padding-left: 40px">
+                    <h3>Оплатить онлайн</h3>
+        <div class="d-flex justify-content-center">
+            <div class="tablo-color pt-0">
+                <form class="text-light pay-form p-3">
                 <div class="mb-3 form__group field">
-                    <input type="text" class="form__field" name="name" id="name" placeholder="name" required>
-                    <label class="form__label" for="name">Ваше имя</label>
+                    <input type="text" class="form_pay_field" name="sum" id="sum" placeholder="sum" required>
+                    <label class="form_pay_label" for="sum">Сумма оплаты</label>
                 </div>
                 <div class="mb-3 form__group field">
-                    <input type="email" class="form__field" name="email" id="email" placeholder="email" required aria-describedby="emailHelp">
-                    <label class="form__label" for="email">Ваш email</label>
+                    <input type="text" class="form_pay_field" name="num" id="num" placeholder="num" required>
+                    <label class="form_pay_label" for="num">Номер накладной</label>
                 </div>
                 <div class="mb-3 form__group field">
-                    <input type="number" class="form__field" name="number" id="number" placeholder="number" required>
-                    <label class="form__label" for="number">Ваш телефон</label>
+                    <input type="email" class="form_pay_field" name="email-pay" id="email-pay" placeholder="email" required aria-describedby="emailHelp">
+                    <label class="form_pay_label" for="email-pay">Email для уведомления</label>
                 </div>
-                <div class="mb-3 form-check">
-                    <label class="form-check-labeL" for="exampleCheck1" style="color: gray;">Согласие на обработку персональных данных</label>
-                    <input type="checkbox" class="form-check-input">
+                <div class="mb-3">
+                    <input type="checkbox" name="check-pay" id="check-pay" class="custom-checkbox custom-pay-checkbox">
+                    <label class="form-check-labeL text-light" for="check-pay" style="color: gray;">Согласие на обработку персональных данных</label>
                 </div>
-                <button type="submit" class="btn btn-danger">Отправить</button>
+                <button type="submit" class="btn btn-light">Отправить</button>
             </form>
-</div>
+            </div>
+        </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
