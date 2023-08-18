@@ -7,12 +7,67 @@
     <div class="tablo-big tablo-light">
         <h3 class="text-center">О нас</h3>
     </div>
-    <div class="tablo-big tablo-light">
-        <p>Мы молодая, динамично развивающаяся компания в мире логистики, готовая взять на себя перевозку даже самых необычных грузов. Несмотря на наш юный возраст, мы уверены в своих силах и предлагаем качественные решения для перемещения товаров по всему миру.</p>
-        <p>"Магнавис" - это не просто компания, а команда молодых профессионалов, готовых доказать свою способность в мире логистики. Мы готовы расти вместе с вашим бизнесом и сделать все, чтобы каждая доставка была успешной и эффективной</p>
+    <div class="tablo-big tablo-light d-flex justify-content-around">
+        <div class="mx-5"><img src="{{ url_for('static', filename='img/container (1) (1).png') }}"></div>
+        <div class="mx-5" style="max-width: 600px;">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" class="mb-5" style="margin-top: 60px; width: 90%;">
+            <p>Мы молодая, динамично развивающаяся компания в мире логистики, готовая взять на себя перевозку даже самых необычных грузов. Несмотря на наш юный возраст, мы уверены в своих силах и предлагаем качественные решения для перемещения товаров по всему миру.</p>
+            <p>"Магнавис" - это не просто компания, а команда молодых профессионалов, готовых доказать свою способность в мире логистики. Мы готовы расти вместе с вашим бизнесом и сделать все, чтобы каждая доставка была успешной и эффективной</p>
+        </div>
     </div>
     <div class="tablo-big tablo-light">
         <h3 class="text-center">Преимущества работы с нашей компанией</h3>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col tablo-light">
+                    <div class="d-flex justify-content-center mb-3"><img style="width: 200px; height: 200px;" src="{{ url_for('static', filename='img/любые-грузыsvg.svg') }}"></div>
+                    <h4>Доставка любых грузов</h4>
+                    <p>
+                        Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.
+                    </p>
+                </div>
+                <div class="col tablo-light">
+                    <div class="d-flex justify-content-center mb-3"><img style="width: 200px; height: 200px;" src="{{ url_for('static', filename='img/страхование.svg') }}"></div>
+                    <div>
+                        <h4>Страхование грузов</h4>
+                        <p>
+                            Мы гарантируем защиту вашего груза на каждом этапе перевозки. В случае непредвиденных ситуаций, страхование грузов обеспечит вас дополнительной уверенностью.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col tablo-light">
+                    <div class="d-flex justify-content-center mb-3"><img style="width: 200px; height: 200px;" src="{{ url_for('static', filename='img/хз-коробка.svg') }}"></div>
+                    <h4>Таможенное оформление</h4>
+                    <p>
+                        Наша команда экспертов знает все тонкости таможенных процедур. Мы гарантируем правильное и своевременное таможенное оформление, чтобы ваш груз прошел без задержек.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col tablo-light">
+                    <div class="d-flex justify-content-center mb-3"><img style="width: 200px; height: 200px;" src="{{ url_for('static', filename='img/на-связи.svg') }}"></div>
+                    <h4>Персональный менеджер 24/7</h4>
+                    <p>
+                        Вы получаете постоянную поддержку своего персонального менеджера, который всегда на связи, готов ответить на вопросы и обеспечить вас всей необходимой информацией.
+                    </p>
+                </div>
+                <div class="col tablo-light">
+                    <div class="d-flex justify-content-center mb-3"><img style="width: 200px; height: 200px;" src="{{ url_for('static', filename='img/сроки.svg') }}"></div>
+                    <h4>Максимально короткие сроки</h4>
+                    <p>
+                        Мы ценим ваше время. Независимо от расстояния, мы гарантируем максимально быструю доставку, чтобы ваш груз прибыл вовремя.
+                    </p>
+                </div>
+                <div class="col tablo-light">
+                    <div class="d-flex justify-content-center mb-3"><img style="width: 200px; height: 200px;" src="{{ url_for('static', filename='img/любые_расстояния.svg') }}"></div>
+                    <h4>Любые расстояния</h4>
+                    <p>
+                        Независимо от того, куда и как далеко вы отправляете груз, наша компания готова обеспечить его безопасную и надежную доставку.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="tablo-big tablo-color">
         <h3 class="text-center">Мы в цифрах</h3>
