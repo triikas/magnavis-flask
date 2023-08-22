@@ -5,8 +5,8 @@ body{
     /*background-color: #575d57;*/
     font-family: 'Exo 2';
     margin: 0;
-
-
+    font-size: larger;
+    background-image: linear-gradient(to bottom, #171616, #000000);
     /*padding-top: 20px;*/
 }
 img{
@@ -24,20 +24,22 @@ footer{
 /*    background-size: 100%;*/
 /*}*/
 .tablo-light{
-    background-color: #dad3d3;
-    box-shadow: 3px 5px 10px rgba(1, 1, 2, 0.79);
+    /*background-color: #dad3d3;*/
+    /*box-shadow: 3px 5px 10px rgba(1, 1, 2, 0.79);*/
     padding: 20px;
     padding-bottom: 40px;
     padding-top: 40px;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
-    color: rgb(0, 0, 0);
+    color: white;
+    /*color: rgb(0, 0, 0);*/
     /*font-size: 1.2em;*/
 }
 .tablo-color{
     background-color: #ab2524;
-    box-shadow: 3px 5px 10px rgba(1, 1, 2, 0.79);
+    /*box-shadow: 3px 5px 10px rgba(1, 1, 2, 0.79);*/
+    border-radius: 8px;
     padding: 20px;
     padding-bottom: 40px;
     padding-top: 40px;
@@ -75,6 +77,10 @@ h1{
 }
 h3{
     margin-bottom: 40px;
+    font-size: 2.2em;
+}
+footer h3{
+    font-size: 1.6em;
 }
 .nav1{
     width: 100%;

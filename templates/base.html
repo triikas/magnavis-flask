@@ -3,7 +3,7 @@
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="shortcut icon" href="{{ url_for('static', filename='img/загруженное (3).ico') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/log.ico') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
@@ -17,16 +17,16 @@
 <body>
     <section class="mb-5">
         <nav class="nav1 d-flex justify-content-around w-100">
-        <div>
+        <div  class="d-flex align-items-center">
 {#            <h2 class="text-light">MAGNAVIS</h2>#}
-            <a href="/"><img src="{{ url_for('static', filename='img/logo-white.png') }}" style="height: 40px;"></a>
+            <a href="/"><img src="{{ url_for('static', filename='img/logo-white-foo.png') }}" style="height: 30px;"></a>
         </div>
         <div>
             <table>
                 <tr>
-                    <td><a href="javascript:scroll(0,5000)" class="btn btn-secondary mr-5">Отправить запрос</a></td>
+                    <td><a href="javascript:scroll(0,5000)" class="btn btn-danger mr-5">Отправить запрос</a></td>
                     <td><div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             Русский
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -35,8 +35,8 @@
                             <li><a class="dropdown-item" href="#">中文</a></li>
                         </ul>
                     </div></td>
-                    <td><button class="btn btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
-                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                    <td><button class="btn btn-dark p-1 d-flex align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" width="26" fill="white" class="bi bi-three-dots" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                     </svg></button></td>
                 </tr>
 
@@ -59,8 +59,9 @@
         <div>
             <table style="width: 100%;height:100%;display: flex;justify-content: center;">
                 <tr>
-                    <td class="td1">
-                        <h1 class="text-light mb-5 "><b>Перевозка грузов по всему миру</b></h1>
+                    <td class="td1" STYLE="padding-right: 25vw">
+                        <h1 class="text-light"><b>ПЕРЕВОЗКА ГРУЗОВ</b></h1>
+                        <h1 class="text-light mb-5 " style="font-size: 3em;"><b>по всему миру</b></h1>
                     </td>
                 </tr>
                 <tr class="center">
@@ -77,15 +78,15 @@
         <div class="container">
             <div class="row">
                 <div class="col px-5">
-                    <a href="/"><img src="{{ url_for('static', filename='img/logo-white-foo.png') }}"></a>
-                    <div class="nav-a"><a class="nav-link text-light mt-4" href= "services" >Услуги</a></div>
-                    <div class="nav-a"><a class="nav-link text-light mt-4" href= "payment" >Оплата</a></div>
-                    <div class="nav-a"><a class="nav-link text-light mt-4" href= "about" >О нас</a></div>
-                    <div class="nav-a"><a class="nav-link text-light mt-4" href= "contacts" >Контакты</a></div>
+                    <a href="/"><img style="width: 90%;" src="{{ url_for('static', filename='img/logo-white-foo.png') }}"></a>
+                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "services" >Услуги</a></div>
+                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "payment" >Оплата</a></div>
+                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "about" >О нас</a></div>
+                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "contacts" >Контакты</a></div>
                 </div>
                 <div class="col px-5">
                     <form>
-                        <h3>Статус груза</h3>
+                        <h3 class="mt-2">Статус груза</h3>
                         <div class="mb-3 form__group field">
                             <input type="text" class="form__field" name="kod" id="kod" placeholder="kod" required>
                             <label class="form__label" for="kod">Код груза</label>
@@ -95,7 +96,7 @@
                 </div>
                 <div class="col px-5">
                     <form class="text-light">
-                        <h3>Отправить запрос</h3>
+                        <h3 class="mt-2">Отправить запрос</h3>
                         <div class="mb-3 form__group field">
                             <input type="text" class="form__field" name="name" id="name" placeholder="name" required>
                             <label class="form__label" for="name">Ваше имя</label>
@@ -120,7 +121,7 @@
         </div>
     </footer>
     <div style="margin-left: 14vw">
-        <p style="color: rgba(84,84,84,0.66);">© 2023 MAGNAVIS</p>
+        <p style="color: rgba(84,84,84,0.66); font-size: 0.8em;">© 2023 MAGNAVIS</p>
     </div>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
     <script src="{{ url_for('static', filename='func.js') }}"></script>
