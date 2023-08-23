@@ -35,8 +35,11 @@ footer{
     color: white;
     /*color: rgb(0, 0, 0);*/
     /*font-size: 1.2em;*/
+    border: solid #ab2524 4px;
+    border-radius: 8px;
 }
 .tablo-color{
+    border: solid #ab2524 4px;
     background-color: #ab2524;
     /*box-shadow: 3px 5px 10px rgba(1, 1, 2, 0.79);*/
     border-radius: 8px;
@@ -51,8 +54,13 @@ footer{
 }
 /*#117e71*/
 .tablo-invis{
-    background-color: #161617;
-    /*padding: 20px;*/
+    padding: 20px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    color: #dad3d3;
 }
 .tablo-img{
     /*background-image: ;*/
@@ -452,7 +460,7 @@ li{
 }
 .cost{
     /*background-color: #cec7c7;*/
-    color: #000000; margin-right: 20px;
+    color: #bdbdb7; margin-right: 20px;
     /*box-shadow: 3px 5px 10px rgba(1, 1, 2, 0.79);*/
     /*text-decoration: underline;*/
 }
