@@ -15,7 +15,7 @@
                 <div class="col d-flex justify-content-around mt-5">
                     <div class="tablo-color" style="max-width: 310px;">
                         <table>
-                            <tr><td CLASS="d-flex justify-content-center mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="50PX"  fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                            <tr><td CLASS="d-flex justify-content-center mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="80PX"  fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z"/>
     </svg> </td></tr>
                             <tr><td>
@@ -24,9 +24,9 @@
                             </td></tr>
                         </table>
                     </div>
-                    <div class="tablo-light" style="max-width: 310px;">
+                    <div class="tablo-light" style="max-width: 310px; background-color: #575D57; border-color: #575D57;">
                         <table>
-                            <tr><td CLASS="d-flex justify-content-center mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="50PX" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                            <tr><td CLASS="d-flex justify-content-center mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="80PX" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
       <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
     </svg> </td></tr>
                             <tr><td>
@@ -37,7 +37,7 @@
                     </div>
                     <div class="tablo-light" style="max-width: 310px;">
                     <table>
-                        <tr><td CLASS="d-flex justify-content-center mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="50PX" fill="currentColor" class="bi bi-person-check" viewBox="0 0 16 16">
+                        <tr><td CLASS="d-flex justify-content-center mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="80PX" fill="currentColor" class="bi bi-person-check" viewBox="0 0 16 16">
   <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
   <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"/>
 </svg> </td></tr>
@@ -54,58 +54,48 @@
     <div class="tablo-invis tablo-big mt-3">
         <h3>Услуги</h3>
         <div class="container-fluid">
-            <div class="row" style="min-height: 700px">
-                <div class="col">
-                    <div class="row tablo-color  text-dark fw-bold" style=" background-image: url({{ url_for('static', filename='img/industrial-port-and-container-yard.jpg') }}); background-repeat: no-repeat; background-size: cover;">
-                        <h4>Мультимодальные перевозки</h4>
+            <div class="row" style="min-height: 600px">
+                <div class="col p-0">
+                    <div class=" tablo-serv" style=" min-height: 300px; background-image: url({{ url_for('static', filename='img/industrial-port-and-container-yard.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                        <div class="tablo-serv-in" style=" min-height: 292px;">
+                            <h4 style="font-weight: bolder;">Мультимодальные перевозки</h4>
+                        </div>
                     </div>
-                    <div class="row tablo-light  text-dark" style=" background-image: url({{ url_for('static', filename='img/closeup-of-real-estate-agent-using-calculator-while-his-client-is-signing-a-contract.jpg') }}); background-repeat: no-repeat; background-size: cover;">
-                        <h4>Страхование грузов</h4>
+                    <div class=" tablo-serv" style="min-height: 303px; background-image: url({{ url_for('static', filename='img/closeup-of-real-estate-agent-using-calculator-while-his-client-is-signing-a-contract.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                        <div class="tablo-serv-in" style=" min-height: 295px;">
+                            <h4 style="font-weight: bolder;">Страхование грузов</h4>
+                        </div>
                     </div>
                 </div>
-                <div class="col tablo-light text-dark" style=" background-image: url({{ url_for('static', filename='img/hand-with-pen-over-application-form.jpg') }}); background-repeat: no-repeat; background-size: cover;">
-                    <h4>Таможенное оформление грузов</h4>
-                </div>
-                <div class="col">
-                    <div class="row">
-                        <div class="col tablo-color text-dark" style=" background-image: url({{ url_for('static', filename='img/adrian-sulyok-sczNLg6rrhQ-unsplash.jpg') }}); background-repeat: no-repeat; background-size: cover;">
-                    <h4>Складские услуги</h4>
-                </div>
-                        <div class="col tablo-color">
-                    <h4>Остальные услуги</h4>
-                </div>
+                <div class="col tablo-serv" style=" background-image: url({{ url_for('static', filename='img/hand-with-pen-over-application-form.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Таможенное оформление грузов</h4>
                     </div>
-                    <div class="row" style="min-height: 700px">
-                        <div class="col tablo-light text-dark" style=" background-image: url({{ url_for('static', filename='img/3aa0b1dd-7a0a-4d92-8362-3f362ce4afcd.png') }}); background-repeat: no-repeat; background-size: cover;">
-                    <h4>Перевозка спецгрузов</h4>
+
                 </div>
+                <div class="col p-0">
+
+                    <div class=" tablo-serv" style="min-height: 450px; background-image: url({{ url_for('static', filename='img/3aa0b1dd-7a0a-4d92-8362-3f362ce4afcd.png') }}); background-repeat: no-repeat; background-size: cover;">
+                        <div class="tablo-serv-in" style=" min-height: 442px;">
+                            <h4 style="font-weight: bolder;">Перевозка спецгрузов</h4>
+                        </div>
                     </div>
+
+                    <div class="d-flex justify-content-start">
+                        <div class=" tablo-serv" style="min-height: 153px; background-image: url({{ url_for('static', filename='img/adrian-sulyok-sczNLg6rrhQ-unsplash.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                            <div class="tablo-serv-in">
+                                <h4 style="font-weight: bolder;">Складские услуги</h4>
+                            </div>
+                        </div>
+                        <a href="services" class="text-decoration-none"><div class=" tablo-serv" style="min-height: 153px; max-width: 150px; padding: 30px;
+    padding-bottom: 40px;
+    padding-top: 30px;">
+                            <h4>Другие услуги</h4>
+                        </div></a>
+                    </div>
+
                 </div>
             </div>
-{#            <div class="row">#}
-{#                <div class="col tablo-color" style=" background-image: url({{ url_for('static', filename='img/industrial-port-and-container-yard.jpg') }}); background-repeat: no-repeat; background-size: cover;">#}
-{#                    <h4>Мультимодальные перевозки</h4>#}
-{#                </div>#}
-{#                <div class="col tablo-light" style=" background-image: url({{ url_for('static', filename='img/closeup-of-real-estate-agent-using-calculator-while-his-client-is-signing-a-contract.jpg') }}); background-repeat: no-repeat; background-size: cover;">#}
-{#                    <h4>Страхование грузов</h4>#}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="row">#}
-{#                <div class="col tablo-light" style=" background-image: url({{ url_for('static', filename='img/hand-with-pen-over-application-form.jpg') }}); background-repeat: no-repeat; background-size: cover;">#}
-{#                    <h4>Таможенное оформление грузов</h4>#}
-{#                </div>#}
-{#                <div class="col tablo-color" style=" background-image: url({{ url_for('static', filename='img/adrian-sulyok-sczNLg6rrhQ-unsplash.jpg') }}); background-repeat: no-repeat; background-size: cover;">#}
-{#                    <h4>Складские услуги</h4>#}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="row">#}
-{#                <div class="col tablo-light" style=" background-image: url({{ url_for('static', filename='img/3aa0b1dd-7a0a-4d92-8362-3f362ce4afcd.png') }}); background-repeat: no-repeat; background-size: cover;">#}
-{#                    <h4>Перевозка спецгрузов</h4>#}
-{#                </div>#}
-{#                <div class="col tablo-color">#}
-{#                    <h4>Остальные услуги</h4>#}
-{#                </div>#}
-{#            </div>#}
         </div>
     </div>
     <div class="tablo-big tablo-invis mt-3">
@@ -238,32 +228,23 @@
         <h3>Виды транспорта</h3>
         <div class="container-fluid">
             <div class="row">
-                <div class="col tablo-light">
-                    <table>
-                        <tr><td class="d-flex justify-content-center"><img src="{{ url_for('static', filename='img/free-icon-font-subway-6955862.svg') }}"> </td></tr>
-                        <tr><td>
-                            <h4>Железнодорожный транспорт</h4>
-                            <p>Железнодорожные перевозки - это оптимальное решение для доставки грузов на длительные расстояния с учетом экономической эффективности. Наша компания предоставляет широкий спектр железнодорожных услуг, включая контейнерные перевозки, полуприцепные вагоны и мультимодальные решения. Этот вариант обеспечивает стабильность в перевозке грузов и идеально подходит для больших объемов товаров.</p>
-                        </td></tr>
-                    </table>
+                <div class="col tablo-light" style="background-image: url({{ url_for('static', filename='img/martin-sanchez-pfkzBUh4KyA-unsplash.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+
+                    <h4>Железнодорожный транспорт</h4>
+                    <p>Железнодорожные перевозки - это оптимальное решение для доставки грузов на длительные расстояния с учетом экономической эффективности. Наша компания предоставляет широкий спектр железнодорожных услуг, включая контейнерные перевозки, полуприцепные вагоны и мультимодальные решения. Этот вариант обеспечивает стабильность в перевозке грузов и идеально подходит для больших объемов товаров.</p>
+
                 </div>
-                <div class="col tablo-light">
-                    <table>
-                        <tr><td class="d-flex justify-content-center"><img src="{{ url_for('static', filename='img/free-icon-font-plane-alt-6955742.svg') }}"> </td></tr>
-                        <tr><td>
-                            <h4>Воздушный транспорт</h4>
-                            <p>Воздушные перевозки - это превосходный способ обеспечить быструю и межконтинентальную доставку грузов. Наша компания предоставляет вам доступ к мировой сети авиакомпаний и логистических решений, что позволяет минимизировать время в пути и уверенно справляться с срочными поставками. Скорость доставки воздушным транспортом сокращает временные рамки производства и обеспечивает гибкость в управлении запасами.</p>
-                        </td></tr>
-                    </table>
+                <div class="col tablo-light" style="background-image: url({{ url_for('static', filename='img/kevin-bosc-KH4AkJIjpOE-unsplash.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+
+                    <h4>Воздушный транспорт</h4>
+                    <p>Воздушные перевозки - это превосходный способ обеспечить быструю и межконтинентальную доставку грузов. Наша компания предоставляет вам доступ к мировой сети авиакомпаний и логистических решений, что позволяет минимизировать время в пути и уверенно справляться с срочными поставками. Скорость доставки воздушным транспортом сокращает временные рамки производства и обеспечивает гибкость в управлении запасами.</p>
+
                 </div>
-                <div class="col tablo-light">
-                    <table>
-                        <tr><td class="d-flex justify-content-center"><img src="{{ url_for('static', filename='img/free-icon-font-truck-moving-6955943.svg') }}"> </td></tr>
-                        <tr><td>
-                            <h4>Автомобильный транспорт</h4>
-                            <p>Автомобильные перевозки - это универсальный способ доставки, который обеспечивает гибкость и точность в планировании маршрутов. Наша компания предоставляет высококачественные услуги автомобильных перевозок, включая грузовики разных типов и габаритов. Этот вариант особенно подходит для мелких и средних грузов, а также для доставки в отдаленные или плохо доступные места.</p>
-                        </td></tr>
-                    </table>
+                <div class="col tablo-light" style="background-image: url({{ url_for('static', filename='img/caleb-ruiter-EmEQ6kK_5P0-unsplash.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+
+                    <h4>Автомобильный транспорт</h4>
+                    <p>Автомобильные перевозки - это универсальный способ доставки, который обеспечивает гибкость и точность в планировании маршрутов. Наша компания предоставляет высококачественные услуги автомобильных перевозок, включая грузовики разных типов и габаритов. Этот вариант особенно подходит для мелких и средних грузов, а также для доставки в отдаленные или плохо доступные места.</p>
+
                 </div>
             </div>
         </div>

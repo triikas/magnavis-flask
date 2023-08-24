@@ -7,7 +7,9 @@ body{
     margin: 0;
     font-size: larger;
     background-image: linear-gradient(to bottom, #171616, #000000);
-    /*padding-top: 20px;*/
+    /*background-image: url("img/p-up-4.PNG");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
 }
 img{
     width: 100%;
@@ -62,8 +64,22 @@ footer{
     margin-bottom: 20px;
     color: #dad3d3;
 }
-.tablo-img{
-    /*background-image: ;*/
+.tablo-serv{
+    border: solid #0c0b0b 4px;
+    background-color: #ab2524;
+    border-radius: 8px;
+    padding: 0;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+.tablo-serv-in{
+    height: 100%;
+    padding: 30px;
+    padding-bottom: 40px;
+    padding-top: 30px;
+    background-color: rgba(93,85,85,0.42);
 }
 .tablo-big{
     width: 90vw;
