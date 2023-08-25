@@ -16,7 +16,7 @@
 </head>
 <body>
     <section class="mb-5">
-        <nav class="nav1 d-flex justify-content-around w-100">
+        <div style="margin-left: 5vw; margin-right: 5vw;"><nav class="nav1 d-flex justify-content-between w-100" style="margin-right: 20px; margin-left: 20px;">
         <div  class="d-flex align-items-center">
 {#            <h2 class="text-light">MAGNAVIS</h2>#}
             <a href="/"><img src="{{ url_for('static', filename='img/logo-white-foo.png') }}" style="height: 30px;"></a>
@@ -43,7 +43,7 @@
 
             </table>
         </div>
-    </nav>
+    </nav></div>
         <nav class="nav2 container mt-3 d-none">
             <div class="row">
                 <div class="col">
@@ -57,11 +57,11 @@
 
         </nav>
         <div>
-            <table style="width: 100%;height:100%;display: flex;justify-content: center;">
+            <table style="height:100%;" class="d-flex justify-content-start">
                 <tr>
-                    <td class="td1" STYLE="padding-right: 25vw">
-                        <h1 class="text-light"><b>ПЕРЕВОЗКА ГРУЗОВ</b></h1>
-                        <h1 class="text-light mb-5 " style="font-size: 3em;"><b>по всему миру</b></h1>
+                    <td class="td1" STYLE="width: 100vw;padding-left: 10vw;padding-right: 10vw; padding-top: 10vh; line-height: 30px;">
+                        <h1 class="text-light m-0 p-0"><b>ПЕРЕВОЗКА ГРУЗОВ</b></h1>
+                        <p class="text-light mb-5" style="font-size: 3em; margin-left: 2px;"><b>по всему миру</b></p>
                     </td>
                 </tr>
                 <tr class="center">
@@ -75,18 +75,18 @@
     {% block content %}{% endblock %}
 
     <footer class="text-light d-block mt-5 pt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col px-5">
-                    <a href="/"><img style="width: 90%;" src="{{ url_for('static', filename='img/logo-white-foo.png') }}"></a>
+        <div class="container-fluid px-5">
+            <div class="row" style="padding-right: 20px; padding-left: 20px;">
+                <div class="col" style="margin-right: 40px; min-width: 335px; max-width: 600px;" >
+                    <a href="/"><img style="margin-bottom: 40px; width: 90%;" src="{{ url_for('static', filename='img/logo-white-foo.png') }}"></a>
                     <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "services" >Услуги</a></div>
                     <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "payment" >Оплата</a></div>
                     <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "about" >О нас</a></div>
                     <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "contacts" >Контакты</a></div>
                 </div>
-                <div class="col px-5">
+                <div class="col px-5 max-footer" style=" min-width: 335px;">
                     <form>
-                        <h3 class="mt-2">Статус груза</h3>
+                        <h3 class="mt-4">Статус груза</h3>
                         <div class="mb-3 form__group field">
                             <input type="text" class="form__field" name="kod" id="kod" placeholder="kod" required>
                             <label class="form__label" for="kod">Код груза</label>
@@ -94,9 +94,9 @@
                         <button type="submit" class="btn btn-danger">Отправить</button>
                     </form>
                 </div>
-                <div class="col px-5">
+                <div class="col max-footer" style="margin-left: 40px; min-width: 335px;" >
                     <form class="text-light">
-                        <h3 class="mt-2">Отправить запрос</h3>
+                        <h3 class="mt-4">Отправить запрос</h3>
                         <div class="mb-3 form__group field">
                             <input type="text" class="form__field" name="name" id="name" placeholder="name" required>
                             <label class="form__label" for="name">Ваше имя</label>
@@ -117,10 +117,51 @@
                         <button type="submit" class="btn btn-danger">Отправить</button>
                     </form>
                 </div>
+                <div class="col min-footer">
+                    <table>
+                        <tr><td>
+                            <div class="col" style="margin-left: 40px; margin-bottom: 40px; min-width: 335px;">
+                    <form style="padding-top: 5px;">
+                        <h3 class="mt-4">Статус груза</h3>
+                        <div class="mb-3 form__group field">
+                            <input type="text" class="form__field" name="kod" id="kod" placeholder="kod" required>
+                            <label class="form__label" for="kod">Код груза</label>
+                        </div>
+                        <button type="submit" class="btn btn-danger" style="margin-left: 4px;">Отправить</button>
+                    </form>
+                </div>
+                        </td></tr>
+                        <tr><td>
+                            <div class="col" style="margin-left: 40px; min-width: 335px;" >
+                    <form class="text-light" style="padding-top: 15px;">
+                        <h3 class="mt-4">Отправить запрос</h3>
+                        <div class="mb-3 form__group field">
+                            <input type="text" class="form__field" name="name" id="name" placeholder="name" required>
+                            <label class="form__label" for="name">Ваше имя</label>
+                        </div>
+                        <div class="mb-3 form__group field">
+                            <input type="email" class="form__field" name="email" id="email" placeholder="email" required aria-describedby="emailHelp">
+                            <label class="form__label" for="email">Ваш email</label>
+                        </div>
+                        <div class="mb-3 form__group field">
+                            <input type="number" class="form__field" name="number" id="number" placeholder="number" required>
+                            <label class="form__label" for="number">Ваш телефон</label>
+                        </div>
+                        <div class="mb-3" style="margin-left: 4px;">
+                            <input type="checkbox" name="check" id="check" class="custom-checkbox">
+                            <label for="check" style="color: gray">Согласие на обработку персональных данных</label>
+
+                        </div>
+                        <button type="submit" class="btn btn-danger" style="margin-left: 4px;">Отправить</button>
+                    </form>
+                </div>
+                        </td></tr>
+                    </table>
+                </div>
             </div>
         </div>
     </footer>
-    <div style="margin-left: 14vw">
+    <div style="margin-left: 5vw; padding-left: 68px; margin-top: 140px;">
         <p style="color: rgba(84,84,84,0.66); font-size: 0.8em;">© 2023 MAGNAVIS</p>
     </div>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>

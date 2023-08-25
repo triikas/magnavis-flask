@@ -67,7 +67,8 @@ footer{
 .tablo-serv{
     border: solid #0c0b0b 4px;
     background-color: #ab2524;
-    border-radius: 8px;
+    /*border-radius: 8px;*/
+    border-radius: 12px;
     padding: 0;
     margin-left: 6px;
     margin-right: 6px;
@@ -79,7 +80,19 @@ footer{
     padding: 30px;
     padding-bottom: 40px;
     padding-top: 30px;
-    background-color: rgba(93,85,85,0.42);
+    /*border-radius: 4px;*/
+    border-radius: 8px;
+    background-color: rgba(96, 96, 96,0.42);
+    &>p{
+        display: none;
+    }
+    &:hover{
+        background-color: rgba(7, 7, 7, 0.67);
+        &&>p{
+            display: block;
+        }
+    }
+
 }
 .tablo-big{
     width: 90vw;
@@ -142,12 +155,19 @@ section>div{
     justify-content: center;
     align-items: center;
 }
+.min-footer{
+    display: none;
+}
 .center{
     display: flex;
     justify-content: center;
 }
 .td1{
     height: 80vh;
+}
+footer{
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 .arrow {
     width: 40px;
@@ -161,7 +181,8 @@ section>div{
   position: relative;
   padding: 15px 0 0;
   margin-top: 10px;
-  width: 90%;
+    padding-left: 4px;
+  /*width: 90%;*/
 }
 
 .form__field {
@@ -479,4 +500,16 @@ li{
     color: #bdbdb7; margin-right: 20px;
     /*box-shadow: 3px 5px 10px rgba(1, 1, 2, 0.79);*/
     /*text-decoration: underline;*/
+}
+@media (max-width: 1348px) {
+    .min-footer{
+        display: block;
+    }
+    .max-footer{
+        display: none;
+    }
+}
+
+@media (max-width: 1005px) {
+
 }
