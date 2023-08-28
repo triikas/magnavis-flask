@@ -18,14 +18,11 @@
     <section class="mb-5">
         <div style="margin-left: 5vw; margin-right: 5vw;"><nav class="nav1 d-flex justify-content-between w-100" style="margin-right: 20px; margin-left: 20px;">
         <div  class="d-flex align-items-center">
-{#            <h2 class="text-light">MAGNAVIS</h2>#}
             <a href="/"><img src="{{ url_for('static', filename='img/logo-white-foo.png') }}" style="height: 30px;"></a>
         </div>
-        <div>
-            <table>
-                <tr>
-                    <td><a href="javascript:scroll(0,5000)" class="btn btn-danger mr-5">Отправить запрос</a></td>
-                    <td><div class="dropdown">
+        <div class="d-flex justify-content-start">
+                    <a href="javascript:scroll(0,5000)" class="btn btn-danger mr-5 mx-1">Отправить запрос</a>
+                    <div class="dropdown">
                         <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             Русский
                         </button>
@@ -34,14 +31,19 @@
                             <li><a class="dropdown-item" href="#">English</a></li>
                             <li><a class="dropdown-item" href="#">中文</a></li>
                         </ul>
-                    </div></td>
-                    <td><button class="btn btn-dark p-1 d-flex align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" width="26" fill="white" class="bi bi-three-dots" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                    </svg></button></td>
-                </tr>
-
-
-            </table>
+                    </div>
+                        <div class="c-dropdown mx-1">
+                            <button style="height: 38px;" class="btn btn-dark p-1 d-flex align-items-center justify-content-center dropdown-toggle-split"  data-bs-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="26" fill="white" class="bi bi-three-dots" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                            </svg>
+                        </button>
+                          <ul id="myDropdown" class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="services">Услуги</a></li>
+                            <li><a class="dropdown-item" href="payment">Оплата</a></li>
+                            <li><a class="dropdown-item" href="about">О Нас</a></li>
+                            <li><a class="dropdown-item" href="contacts">Контакты</a></li>
+                          </ul>
+                        </div>
         </div>
     </nav></div>
         <nav class="nav2 container mt-3 d-none">
@@ -59,7 +61,7 @@
         <div>
             <table style="height:100%;" class="d-flex justify-content-start">
                 <tr>
-                    <td class="td1" STYLE="width: 100vw;padding-left: 10vw;padding-right: 10vw; padding-top: 10vh; line-height: 30px;">
+                    <td class="td1" STYLE="width: 100vw;padding-left: 15vw;padding-right: 15vw; padding-top: 0vh; line-height: 30px;">
                         <h1 class="text-light m-0 p-0"><b>ПЕРЕВОЗКА ГРУЗОВ</b></h1>
                         <p class="text-light mb-5" style="font-size: 3em; margin-left: 2px;"><b>по всему миру</b></p>
                     </td>
@@ -120,9 +122,9 @@
                 <div class="col min-footer">
                     <table>
                         <tr><td>
-                            <div class="col" style="margin-left: 40px; margin-bottom: 40px; min-width: 335px;">
+                            <div class="col footform ff-1" style=" margin-bottom: 40px; min-width: 335px;">
                     <form style="padding-top: 5px;">
-                        <h3 class="mt-4">Статус груза</h3>
+                        <h3 class="mt-2">Статус груза</h3>
                         <div class="mb-3 form__group field">
                             <input type="text" class="form__field" name="kod" id="kod" placeholder="kod" required>
                             <label class="form__label" for="kod">Код груза</label>
@@ -132,7 +134,7 @@
                 </div>
                         </td></tr>
                         <tr><td>
-                            <div class="col" style="margin-left: 40px; min-width: 335px;" >
+                            <div class="col footform" style=" min-width: 335px;" >
                     <form class="text-light" style="padding-top: 15px;">
                         <h3 class="mt-4">Отправить запрос</h3>
                         <div class="mb-3 form__group field">
@@ -147,9 +149,9 @@
                             <input type="number" class="form__field" name="number" id="number" placeholder="number" required>
                             <label class="form__label" for="number">Ваш телефон</label>
                         </div>
-                        <div class="mb-3" style="margin-left: 4px;">
+                        <div class="mb-3" style="margin-left: 4px; font-size: small;">
                             <input type="checkbox" name="check" id="check" class="custom-checkbox">
-                            <label for="check" style="color: gray">Согласие на обработку персональных данных</label>
+                            <label for="check" style="color: #808080;">Согласие на обработку персональных данных</label>
 
                         </div>
                         <button type="submit" class="btn btn-danger" style="margin-left: 4px;">Отправить</button>
@@ -161,7 +163,7 @@
             </div>
         </div>
     </footer>
-    <div style="margin-left: 5vw; padding-left: 68px; margin-top: 140px;">
+    <div style="margin-left: 5vw; padding-left: 68px; margin-top: 140px; margin-bottom: 50px;">
         <p style="color: rgba(84,84,84,0.66); font-size: 0.8em;">© 2023 MAGNAVIS</p>
     </div>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>

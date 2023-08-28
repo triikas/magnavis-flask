@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1938 6480">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_Безымянный_градиент_7);
+      }
+
+      .cls-2 {
+        fill: url(#_Безымянный_градиент_6);
+      }
+
+      .cls-3 {
+        fill: url(#_Безымянный_градиент_8);
+      }
+    </style>
+    <linearGradient id="_Безымянный_градиент_7" data-name="Безымянный градиент 7" x1="966.53" y1="3425.85" x2="951.71" y2="1164.69" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#333"/>
+      <stop offset=".02" stop-color="#2d2d2d"/>
+      <stop offset=".12" stop-color="#191919"/>
+      <stop offset=".23" stop-color="#0a0a0a"/>
+      <stop offset=".36" stop-color="#020202"/>
+      <stop offset=".58" stop-color="#000"/>
+      <stop offset=".72" stop-color="#080808"/>
+      <stop offset=".83" stop-color="#131212"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_8" data-name="Безымянный градиент 8" x1="954.48" y1="4037.58" x2="974.06" y2="2058.13" gradientUnits="userSpaceOnUse">
+      <stop offset=".17" stop-color="#000"/>
+      <stop offset=".49" stop-color="#020202"/>
+      <stop offset=".68" stop-color="#0a0a0a"/>
+      <stop offset=".82" stop-color="#181818"/>
+      <stop offset=".95" stop-color="#2c2c2c"/>
+      <stop offset=".99" stop-color="#333"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_6" data-name="Безымянный градиент 6" x1="950.25" y1="5751.93" x2="971.49" y2="3604.74" gradientUnits="userSpaceOnUse">
+      <stop offset=".41" stop-color="#000"/>
+      <stop offset=".99" stop-color="#333"/>
+    </linearGradient>
+  </defs>
+  <rect class="cls-1" x="0" y="1078.79" width="1919" height="2548.5"/>
+  <image width="2160" height="3840" transform="translate(0 1090.12) rotate(-90) scale(.5)" xlink:href="../../../../Downloads/IMG_5120.PNG"/>
+  <path class="cls-3" d="m1919,1660.52s-317,206.52-552,286.52-564,122-564,122c0,0-446,70-596,183S0,2353.08,0,2353.08v2354.92h1919V1660.52Z"/>
+  <path class="cls-2" d="m0,3153.7s328,281.3,507,333.3,413.65,0,413.65,0c0,0,216.35-104,432.35-94s566,257.91,566,342.96v2744.04H0v-3326.3Z"/>
+</svg>
