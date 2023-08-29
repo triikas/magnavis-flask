@@ -3,22 +3,17 @@
 {% block title %}Услуги{% endblock %}
 
 {% block content %}
-    <style>body{background-image: none;}section>div{display: none;}section{background-image: none; min-height: 0;}</style>
-    <div class="tablo-big tablo-light">
+    <style>.p-up-s{display: none;}section{ min-height: 0;}body{background-image: linear-gradient(to bottom, #171616, #000000);}</style>
+    <div class="tablo-big tablo-invis">
         <h3 class="text-center">Услуги</h3>
     </div>
-    <div class="tablo-big tablo-light">
+    <div class="tablo-big tablo-invis">
         <h3>Транспорт</h3>
         <div class="container-fluid">
             <div class="row">
-                <div class="col tablo-color p-0" style="max-width: 450px;">
-                    <div style="background-color: #ab2524; padding: 20px;">
-                       <h4 class="m-0">Авиадоставка</h4>
-                    </div>
-                    <div>
-                        <img src="{{ url_for('static', filename='img/pl2.gif') }}">
-                    </div>
+                <div class="col tablo-color">
 
+                       <h4 class="m-0">Авиадоставка</h4>
 
                 </div>
                 <div class="col tablo-light">
@@ -49,7 +44,7 @@
         </div>
 
     </div>
-    <div class="tablo-big tablo-light">
+    <div class="tablo-big tablo-invis">
        <h3>Грузы любой специфики</h3>
        <div class="container-fluid">
             <div class="row">
@@ -102,7 +97,7 @@
             </div>
         </div>
     </div>
-    <div class="tablo-big tablo-light">
+    <div class="tablo-big tablo-invis">
         <h3>Дополнительные услуги</h3>
         <div class="container-fluid">
             <div class="row">
@@ -152,11 +147,11 @@
             </div>
         </div>
     </div>
-    <div class="tablo-big tablo-light" style="padding-left: 40px; padding-right: 40px;">
+    <div class="tablo-big tablo-invis" style="padding-left: 40px; padding-right: 40px;">
         <h3>Вопрос-Ответ</h3>
         <ul class="list-unstyled">
                 <li>
-                    <div class="d-flex justify-content-between faq-question que1">
+                    <div class="d-flex justify-content-between faq-question fa-start que1">
                         <h4 class="mt-2">Сколько весит розовый слон?</h4>
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-plus-circle plus" viewBox="0 0 16 16">
   <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -172,7 +167,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="d-flex justify-content-between faq-question que2">
+                    <div class="d-flex justify-content-between faq-question fa-end que2">
                         <h4 class="mt-2">Сколько весит розовый слон?</h4>
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-plus-circle plus" viewBox="0 0 16 16">
   <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>

@@ -58,7 +58,7 @@
             </div>
 
         </nav>
-        <div>
+        <div class="p-up-s">
             <table style="height:100%;" class="d-flex justify-content-start">
                 <tr>
                     <td class="td1" STYLE="width: 100vw;padding-left: 15vw;padding-right: 15vw; padding-top: 0vh; line-height: 30px;">
@@ -68,7 +68,9 @@
                 </tr>
                 <tr class="center">
                     <td>
-                        <div class="arrow mt-5"></div>
+                        <div class="arrow mt-5"><svg xmlns="http://www.w3.org/2000/svg" width="60" fill="white" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg></div>
                     </td>
                 </tr>
             </table>
@@ -80,7 +82,7 @@
         <div class="container-fluid px-5">
             <div class="row" style="padding-right: 20px; padding-left: 20px;">
                 <div class="col" style="margin-right: 40px; min-width: 335px; max-width: 600px;" >
-                    <a href="/"><img style="margin-bottom: 40px; width: 90%;" src="{{ url_for('static', filename='img/logo-white-foo.png') }}"></a>
+                    <a href="/"><img style="margin-bottom: 40px; width: 90%; padding-right: 20px;" src="{{ url_for('static', filename='img/logo-white-foo.png') }}"></a>
                     <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "services" >Услуги</a></div>
                     <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "payment" >Оплата</a></div>
                     <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "about" >О нас</a></div>
@@ -111,10 +113,13 @@
                             <input type="number" class="form__field" name="number" id="number" placeholder="number" required>
                             <label class="form__label" for="number">Ваш телефон</label>
                         </div>
+                        <div class="mb-3 form__group field">
+                            <textarea cols="40" rows="1" class="form__field" name="comment" id="comment" placeholder="comment" required ></textarea>
+                            <label class="form__label" for="comment">Комментарий</label>
+                        </div>
                         <div class="mb-3">
                             <input type="checkbox" name="check" id="check" class="custom-checkbox">
-                            <label for="check" style="color: gray">Согласие на обработку персональных данных</label>
-
+                            <label for="check" style="color: gray; font-size: 0.8em;">Согласие на обработку персональных данных</label>
                         </div>
                         <button type="submit" class="btn btn-danger">Отправить</button>
                     </form>
@@ -149,10 +154,13 @@
                             <input type="number" class="form__field" name="number" id="number" placeholder="number" required>
                             <label class="form__label" for="number">Ваш телефон</label>
                         </div>
-                        <div class="mb-3" style="margin-left: 4px; font-size: small;">
+                        <div class="mb-3 form__group field">
+                            <textarea cols="40" rows="1" class="form__field" name="comment" id="comment" placeholder="comment" required ></textarea>
+                            <label class="form__label" for="comment">Комментарий</label>
+                        </div>
+                        <div class="mb-3">
                             <input type="checkbox" name="check" id="check" class="custom-checkbox">
-                            <label for="check" style="color: #808080;">Согласие на обработку персональных данных</label>
-
+                            <label for="check" style="color: gray; font-size: 0.7em;">Согласие на обработку персональных данных</label>
                         </div>
                         <button type="submit" class="btn btn-danger" style="margin-left: 4px;">Отправить</button>
                     </form>
