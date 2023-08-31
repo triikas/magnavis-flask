@@ -1,7 +1,13 @@
 from flask import Flask, render_template
+from flask_mail import Mail, Message
 
 application = Flask(__name__)
-
+application.config['MAIL_SERVER'] = 'smtp.googlemail.com'
+application.config['MAIL_PORT'] = 587
+application.config['MAIL_USE_TLS'] = True
+application.config['MAIL_USERNAME'] = 'magnavis.site@gmail.com'
+application.config['MAIL_DEFAULT_SENDER'] = 'magnavis.site@gmail.com'
+application.config['MAIL_PASSWORD'] = '3zT-vZi-qvT-DyR'
 
 @application.route('/')
 def home():
