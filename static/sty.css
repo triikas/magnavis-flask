@@ -161,7 +161,7 @@ footer{
     /*border-top: 4px solid #ffffff;*/
     /*border-right: 4px solid #ffffff;*/
     /*transform: rotate(135deg);*/
-    animation: down 3s infinite;
+    animation: down 2s infinite;
 
 }
 .arrow::before {
