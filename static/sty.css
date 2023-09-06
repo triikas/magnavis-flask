@@ -45,6 +45,10 @@ body{
 img{
     width: 100%;
 }
+iframe{
+    border-radius: 8px;
+    overflow: hidden;
+}
 td>img{
     width: 40%;
 }
@@ -74,6 +78,12 @@ footer{
     margin-right: 20px;
     margin-bottom: 20px;
     color: #dad3d3;
+}
+.coupon-btn:hover{
+    cursor: pointer;
+}
+.coupon-btn-2:hover{
+    cursor: pointer;
 }
 .tablo-invis{
     padding: 20px;

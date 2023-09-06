@@ -82,7 +82,7 @@
         <div class="container-fluid px-5">
             <div class="row" style="padding-right: 20px; padding-left: 20px;">
                 <div class="col" style="margin-right: 40px; min-width: 335px; max-width: 600px;" >
-                    <a href="/"><img style="margin-bottom: 40px; width: 80%; padding-right: 20px;" src="{{ url_for('static', filename='img/logo-white-foo.png') }}"></a>
+                    <a class="mt-1" href="/"><img style="margin-bottom: 40px; width: 80%; padding-right: 20px;" src="{{ url_for('static', filename='img/logo-white-foo.png') }}"></a>
                     <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "services" >Услуги</a></div>
                     <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "payment" >Оплата</a></div>
                     <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "about" >О нас</a></div>
@@ -90,7 +90,7 @@
                 </div>
                 <div class="col px-5 max-footer" style=" min-width: 335px;">
                     <form>
-                        <h3 class="mt-4">Статус груза</h3>
+                        <h3 class="mt-3">Статус груза</h3>
                         <div class="mb-3 form__group field">
                             <input type="text" class="form__field" name="kod" id="kod" placeholder="kod" required>
                             <label class="form__label" for="kod">Код груза</label>
@@ -100,7 +100,7 @@
                 </div>
                 <div class="col max-footer" style="margin-left: 40px; min-width: 335px;" >
                     <form class="text-light">
-                        <h3 class="mt-4">Отправить запрос</h3>
+                        <h3 class="mt-3">Отправить запрос</h3>
                         <div class="mb-3 form__group field">
                             <input type="text" class="form__field" name="name" id="name" placeholder="name" required>
                             <label class="form__label" for="name">Ваше имя</label>
@@ -172,7 +172,8 @@
         </div>
     </footer>
     <div style="margin-left: 5vw; padding-left: 68px; margin-top: 140px; margin-bottom: 50px;">
-        <p style="color: rgba(84,84,84,0.66); font-size: 0.9em;">© 2023 MAGNAVIS</p>
+        <p style="color: rgba(84,84,84,0.66); font-size: 0.9em;">© 2023 Логистическая компания MAGNAVIS</p>
+        <p style="color: rgba(84,84,84,0.66); font-size: 0.7em;">Uicons от <a style="color: rgba(84,84,84,0.66);" href="https://www.flaticon.com/uicons">Flaticon</a></p>
     </div>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
     <script src="{{ url_for('static', filename='func.js') }}"></script>

@@ -50,3 +50,38 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
+
+
+$(function() {
+  // copy content to clipboard
+  function copyToClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+  }
+
+  // copy coupone code to clipboard
+  $(".coupon-btn").on("click", function() {
+    copyToClipboard("#coupon-field");
+    $(".coupon-alert").fadeIn("slow");
+  });
+});
+
+$(function() {
+  // copy content to clipboard
+  function copyToClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+  }
+
+  // copy coupone code to clipboard
+  $(".coupon-btn-2").on("click", function() {
+    copyToClipboard("#coupon-field-2");
+    $(".coupon-alert-2").fadeIn("slow");
+  });
+});
