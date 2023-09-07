@@ -85,3 +85,27 @@ $(function() {
     $(".coupon-alert-2").fadeIn("slow");
   });
 });
+
+function down() {
+  var down = document.querySelectorAll(".down");
+  var y1 = document.querySelectorAll(".badge");
+  for (var i = 0; i < down.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = down[i].getBoundingClientRect().top;
+
+    if (elementTop < windowHeight*0.7) {
+      down[i].classList.add("svg-none");
+      y1[i].classList.add("bad");
+      // y1.style.cssText = 'background: rgba(87,90,87,0.66);'
+    }
+    if (elementTop > windowHeight*0.8) {
+      down[i].classList.remove("svg-none");
+    }
+  }
+}
+
+window.addEventListener("scroll", down);
+
+
+y1.style.cssText = 'background: rgba(87,90,87,0.66);'
+
