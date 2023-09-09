@@ -73,7 +73,7 @@ footer{
     border-radius: 8px;
 }
 .tablo-color{
-    border: solid #ab2524 4px;
+    /*border: solid #ab2524 4px;*/
     background-color: #ab2524;
     border-radius: 8px;
     padding: 20px;
@@ -468,6 +468,9 @@ li{
 }
 .fa-end{
     border-radius: 0 0 8px 8px;
+}
+.opened>.fa-end{
+    border-radius: 0 0 0 0;
 }
 .minus{
     display: none;
