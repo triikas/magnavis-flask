@@ -3,20 +3,19 @@
 {% block title %}О нас{% endblock %}
 
 {% block content %}
-    <style>.t{margin-top: 16px;}.p-up-s{display: none;}section{ min-height: 0;}body{background-image: linear-gradient(to bottom, #171616, #000000);}</style>
+    <style>.t{margin-top: 16px;}.p-up-s{display: none;}section{ min-height: 0;}body{background-image: linear-gradient(to bottom, #171616, #000000);}.tablo-light{padding-left: 40px;padding-right: 40px;}.window{min-width: 780px;}</style>
     <div class="tablo-big tablo-invis">
         <h3 class="text-center">О нас</h3>
     </div>
     <div class="tablo-big tablo-invis">
-        <div class=" px-5">
-            <div class="tablo-light d-flex justify-content-between p-0 m-0">
-                <div class="tablo-light m-0" style="width: 50vw; height:60vh;background-image: url({{ url_for('static', filename='img/container.png') }}); background-repeat: no-repeat; background-size: cover;"></div>
-                <div class="mx-5" style="max-width: 600px;">
-
-                <img src="{{ url_for('static', filename='img/logo-white.png') }}" class="mb-5" style="margin-top: 60px; width: 90%; border-radius: 8px;">
-                <p><b style="color: #6a1a21">4.1</b>Мы молодая, динамично развивающаяся компания в мире логистики, готовая взять на себя перевозку даже самых необычных грузов. Несмотря на наш юный возраст, мы уверены в своих силах и предлагаем качественные решения для перемещения товаров по всему миру.</p>
-                <p>"Магнавис" - это не просто компания, а команда молодых профессионалов, готовых доказать свою способность в мире логистики. Мы готовы расти вместе с вашим бизнесом и сделать все, чтобы каждая доставка была успешной и эффективной</p>
-            </div>
+        <div class="container-fluid px-5">
+            <div class="tablo-light row p-0 m-0">
+                <div class="col tablo-light m-0" style="width: 50%; height:60vh;background-image: url({{ url_for('static', filename='img/container.png') }}); background-repeat: no-repeat; background-size: cover;"></div>
+                <div class="col tablo-light m-0" style="width: 50%;">
+                    <img src="{{ url_for('static', filename='img/logo-white.png') }}" class="mb-5" style=" width: 65%; border-radius: 8px;">
+                    <p style="text-align: justify;"><b style="color: #6a1a21">4.1</b>Мы молодая, динамично развивающаяся компания в мире логистики, готовая взять на себя перевозку даже самых необычных грузов. Несмотря на наш юный возраст, мы уверены в своих силах и предлагаем качественные решения для перемещения товаров по всему миру.</p>
+                    <p style="text-align: justify;">"Магнавис" - это не просто компания, а команда молодых профессионалов, готовых доказать свою способность в мире логистики. Мы готовы расти вместе с вашим бизнесом и сделать все, чтобы каждая доставка была успешной и эффективной</p>
+                </div>
             </div>
         </div>
 
@@ -26,13 +25,15 @@
         <div class="container-fluid px-5">
             <div class="row">
                 <div class="col t tablo-light">
-                    <table style="height: 460px;" style="height: 460px;">
-                        <tr class="h-50"><td class="h-100" class="h-100">
-                            <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>
-                        </td></tr>
-                        <tr class="h-50"><td class="h-100" class="h-100">
-                            <h4>Доставка любых грузов</h4>
-                            <p>
+                    <table style="height: 360px;" style="height: 460px;">
+                        <tr class="h-50">
+                            <td class="h-100 d-flex justify-content-around align-items-center">
+                                <div class="d-flex justify-content-center"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>
+                                <h4 style="font-size: 1.6em;">Доставка<br>любых&nbspгрузов</h4>
+                            </td>
+                        </tr>
+                        <tr class="h-50"><td class="h-100">
+                            <p class="m-0" style="text-align: justify;">
                                 <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.
                             </p>
                         </td></tr>
@@ -44,85 +45,126 @@
 {#                    </p>#}
                 </div>
                 <div class="col t tablo-light">
-                    <table style="height: 460px;">
+                    <table style="height: 360px;" style="height: 460px;">
+                        <tr class="h-50">
+                            <td class="h-100 d-flex justify-content-around align-items-center">
+                                <div class="d-flex justify-content-center"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/2.svg') }}"></div>
+                                <h4 style="font-size: 1.6em;">Страхование<br>грузов</h4>
+                            </td>
+                        </tr>
                         <tr class="h-50"><td class="h-100">
-                            <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/2.svg') }}"></div>
-                        </td></tr>
-                        <tr class="h-50"><td class="h-100">
-                            <div>
-                                <h4>Страхование грузов</h4>
-                                <p>
-                                    <b style="color: #6a1a21">4.3</b>Мы гарантируем защиту вашего груза на каждом этапе перевозки. В случае непредвиденных ситуаций, страхование грузов обеспечит вас дополнительной уверенностью.
-                                </p>
-                            </div>
+                            <p class="m-0" style="text-align: justify;">
+                                <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.
+                            </p>
                         </td></tr>
                     </table>
-                    
-                    
-
+{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
+{#                    <h4>Доставка любых грузов</h4>#}
+{#                    <p>#}
+{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
+{#                    </p>#}
                 </div>
                 <div class="col t tablo-light">
-                    <table style="height: 460px;">
+                    <table style="height: 360px;" style="height: 460px;">
+                        <tr class="h-50">
+                            <td class="h-100 d-flex justify-content-around align-items-center">
+                                <div class="d-flex justify-content-center"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/3.svg') }}"></div>
+                                <h4 style="font-size: 1.6em;">Таможенное<br>оформление</h4>
+                            </td>
+                        </tr>
                         <tr class="h-50"><td class="h-100">
-                            <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/3.svg') }}"></div>
-                        </td></tr>
-                        <tr class="h-50"><td class="h-100">
-                            <h4>Таможенное оформление</h4>
-                    <p>
-                        <b style="color: #6a1a21">4.4</b>Наша команда экспертов знает все тонкости таможенных процедур. Мы гарантируем правильное и своевременное таможенное оформление, чтобы ваш груз прошел без задержек.
-                    </p>
+                            <p class="m-0" style="text-align: justify;">
+                                <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.
+                            </p>
                         </td></tr>
                     </table>
-                    
-                    
+{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
+{#                    <h4>Доставка любых грузов</h4>#}
+{#                    <p>#}
+{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
+{#                    </p>#}
                 </div>
+{#                <div class="col t tablo-light">#}
+{#                    <table style="height: 360px;">#}
+{#                        <tr class="h-50"><td class="h-100">#}
+{#                            <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/2.svg') }}"></div>#}
+{#                        </td></tr>#}
+{#                        <tr class="h-50"><td class="h-100">#}
+{#                            <div>#}
+{#                                <h4>Страхование грузов</h4>#}
+{#                                <p style="text-align: justify;">#}
+{#                                    <b style="color: #6a1a21">4.3</b>Мы гарантируем защиту вашего груза на каждом этапе перевозки. В случае непредвиденных ситуаций, страхование грузов обеспечит вас дополнительной уверенностью.#}
+{#                                </p>#}
+{#                            </div>#}
+{#                        </td></tr>#}
+{#                    </table>#}
+{#                    #}
+{#                    #}
+{##}
+{#                </div>#}
             </div>
             <div class="row">
                 <div class="col t tablo-light">
-                    <table style="height: 460px;">
-                        <tr class="h-50"><td style="height: 261px">
-                                                <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/4.svg') }}"></div>
-
-                        </td></tr>
+                    <table style="height: 360px;" style="height: 460px;">
+                        <tr class="h-50">
+                            <td class="h-100 d-flex justify-content-around align-items-center">
+                                <div class="d-flex justify-content-center"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/4.svg') }}"></div>
+                                <h4 style="font-size: 1.6em;">Персональный<br>менеджер<br>24/7</h4>
+                            </td>
+                        </tr>
                         <tr class="h-50"><td class="h-100">
-                            <h4>Персональный менеджер 24/7</h4>
-                    <p>
-                        <b style="color: #6a1a21">4.5</b>Вы получаеда на связи, kkk kkkkk kkkkk kkkkkk kkkkготов ответить на вопросы и обеспечить вас всей необходимой информацией.
-                    </p>
+                            <p class="m-0" style="text-align: justify;">
+                                <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.
+                            </p>
                         </td></tr>
                     </table>
-                    
+{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
+{#                    <h4>Доставка любых грузов</h4>#}
+{#                    <p>#}
+{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
+{#                    </p>#}
                 </div>
                 <div class="col t tablo-light">
-                    <table style="height: 460px;">
-                        <tr class="h-50"><td style="height: 261px">
-                                                <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/5.svg') }}"></div>
-
-                        </td></tr>
+                    <table style="height: 360px;" style="height: 460px;">
+                        <tr class="h-50">
+                            <td class="h-100 d-flex justify-content-around align-items-center">
+                                <div class="d-flex justify-content-center"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/5.svg') }}"></div>
+                                <h4 style="font-size: 1.6em;">Максимально<br>короткие<br>сроки</h4>
+                            </td>
+                        </tr>
                         <tr class="h-50"><td class="h-100">
-                            <h4>Максимально короткие сроки</h4>
-                    <p>
-                        <b style="color: #6a1a21">4.6</b>Мы ценим ваше время. Независимо от расстояния, мы гарантируем максимально быструю доставку, чтобы ваш груз прибыл вовремя.
-                    </p>
+                            <p class="m-0" style="text-align: justify;">
+                                <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.
+                            </p>
                         </td></tr>
                     </table>
-                    
+{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
+{#                    <h4>Доставка любых грузов</h4>#}
+{#                    <p>#}
+{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
+{#                    </p>#}
                 </div>
                 <div class="col t tablo-light">
-                    <table style="height: 460px;">
-                        <tr class="h-50"><td style="height: 261px">
-                                                <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/6.svg') }}"></div>
-
-                        </td></tr>
+                    <table style="height: 360px;" style="height: 460px;">
+                        <tr class="h-50">
+                            <td class="h-100 d-flex justify-content-around align-items-center">
+                                <div class="d-flex justify-content-center"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/6.svg') }}"></div>
+                                <h4 style="font-size: 1.6em;">Любые<br>расстояния</h4>
+                            </td>
+                        </tr>
                         <tr class="h-50"><td class="h-100">
-                            <h4>Любые расстояния</h4>
-                    <p>
-                        <b style="color: #6a1a21">4.7</b>Независимо от того, куда и как далеко вы отправляете груз, наша компания готова обеспечить его безопасную и надежную доставку.
-                    </p>
+                            <p class="m-0" style="text-align: justify;">
+                                <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.
+                            </p>
                         </td></tr>
                     </table>
-                    
+{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
+{#                    <h4>Доставка любых грузов</h4>#}
+{#                    <p>#}
+{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
+{#                    </p>#}
                 </div>
+
             </div>
         </div>
     </div>
@@ -131,32 +173,32 @@
         <div class="d-flex justify-content-around tablo-color mx-5">
             <div>
                 <h5>Договоров подписано</h5>
-                <p style="font-size: 3em;">139</p>
+                <p class="m-0" style="font-size: 3em; max-height: 70px;">139</p>
             </div>
             <div>
                 <h5>Постоянных клиентов</h5>
-                <p style="font-size: 3em;">57</p>
+                <p class="m-0" style="font-size: 3em; max-height: 70px;">57</p>
             </div>
             <div>
                 <h5>Количество направлений</h5>
-                <p style="font-size: 3em;">300+</p>
+                <p class="m-0" style="font-size: 3em; max-height: 70px;">300+</p>
             </div>
             <div>
                 <h5>Грузов перевезено</h5>
-                <p style="font-size: 3em;">478</p>
+                <p class="m-0" style="font-size: 3em; max-height: 70px;">478</p>
             </div>
         </div>
     </div>
     <div class="tablo-big tablo-invis">
         <h3>Наши партнёры</h3>
         <div class="container px-5">
-            <div class="row">
-                <div class="col logo d-flex align-items-center mb-5 mt-3 mx-2" STYLE="min-width: 300px;max-width: 400px;"><img src="{{ url_for('static', filename='img/part1.png') }}"> </div>
-                <div class="col logo d-flex align-items-center mb-5 mt-3 mx-2" STYLE="min-width: 300px;max-width: 400px;"><img src="{{ url_for('static', filename='img/part7.png') }}"> </div>
-                <div class="col logo d-flex align-items-center mb-5 mt-3 mx-2" STYLE=" min-width: 300px;max-width: 400px;"><img src="{{ url_for('static', filename='img/part3.png') }}"> </div>
-                <div class="col logo d-flex align-items-center mb-5 mt-3 mx-2" STYLE=" min-width: 300px;max-width: 400px;"><img src="{{ url_for('static', filename='img/part4.png') }}"> </div>
-                <div class="col logo d-flex align-items-center mb-5 mt-3 mx-2" STYLE=" min-width: 300px;max-width: 400px;"><img src="{{ url_for('static', filename='img/part5.png') }}"> </div>
-                <div class="col logo d-flex align-items-center mb-5 mt-3 mx-2" STYLE=" min-width: 300px;max-width: 400px;"><img src="{{ url_for('static', filename='img/part6.png') }}"> </div>
+            <div class="row w-100 m-0">
+                <div class="col logo d-flex align-items-center mx-auto mb-5 mt-3 mx-2" STYLE="min-width: 300px;max-width: 400px;"><img src="{{ url_for('static', filename='img/part1.png') }}"> </div>
+                <div class="col logo d-flex align-items-center mx-auto mb-5 mt-3 mx-2" STYLE="min-width: 300px;max-width: 400px;"><img src="{{ url_for('static', filename='img/part7.png') }}"> </div>
+                <div class="col logo d-flex align-items-center mx-auto mb-5 mt-3 mx-2" STYLE=" min-width: 300px;max-width: 400px;"><img src="{{ url_for('static', filename='img/part3.png') }}"> </div>
+                <div class="col logo d-flex align-items-center mx-auto mb-5 mt-3 mx-2" STYLE=" min-width: 300px;max-width: 400px;"><img src="{{ url_for('static', filename='img/part4.png') }}"> </div>
+                <div class="col logo d-flex align-items-center mx-auto mb-5 mt-3 mx-2" STYLE=" min-width: 300px;max-width: 400px;"><img src="{{ url_for('static', filename='img/part5.png') }}"> </div>
+                <div class="col logo d-flex align-items-center mx-auto mb-5 mt-3 mx-2" STYLE=" min-width: 300px;max-width: 400px;"><img src="{{ url_for('static', filename='img/part6.png') }}"> </div>
             </div>
         </div>
     </div>

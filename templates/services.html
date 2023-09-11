@@ -3,7 +3,7 @@
 {% block title %}Услуги{% endblock %}
 
 {% block content %}
-    <style>.p-up-s{display: none;}section{ min-height: 0;}body{background-image: linear-gradient(to bottom, #171616, #000000);}</style>
+    <style>.p-up-s{display: none;}section{ min-height: 0;}body{background-image: linear-gradient(to bottom, #171616, #000000);} .tablo-light{margin-top: 16px;} .tablo-color{margin-top: 16px;}</style>
     <div class="tablo-big tablo-invis">
         <h3 class="text-center">Услуги</h3>
     </div>
@@ -56,85 +56,108 @@
        <h3>Специфика грузов</h3>
        <div class="container-fluid px-5">
             <div class="row">
-                <div style="min-height: 145px;" class="col tablo-light">
+                <div style="" class="col tablo-light">
                     <h4>Перевозки грузов с температурным режимом</h4>
                 </div>
-                <div style="min-height: 145px;" class="col tablo-light">
+                <div style="" class="col tablo-light">
                     <h4>Перевозка животных</h4>
                 </div>
-                <div style="min-height: 145px;" class="col tablo-light">
+                <div style="" class="col tablo-light">
                     <h4>Перевозка зап. частей и оборудования</h4>
                 </div>
             </div>
             <div class="row">
-                <div style="min-height: 145px;" class="col tablo-light">
+                <div style="min-height: 125px;" class="col tablo-light">
                     <h4>Перевозка медикаментов</h4>
                 </div>
-                <div style="min-height: 145px;" class="col tablo-light">
+                <div style="min-height: 125px;" class="col tablo-light">
                     <h4>Перевозка продуктов питания</h4>
                 </div>
-                <div style="min-height: 145px;" class="col tablo-light">
+                <div style="min-height: 125px;" class="col tablo-light">
                     <h4>Перевозка автомобилей</h4>
                 </div>
             </div>
             <div class="row">
-                <div style="min-height: 145px;" class="col tablo-light">
+                <div style="min-height: 125px;" class="col tablo-light">
                     <h4>Перевозка цветов</h4>
                 </div>
-                <div style="min-height: 145px;" class="col tablo-light">
+                <div style="min-height: 125px;" class="col tablo-light">
                     <h4>Перевозка ценных грузов</h4>
                 </div>
-                <div style="min-height: 145px;" class="col tablo-light">
-                    <h4>Другое</h4>
+                <div style="min-height: 125px;" class="col tablo-light">
+                    <h4>Перевозка хрупких грузов</h4>
                 </div>
             </div>
            <div class="row">
-                <div style="min-height: 145px;" class="col tablo-light">
+                <div style="min-height: 125px;" class="col tablo-light">
                     <h4>Перевозка опасных грузов</h4>
                 </div>
-                <div style="min-height: 145px;" class="col tablo-light">
+                <div style="min-height: 125px;" class="col tablo-light">
                     <h4>Перевозка спецгрузов</h4>
                 </div>
-                <div style="min-height: 145px;" class="col tablo-light">
+                <div style="min-height: 125px;" class="col tablo-light">
                     <h4>Перевозка одежды</h4>
                 </div>
             </div>
         </div>
     </div>
     <div class="tablo-big tablo-invis">
+        <style>
+            .tablo-serv{
+                margin: 16px;
+            }
+        </style>
         <h3>Дополнительные услуги</h3>
         <div class="container-fluid px-5">
             <div class="row">
-                <div style="min-height: 145px;" class="col tablo-color">
-                    <h4>Упаковка грузов</h4>
+                <div class="col tablo-serv p-0" style=" background-image: url({{ url_for('static', filename='img/kadarius-seegars-DevJkLB3hWE-unsplash-1.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                        <h4>Упаковка грузов</h4>
+                    </div>
                 </div>
-                <div style="min-height: 145px;" class="col tablo-color">
+                <div class="col tablo-serv p-0" style=" background-image: url({{ url_for('static', filename='img/markus-spiske-RWTUrJf7I5w-unsplash-1.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
                     <h4>Погрузо-разгрузочные работы</h4>
+                    </div>
                 </div>
-                <div style="min-height: 145px;" class="col tablo-color">
+                <div class="col tablo-serv p-0" style=" background-image: url({{ url_for('static', filename='img/industrial-port-and-container-yard.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
                     <h4>Мультимодальные перевозки</h4>
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div style="min-height: 145px;" class="col tablo-color">
+                <div class="col tablo-serv p-0" style=" background-image: url({{ url_for('static', filename='img/mealpro-efgpRGeu9tg-unsplash.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
                     <h4>Доставка груза от «двери до двери»</h4>
+                    </div>
                 </div>
-                <div style="min-height: 145px;" class="col tablo-color">
+                <div class="col tablo-serv p-0" style=" background-image: url({{ url_for('static', filename='img/adrian-sulyok-sczNLg6rrhQ-unsplash.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
                     <h4>Складские услуги</h4>
+                    </div>
                 </div>
-                <div style="min-height: 145px;" class="col tablo-color">
+                <div class="col tablo-serv p-0" style=" background-image: url({{ url_for('static', filename='img/closeup-of-real-estate-agent-using-calculator-while-his-client-is-signing-a-contract.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
                     <h4>Страхование грузов</h4>
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div style="min-height: 145px;" class="col tablo-color">
+                <div class="col tablo-serv p-0" style=" background-image: url({{ url_for('static', filename='img/hand-with-pen-over-application-form.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
                     <h4>Таможенное оформление грузов</h4>
+                    </div>
                 </div>
-                <div style="min-height: 145px;" class="col tablo-color">
+                <div class="col tablo-serv p-0" style=" background-image: url({{ url_for('static', filename='img/anete-lusina-rFKBUwLg_WQ-unsplash.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
                     <h4>Экспедирование грузов</h4>
+                    </div>
                 </div>
-                <div style="min-height: 145px;" class="col tablo-color">
-
+                <div class="col tablo-serv p-0" style=" background-image: url({{ url_for('static', filename='img/jose-martin-ramirez-carrasco-yhNVwsKTSaI-unsplash.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Отслеживание грузов</h4>
+                    </div>
                 </div>
             </div>
 

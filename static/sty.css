@@ -45,6 +45,7 @@ body{
     justify-content: center;
 }
 .window{
+    min-width: 700px;
     max-width: 1980px;
 }
 img{
@@ -58,8 +59,9 @@ td>img{
     width: 40%;
 }
 footer{
-    padding-left: 10vw;
-    padding-right: 10vw;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 .tablo-light{
     padding: 20px;
@@ -532,6 +534,10 @@ li{
   color: #aa2524;
   border-bottom: 1px solid #aa2524;
 }
+.btn-danger{
+    background-color: rgb(171, 37, 36);
+    border-color: rgb(171, 37, 36);
+}
 .accordion a::after {
   /*font-family: 'Ionicons';*/
   /*content: '\f218';*/
@@ -584,6 +590,9 @@ li{
     /*box-shadow: 3px 5px 10px rgba(1, 1, 2, 0.79);*/
     /*text-decoration: underline;*/
 }
+.gal{
+    margin-left: 40px;
+}
 .bad{
     background-color: rgba(87,90,87,0.66) !important;
 }
@@ -604,6 +613,23 @@ li{
     .tof{
         margin-right: 0;
     }
+}
+@media (max-width: 1318px) {
+    .tt-3{
+        margin-left: 0;
+        min-width: 700px !important;
+    }
+    .tt-2{
+        margin-right: 0;
+    }
+}
+@media (max-width: 916px) {
+    .tt-3, .tt-2, .tt-1{
+        margin-left: 0;
+        margin-right: 0;
+        min-width: 400px !important;
+    }
+
 }
 @media (max-width: 906px) {
     .tof{
@@ -716,4 +742,30 @@ li{
     .y{
         display: none;
     }
+}
+.of{
+    display: none;
+}
+@media (max-width: 1404px) {
+    .map{
+        display: none;
+    }
+    .of{
+        display: block;
+        width: 66%;
+    }
+}
+@media (max-width: 1030px) {
+    .of{
+        display: none;
+    }
+}
+.frm{
+    max-width: 617px;
+}
+@media (max-width: 994px) {
+    .frm{
+        max-width: 1000px;
+    }
+
 }
