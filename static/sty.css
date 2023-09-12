@@ -60,8 +60,8 @@ td>img{
 }
 footer{
     width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
+    /*padding-left: 5%;*/
+    /*padding-right: 5%;*/
 }
 .tablo-light{
     padding: 20px;
@@ -766,6 +766,12 @@ li{
 @media (max-width: 994px) {
     .frm{
         max-width: 1000px;
+    }
+
+}
+@media (min-width: 1798px) {
+    .window{
+        min-width: 1798px;
     }
 
 }
