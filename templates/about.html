@@ -11,8 +11,14 @@
     <div class="tablo-big tablo-invis">
         <div class="container-fluid px-5">
             <div class="tablo-light row p-0 m-0">
-                <div class="col tablo-light m-0" style="width: 50%; height:60vh;background-image: url({{ url_for('static', filename='img/container.png') }}); background-repeat: no-repeat; background-size: cover;"></div>
-                <div class="col tablo-light m-0" style="width: 50%;">
+                <div class="col tablo-light m-0 img-about" style="width: 50%; height:60vh;background-image: url({{ url_for('static', filename='img/container.png') }}); background-repeat: no-repeat; background-size: cover;">
+                   <div class="col tablo-light m-0 text-about-2" style="width: 50%; display: none;">
+                        <img src="{{ url_for('static', filename='img/logo-white.png') }}" class="mb-5" style=" width: 65%; border-radius: 8px;">
+                        <p style="text-align: justify;"><b style="color: #6a1a21">4.1</b>Мы молодая, динамично развивающаяся компания в мире логистики, готовая взять на себя перевозку даже самых необычных грузов. Несмотря на наш юный возраст, мы уверены в своих силах и предлагаем качественные решения для перемещения товаров по всему миру.</p>
+                        <p style="text-align: justify;">"Магнавис" - это не просто компания, а команда молодых профессионалов, готовых доказать свою способность в мире логистики. Мы готовы расти вместе с вашим бизнесом и сделать все, чтобы каждая доставка была успешной и эффективной</p>
+                   </div>
+                </div>
+                <div class="col tablo-light m-0  text-about-1" style="width: 50%;">
                     <img src="{{ url_for('static', filename='img/logo-white.png') }}" class="mb-5" style=" width: 65%; border-radius: 8px;">
                     <p style="text-align: justify;"><b style="color: #6a1a21">4.1</b>Мы молодая, динамично развивающаяся компания в мире логистики, готовая взять на себя перевозку даже самых необычных грузов. Несмотря на наш юный возраст, мы уверены в своих силах и предлагаем качественные решения для перемещения товаров по всему миру.</p>
                     <p style="text-align: justify;">"Магнавис" - это не просто компания, а команда молодых профессионалов, готовых доказать свою способность в мире логистики. Мы готовы расти вместе с вашим бизнесом и сделать все, чтобы каждая доставка была успешной и эффективной</p>
@@ -200,7 +206,7 @@
                 <div class="col logo d-flex align-items-center mx-auto mb-5 mt-3 mx-2" STYLE=" min-width: 300px;max-width: 400px;"><img src="{{ url_for('static', filename='img/part4.png') }}"> </div>
                 <div class="col logo d-flex align-items-center mx-auto mb-5 mt-3 mx-2" STYLE=" min-width: 300px;max-width: 400px;"><img src="{{ url_for('static', filename='img/part5.png') }}"> </div>
                 <div class="col logo d-flex align-items-center mx-auto mb-5 mt-3 mx-2" STYLE=" min-width: 300px;max-width: 400px;"><img src="{{ url_for('static', filename='img/part6.png') }}"> </div>
-                <div class="col logo d-flex align-items-center mx-auto mb-5 mt-3 mx-2" STYLE=" min-width: 300px;max-width: 400px;"><img src="{{ url_for('static', filename='img/logo_b.png') }}"> </div>
+                <div class="col logo d-flex align-items-center mx-auto mb-5 mt-3 mx-2" STYLE=" min-width: 300px;max-width: 400px;"><img src="{{ url_for('static', filename='img/Logo_b.png') }}"> </div>
             </div>
         </div>
     </div>

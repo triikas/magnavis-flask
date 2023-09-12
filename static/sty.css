@@ -775,3 +775,18 @@ li{
     }
 
 }
+@media (max-width: 1352px) {
+    .text-about-1{
+        display: none;
+    }
+    .text-about-2{
+        display: block !important;
+        background: rgba(96, 96, 96,0.42);
+        margin: 0 !important;
+        width: 100% !important;
+    }
+    .img-about{
+        width: 100%;
+        padding: 0 !important;
+    }
+}
