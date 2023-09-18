@@ -14,7 +14,7 @@
 <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
     <link rel="stylesheet" href="{{ url_for('static', filename='sty.css') }}">
 </head>
-<body>
+<body class="asyncImage" data-src="{{ url_for('static', filename='img/p-up-5.png') }}">
     {% for msg in get_flashed_messages() %}
         <div class="flash d-flex justify-content-center align-items-center m-0">
             <div class="flash-in d-flex align-items-center">
