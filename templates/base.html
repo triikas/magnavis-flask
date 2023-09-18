@@ -15,6 +15,19 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='sty.css') }}">
 </head>
 <body>
+    {% for msg in get_flashed_messages() %}
+        <div class="flash d-flex justify-content-center align-items-center m-0">
+            <div class="flash-in d-flex align-items-center">
+                <table>
+                    <tr><td><h2 class="text-center text-light mb-4">{{msg}}</h2></td></tr>
+                    <tr><td class="d-flex justify-content-center"><button style="width: 60px;" class="btn btn-light" onclick="flashh()">ОК</button></td></tr>
+                </table>
+
+
+            </div>
+
+        </div>
+    {% endfor %}
     <div class="window">
     <section class="mb-5 up">
         <div style="margin-left: 5%; margin-right: 5%; padding-top: 2vh;"><nav class="nav1 d-flex justify-content-between w-100" style="margin-right: 20px; margin-left: 20px;">
@@ -82,17 +95,24 @@
                     <form>
                         <h3 class="mt-3">Статус груза</h3>
                         <div class="mb-3 form__group field">
-                            <input type="text" class="form__field" name="kod" id="kod" placeholder="kod" required>
+                            <input minlength="5" type="text" class="form__field" name="kod" id="kod" placeholder="kod" required>
                             <label class="form__label" for="kod">Код груза</label>
                         </div>
-                        <button type="submit" class="btn btn-danger">Отправить</button>
+                        <button type="button" class="btn btn-danger" onclick="status()">Отправить</button>
                     </form>
+                    <div class="status-vrem tablo-color d-none">
+
+                        <table>
+                            <tr><td><H3>Груз с таким кодом не найден</H3></td></tr>
+                            <tr><td class=""><button class="btn btn-light" style="width: 60px;" onclick="status_delete()">ОК</button></td></tr>
+                        </table>
+                    </div>
                 </div>
                 <div class="col px-0 max-footer" style="margin-left: 40px; min-width: 335px;" >
-                    <form class="text-light">
+                    <form class="text-light" method="post">
                         <h3 class="mt-3">Отправить запрос</h3>
                         <div class="mb-3 form__group field">
-                            <input minlength="5" type="text" class="form__field" name="name" id="name" placeholder="name" required>
+                            <input minlength="2" type="text" class="form__field" name="name" id="name" placeholder="name" required>
                             <label class="form__label" for="name">Ваше имя</label>
                         </div>
                         <div class="mb-3 form__group field">
@@ -100,15 +120,15 @@
                             <label class="form__label" for="email">Ваш email</label>
                         </div>
                         <div class="mb-3 form__group field">
-                            <input type="number" class="form__field" name="number" id="number" placeholder="number" required>
+                            <input minlength="10" type="number" class="form__field" name="number" id="number" placeholder="number" required>
                             <label class="form__label" for="number">Ваш телефон</label>
                         </div>
                         <div class="mb-3 form__group field">
-                            <textarea cols="40" rows="3" class="form__field" name="comment" id="comment" placeholder="comment" required ></textarea>
+                            <textarea cols="40" rows="3" class="form__field" name="comment" id="comment" placeholder="comment"></textarea>
                             <label class="form__label" for="comment">Комментарий</label>
                         </div>
                         <div class="mb-3">
-                            <input type="checkbox" name="check" id="check" class="custom-checkbox">
+                            <input type="checkbox" name="check" id="check" class="custom-checkbox" required>
                             <label for="check" style="color: gray; font-size: 0.8em;">Согласие на обработку персональных данных</label>
                         </div>
                         <button type="submit" class="btn btn-danger">Отправить</button>
@@ -149,7 +169,7 @@
                             <label class="form__label" for="comment">Комментарий</label>
                         </div>
                         <div class="mb-3">
-                            <input type="checkbox" name="check" id="check" class="custom-checkbox">
+                            <input type="checkbox" name="check" id="check" class="custom-checkbox" required>
                             <label for="check" style="color: gray; font-size: 0.7em;">Согласие на обработку персональных данных</label>
                         </div>
                         <button type="submit" class="btn btn-danger" style="margin-left: 4px;">Отправить</button>

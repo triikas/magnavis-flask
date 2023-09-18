@@ -477,6 +477,29 @@ li{
 .minus{
     display: none;
 }
+.flash{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(48, 48, 48, 0.78);
+    position: fixed;
+    z-index: 5;
+
+}
+.flash-in{
+    width: 300px;
+    height: 183px;
+    background-color: rgb(170, 37, 36);
+    border-radius: 8px;
+    padding: 20px;
+
+    /*position: absolute;*/
+
+}
+.status-vrem{
+    margin: 0;
+    margin-top: 20px;
+
+}
 .opened>.faq-question{
     color: #ab2524;
     cursor: pointer;

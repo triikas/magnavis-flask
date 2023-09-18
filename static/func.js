@@ -86,6 +86,30 @@ $(function() {
   });
 });
 
+function flashh() {
+  var fl = document.querySelectorAll(".flash");
+  for (var i = 0; i < fl.length; i++) {
+    fl[i].classList.add("d-none");
+  }
+
+}
+
+function status() {
+  var fl = document.querySelectorAll(".status-vrem");
+  for (var i = 0; i < fl.length; i++) {
+    fl[i].classList.remove("d-none");
+  }
+
+}
+
+function status_delete() {
+  var fl = document.querySelectorAll(".status-vrem");
+  for (var i = 0; i < fl.length; i++) {
+    fl[i].classList.add("d-none");
+  }
+
+}
+
 function down() {
   var down = document.querySelectorAll(".down");
   var y1 = document.querySelectorAll(".badge");
