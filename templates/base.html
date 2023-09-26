@@ -44,7 +44,7 @@
                         РУС
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" data-lang-list>
-                        <li><a class="dropdown-item" data-ya-lang="ru">РУС</a></li>
+                        <li><a  content="notranslate" class="dropdown-item" data-ya-lang="ru">РУС</a></li>
                         <li><a class="dropdown-item" data-ya-lang="en">ENG</a></li>
                         <li><a class="dropdown-item" data-ya-lang="zh">中文</a></li>
                     </ul>
@@ -121,13 +121,14 @@
                     <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "contacts" >Контакты</a></div>
                 </div>
                 <div class="col px-0 max-footer" style=" min-width: 335px;">
-                    <form>
+                    <form method="post">
                         <h3 class="mt-3">Статус груза</h3>
                         <div class="mb-3 form__group field">
                             <input minlength="5" type="text" class="form__field" name="kod" id="kod" placeholder="kod" required>
                             <label class="form__label" for="kod">Код груза</label>
                         </div>
-                        <button type="button" class="btn btn-danger" onclick="status()">Отправить</button>
+{#                        <button type="button" class="btn btn-danger" onclick="status()">Отправить</button>#}
+                        <button type="submit" class="btn btn-danger">Отправить</button>
                     </form>
                     <div class="status-vrem tablo-color d-none">
 
@@ -152,6 +153,10 @@
                             <input minlength="10" type="tel" class="form__field" name="number" id="number" placeholder="number" required aria-describedby="numberHelp">
                             <label class="form__label" for="number">Ваш телефон</label>
                         </div>
+                        <div class="mb-3 form__group field d-none">
+                            <input minlength="10" type="tel" class="form__field" name="number" id="lovushka" placeholder="number" aria-describedby="numberHelp">
+                            <label class="form__label" for="lovushka">Ваш телефон</label>
+                        </div>
                         <div class="mb-3 form__group field">
                             <textarea cols="40" rows="3" class="form__field" name="comment" id="comment" placeholder="comment"></textarea>
                             <label class="form__label" for="comment">Комментарий</label>
@@ -167,13 +172,13 @@
                     <table>
                         <tr><td style="max-height: 306px">
                             <div class="col px-0 footform ff-1" style=" margin-bottom: 40px; min-width: 335px; padding-top: 0;">
-                    <form style="padding-top: 5px">
+                    <form style="padding-top: 5px" method="post">
                         <h3 class="mt-3">Статус груза</h3>
                         <div class="mb-3 form__group field">
                             <input minlength="5" type="text" class="form__field" name="kod" id="kod" placeholder="kod" required>
                             <label class="form__label" for="kod">Код груза</label>
                         </div>
-                        <button type="button" class="btn btn-danger" onclick="status()">Отправить</button>
+                        <button type="submit" class="btn btn-danger">Отправить</button>
                     </form>
                      <div class="status-vrem tablo-color d-none">
 
@@ -199,6 +204,10 @@
                         <div class="mb-3 form__group field">
                             <input minlength="10" type="tel" class="form__field" name="number" id="number1" placeholder="number" required aria-describedby="numberHelp">
                             <label class="form__label" for="number1">Ваш телефон</label>
+                        </div>
+                        <div class="mb-3 form__group field d-none">
+                            <input minlength="10" type="tel" class="form__field" name="number" id="lovushka1" placeholder="number" aria-describedby="numberHelp">
+                            <label class="form__label" for="lovushka1">Ваш телефон</label>
                         </div>
                         <div class="mb-3 form__group field">
                             <textarea cols="40" rows="3" class="form__field" name="comment" id="comment1" placeholder="comment"></textarea>

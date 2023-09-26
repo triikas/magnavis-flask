@@ -49,6 +49,7 @@ function yaTranslateHtmlHandler(code) {
         'en':'ENG',
         'ru':'РУС',
         'zh':'中文'
+        // 'zh':'Китайский'
     };
     document.querySelector('[data-lang-active]').innerHTML = lg[code];
 }

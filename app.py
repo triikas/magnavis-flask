@@ -23,13 +23,19 @@ def home():
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
+        lovushka = request.form.get('lovushka')
+        kod = request.form.get('kod')
+        if str(request.form.get('kod')) != "None":
+            flash("Груз не найден")
+            return redirect(url_for('home'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str((request.form.get('email'))):
-            flash("Вы указали почту, на которую нельзя ответить")
+        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
+            flash("Неверные данные")
         else:
             mail.send(msg)
             flash("Запрос отправлен")
-            print(str((request.form.get('email'))))
+            # print(str((request.form.get('email'))))
+            # print(str((request.form.get('kod'))))
             return redirect(url_for('home'))
 
     return render_template('home.html')
@@ -43,13 +49,18 @@ def contacts():
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
+        lovushka = request.form.get('lovushka')
+        kod = request.form.get('kod')
+        if str(request.form.get('kod')) != "None":
+            flash("Груз не найден")
+            return redirect(url_for('contacts'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str((request.form.get('email'))):
+        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
             flash("Вы указали почту, на которую нельзя ответить")
         else:
             mail.send(msg)
             flash("Запрос отправлен")
-            print(str((request.form.get('email'))))
+            # print(str((request.form.get('email'))))
             return redirect(url_for('contacts'))
     return render_template('contacts.html')
 
@@ -62,13 +73,18 @@ def payment():
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
+        lovushka = request.form.get('lovushka')
+        kod = request.form.get('kod')
+        if str(request.form.get('kod')) != "None":
+            flash("Груз не найден")
+            return redirect(url_for('payment'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str((request.form.get('email'))):
+        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
             flash("Вы указали почту, на которую нельзя ответить")
         else:
             mail.send(msg)
             flash("Запрос отправлен")
-            print(str((request.form.get('email'))))
+            # print(str((request.form.get('email'))))
             return redirect(url_for('payment'))
     return render_template('payment.html')
 
@@ -81,13 +97,18 @@ def services():
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
+        lovushka = request.form.get('lovushka')
+        kod = request.form.get('kod')
+        if str(request.form.get('kod')) != "None":
+            flash("Груз не найден")
+            return redirect(url_for('services'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str((request.form.get('email'))):
+        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
             flash("Вы указали почту, на которую нельзя ответить")
         else:
             mail.send(msg)
             flash("Запрос отправлен")
-            print(str((request.form.get('email'))))
+            # print(str((request.form.get('email'))))
             return redirect(url_for('services'))
     return render_template('services.html')
 
@@ -100,13 +121,18 @@ def about():
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
+        lovushka = request.form.get('lovushka')
+        kod = request.form.get('kod')
+        if str(request.form.get('kod')) != "None":
+            flash("Груз не найден")
+            return redirect(url_for('about'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str((request.form.get('email'))):
+        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
             flash("Вы указали почту, на которую нельзя ответить")
         else:
             mail.send(msg)
             flash("Запрос отправлен")
-            print(str((request.form.get('email'))))
+            # print(str((request.form.get('email'))))
             return redirect(url_for('about'))
     return render_template('about.html')
 
