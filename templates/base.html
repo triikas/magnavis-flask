@@ -15,7 +15,7 @@
 <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
     <link rel="stylesheet" href="{{ url_for('static', filename='sty.css') }}">
 </head>
-<body class="asyncImage" data-src="{{ url_for('static', filename='img/p-up-5.png') }}">
+<body class="asyncImage" data-src="{{ url_for('static', filename='img/p-up-5.png') }}" onload="forms()">
     {% for msg in get_flashed_messages() %}
         <div class="flash d-flex justify-content-center align-items-center m-0">
             <div class="flash-in d-flex justify-content-center">
@@ -40,13 +40,13 @@
 
                 <div class="dropdown">
                     <div id="ytWidget" style="display: none;"></div>
-                    <button class="btn btn-dark dropdown-toggle" data-lang-active type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button style="height: 38px;" class="btn btn-dark dropdown-toggle d-flex align-items-center" data-lang-active type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         РУС
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" data-lang-list>
-                        <li><a  content="notranslate" class="dropdown-item" data-ya-lang="ru">РУС</a></li>
-                        <li><a class="dropdown-item" data-ya-lang="en">ENG</a></li>
-                        <li><a class="dropdown-item" data-ya-lang="zh">中文</a></li>
+                        <li><a  content="notranslate" class="dropdown-item" data-ya-lang="ru"><img style="max-width: 25%;" src="{{ url_for('static', filename='img/ru2.png') }}"></a></li>
+                        <li><a class="dropdown-item" data-ya-lang="en"><img style="max-width: 25%;" src="../static/img/en2.png"></a></li>
+                        <li><a class="dropdown-item" data-ya-lang="zh"><img style="max-width: 25%;" src="{{ url_for('static', filename='img/zh2.png') }}"></a></li>
                     </ul>
                 </div>
 
@@ -138,35 +138,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="col px-0 max-footer" style="margin-left: 40px; min-width: 335px;" >
-                    <form class="text-light" method="post">
-                        <h3 class="mt-3">Отправить запрос</h3>
-                        <div class="mb-3 form__group field">
-                            <input minlength="2" type="text" class="form__field" name="name" id="name" placeholder="name" required>
-                            <label class="form__label" for="name">Ваше имя</label>
-                        </div>
-                        <div class="mb-3 form__group field">
-                            <input type="email" class="form__field" name="email" id="email" placeholder="email" required aria-describedby="emailHelp">
-                            <label class="form__label" for="email">Ваш email</label>
-                        </div>
-                        <div class="mb-3 form__group field">
-                            <input minlength="10" type="tel" class="form__field" name="number" id="number" placeholder="number" required aria-describedby="numberHelp">
-                            <label class="form__label" for="number">Ваш телефон</label>
-                        </div>
-                        <div class="mb-3 form__group field d-none">
-                            <input minlength="10" type="tel" class="form__field" name="number" id="lovushka" placeholder="number" aria-describedby="numberHelp">
-                            <label class="form__label" for="lovushka">Ваш телефон</label>
-                        </div>
-                        <div class="mb-3 form__group field">
-                            <textarea cols="40" rows="3" class="form__field" name="comment" id="comment" placeholder="comment"></textarea>
-                            <label class="form__label" for="comment">Комментарий</label>
-                        </div>
-                        <div class="mb-3">
-                            <input type="checkbox" name="check" id="check" class="custom-checkbox" required>
-                            <label for="check" style="color: gray; font-size: 0.8em;">Согласие на обработку персональных данных</label>
-                        </div>
-                        <button type="submit" class="btn btn-danger">Отправить</button>
-                    </form>
+                <div class="col px-0 max-footer form1" style="margin-left: 40px; min-width: 335px;" >
                 </div>
                 <div class="col px-0 min-footer" style="min-width: 407px;">
                     <table>
@@ -190,35 +162,7 @@
                 </div>
                         </td></tr>
                         <tr><td>
-                            <div class="col px-0 footform" style=" min-width: 335px;" >
-                    <form class="text-light" method="post" style="padding-top: 15px">
-                        <h3 class="mt-3">Отправить запрос</h3>
-                        <div class="mb-3 form__group field">
-                            <input minlength="2" type="text" class="form__field" name="name" id="name1" placeholder="name" required>
-                            <label class="form__label" for="name1">Ваше имя</label>
-                        </div>
-                        <div class="mb-3 form__group field">
-                            <input type="email" class="form__field" name="email" id="email1" placeholder="email" required aria-describedby="emailHelp">
-                            <label class="form__label" for="email1">Ваш email</label>
-                        </div>
-                        <div class="mb-3 form__group field">
-                            <input minlength="10" type="tel" class="form__field" name="number" id="number1" placeholder="number" required aria-describedby="numberHelp">
-                            <label class="form__label" for="number1">Ваш телефон</label>
-                        </div>
-                        <div class="mb-3 form__group field d-none">
-                            <input minlength="10" type="tel" class="form__field" name="number" id="lovushka1" placeholder="number" aria-describedby="numberHelp">
-                            <label class="form__label" for="lovushka1">Ваш телефон</label>
-                        </div>
-                        <div class="mb-3 form__group field">
-                            <textarea cols="40" rows="3" class="form__field" name="comment" id="comment1" placeholder="comment"></textarea>
-                            <label class="form__label" for="comment1">Комментарий</label>
-                        </div>
-                        <div class="mb-3">
-                            <input type="checkbox" name="check1" id="check1" class="custom-checkbox" required>
-                            <label for="check1" style="color: gray; font-size: 0.8em;">Согласие на обработку персональных данных</label>
-                        </div>
-                        <button type="submit" class="btn btn-danger">Отправить</button>
-                    </form>
+                            <div class="col px-0 footform form2" style=" min-width: 335px;" >
                 </div>
                         </td></tr>
                     </table>

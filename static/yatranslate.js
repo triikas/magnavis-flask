@@ -51,7 +51,7 @@ function yaTranslateHtmlHandler(code) {
         'zh':'中文'
         // 'zh':'Китайский'
     };
-    document.querySelector('[data-lang-active]').innerHTML = lg[code];
+    document.querySelector('[data-lang-active]').innerHTML = `<img style="height: 14px; width: 32.5px;" src="../static/img/${code}2w.png">`;
 }
 
 function yaTranslateEventHandler(event, selector, handler) {
