@@ -62,6 +62,9 @@ function forms() {
                         </div>
                         <button type="submit" class="btn btn-danger">Отправить</button>
                     </form>`;
+  // var dodo = document.querySelectorAll(".comment__text");
+  // document.querySelector(".dodo").innerHTML = `${dodo[0]}`;
+  // console.log(dodo[0].textContent)
 }
 
 $(function() {

@@ -4,6 +4,9 @@
 
 {% block content %}
     <style>.p-up-s{display: none;}section{ min-height: 0;}body{background-image: linear-gradient(to bottom, #171616, #000000);} .tablo-light{padding-left: 40px;padding-right: 40px;} .tablo-color{padding-left: 40px;padding-right: 40px;}</style>
+    <script>
+        document.querySelector("body").classList.remove("asyncImage");
+    </script>
     <div class="tablo-big tablo-invis">
         <h3 class="text-center m-0">Оплата</h3>
     <div style="width: 50%; margin-left: 25%; height: 2px; background-color: white; margin-top: 20px;"></div>
@@ -15,9 +18,9 @@
                 <div class="col tablo-color sp-1" style="min-width: 404px;">
                     <h4>Для юридического лица</h4>
                     <ul>
-                        <li>Безналичная форма в рублях по счету на ООО/ИП (НДС/УСН).<br>Клиенту предоставляется полный комплект закрывающих бухгалтерских документов</li>
+                        <li>Безналичная форма в рублях по счету на ООО/ИП (НДС/УСН)<br><r style="font-size: 0.6em;">Клиенту предоставляется полный комплект закрывающих бухгалтерских документов</r></li>
                         <li>Наличная форма</li>
-                        <li>Оплата онлайн на сайте по корп. карте</li>
+                        <li>Оплата онлайн на сайте по корпоративной карте</li>
                     </ul>
                 </div>
 
@@ -33,12 +36,12 @@
         </div>
     </div>
     <div class="tablo-big tablo-invis">
-        <h3>Сроки</h3>
+        <h3>Электронный документооборот (ЭДО)</h3>
         <div class="container-fluid px-5">
             <div class="row">
 
                     <div class=" col tablo-light d-flex justify-content-end align-items-center sp-1" style="min-height: 130px; min-width: 531px;">
-                        <div class="w-100"><p class="mb-0 m"><b style="color: #6a1a21">3.1</b>В день прихода груза на склад мы выставляем вам счёт.</p></div>
+                        <div class="w-100"><p class="mb-0 m"><b style="color: #6a1a21">3.1</b>Движение документации можно отследить в режиме онлайн, что исключает риск потери важных бумаг.</p></div>
                         <div class="d-flex justify-content-center align-items-center" style="margin-left: 40px; border-radius: 8px;color: white; min-width: 50px; height: 50px; background-color: #ab2524;"><svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor" class="bi bi-person-up" viewBox="0 0 16 16">
   <path d="M6.445 12.688V7.354h-.633A12.6 12.6 0 0 0 4.5 8.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61h.675zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82h-.684zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23z"/>
   <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
@@ -46,10 +49,10 @@
 </svg></div>
                     </div>
                     <div class=" col tablo-light d-flex justify-content-end align-items-center sp-2 sr" style="min-height: 130px; min-width: 531px;">
-                        <div class="w-100"><p class="mb-0 m"><b style="color: #6a1a21">3.2</b>Для постоянных клиентов возможна договорённость на иные сроки оплаты.</p></div>
-                        <div class="d-flex justify-content-center align-items-center" style="margin-left: 40px; border-radius: 8px;color: white; min-width: 50px; height: 50px; background-color: #ab2524;"><svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor" class="bi bi-person-up" viewBox="0 0 16 16">
-  <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.354-5.854 1.5 1.5a.5.5 0 0 1-.708.708L13 11.707V14.5a.5.5 0 0 1-1 0v-2.793l-.646.647a.5.5 0 0 1-.708-.708l1.5-1.5a.5.5 0 0 1 .708 0ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
-  <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"/>
+                        <div class="w-100"><p class="mb-0 m"><b style="color: #6a1a21">3.2</b>Электронный документооборот значительно экономит время и ресурсы организации.</p></div>
+                        <div class="d-flex justify-content-center align-items-center" style="margin-left: 40px; border-radius: 8px;color: white; min-width: 50px; height: 50px; background-color: #ab2524;"><svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor" class="bi bi-stopwatch" viewBox="0 0 16 16">
+  <path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5V5.6z"/>
+  <path d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64a.715.715 0 0 1 .012-.013l.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354a.512.512 0 0 1-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5zM8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3z"/>
 </svg></div>
                     </div>
 
@@ -65,10 +68,10 @@
                         <h4>1. Заполните форму оплаты</h4>
                     </div>
                     <div class="tablo-light frm-how mx-0">
-                        <h4>2. Нажмте "Оплатить"</h4>
+                        <h4>2. Нажмите "Оплатить"</h4>
                     </div>
                     <div class="tablo-light frm-how mx-0">
-                        <h4>3. Вам придёт уведомление на почту</h4>
+                        <h4>3. На вашу почту поступит уведомление</h4>
                     </div>
                     <div class="tablo-light frm-how mx-0">
                         <h4>4. Ожидайте звонка менеджера</h4>

@@ -45,15 +45,25 @@ function yaTranslateGetCode() {
 }
 
 function yaTranslateHtmlHandler(code) {
-    let lg = {
-        'en':'ENG',
-        'ru':'РУС',
-        'zh':'中文'
-        // 'zh':'Китайский'
-    };
-    document.querySelector('[data-lang-active]').innerHTML = `<img style="height: 14px; width: 32.5px;" src="../static/img/${code}2w.png">`;
-}
+    if (code === 'zh') {
+        document.querySelector('[data-lang-active]').innerHTML = `<img style="height: 14px; width: 28px;" src="../static/img/${code}2w.png">`;
+        try {
+            var doc = document.querySelectorAll(".cost-sp-2");
+            for (let i of Array(4).keys()) {
+                doc[i].classList.add("cost-sp-zh");
+            }
+        } catch (err) {}
+    } else if (code === 'en') {
+        document.querySelector('[data-lang-active]').innerHTML = `<img style="height: 11px; width: 25px;" src="../static/img/${code}2w.png">`;
+        try {
+            document.querySelector(".cost-sp").classList.add("cost-sp-en");
+        } catch (err) {}
+    }
+    else {
+        document.querySelector('[data-lang-active]').innerHTML = `<img style="height: 11px; width: 25px;" src="../static/img/${code}2w.png">`;
+    }
 
+}
 function yaTranslateEventHandler(event, selector, handler) {
     document.addEventListener(event, function (e) {
         let el = e.target.closest(selector);
