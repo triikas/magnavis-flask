@@ -209,5 +209,5 @@ function down() {
 window.addEventListener("scroll", down);
 
 
-y1.style.cssText = 'background: rgba(87,90,87,0.66);'
+// y1.style.cssText = 'background: rgba(87,90,87,0.66);'
 
