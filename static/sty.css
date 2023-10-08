@@ -939,6 +939,22 @@ li{
     }
 
 }
+@media (max-width: 1677px) {
+    .otz{
+
+        &>p{
+            margin-bottom: 20px !important;
+        }
+    }
+
+}
+@media (max-width: 1400px) {
+    .otz{
+        line-height: 1.3em !important;
+        padding: 30px !important;
+    }
+
+}
 @media (max-width: 950px) {
     .sr{
         min-width: 535px !important;
