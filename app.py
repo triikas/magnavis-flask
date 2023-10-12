@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
 from flask_mail import Mail, Message
+from flask_mobility import Mobility
 
 application = Flask(__name__)
+Mobility(application)
 application.secret_key = "Wx4w54bL*7Tzdez(Td;"
 application.config['MAIL_SERVER'] = 'smtp.magnavis.ru'
 application.config['MAIL_PORT'] = 587
@@ -25,6 +27,8 @@ def home():
         comment = request.form.get('comment')
         lovushka = request.form.get('lovushka')
         kod = request.form.get('kod')
+        if request.MOBILE:
+            flash("lkjlkj")
         if str(request.form.get('kod')) != "None":
             flash("Груз не найден")
             return redirect(url_for('home'))
