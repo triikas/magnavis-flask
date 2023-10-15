@@ -19,8 +19,6 @@ mail = Mail(application)
 @application.route('/', methods=['post', 'get'])
 def home():
     print("fgh: ", str(request.MOBILE))
-    if request.MOBILE:
-        flash("lkjlkj")
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=['sales1@magnavis.ru', 'sales2@magnavis.ru', 'cargo@magnavis.ru'])
         # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
@@ -32,18 +30,24 @@ def home():
         kod = request.form.get('kod')
         if str(request.form.get('kod')) != "None":
             flash("Груз не найден")
-            return redirect(url_for('home'))
+            if request.MOBILE:
+                return redirect(url_for('mobile/home'))
+            else:
+                return redirect(url_for('home'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
         if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
             flash("Неверные данные")
         else:
             mail.send(msg)
             flash("Запрос отправлен")
-            # print(str((request.form.get('email'))))
-            # print(str((request.form.get('kod'))))
-            return redirect(url_for('home'))
-
-    return render_template('home.html')
+            if request.MOBILE:
+                return redirect(url_for('mobile/home'))
+            else:
+                return redirect(url_for('home'))
+    if request.MOBILE:
+        return render_template('mobile/home.html')
+    else:
+        return render_template('home.html')
 
 @application.route('/contacts', methods=['post', 'get'])
 def contacts():
