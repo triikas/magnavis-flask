@@ -34,7 +34,7 @@
     <section class="mb-5 up">
         <div style=" padding-top: 2vh;"><nav class="nav1 d-flex justify-content-between px-5" style="margin-right: 20px; margin-left: 20px;">
             <div  class="d-flex align-items-center">
-                <a href="/"><img src="{{ url_for('static', filename='img/logo-white-foo.png') }}" style="height: 75px; width: 549.5px"></a>
+                <a href="/"><img src="{{ url_for('static', filename='img/logo-white-foo.png') }}" style="height: 70px; width: 513px"></a>
             </div>
             <div class="d-flex justify-content-start">
 
@@ -49,28 +49,36 @@
         </nav></div>
         <div class="navv px-5 d-none" style="width: 100vw; position: absolute;">
             <div class="tablo-light navv-in">
-                <ul>
-                    <li><a href="services">Услуги</a></li>
-                    <li><a href="about">О Нас</a></li>
-                    <li><a href="payment">Оплата</a></li>
-                    <li><a href="contacts">Контакты</a></li>
-                  </ul>
-                <a href="javascript:scroll(0,9000)" class="btn btn-danger mr-5 mx-1" style=" height: 75px;">Отправить запрос</a>
 
-                <div class="dropdown">
+                <p class="mb-4"><a style="font-size: 1.5em; text-decoration: none;" class="text-light" href="services">Услуги</a></p>
+                <p class="mb-4"><a style="font-size: 1.5em; text-decoration: none;" class="text-light" href="about">О нас</a></p>
+                <p class="mb-4"><a style="font-size: 1.5em; text-decoration: none;" class="text-light" href="payment">Оплата</a></p>
+                <p class="mb-4"><a style="font-size: 1.5em; text-decoration: none;" class="text-light" href="contacts">Контакты</a></p>
+                <table>
+                    <tr>
+                        <td>
+                            <a href="javascript:scroll(0,9000)" class="btn btn-danger mr-5 mx-1" style="font-size: 2em; height: 75px; margin-right: 20px !important;">Отправить запрос</a>
+                        </td>
+                        <td>
+                            <div class="dropdown">
                     <div id="ytWidget" style="display: none;"></div>
-                    <button style="height: 38px;" class="btn btn-dark dropdown-toggle d-flex align-items-center" data-lang-active type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        РУС
+                    <button style="font-size: 1.5em; height: 75px;" class="btn btn-dark dropdown-toggle d-flex align-items-center px-4" data-lang-active type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img style="height: 22px; width: 50px; padding: 50px;" src="{{ url_for('static', filename='img/ru2.png') }}">
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" data-lang-list>
-                        <li><a  content="notranslate" class="dropdown-item" data-ya-lang="ru"><img style="height: 11px; width: 25px;" src="{{ url_for('static', filename='img/ru2.png') }}"></a></li>
-                        <li><a class="dropdown-item" data-ya-lang="en"><img style="height: 11px; width: 29px;" src="../static/img/en2.png"></a></li>
-                        <li><a class="dropdown-item" data-ya-lang="zh"><img style="height: 14px; width: 28px;" src="{{ url_for('static', filename='img/zh2.png') }}"></a></li>
+                        <li class="py-3 mx-3"><a class="dropdown-item" data-ya-lang="ru"><img style="height: 22px; width: 50px;" src="{{ url_for('static', filename='img/ru2.png') }}"></a></li>
+                        <li class="py-3 mx-3"><a class="dropdown-item" data-ya-lang="en"><img style="height: 22px; width: 58px;" src="../static/img/en2.png"></a></li>
+                        <li class="py-3 mx-3"><a class="dropdown-item" data-ya-lang="zh"><img style="height: 28px; width: 56px;" src="{{ url_for('static', filename='img/zh2.png') }}"></a></li>
                     </ul>
                 </div>
-                <img class="d-none" src="../static/img/en2w.png">
-                <img class="d-none" src="../static/img/ru2w.png">
-                <img class="d-none" src="../static/img/zh2w.png">
+                            <img class="d-none" src="../static/img/en2w.png">
+                            <img class="d-none" src="../static/img/ru2w.png">
+                            <img class="d-none" src="../static/img/zh2w.png">
+                        </td>
+                    </tr>
+                </table>
+
+
             </div>
         </div>
         <div style="width: 100vw;">
@@ -99,7 +107,7 @@
             <div class="container-fluid">
             <div class="row" style="padding-right: 20px; padding-left: 20px;">
                 <div class="col px-0" style="margin-right: 40px; min-width: 372px; max-width: 600px;" >
-                    <a class="mt-1" href="/"><img style="margin-bottom: 40px;height: 70px; width: 513px; padding-right: 20px;" src="{{ url_for('static', filename='img/logo-white-foo.png') }}"></a>
+                    <a class="mt-1" href="/"><img style="margin-bottom: 40px;height: 75px; width: 549.5px; padding-right: 20px;" src="{{ url_for('static', filename='img/logo-white-foo.png') }}"></a>
                     <div class="nav-a" style="font-size: 1.9em;"><a class="nav-link text-light mt-4" href= "services" >Услуги</a></div>
                     <div class="nav-a" style="font-size: 1.9em;"><a class="nav-link text-light mt-4" href= "about" >О нас</a></div>
                     <div class="nav-a" style="font-size: 1.9em;"><a class="nav-link text-light mt-4" href= "payment" >Оплата</a></div>
@@ -107,7 +115,7 @@
                 </div>
 
             </div>
-            <div class="row" style="padding-right: 20px; padding-left: 20px;">
+            <div class="row mt-4" style="padding-right: 20px; padding-left: 20px;">
                 <div class="col px-0 max-footer" style=" min-width: 335px;">
                     <form method="post">
                         <h3 class="mt-3">Статус груза</h3>
@@ -115,8 +123,8 @@
                             <input minlength="5" type="text" class="form__field" name="kod" id="kod" placeholder="kod" required>
                             <label class="form__label" for="kod">Код груза</label>
                         </div>
-                        <button type="button" class="btn btn-danger" onclick="status()">Отправить</button>
-                        <button type="submit" class="btn btn-danger">Отправить</button>
+{#                        <button type="button" class="btn btn-danger" onclick="status()">Отправить</button>#}
+                        <button style="font-size: 1.6em;" type="submit" class="btn btn-danger">Отправить</button>
                     </form>
                     <div class="status-vrem tablo-color d-none">
 
@@ -127,7 +135,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row" style="padding-right: 20px; padding-left: 20px;">
+            <div class="row mt-4" style="padding-right: 20px; padding-left: 20px;">
                 <div class="col px-0 max-footer form1" style="min-width: 335px;" >
             </div>
 {#                <div class="col px-0 min-footer" style="min-width: 407px;">#}

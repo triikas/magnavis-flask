@@ -30,9 +30,9 @@ function forms() {
                         </div>
                         <div class="mb-3">
                             <input type="checkbox" name="check" id="check" class="custom-checkbox" required>
-                            <label for="check" style="color: gray; font-size: 0.8em;">Согласие на обработку персональных данных</label>
+                            <label for="check" id="mail-check" style="color: gray; font-size: 0.8em;">Согласие на обработку персональных данных</label>
                         </div>
-                        <button type="submit" class="btn btn-danger">Отправить</button>
+                        <button type="submit" id="mail-btn" class="btn btn-danger">Отправить</button>
                     </form>`;
   document.querySelector(".form2").innerHTML = `<form class="text-light" method="post" style="padding-top: 15px">
                         <h3 class="mt-3">Отправить запрос</h3>

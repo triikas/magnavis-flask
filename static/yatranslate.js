@@ -54,7 +54,7 @@ function yaTranslateHtmlHandler(code) {
             }
         } catch (err) {}
     } else if (code === 'en') {
-        document.querySelector('[data-lang-active]').innerHTML = `<img style="height: 11px; width: 25px;" src="../static/img/${code}2w.png">`;
+        document.querySelector('[data-lang-active]').innerHTML = `<img style="height: 22px; width: 58px;" src="../static/img/${code}2w.png">`;
         try {
             var doc = document.querySelectorAll(".cost-sp");
             for (let i of Array(4).keys()) {
@@ -63,7 +63,7 @@ function yaTranslateHtmlHandler(code) {
         } catch (err) {}
     }
     else {
-        document.querySelector('[data-lang-active]').innerHTML = `<img style="height: 11px; width: 25px;" src="../static/img/${code}2w.png">`;
+        document.querySelector('[data-lang-active]').innerHTML = `<img style="height: 22px; width: 50px;" src="../static/img/${code}2w.png">`;
     }
 
 }

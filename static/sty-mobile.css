@@ -227,14 +227,15 @@ h3{
     margin-bottom: 60px;
     font-size: 3.3em;
 }
-label{
-    font-size: 1.9em !important;
-}
+
 h4{
     font-size: 2em;
 }
 footer h3{
-    font-size: 2.4em;
+    font-size: 3em;
+}
+#mail-btn{
+    font-size: 1.6em;
 }
 .nav1{
     width: 100%;
@@ -281,6 +282,9 @@ section>div{
 /*.min-footer{*/
 /*    display: none;*/
 /*}*/
+#mail-check{
+    font-size: 1.5em !important;
+}
 .center{
     display: flex;
     justify-content: center;
@@ -309,7 +313,7 @@ footer{
   border: 0;
   border-bottom: 2px solid #797272;
   outline: 0;
-  font-size: 1.3rem;
+  font-size: 1.9rem;
   color:  #e0dede;
   padding: 7px 0;
   background: transparent;
@@ -320,26 +324,26 @@ footer{
   }
 
   &:placeholder-shown ~ .form__label {
-    font-size: 1.3rem;
+    font-size: 1.9rem;
     cursor: text;
     top: 20px;
   }
 }
 .form__label {
   position: absolute;
-  top: 0;
+  top: -20PX;
   display: block;
   transition: 0.2s;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: gray;
 }
 .form__field:focus {
   ~ .form__label {
     position: absolute;
-    top: 0;
+    top: -20PX;
     display: block;
     transition: 0.2s;
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: #880c0c;
     font-weight:700;
   }
