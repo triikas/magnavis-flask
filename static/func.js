@@ -188,6 +188,14 @@ function status_delete() {
 
 }
 
+function nav() {
+  var fl = document.querySelectorAll(".navv");
+
+  for (var i = 0; i < fl.length; i++) {
+    fl[i].classList.toggle("d-none");
+  }
+}
+
 function down() {
   var down = document.querySelectorAll(".down");
   var y1 = document.querySelectorAll(".badge");

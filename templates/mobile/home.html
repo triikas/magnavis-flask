@@ -5,9 +5,10 @@
 {% block content %}
 
     <div class="tablo-invis tablo-big mt-3 reveal">
-        <h3>О нас</h3>
+
         <div class="container-fluid px-5">
             <div class="row">
+                <h3 style="padding-left: 0 !important;">О нас</h3>
                 <div class="col" style="padding-left: 0; padding-right: 0; min-width: 430px;"><p class="p-0" style="text-align: justify;">
 Логистическая компания "Магнавис" – ваш надежный партнер в сфере доставки и управления грузоперевозками. Мы осуществляем перевозку любых видов груза под ключ: от оформления необходимых документов до передачи товара в руки клиента. Наша главная задача — оперативно, безопасно и по доступным ценам доставить ваш груз из любой точки мира.                </p></div>
 
@@ -23,7 +24,7 @@
   <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z"/>
 </svg> </td></tr>
                         <tr class="h-50"><td class="">
-                            <h4 class="text-center m-0">Эффективные<br>логистические&nbspрешения</h4>
+                            <h4 class="text-center m-0">Эффективные<br>логистические решения</h4>
                             <p class="d-none">Наша компания предоставляет индивидуальные и высокоэффективные логистические решения, которые позволяют оптимизировать ваши поставки и снизить издержки.</p>
                         </td></tr>
                     </table>
@@ -72,20 +73,21 @@
         </div>
     </div>
     <div class="tablo-invis tablo-big mt-3 reveal">
-        <h3>Услуги</h3>
+
         <div class="container-fluid px-5">
             <div class="row" style="min-height: 600px">
+                <h3 style="padding-left: 0 !important;">Услуги</h3>
                 <div class="col p-0">
                     <div class=" tablo-serv" style="margin-bottom: 16px; min-width: 340px; min-height: 308px; background-image: url({{ url_for('static', filename='img/min/industrial-port-and-container-yard-min.jpg') }}); background-repeat: no-repeat; background-size: cover;">
                         <div class="tablo-serv-in pb-0" style=" min-height: 308px;">
                             <h4 style="font-weight: bolder;">Мультимодальные<br>перевозки</h4>
-                            <p class="mt-4">Обеспечиваем транспортировку грузов с использованием различных видов транспорта, чтобы доставить ваш заказ точно в срок</p>
+{#                            <p class="mt-4">Обеспечиваем транспортировку грузов с использованием различных видов транспорта, чтобы доставить ваш заказ точно в срок</p>#}
                         </div>
                     </div>
                     <div class=" tablo-serv" style=" min-height: 308px; min-width: 340px; background-image: url({{ url_for('static', filename='img/min/closeup-of-real-estate-agent-using-calculator-while-his-client-is-signing-a-contract-min.jpg') }}); background-repeat: no-repeat; background-size: cover;">
                         <div class="tablo-serv-in" style="min-height: 308px;">
                             <h4 style="font-weight: bolder;">Страхование<br>грузов</h4>
-                            <p class="mt-4">Гарантируем защиту ваших ценных грузов на всем пути доставки</p>
+{#                            <p class="mt-4">Гарантируем защиту ваших ценных грузов на всем пути доставки</p>#}
                         </div>
                     </div>
                 </div>
@@ -93,7 +95,7 @@
                     <div class="tablo-serv tof" style="min-height: 631px;    background-image: url({{ url_for('static', filename='img/min/hand-with-pen-over-application-form.jpg') }}); background-repeat: no-repeat; background-size: cover;">
                         <div class="tablo-serv-in pb-0" style="min-height: 631px;">
                             <h4 style="font-weight: bolder;">Таможенное<br>оформление<br>грузов</h4>
-                            <p class="mt-4">Правильное и быстро оформляем все типы грузов при пересечении таможенной границы, минимизируем риски задержек. Весь комплекс таможенных процедур для физических и юридических лиц: подготовка необходимых документов, заполнение таможенных деклараций, платежи и взаимодействие с таможенным органами. «Магнавис» сопровождает ваш груз на каждом этапе его прохождения границы</p>
+{#                            <p class="mt-4">Правильное и быстро оформляем все типы грузов при пересечении таможенной границы, минимизируем риски задержек. Весь комплекс таможенных процедур для физических и юридических лиц: подготовка необходимых документов, заполнение таможенных деклараций, платежи и взаимодействие с таможенным органами. «Магнавис» сопровождает ваш груз на каждом этапе его прохождения границы</p>#}
                         </div>
                     </div>
                 </div>
@@ -101,17 +103,17 @@
                     <div class=" tablo-serv" style="min-width: 340px; margin-bottom: 16px;min-height: 420px; background-image: url({{ url_for('static', filename='img/min/3aa0b1dd-7a0a-4d92-8362-3f362ce4afcd.png') }}); background-repeat: no-repeat; background-size: cover;">
                         <div class="tablo-serv-in pb-0" style=" min-height: 420px;">
                             <h4 style="font-weight: bolder;">Перевозка<br>спецгрузов</h4>
-                            <p class="mt-4">Осуществляем профессиональную перевозку специальных грузов: от музейных экспонатов до жирафов. Благодаря нашим специалистам мы доставляем грузы, которым требуется особые условия: температурный режим, специальное оборудование, дополнительные меры безопасности</p>
+{#                            <p class="mt-4">Осуществляем профессиональную перевозку специальных грузов: от музейных экспонатов до жирафов. Благодаря нашим специалистам мы доставляем грузы, которым требуется особые условия: температурный режим, специальное оборудование, дополнительные меры безопасности</p>#}
                         </div>
                     </div>
                     <div class="d-flex justify-content-start">
                         <div class=" tablo-serv" style="margin-right: 16px;min-width: 220px; min-height: 195px; background-image: url({{ url_for('static', filename='img/min/adrian-sulyok-sczNLg6rrhQ-unsplash.jpg') }}); background-repeat: no-repeat; background-size: cover;">
                             <div class="tablo-serv-in pb-0">
                                 <h4 style="font-weight: bolder;">Складские<br>услуги</h4>
-                                <p class="mt-4 mb-0">Хранению любых<br>грузов</p>
+{#                                <p class="mt-4 mb-0">Хранению любых<br>грузов</p>#}
                             </div>
                         </div>
-                        <div class=" tablo-serv" style=" min-height: 165px; max-width: 150px; padding: 30px;padding-bottom: 40px;padding-top: 30px;"><a href="services" class="text-decoration-none text-center" style="color: #ffffff;">
+                        <div class=" tablo-serv" style=" min-height: 165px; max-width: 210px; padding: 30px;padding-bottom: 40px;padding-top: 30px;"><a href="services" class="text-decoration-none text-center" style="color: #ffffff;">
                             <h4>Другие <d style="font-size: 1.1em">услуги</d></h4>
                         </a></div>
                     </div>
@@ -121,9 +123,10 @@
         </div>
     </div>
     <div class="tablo-big tablo-invis mt-3 reveal">
-        <h3>Цены</h3>
+
         <div class="container-fluid px-5">
             <div class="row">
+                <h3 style="padding-left: 0 !important;">Цены</h3>
                 <div class="col tablo-light" style="padding: 25px;padding-bottom: 10px;padding-top: 18px; margin-left: 0;">
                     <div class=" al h-100">
                         <div class="d-flex justify-content-between w-100">
@@ -223,9 +226,10 @@
 {#        <p class="px-4" style="color: #2c2c2c;">Стоимость заказа расчитывается индивидуально</p>#}
     </div>
     <div class="tablo-big tablo-invis mt-3 reveal">
-        <h3>Почему выбирают нас</h3>
+
         <div class="container-fluid px-5">
             <div class="row">
+            <h3 style="padding-left: 0 !important;">Почему выбирают нас</h3>
                 <div style="background-color: #ab2524;" class="col tablo-light d-flex justify-content-start why-1">
                     <div class="d-flex align-items-center" style="margin-left: 20px;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
@@ -276,22 +280,24 @@
         </div>
     </div>
     <div class="tablo-big tablo-invis mt-3 reveal">
-        <h3>Виды транспорта</h3>
+
         <div class="container-fluid px-5">
+
             <div class="row">
-                <div class="col tablo-serv " style="min-height: 370px; min-width: 430px; background-image: url({{ url_for('static', filename='img/min/martin-sanchez-pfkzBUh4KyA-unsplash-min-2.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                <h3 style="padding-left: 0 !important;">Виды транспорта</h3>
+                <div class="col tablo-serv " style="min-height: 570px; min-width: 430px; background-image: url({{ url_for('static', filename='img/min/martin-sanchez-pfkzBUh4KyA-unsplash-min-2.jpg') }}); background-repeat: no-repeat; background-size: cover;">
                     <div class="tablo-serv-in">
                         <h4 style="font-weight: bolder;">Железнодорожный транспорт</h4>
                         <p class="mt-4">Железнодорожные перевозки – это оптимальное решение для транспортировки грузов на дальние расстояния с учетом экономической эффективности. Железнодорожный транспорт обеспечивает стабильность грузоперевозки и идеально подходит для доставки больших объемов товаров. Вагонный состав позволяет транспортировать любой тип грузов: сыпучие, жидкие, хрупкие, при этом на всем пути доставки мы гарантируем сохранность перевозимых предметов.</p>
                     </div>
                 </div>
-                <div class="col tablo-serv toff" style="min-height: 370px; min-width: 430px; background-image: url({{ url_for('static', filename='img/min/kevin-bosc-KH4AkJIjpOE-unsplash-min-2.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                <div class="col tablo-serv toff" style="min-height: 570px; min-width: 430px; background-image: url({{ url_for('static', filename='img/min/kevin-bosc-KH4AkJIjpOE-unsplash-min-2.jpg') }}); background-repeat: no-repeat; background-size: cover;">
                     <div class="tablo-serv-in">
                         <h4 style="font-weight: bolder;">Воздушный транспорт</h4>
                         <p class="mt-4">Авиаперевозки – один из лучших способов обеспечить оперативную межконтинентальную доставку грузов. Главное преимущество перемещений по воздуху – это скорость. "Магнавис" предоставляет вам доступ к мировой сети авиакомпаний и осуществляет срочную перевозку любых видов грузов в кротчайшие сроки. Это особенно актуально, к примеру, для скоропортящихся товаров: продукты питания, лекарственные препараты и живые цветы.</p>
                     </div>
                 </div>
-                <div class="col tablo-serv" style="min-height: 370px;  min-width: 430px; background-image: url({{ url_for('static', filename='img/min/caleb-ruiter-EmEQ6kK_5P0-unsplash-min-2.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                <div class="col tablo-serv" style="min-height: 570px;  min-width: 430px; background-image: url({{ url_for('static', filename='img/min/caleb-ruiter-EmEQ6kK_5P0-unsplash-min-2.jpg') }}); background-repeat: no-repeat; background-size: cover;">
                     <div class="tablo-serv-in">
                         <h4 style="font-weight: bolder;">Автомобильный транспорт</h4>
                         <p class="mt-4">Автомобильные перевозки – наиболее универсальный способ доставки, который обеспечивает расширенные возможности в планировании маршрутов. Мы предоставляем высококачественные услуги автомобильных перевозок с использованием транспорта различного назначения в зависимости от типа груза и направления. Перевозки с помощью авто особенно подходят для мелких и средних грузов, а также для доставки в отдаленные или плохо доступные места.</p>

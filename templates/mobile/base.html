@@ -32,54 +32,59 @@
     {% endfor %}
     <div class="window">
     <section class="mb-5 up">
-        <div style=" padding-top: 2vh;"><nav class="nav1 d-flex justify-content-between" style="margin-right: 20px; margin-left: 20px;">
+        <div style=" padding-top: 2vh;"><nav class="nav1 d-flex justify-content-between px-5" style="margin-right: 20px; margin-left: 20px;">
             <div  class="d-flex align-items-center">
-                <a href="/"><img src="{{ url_for('static', filename='img/logo-white-foo.png') }}" style="height: 50px; width: 366px"></a>
+                <a href="/"><img src="{{ url_for('static', filename='img/logo-white-foo.png') }}" style="height: 75px; width: 549.5px"></a>
             </div>
             <div class="d-flex justify-content-start">
-{#                <a href="javascript:scroll(0,9000)" class="btn btn-danger mr-5 mx-1">Отправить запрос</a>#}
 
-{#                <div class="dropdown">#}
-{#                    <div id="ytWidget" style="display: none;"></div>#}
-{#                    <button style="height: 38px;" class="btn btn-dark dropdown-toggle d-flex align-items-center" data-lang-active type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">#}
-{#                        РУС#}
-{#                    </button>#}
-{#                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" data-lang-list>#}
-{#                        <li><a  content="notranslate" class="dropdown-item" data-ya-lang="ru"><img style="height: 11px; width: 25px;" src="{{ url_for('static', filename='img/ru2.png') }}"></a></li>#}
-{#                        <li><a class="dropdown-item" data-ya-lang="en"><img style="height: 11px; width: 29px;" src="../static/img/en2.png"></a></li>#}
-{#                        <li><a class="dropdown-item" data-ya-lang="zh"><img style="height: 14px; width: 28px;" src="{{ url_for('static', filename='img/zh2.png') }}"></a></li>#}
-{#                    </ul>#}
-{#                </div>#}
-{#                <img class="d-none" src="../static/img/en2w.png">#}
-{#                <img class="d-none" src="../static/img/ru2w.png">#}
-{#                <img class="d-none" src="../static/img/zh2w.png">#}
 
                 <div class="c-dropdown mx-1">
-                            <button style="height: 50px; width: 50px;" class="btn btn-dark p-1 d-flex align-items-center justify-content-center dropdown-toggle-split"  data-bs-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="40" fill="white" class="bi bi-three-dots" viewBox="0 0 16 16">
+                            <button onclick="nav()" style="height: 75px; width: 75px;" class="btn btn-dark p-1 d-flex align-items-center justify-content-center dropdown-toggle-split"  data-bs-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="65" fill="white" class="bi bi-three-dots" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                            </svg>
-                        </button>
-                          <ul id="myDropdown" class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="services">Услуги</a></li>
-                            <li><a class="dropdown-item" href="about">О Нас</a></li>
-                            <li><a class="dropdown-item" href="payment">Оплата</a></li>
-                            <li><a class="dropdown-item" href="contacts">Контакты</a></li>
-                          </ul>
+                            </svg></button>
+
                         </div>
         </div>
         </nav></div>
-        <div class="p-up-s">
-            <table style="height:100%;" class="d-flex justify-content-start">
+        <div class="navv px-5 d-none" style="width: 100vw; position: absolute;">
+            <div class="tablo-light navv-in">
+                <ul>
+                    <li><a href="services">Услуги</a></li>
+                    <li><a href="about">О Нас</a></li>
+                    <li><a href="payment">Оплата</a></li>
+                    <li><a href="contacts">Контакты</a></li>
+                  </ul>
+                <a href="javascript:scroll(0,9000)" class="btn btn-danger mr-5 mx-1" style=" height: 75px;">Отправить запрос</a>
+
+                <div class="dropdown">
+                    <div id="ytWidget" style="display: none;"></div>
+                    <button style="height: 38px;" class="btn btn-dark dropdown-toggle d-flex align-items-center" data-lang-active type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        РУС
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" data-lang-list>
+                        <li><a  content="notranslate" class="dropdown-item" data-ya-lang="ru"><img style="height: 11px; width: 25px;" src="{{ url_for('static', filename='img/ru2.png') }}"></a></li>
+                        <li><a class="dropdown-item" data-ya-lang="en"><img style="height: 11px; width: 29px;" src="../static/img/en2.png"></a></li>
+                        <li><a class="dropdown-item" data-ya-lang="zh"><img style="height: 14px; width: 28px;" src="{{ url_for('static', filename='img/zh2.png') }}"></a></li>
+                    </ul>
+                </div>
+                <img class="d-none" src="../static/img/en2w.png">
+                <img class="d-none" src="../static/img/ru2w.png">
+                <img class="d-none" src="../static/img/zh2w.png">
+            </div>
+        </div>
+        <div style="width: 100vw;">
+            <table style="height:100%; width: 100%;" class="">
                 <tr>
-                    <td class="td1" STYLE="width: 100vw;padding-left: 15vw;padding-right: 15vw; padding-top: 0vh; line-height: 30px;">
-                        <h1 class="text-light m-0 p-0" style="line-height: revert; margin-bottom: 20px !important;"><b>ПЕРЕВОЗКА</b></h1>
-                        <h1 class="text-light m-0 p-0"><b>ГРУЗОВ</b></h1>
-                        <p class="text-light mb-5" style="font-size: 3em; margin-left: 2px;"><b>по всему миру</b></p>
+                    <td class="td1 px-5" STYLE="margin-left: 20px; padding-top: 0vh; line-height: 30px;">
+                        <h1 class="text-light m-0 p-0" style="line-height: revert; margin-bottom: 20px !important;font-size: 5.3em; margin-left: 20px !important;"><b>ПЕРЕВОЗКА</b></h1>
+                        <h1 class="text-light m-0 p-0" style="font-size: 5.3em; margin-left: 20px !important;"><b>ГРУЗОВ</b></h1>
+                        <p class="text-light mb-5" style="font-size: 4em; margin-left: 2px; margin-left: 20px !important;"><b>по всему миру</b></p>
                     </td>
                 </tr>
                 <tr class="center">
                     <td>
-                        <a href="javascript:scroll(0,1000)"><div class="arrow mt-3 down"><svg xmlns="http://www.w3.org/2000/svg" width="60" fill="white" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <a href="javascript:scroll(0,2000)"><div class="arrow mt-3 down"><svg xmlns="http://www.w3.org/2000/svg" width="120" fill="white" class="bi bi-chevron-down" viewBox="0 0 16 16">
                           <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
                         </svg></div></a>
                     </td>
@@ -94,11 +99,11 @@
             <div class="container-fluid">
             <div class="row" style="padding-right: 20px; padding-left: 20px;">
                 <div class="col px-0" style="margin-right: 40px; min-width: 372px; max-width: 600px;" >
-                    <a class="mt-1" href="/"><img style="margin-bottom: 40px; width: 372px; padding-right: 20px;" src="{{ url_for('static', filename='img/logo-white-foo.png') }}"></a>
-                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "services" >Услуги</a></div>
-                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "about" >О нас</a></div>
-                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "payment" >Оплата</a></div>
-                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "contacts" >Контакты</a></div>
+                    <a class="mt-1" href="/"><img style="margin-bottom: 40px;height: 70px; width: 513px; padding-right: 20px;" src="{{ url_for('static', filename='img/logo-white-foo.png') }}"></a>
+                    <div class="nav-a" style="font-size: 1.9em;"><a class="nav-link text-light mt-4" href= "services" >Услуги</a></div>
+                    <div class="nav-a" style="font-size: 1.9em;"><a class="nav-link text-light mt-4" href= "about" >О нас</a></div>
+                    <div class="nav-a" style="font-size: 1.9em;"><a class="nav-link text-light mt-4" href= "payment" >Оплата</a></div>
+                    <div class="nav-a" style="font-size: 1.9em;"><a class="nav-link text-light mt-4" href= "contacts" >Контакты</a></div>
                 </div>
 
             </div>
