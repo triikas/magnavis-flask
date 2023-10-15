@@ -18,6 +18,9 @@ mail = Mail(application)
 
 @application.route('/', methods=['post', 'get'])
 def home():
+    print("fgh: ", str(request.MOBILE))
+    if request.MOBILE:
+        flash("lkjlkj")
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=['sales1@magnavis.ru', 'sales2@magnavis.ru', 'cargo@magnavis.ru'])
         # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
@@ -27,8 +30,6 @@ def home():
         comment = request.form.get('comment')
         lovushka = request.form.get('lovushka')
         kod = request.form.get('kod')
-        if request.MOBILE:
-            flash("lkjlkj")
         if str(request.form.get('kod')) != "None":
             flash("Груз не найден")
             return redirect(url_for('home'))
