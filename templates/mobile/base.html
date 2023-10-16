@@ -48,7 +48,7 @@
         </div>
         </nav></div>
         <div class="navv px-5 d-none" style="width: 100vw; position: absolute;">
-            <div class="tablo-light navv-in">
+            <div class="tablo-light navv-in" style="padding-left: 40px; padding-right: 40px;">
 
                 <p class="mb-4"><a style="font-size: 1.5em; text-decoration: none;" class="text-light" href="services">Услуги</a></p>
                 <p class="mb-4"><a style="font-size: 1.5em; text-decoration: none;" class="text-light" href="about">О нас</a></p>
@@ -57,7 +57,7 @@
                 <table>
                     <tr>
                         <td>
-                            <a href="javascript:scroll(0,9000)" class="btn btn-danger mr-5 mx-1" style="font-size: 2em; height: 75px; margin-right: 20px !important;">Отправить запрос</a>
+                            <a href="javascript:scroll(0,9000)" class="btn btn-danger mr-5" style="font-size: 2em; height: 75px; margin-right: 20px !important;">Отправить запрос</a>
                         </td>
                         <td>
                             <div class="dropdown">
@@ -81,7 +81,7 @@
 
             </div>
         </div>
-        <div style="width: 100vw;">
+        <div style="width: 100vw;" class=" p-up-s">
             <table style="height:100%; width: 100%;" class="">
                 <tr>
                     <td class="td1 px-5" STYLE="margin-left: 20px; padding-top: 0vh; line-height: 30px;">
@@ -92,7 +92,7 @@
                 </tr>
                 <tr class="center">
                     <td>
-                        <a href="javascript:scroll(0,2000)"><div class="arrow mt-3 down"><svg xmlns="http://www.w3.org/2000/svg" width="120" fill="white" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <a href="javascript:scroll(0,1500)"><div class="arrow mt-3 down"><svg xmlns="http://www.w3.org/2000/svg" width="120" fill="white" class="bi bi-chevron-down" viewBox="0 0 16 16">
                           <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
                         </svg></div></a>
                     </td>
@@ -101,8 +101,7 @@
         </div>
     </section>
     {% block content %}{% endblock %}
-
-    <footer class="text-light mt-5 pt-5 px-0">
+    <footer class="text-light mt-5 pt-5 px-0 {% if request.MOBILE %}user-agent{% endif %}">
         <div style="margin-right: 5%; margin-left: 5%;">
             <div class="container-fluid">
             <div class="row" style="padding-right: 20px; padding-left: 20px;">
@@ -170,8 +169,8 @@
         </div>
     </footer>
     <div class="content__desc" style="margin-left: 5%; padding-left: 20px; margin-top: 140px; margin-bottom: 50px;">
-        <p style="color: rgba(192,192,192,0.66); font-size: 0.9em; margin: 0;">© 2023 Логистическая компания MAGNAVIS</p>
-        <p style="color: rgba(84,84,84,0.66); font-size: 0.7em;">Uicons от <a style="color: rgba(84,84,84,0.66);" href="https://www.flaticon.com/uicons">Flaticon</a></p>
+        <p style="color: rgba(192,192,192,0.66); font-size: 1.3em; margin: 0;">© 2023 Логистическая компания MAGNAVIS</p>
+        <p style="color: rgba(84,84,84,0.66); font-size: 1em;">Uicons от <a style="color: rgba(84,84,84,0.66);" href="https://www.flaticon.com/uicons">Flaticon</a></p>
     </div>
     <script src="{{ url_for('static', filename='yatranslate.js') }}"></script>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>

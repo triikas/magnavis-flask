@@ -45,8 +45,14 @@ function yaTranslateGetCode() {
 }
 
 function yaTranslateHtmlHandler(code) {
+    var lang_size = [28, 56, 22, 58, 22, 50];
+    if (!document.querySelector("footer").classList.contains("user-agent")) {
+        for (let i = 0; i < 6; i++) {
+            lang_size[i] /= 2;
+        }
+    }
     if (code === 'zh') {
-        document.querySelector('[data-lang-active]').innerHTML = `<img style="height: 14px; width: 28px;" src="../static/img/${code}2w.png">`;
+        document.querySelector('[data-lang-active]').innerHTML = `<img style="height: ${lang_size[0]}px; width: ${lang_size[1]}px;" src="../static/img/${code}2w.png">`;
         try {
             var doc = document.querySelectorAll(".cost-sp-2");
             for (let i of Array(4).keys()) {
@@ -54,7 +60,7 @@ function yaTranslateHtmlHandler(code) {
             }
         } catch (err) {}
     } else if (code === 'en') {
-        document.querySelector('[data-lang-active]').innerHTML = `<img style="height: 22px; width: 58px;" src="../static/img/${code}2w.png">`;
+        document.querySelector('[data-lang-active]').innerHTML = `<img style="height: ${lang_size[2]}px; width: ${lang_size[3]}px;" src="../static/img/${code}2w.png">`;
         try {
             var doc = document.querySelectorAll(".cost-sp");
             for (let i of Array(4).keys()) {
@@ -63,7 +69,7 @@ function yaTranslateHtmlHandler(code) {
         } catch (err) {}
     }
     else {
-        document.querySelector('[data-lang-active]').innerHTML = `<img style="height: 22px; width: 50px;" src="../static/img/${code}2w.png">`;
+        document.querySelector('[data-lang-active]').innerHTML = `<img style="height: ${lang_size[4]}px; width: ${lang_size[5]}px;" src="../static/img/${code}2w.png">`;
     }
 
 }

@@ -1,0 +1,245 @@
+{% extends "mobile/base.html" %}
+
+{% block title %}Услуги{% endblock %}
+
+{% block content %}
+    <style>.p-up-s{display: none;}section{ min-height: 0;}body{background-image: linear-gradient(to bottom, #171616, #000000);} .tablo-light{margin-top: 16px;} .tablo-color{margin-top: 16px;}</style>
+    <script>
+        document.querySelector("body").classList.remove("asyncImage");
+    </script>
+    <div class="tablo-big tablo-invis">
+        <h3 class="text-center m-0">Услуги</h3>
+    <div style="width: 50%; margin-left: 25%; height: 2px; background-color: white; margin-top: 20px;"></div>
+    </div>
+    <style>
+    .col{
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    </style>
+    <div class="tablo-big tablo-invis">
+
+       <div class="container-fluid px-5">
+            <div class="row">
+                <h3 style="padding-left: 0 !important;">Специфика грузов</h3>
+                <div style="" class="col tablo-light mx-0">
+                    <h4>Перевозки грузов с температурным режимом</h4>
+                </div>
+                <div style="margin-left: 32px !important;" class="col tablo-light mx-0 ">
+                    <h4>Перевозка животных</h4>
+                </div>
+                <div style="" class="col tablo-light mx-0">
+                    <h4>Перевозка зап. частей и оборудования</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div style="min-height: 125px;" class="col tablo-light mx-0">
+                    <h4>Перевозка медикаментов</h4>
+                </div>
+                <div style="min-height: 125px;margin-left: 32px !important;" class="col tablo-light mx-0 ">
+                    <h4>Перевозка продуктов питания</h4>
+                </div>
+                <div style="min-height: 125px;" class="col tablo-light mx-0">
+                    <h4>Перевозка автомобилей</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div style="min-height: 125px;" class="col tablo-light mx-0">
+                    <h4>Перевозка цветов</h4>
+                </div>
+                <div style="min-height: 125px;margin-left: 32px !important; margin-right: 32px !important;" class="col tablo-light mx-0 ">
+                    <h4>Перевозка ценных грузов</h4>
+                </div>
+                <div style="min-height: 125px;" class="col tablo-light mx-0">
+                    <h4>Перевозка хрупких грузов</h4>
+                </div>
+            </div>
+           <div class="row">
+                <div style="min-height: 125px;" class="col tablo-light mx-0 ">
+                    <h4>Перевозка опасных грузов</h4>
+                </div>
+                <div style="min-height: 125px;margin-left: 32px !important; margin-right: 32px !important;" class="col tablo-light mx-0 ">
+                    <h4>Перевозка предметов искусства</h4>
+                </div>
+                <div style="min-height: 125px;" class="col tablo-light mx-0 ">
+                    <h4>Перевозка одежды</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis">
+        <style>
+            .tablo-serv{
+                margin: 16px;
+            }
+        </style>
+
+        <div class="container-fluid px-5">
+            <div class="row">
+                <h3 style="padding-left: 0 !important;">Дополнительные услуги</h3>
+                <div class="col tablo-serv p-0 mx-0" style="min-width: 266px; background-image: url({{ url_for('static', filename='img/min/kadarius-seegars-DevJkLB3hWE-unsplash-1-min.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                        <h4>Упаковка грузов</h4>
+                    </div>
+                </div>
+                <div class="col tablo-serv p-0 mx-0 tof-dop" style="min-width: 266px; background-image: url({{ url_for('static', filename='img/min/markus-spiske-RWTUrJf7I5w-unsplash-1-min.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Погрузо-разгрузочные работы</h4>
+                    </div>
+                </div>
+                <div class="col tablo-serv p-0 mx-0" style="min-width: 400px; background-image: url({{ url_for('static', filename='img/min/industrial-port-and-container-yard-min.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Мультимодальные перевозки</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col tablo-serv p-0 mx-0" style=" background-image: url({{ url_for('static', filename='img/min/mealpro-efgpRGeu9tg-unsplash-min.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Доставка груза от «двери до двери»</h4>
+                    </div>
+                </div>
+                <div class="col tablo-serv p-0 mx-0 tof-dop-2" style=" background-image: url({{ url_for('static', filename='img/min/adrian-sulyok-sczNLg6rrhQ-unsplash-min.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Складские услуги</h4>
+                    </div>
+                </div>
+                <div class="col tablo-serv p-0 mx-0" style=" background-image: url({{ url_for('static', filename='img/min/closeup-of-real-estate-agent-using-calculator-while-his-client-is-signing-a-contract-min.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Страхование грузов</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col tablo-serv p-0 mx-0" style="min-width: 400px; background-image: url({{ url_for('static', filename='img/min/hand-with-pen-over-application-form.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Таможенное оформление грузов</h4>
+                    </div>
+                </div>
+                <div class="col tablo-serv p-0 mx-0 tof-dop" style="min-width: 266px; background-image: url({{ url_for('static', filename='img/min/anete-lusina-rFKBUwLg_WQ-unsplash-min.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Экспедирование грузов</h4>
+                    </div>
+                </div>
+                <div class="col tablo-serv p-0 mx-0" style="min-width: 266px; background-image: url({{ url_for('static', filename='img/min/jose-martin-ramirez-carrasco-yhNVwsKTSaI-unsplash-min.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Отслеживание грузов</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis">
+
+
+{#        <div class="container-fluid px-5">#}
+{#            <div class="row">#}
+{#                <div class="col p-0">#}
+{#                    <p>Наша компания, предоставляющая международные логистические услуги, имеет широкую сеть партнеров по всему миру. Это позволяет нам осуществлять доставку в различные страны и регионы.</p>#}
+{#                    <p>У нас есть собственные логистические хабы (транспортные узлы) в стратегически важных логистических точках. Это позволяет эффективно объединять, перегружать и перераспределять грузы между различными транспортными средствами и направлениями.</p>#}
+{#                    <p>Магнавис – это логистическая компания, которая активно участвует в формировании и поддержке международных договоров и соглашений, которые способствуют более эффективной и безопасной транспортировке грузов. Включая соглашения об упрощении таможенных процедур, сотрудничество с международными организациями и участие в глобальных программных инициативах.</p>#}
+{#                    <p>Наши международные логистические услуги дают возможность заказа и комбинированных (мультимодальных) перевозок, где груз доставляется с использованием нескольких видов транспорта, таких как морские, авиационные, железнодорожные и автомобильные. Это позволяет выбирать оптимальные маршруты доставки и обеспечивать гибкость в зависимости от типа груза, расстояния и временных ограничений.</p>#}
+{#                    <p>Транспортно-логистические услуги от нашей компании включают профессиональное таможенное оформление. Наши специалисты обладают необходимым опытом и знаниями в области международной таможенной практики, что позволяет обеспечивать быстрое и эффективное прохождение всех процедур, минимизируя риски задержек и проблем с таможенными органами.</p>#}
+{#                    <p>Поскольку международные перевозки грузов сопряжены с различными рисками, такими как потери, повреждения или задержки, мы предлагаем услуги по управлению рисками и страхованию, чтобы защитить интересы клиентов и обеспечить компенсацию в случае непредвиденных событий.</p>#}
+{#                    <p>Работа с международными клиентами и партнерами требует от логистических компаний способности адаптироваться к различным культурным и бизнес-практикам. Магнавис, как опытная международная логистическая компания обладает знаниями и навыками для успешного взаимодействия с разными культурами и обеспечения эффективной коммуникации на международном уровне.</p>#}
+{#                    <p>Мы готовы предоставить полный спектр логистических услуг (в том числе и международных) как единоразово, так и на постоянных условиях. Начните с бесплатной консультации у персонального менеджера, чтобы узнать больше о нашей компании и особенностях сотрудничества в интересующем вас формате. Для этого свяжитесь с нами любым удобным для вас способом.</p>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+        <div class="container-fluid px-5">
+            <div class="row">
+                <h3 style="padding-left: 0 !important;">Международные логистические услуги от нашей компании</h3>
+                <div class="col text-start-1" style="padding-left: 0; padding-right: 16px; min-width: 600px;">
+                    <p style="text-align: justify; margin-bottom: 20px;">Наша компания, предоставляющая международные логистические услуги, имеет широкую сеть надёжных партнеров по всему миру. Это позволяет нам осуществлять быструю доставку в различные регионы на любом конце света.</p>
+                    <p style="text-align: justify; margin-bottom: 20px;">Транспортно-логистические услуги от нашей компании включают профессиональное таможенное оформление. Специалисты МАГНАВИС обладают необходимым опытом и знаниями в области международной таможенной практики для обеспечения быстрого и эффективного прохождения всех процедур с минимальными задержками и без проблем с таможенными органами.</p>
+                    <p style="text-align: justify; margin-bottom: 20px;">Международные перевозки грузов сопряжены с различными рисками, такими как потери, повреждения или задержки, поэтому мы предлагаем услуги по управлению рисками и страхованию, чтобы защитить интересы клиентов и обеспечить компенсацию в случае непредвиденных событий.</p>
+                    <p style="text-align: justify; margin-bottom: 20px;">Ещё одно направление нашей работы – мультимодальные перевозки, когда для доставки груза задействованы несколько видов транспорта: авиационный, железнодорожный, автомобильный и морской. Таким образом мы находим оптимальные маршруты и обеспечиваем доставку груза в наиболее короткие сроки в зависимости от его типа.</p>
+
+                </div>
+                <div class="col text-start-1" style="padding-right: 0; padding-left: 16px; min-width: 430px;">
+                    <p style="text-align: justify; margin-bottom: 20px;">Мы взаимодействуем с крупнейшими логистическими хабами всего мира. Это позволяет эффективно объединять, перегружать и перераспределять грузы с использованием различных транспортных средств.</p>
+                    <p style="text-align: justify; margin-bottom: 20px;">МАГНАВИС активно участвует в формировании и поддержке международных договоров и соглашений, которые способствуют более эффективной и безопасной транспортировке грузов. Включая соглашения об упрощении таможенных процедур, сотрудничество с международными организациями и участие в глобальных программных инициативах.</p>
+                    <p style="text-align: justify; margin-bottom: 20px;">Работа с международными клиентами требует от логистических компаний способности учитывать различные культурные особенности. МАГНАВИС успешного взаимодействует с партнёрами по всему миру и обеспечивает эффективную коммуникацию на международном уровне, благодаря знаниям и навыкам наших специалистов.</p>
+                    <p style="text-align: justify; margin-bottom: 20px;">Мы готовы предоставить полный спектр логистических услуг для вашего бизнеса. Узнать больше о возможностях МАГНАВИС, а также обсудить детали нашего будущего сотрудничества можно на бесплатной консультации с персональным менеджером.</p>
+                    <p style="text-align: justify; margin-bottom: 20px;">Для этого свяжитесь с нами любым удобным для вас способом.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis d-none">
+
+        <div class="container-fluid px-5">
+            <div class="row"><h3 style="padding-left: 0 !important;">Вопрос-Ответ</h3><div class="col px-0">
+                <ul class="list-unstyled">
+                <li>
+                    <div class="d-flex justify-content-between faq-question fa-start que1">
+                        <h4 class="mt-2">Сколько весит розовый слон?</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-plus-circle plus" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+</svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-dash-circle minus" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+</svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p><b style="color: #6a1a21">2.1</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between faq-question que2">
+                        <h4 class="mt-2">Сколько весит розовый слон?</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-plus-circle plus" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+</svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-dash-circle minus" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+</svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p><b style="color: #6a1a21">2.2</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between faq-question que2">
+                        <h4 class="mt-2">Сколько весит розовый слон?</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-plus-circle plus" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+</svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-dash-circle minus" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+</svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p><b style="color: #6a1a21">2.3</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between faq-question fa-end que2">
+                        <h4 class="mt-2">Сколько весит розовый слон?</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-plus-circle plus" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+</svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-dash-circle minus" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+</svg>
+                    </div>
+                    <div class="faq-answer" style="border-radius: 0 0 8px 8px;">
+                        <p><b style="color: #6a1a21">2.4</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+                    </div>
+                </li>
+            </ul></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

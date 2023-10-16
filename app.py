@@ -62,7 +62,10 @@ def contacts():
         kod = request.form.get('kod')
         if str(request.form.get('kod')) != "None":
             flash("Груз не найден")
-            return redirect(url_for('contacts'))
+            if request.MOBILE:
+                return redirect(url_for('mobile/contacts'))
+            else:
+                return redirect(url_for('contacts'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
         if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
             flash("Вы указали почту, на которую нельзя ответить")
@@ -70,8 +73,14 @@ def contacts():
             mail.send(msg)
             flash("Запрос отправлен")
             # print(str((request.form.get('email'))))
-            return redirect(url_for('contacts'))
-    return render_template('contacts.html')
+            if request.MOBILE:
+                return redirect(url_for('mobile/contacts'))
+            else:
+                return redirect(url_for('contacts'))
+    if request.MOBILE:
+        return render_template('mobile/contacts.html')
+    else:
+        return render_template('contacts.html')
 
 @application.route('/payment', methods=['post', 'get'])
 def payment():
@@ -86,7 +95,10 @@ def payment():
         kod = request.form.get('kod')
         if str(request.form.get('kod')) != "None":
             flash("Груз не найден")
-            return redirect(url_for('payment'))
+            if request.MOBILE:
+                return redirect(url_for('mobile/payment'))
+            else:
+                return redirect(url_for('payment'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
         if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
             flash("Вы указали почту, на которую нельзя ответить")
@@ -94,8 +106,14 @@ def payment():
             mail.send(msg)
             flash("Запрос отправлен")
             # print(str((request.form.get('email'))))
-            return redirect(url_for('payment'))
-    return render_template('payment.html')
+            if request.MOBILE:
+                return redirect(url_for('mobile/payment'))
+            else:
+                return redirect(url_for('payment'))
+    if request.MOBILE:
+        return render_template('mobile/payment.html')
+    else:
+        return render_template('payment.html')
 
 @application.route('/services', methods=['post', 'get'])
 def services():
@@ -110,7 +128,10 @@ def services():
         kod = request.form.get('kod')
         if str(request.form.get('kod')) != "None":
             flash("Груз не найден")
-            return redirect(url_for('services'))
+            if request.MOBILE:
+                return redirect(url_for('mobile/services'))
+            else:
+                return redirect(url_for('services'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
         if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
             flash("Вы указали почту, на которую нельзя ответить")
@@ -118,8 +139,14 @@ def services():
             mail.send(msg)
             flash("Запрос отправлен")
             # print(str((request.form.get('email'))))
-            return redirect(url_for('services'))
-    return render_template('services.html')
+            if request.MOBILE:
+                return redirect(url_for('mobile/services'))
+            else:
+                return redirect(url_for('services'))
+    if request.MOBILE:
+        return render_template('mobile/services.html')
+    else:
+        return render_template('services.html')
 
 @application.route('/about', methods=['post', 'get'])
 def about():
@@ -134,7 +161,10 @@ def about():
         kod = request.form.get('kod')
         if str(request.form.get('kod')) != "None":
             flash("Груз не найден")
-            return redirect(url_for('about'))
+            if request.MOBILE:
+                return redirect(url_for('mobile/about'))
+            else:
+                return redirect(url_for('about'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
         if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
             flash("Вы указали почту, на которую нельзя ответить")
@@ -142,8 +172,14 @@ def about():
             mail.send(msg)
             flash("Запрос отправлен")
             # print(str((request.form.get('email'))))
-            return redirect(url_for('about'))
-    return render_template('about.html')
+            if request.MOBILE:
+                return redirect(url_for('mobile/about'))
+            else:
+                return redirect(url_for('about'))
+    if request.MOBILE:
+        return render_template('mobile/about.html')
+    else:
+        return render_template('about.html')
 
 
 if __name__ == '__main__':
