@@ -37,114 +37,138 @@
         <div class="container-fluid px-5">
             <div class="row">
                 <h3 style="padding-left: 0 !important;">Преимущества работы с нашей компанией</h3>
+{#                <div style="min-width: 422px;" class="col t tablo-light">#}
+{#                    <table>#}
+{#                        <tr class="">#}
+{#                            <td class="h-100 d-flex justify-content-start align-items-center" style="height: 116px !important; margin-bottom: 40px;">#}
+{#                                <div style="margin-right: 30px; margin-left: 30px;" class="d-flex justify-content-center"><img style="width: 220px; height: 220px;" src="{{ url_for('static', filename='img/1(w).svg') }}"></div>#}
+{#                                <h4>Доставка<br>любых&nbspгрузов</h4>#}
+{#                            </td>#}
+{#                        </tr>#}
+{#                        <tr class=""><td class="h-100">#}
+{#                            <p class="m-0" style="text-align: justify;">#}
+{#Мы работаем с любыми категориями товаров, включая опасные, негабаритные и тяжеловесные грузы. С нашей помощью вы можете перевезти килограммы мороженого, музейные экспонаты и крокодилов. Исходя из специфики вашего груза мы подберём оптимальный вариант маршрута и обеспечим соблюдение всех необходимых требований и норм.                        </td></tr>#}
+{#                    </table>#}
+{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
+{#                    <h4>Доставка любых грузов</h4>#}
+{#                    <p>#}
+{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
+{#                    </p>#}
+{#                </div>#}
+{#                <div style="min-width: 422px;" class="col t tablo-light tof-about">#}
+{#                    <table>#}
+{#                        <tr class="">#}
+{#                            <td class="h-100 d-flex justify-content-start align-items-center" style="height: 116px !important; margin-bottom: 40px;">#}
+{#                                <div style="margin-right: 40px; margin-left: 40px;" class="d-flex justify-content-center"><img style="width: 220px; height: 220px;" src="{{ url_for('static', filename='img/2(w).svg') }}"></div>#}
+{#                                <h4>Страхование<br>грузов</h4>#}
+{#                            </td>#}
+{#                        </tr>#}
+{#                        <tr class=""><td class="h-100">#}
+{#                            <p class="m-0" style="text-align: justify;">#}
+{#С "Магнавис" ваши грузы прибудут в точку назначения в целостности и сохранности. Наша компания предлагает надёжные и выгодные услуги по страхованию грузов на время перевозки. Условия договоров отвечают современным требованиям, предъявляемым к страховому покрытию, и позволяют защитить клиентов от возможных убытков.                        </td></tr>#}
+{#                    </table>#}
+{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
+{#                    <h4>Доставка любых грузов</h4>#}
+{#                    <p>#}
+{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
+{#                    </p>#}
+{#                </div>#}
+{#                <div style="min-width: 422px;" class="col t tablo-light">#}
+{#                    <table>#}
+{#                        <tr class="">#}
+{#                            <td class="h-100 d-flex justify-content-start align-items-center" style="height: 116px !important; margin-bottom: 40px;">#}
+{#                                <div style="margin-right: 40px; margin-left: 40px;" class="d-flex justify-content-center"><img style="width: 220px; height: 220px;" src="{{ url_for('static', filename='img/3w.svg') }}"></div>#}
+{#                                <h4>Таможенное<br>оформление</h4>#}
+{#                            </td>#}
+{#                        </tr>#}
+{#                        <tr class=""><td class="h-100">#}
+{#                            <p class="m-0" style="text-align: justify;">#}
+{#Мы обеспечиваем профессиональное и оперативное таможенное оформление грузов, организуя нашим клиентам быстрое и беспрепятственное прохождение таможенных процедур. Мы работаем с различными видами товаров, поэтому знаем все тонкости таможенного оформления: от подготовки документов до сопровождения груза на границе.                    </table>#}
+{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
+{#                    <h4>Доставка любых грузов</h4>#}
+{#                    <p>#}
+{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
+{#                    </p>#}
+{#                </div>#}
+                <div style="min-width: 622px;" class="col t tablo-light">
+                    <div class="d-flex justify-content-between align-items-center w-100 mb-5">
+                            <div>
+                                <h4>Доставка любых грузов</h4>
+                            </div>
+                            <div class="tablo-color p-3 m-0">
+                                <img style="width: 60px; height: 60px;" src="{{ url_for('static', filename='img/1(w).svg') }}">
+                            </div>
+                    </div>
+                    <p class="m-0" style="text-align: justify;">
+Мы работаем с любыми категориями товаров, включая опасные, негабаритные и тяжеловесные грузы. С нашей помощью вы можете перевезти килограммы мороженого, музейные экспонаты и крокодилов. Исходя из специфики вашего груза мы подберём оптимальный вариант маршрута и обеспечим соблюдение всех необходимых требований и норм.
+                            </p>
+                </div>
+                <div style="min-width: 622px;" class="col t tablo-light">
+                    <div class="d-flex justify-content-between align-items-center w-100 mb-5">
+                            <div>
+                                <h4>Страхование грузов</h4>
+                            </div>
+                            <div class="tablo-color p-3 m-0">
+                                <img style="width: 60px; height: 60px;" src="{{ url_for('static', filename='img/2(w).svg') }}">
+                            </div>
+                    </div>
+                    <p class="m-0" style="text-align: justify;">
+С "Магнавис" ваши грузы прибудут в точку назначения в целостности и сохранности. Наша компания предлагает надёжные и выгодные услуги по страхованию грузов на время перевозки. Условия договоров отвечают современным требованиям, предъявляемым к страховому покрытию, и позволяют защитить клиентов от возможных убытков.
+                    </p>
+                </div>
                 <div style="min-width: 422px;" class="col t tablo-light">
-                    <table>
-                        <tr class="">
-                            <td class="h-100 d-flex justify-content-start align-items-center" style="height: 116px !important; margin-bottom: 40px;">
-                                <div style="margin-right: 30px; margin-left: 30px;" class="d-flex justify-content-center"><img style="width: 116px; height: 116px;" src="{{ url_for('static', filename='img/1(w).svg') }}"></div>
-                                <h4>Доставка<br>любых&nbspгрузов</h4>
-                            </td>
-                        </tr>
-                        <tr class=""><td class="h-100">
-                            <p class="m-0" style="text-align: justify;">
-Мы работаем с любыми категориями товаров, включая опасные, негабаритные и тяжеловесные грузы. С нашей помощью вы можете перевезти килограммы мороженого, музейные экспонаты и крокодилов. Исходя из специфики вашего груза мы подберём оптимальный вариант маршрута и обеспечим соблюдение всех необходимых требований и норм.                        </td></tr>
-                    </table>
-{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
-{#                    <h4>Доставка любых грузов</h4>#}
-{#                    <p>#}
-{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
-{#                    </p>#}
+                    <div class="d-flex justify-content-between align-items-center w-100 mb-5">
+                            <div>
+                                <h4>Таможенное оформление</h4>
+                            </div>
+                            <div class="tablo-color p-3 m-0">
+                                <img style="width: 60px; height: 60px;" src="{{ url_for('static', filename='img/3w.svg') }}">
+                            </div>
+                    </div>
+                    <p class="m-0" style="text-align: justify;">
+Мы обеспечиваем профессиональное и оперативное таможенное оформление грузов, организуя нашим клиентам быстрое и беспрепятственное прохождение таможенных процедур. Мы работаем с различными видами товаров, поэтому знаем все тонкости таможенного оформления: от подготовки документов до сопровождения груза на границе.
+                            </p>
                 </div>
-                <div style="min-width: 422px;" class="col t tablo-light tof-about">
-                    <table>
-                        <tr class="">
-                            <td class="h-100 d-flex justify-content-start align-items-center" style="height: 116px !important; margin-bottom: 40px;">
-                                <div style="margin-right: 40px; margin-left: 40px;" class="d-flex justify-content-center"><img style="width: 116px; height: 116px;" src="{{ url_for('static', filename='img/2(w).svg') }}"></div>
-                                <h4>Страхование<br>грузов</h4>
-                            </td>
-                        </tr>
-                        <tr class=""><td class="h-100">
-                            <p class="m-0" style="text-align: justify;">
-С "Магнавис" ваши грузы прибудут в точку назначения в целостности и сохранности. Наша компания предлагает надёжные и выгодные услуги по страхованию грузов на время перевозки. Условия договоров отвечают современным требованиям, предъявляемым к страховому покрытию, и позволяют защитить клиентов от возможных убытков.                        </td></tr>
-                    </table>
-{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
-{#                    <h4>Доставка любых грузов</h4>#}
-{#                    <p>#}
-{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
-{#                    </p>#}
-                </div>
-                <div style="min-width: 422px;" class="col t tablo-light">
-                    <table>
-                        <tr class="">
-                            <td class="h-100 d-flex justify-content-start align-items-center" style="height: 116px !important; margin-bottom: 40px;">
-                                <div style="margin-right: 40px; margin-left: 40px;" class="d-flex justify-content-center"><img style="width: 116px; height: 116px;" src="{{ url_for('static', filename='img/3w.svg') }}"></div>
-                                <h4>Таможенное<br>оформление</h4>
-                            </td>
-                        </tr>
-                        <tr class=""><td class="h-100">
-                            <p class="m-0" style="text-align: justify;">
-Мы обеспечиваем профессиональное и оперативное таможенное оформление грузов, организуя нашим клиентам быстрое и беспрепятственное прохождение таможенных процедур. Мы работаем с различными видами товаров, поэтому знаем все тонкости таможенного оформления: от подготовки документов до сопровождения груза на границе.                    </table>
-{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
-{#                    <h4>Доставка любых грузов</h4>#}
-{#                    <p>#}
-{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
-{#                    </p>#}
-                </div>
-
             </div>
             <div class="row">
-                <div style="min-width: 422px;" class="col t tablo-light">
-                    <table>
-                        <tr class="" style="height: 156px;">
-                            <td class="h-100 d-flex justify-content-start align-items-center" style="height: 116px !important; margin-bottom: 40px;">
-                                <div style="margin-right: 40px; margin-left: 40px;" class="d-flex justify-content-center"><img style="width: 110px; height: 110px;" src="{{ url_for('static', filename='img/4w.svg') }}"></div>
-                                <h4>Персональный<br>менеджер<br>24/7</h4>
-                            </td>
-                        </tr>
-                        <tr class=""><td class="h-100">
-                            <p class="m-0" style="text-align: justify;">
-Преимуществом МАГНАВИС является индивидуальный подход к каждому клиенту и своевременное информирование клиента. Наши менеджеры всегда готовы помочь в выборе оптимального варианта доставки для вашего груза.                    </table>
-{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
-{#                    <h4>Доставка любых грузов</h4>#}
-{#                    <p>#}
-{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
-{#                    </p>#}
+                <div style="min-width: 622px;" class="col t tablo-light">
+                    <div class="d-flex justify-content-between align-items-center w-100 mb-5">
+                            <div>
+                                <h4>Персональный менеджер 24/7</h4>
+                            </div>
+                            <div class="tablo-color p-3 m-0">
+                                <img style="width: 60px; height: 60px;" src="{{ url_for('static', filename='img/4w.svg') }}">
+                            </div>
+                    </div>
+                    <p class="m-0" style="text-align: justify;">
+Преимуществом МАГНАВИС является индивидуальный подход к каждому клиенту и своевременное информирование клиента. Наши менеджеры всегда готовы помочь в выборе оптимального варианта доставки для вашего груза.
+                            </p>
                 </div>
-                <div style="min-width: 422px;" class="col t tablo-light tof-about">
-                    <table>
-                        <tr class=""  style="height: 156px;">
-                            <td class="h-100 d-flex justify-content-start align-items-center"  style="height: 116px !important; margin-bottom: 40px;">
-                                <div style="margin-right: 40px; margin-left: 40px;" class="d-flex justify-content-center"><img style="width: 116px; height: 116px;" src="{{ url_for('static', filename='img/5w.svg') }}"></div>
-                                <h4>Максимально<br>короткие<br>сроки</h4>
-                            </td>
-                        </tr>
-                        <tr class=""><td class="h-100">
-                            <p class="m-0" style="text-align: justify;">
-Наша задача – доставить ваш груз в максимально сжатые сроки. Для этого мы работаем с самими быстрыми курьерами и самым быстрым транспортом в мире. И главное – мы гарантируем сохранность ваших товаров на всём пути следования.                        </td></tr>
-                    </table>
-{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
-{#                    <h4>Доставка любых грузов</h4>#}
-{#                    <p>#}
-{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
-{#                    </p>#}
+                <div style="min-width: 622px;" class="col t tablo-light">
+                    <div class="d-flex justify-content-between align-items-center w-100 mb-5">
+                            <div>
+                                <h4>Максимально короткие сроки</h4>
+                            </div>
+                            <div class="tablo-color p-3 m-0">
+                                <img style="width: 60px; height: 60px;" src="{{ url_for('static', filename='img/5w.svg') }}">
+                            </div>
+                    </div>
+                    <p class="m-0" style="text-align: justify;">
+Наша задача – доставить ваш груз в максимально сжатые сроки. Для этого мы работаем с самими быстрыми курьерами и самым быстрым транспортом в мире. И главное – мы гарантируем сохранность ваших товаров на всём пути следования.
+                    </p>
                 </div>
                 <div style="min-width: 422px;" class="col t tablo-light">
-                    <table>
-                        <tr class="">
-                            <td class="h-100 d-flex justify-content-start align-items-center" style="height: 116px !important; margin-bottom: 40px;">
-                                <div style="margin-right: 40px; margin-left: 40px;" class="d-flex justify-content-center"><img style="width: 116px; height: 116px;" src="{{ url_for('static', filename='img/6w.svg') }}"></div>
-                                <h4>Из&nbspлюбой<br>точки<br>мира</h4>
-                            </td>
-                        </tr>
-                        <tr class=""><td class="h-100">
-                            <p class="m-0" style="text-align: justify;">
- "Магнавис" подвластны любые расстояния: мы осуществляем перевозки по суше, воде и воздуху. С нами ваши грузы придут точно в срок. Мы доставим ваш груз в любую точку мира даже тогда, когда кажется, что все границы закрыты.                        </td></tr>
-                    </table>
-{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
-{#                    <h4>Доставка любых грузов</h4>#}
-{#                    <p>#}
-{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
-{#                    </p>#}
+                    <div class="d-flex justify-content-between align-items-center w-100 mb-5">
+                            <div>
+                                <h4>Из любой точки мира</h4>
+                            </div>
+                            <div class="tablo-color p-3 m-0">
+                                <img style="width: 60px; height: 60px;" src="{{ url_for('static', filename='img/6w.svg') }}">
+                            </div>
+                    </div>
+                    <p class="m-0" style="text-align: justify;">
+ "Магнавис" подвластны любые расстояния: мы осуществляем перевозки по суше, воде и воздуху. С нами ваши грузы придут точно в срок. Мы доставим ваш груз в любую точку мира даже тогда, когда кажется, что все границы закрыты.
+                            </p>
                 </div>
 
             </div>
@@ -153,30 +177,46 @@
     <div class="tablo-big tablo-invis">
 
         <div class="container-fluid px-5"><div class="row"><h3 style="padding-left: 0 !important;">Мы в цифрах</h3>
-            <div class="d-flex justify-content-between  tablo-color mx-0" style="padding-right: 40px; padding-left: 40px;">
-                <div style="width: 100%; margin-bottom: 60px; margin-right: 60px;">
-                    <div style="margin-bottom: 60px;">
-                <h5>Договоров подписано</h5>
-                <p class="m-0" style="font-size: 4em; max-height: 70px;">139</p>
-            </div>
-            <div>
-                <h5>Постоянных клиентов</h5>
-                <p class="m-0" style="font-size: 4em; max-height: 70px;">57</p>
-            </div>
-                </div>
-                <div style="width: 100%; margin-bottom: 60px;">
-                    <div style="margin-bottom: 60px;">
-                <h5>Направлений</h5>
-                <p class="m-0" style="font-size: 4em; max-height: 70px;">300+</p>
-            </div>
-            <div>
-                <h5>Грузов перевезено</h5>
-                <p class="m-0" style="font-size: 4em; max-height: 70px;">478</p>
-            </div>
-                </div>
-
-
-        </div>
+{#            <div class="d-flex justify-content-between  tablo-color mx-0" style="padding-right: 40px; padding-left: 40px;">#}
+{#                <div style="width: 100%; margin-bottom: 60px; margin-right: 60px;">#}
+{#                    #}
+{#                    #}
+{#                </div>#}
+{#                <div style="width: 100%; margin-bottom: 60px;">#}
+{#                    #}
+{#                    #}
+{#                </div>#}
+{#            </div>#}
+            <div class="tablo-color" style="padding: 40px;"><table style="width: 100%;">
+                <tr>
+                    <td style=" padding-bottom: 30px;">
+{#                        <div style="margin-bottom: 60px;">#}
+                        <h5>Договоров подписано</h5>
+                        <p class="m-0" style="font-size: 4em; ">139</p>
+{#                    </div>#}
+                    </td>
+                    <td style="padding-left: 40px; padding-bottom: 30px;">
+{#                        <div>#}
+                    <h5 style="width: 370px;">Постоянных клиентов</h5>
+                    <p class="m-0" style="font-size: 4em; width: 300px;">57</p>
+{#                </div>#}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+{#                        <div style="margin-bottom: 60px;">#}
+                        <h5>Направлений</h5>
+                        <p class="m-0" style="font-size: 4em; ">300+</p>
+{#                    </div>#}
+                    </td>
+                    <td style="padding-left: 40px;">
+{#                        <div>#}
+                    <h5>Грузов перевезено</h5>
+                    <p class="m-0" style="font-size: 4em; ">478</p>
+{#                </div>#}
+                    </td>
+                </tr>
+            </table></div>
 
         </div> </div>
 

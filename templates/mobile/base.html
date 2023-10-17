@@ -31,8 +31,9 @@
         </div>
     {% endfor %}
     <div class="window">
-    <section class="mb-5 up">
-        <div style=" padding-top: 2vh;"><nav class="nav1 d-flex justify-content-between px-5" style="margin-right: 20px; margin-left: 20px;">
+    <section class=" up">
+
+        <div class="nav-ac" style="z-index: 0; padding-top: 49px; padding-bottom: 4px;"><nav class="nav1 d-flex justify-content-between px-5" style="margin-right: 20px; margin-left: 20px; border: none;">
             <div  class="d-flex align-items-center">
                 <a href="/"><img src="{{ url_for('static', filename='img/logo-white-foo.png') }}" style="height: 70px; width: 513px"></a>
             </div>
@@ -47,8 +48,10 @@
                         </div>
         </div>
         </nav></div>
-        <div class="navv px-5 d-none" style="width: 100vw; position: absolute;">
-            <div class="tablo-light navv-in" style="padding-left: 40px; padding-right: 40px;">
+        <div class="navv d-none " style="width: 100vw; top: 124px; position: absolute; border: none; ; animation: ani 1s forwards; z-index: 5;">
+
+
+            <div class="tablo-light navv-in m-0" style="padding-left: 40px; padding-right: 40px; border-radius: 0 0 8px 8px; border: none;">
 
                 <p class="mb-4"><a style="font-size: 1.5em; text-decoration: none;" class="text-light" href="services">Услуги</a></p>
                 <p class="mb-4"><a style="font-size: 1.5em; text-decoration: none;" class="text-light" href="about">О нас</a></p>
@@ -81,6 +84,7 @@
 
             </div>
         </div>
+
         <div style="width: 100vw;" class=" p-up-s">
             <table style="height:100%; width: 100%;" class="">
                 <tr>
@@ -114,6 +118,7 @@
                 </div>
 
             </div>
+                <div class="my-5" style="width: 100%; border: #7c7c7c solid 2px;"></div>
             <div class="row mt-4" style="padding-right: 20px; padding-left: 20px;">
                 <div class="col px-0 max-footer" style=" min-width: 335px;">
                     <form method="post">

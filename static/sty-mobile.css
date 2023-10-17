@@ -55,6 +55,9 @@ img{
 p{
     font-size: 1.5em;
 }
+li{
+    font-size: 1.5em;
+}
 iframe{
     border-radius: 8px;
     overflow: hidden;
@@ -126,7 +129,32 @@ footer{
     padding-top: 30px;
     /*border-radius: 4px;*/
     border-radius: 8px;
-    background-color: rgba(96, 96, 96,0.42);
+    background-color: rgba(23, 23, 23, 0.45);
+    &>p{
+        display: none;
+    }
+    /*&:hover{*/
+    /*    background-color: rgba(7, 7, 7, 0.67);*/
+    /*    &&>p{*/
+    /*        display: block;*/
+    /*    }*/
+    /*}*/
+
+}
+.btn-dark{
+    background-color: #373c41;
+}
+.nav-activ{
+    background-color: #575a57;
+}
+.tablo-serv-in-tr{
+    height: 100%;
+    padding: 30px;
+    padding-bottom: 40px;
+    padding-top: 30px;
+    /*border-radius: 4px;*/
+    border-radius: 8px;
+    background-color: rgba(70, 70, 70, 0.31);
     &>p{
         display: none;
     }
@@ -271,7 +299,7 @@ nav>td{
     margin-right: 100px;
 }
 section{
-    padding-top: 20px;
+    /*padding-top: 20px;*/
     min-height: 100vh;
     /*background-image: url("img/p-up-2.PNG");*/
     /*background-repeat: no-repeat;*/
@@ -372,16 +400,16 @@ a{
     height: 60px;
     min-width: 10vw;
 }
-.pay-form{
-    max-width: 500px;
-}
+/*.pay-form{*/
+/*    max-width: 500px;*/
+/*}*/
 .form_pay_field {
   /*font-family: inherit;*/
   width: 100%;
   border: 0;
   border-bottom: 2px solid #d9d2d2;
   outline: 0;
-  font-size: 1.3rem;
+  font-size: 2.5rem;
   color:  #e0dede;
   padding: 7px 0;
   background: transparent;
@@ -392,7 +420,7 @@ a{
   }
 
   &:placeholder-shown ~ .form_pay_label {
-    font-size: 1.3rem;
+    font-size: 2.5rem;
     cursor: text;
     top: 20px;
   }
@@ -402,7 +430,7 @@ a{
   top: 0;
   display: block;
   transition: 0.2s;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #fcfbfb;
 }
 .form_pay_field:focus {
@@ -411,7 +439,7 @@ a{
     top: 0;
     display: block;
     transition: 0.2s;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight:700;
   }
   padding-bottom: 6px;
@@ -501,6 +529,10 @@ li{
         cursor: pointer;
     }
 }
+@keyframes ani {
+  0% {transform: translateY(-150%);}
+  100% {transform: translateY(0);}
+}
 .fa-start{
     border-radius: 8px 8px 0 0;
 }
@@ -547,6 +579,7 @@ li{
         display: block;
     }
 }
+
 .faq-answer{
     padding: 20px;
     display: none;
@@ -1004,8 +1037,9 @@ li{
         display: none;
     }
     .text-about-2{
+        /*color: #ffffff;*/
         display: block !important;
-        background: rgba(96, 96, 96,0.42);
+        background: rgba(73, 73, 73, 0.7);
         margin: 0 !important;
         width: 100% !important;
         height: 100% !important;
