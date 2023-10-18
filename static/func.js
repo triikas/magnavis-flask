@@ -132,39 +132,57 @@ window.addEventListener("scroll", reveal);
   });
 })();
 
-$(function() {
-  // copy content to clipboard
-  function copyToClipboard(element) {
-    var $temp = $("<input>");
-    $("body").append($temp);
-    $temp.val($(element).text()).select();
-    document.execCommand("copy");
-    $temp.remove();
-  }
-
-  // copy coupone code to clipboard
-  $(".coupon-btn").on("click", function() {
-    copyToClipboard("#coupon-field");
-    $(".coupon-alert").fadeIn("slow");
-  });
-});
-
-$(function() {
-  // copy content to clipboard
-  function copyToClipboard(element) {
-    var $temp = $("<input>");
-    $("body").append($temp);
-    $temp.val($(element).text()).select();
-    document.execCommand("copy");
-    $temp.remove();
-  }
-
-  // copy coupone code to clipboard
-  $(".coupon-btn-2").on("click", function() {
-    copyToClipboard("#coupon-field-2");
-    $(".coupon-alert-2").fadeIn("slow");
-  });
-});
+const copyContent1 = async () => {
+    try {
+      await navigator.clipboard.writeText("pvl@magnavis.ru");
+      console.log('Content copied to clipboard');
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+}
+const copyContent2 = async () => {
+    try {
+      await navigator.clipboard.writeText("andr@magnavis.ru");
+      console.log('Content copied to clipboard');
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+}
+// $(function() {
+//   // copy content to clipboard
+//   function copyToClipboard(element) {
+//     var $temp = $("<input>");
+//     $("body").append($temp);
+//     $temp.val($(element).text()).select();
+//     document.execCommand("copy");
+//     $temp.remove();
+//   }
+//
+//   // copy coupone code to clipboard
+//   // $(".coupon-btn").on("click", function() {
+//   //   copyToClipboard("#coupon-field");
+//   //   $(".coupon-alert").fadeIn("slow");
+//   });
+// });
+//
+//
+//
+// $(function() {
+//   // copy content to clipboard
+//   function copyToClipboard(element) {
+//     var $temp = $("<input>");
+//     $("body").append($temp);
+//     $temp.val($(element).text()).select();
+//     document.execCommand("copy");
+//     $temp.remove();
+//   }
+//
+//   // copy coupone code to clipboard
+//   // $(".coupon-btn-2").on("click", function() {
+//   //   copyToClipboard("#coupon-field-2");
+//   //   $(".coupon-alert-2").fadeIn("slow");
+//   // });
+// });
 
 function flashh() {
   var fl = document.querySelectorAll(".flash");
