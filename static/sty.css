@@ -63,6 +63,75 @@ footer{
     /*padding-left: 5%;*/
     /*padding-right: 5%;*/
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.but {
+  position: relative;
+  cursor: pointer;
+  border: none;
+  /*width: 300px;*/
+  /*height: 80px;*/
+  /*border-radius: 50px;*/
+  outline: none;
+  background: linear-gradient(90deg, #aa2524, #575a57, #575a57, #aa2524);
+  background-size: 400%;
+  color: #fff;
+  /*font-size: 24px;*/
+  /*letter-spacing: 4px;*/
+    animation: animate 8s linear infinite;
+}
+/*.but::before {*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  right: 0;*/
+/*  bottom: 0;*/
+/*  z-index: -1;*/
+/*  background: linear-gradient(90deg, #EC37D0, #D92B2B, #FFAA0D, #EC37D0);*/
+/*  background-size: 400%;*/
+/*  !*border-radius: 50px;*!*/
+/*  opacity: 0;*/
+/*  transition: .5s;*/
+/*}*/
+/*.but:hover {*/
+/*  animation: animate 10s linear infinite;*/
+/*}*/
+/*.but:hover::before {*/
+/*  filter: blur(25px);*/
+/*  opacity: .8;*/
+/*  animation: animate 10s linear infinite;*/
+/*}*/
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .tablo-light{
     padding: 20px;
     padding-bottom: 40px;
@@ -73,6 +142,14 @@ footer{
     color: white;
     background-color: #575a57;
     border-radius: 8px;
+}
+.mes-in{
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 1rem;
+    padding: 16px;
+    font-weight: bold;
+
 }
 .tablo-color{
     /*border: solid #ab2524 4px;*/

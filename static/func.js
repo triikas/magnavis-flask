@@ -6,7 +6,7 @@
 // items.forEach(item => item.addEventListener('click', toggleAccordion));
 
 function forms() {
-  document.querySelector(".form1").innerHTML = `<form class="text-light" method="post">
+  document.querySelector(".form1").innerHTML = `<form class="text-light" method="post" id="request-f">
                         <h3 class="mt-3">Отправить запрос</h3>
                         <div class="mb-3 form__group field">
                             <input minlength="2" type="text" class="form__field" name="name" id="name" placeholder="name" required>
@@ -33,8 +33,9 @@ function forms() {
                             <label for="check" id="mail-check" style="color: gray; font-size: 0.8em;">Согласие на обработку персональных данных</label>
                         </div>
                         <button type="submit" id="mail-btn" class="btn btn-danger">Отправить</button>
+                        <div class="mes"></div>
                     </form>`;
-  document.querySelector(".form2").innerHTML = `<form class="text-light" method="post" style="padding-top: 15px">
+  document.querySelector(".form2").innerHTML = `<form class="text-light" method="post" id="request-f-min" style="padding-top: 15px">
                         <h3 class="mt-3">Отправить запрос</h3>
                         <div class="mb-3 form__group field">
                             <input minlength="2" type="text" class="form__field" name="name" id="name1" placeholder="name" required>
@@ -61,11 +62,165 @@ function forms() {
                             <label for="check1" style="color: gray; font-size: 0.8em;">Согласие на обработку персональных данных</label>
                         </div>
                         <button type="submit" class="btn btn-danger">Отправить</button>
+                        <div class="mes"></div>
                     </form>`;
   // var dodo = document.querySelectorAll(".comment__text");
   // document.querySelector(".dodo").innerHTML = `${dodo[0]}`;
   // console.log(dodo[0].textContent)
 }
+
+
+
+
+// document.querySelector(".form-request-1").addEventListener("submit", function(event){
+//   event.preventDefault();
+//
+//   fetch(form.action, {
+//       method: "post",
+//       body: new URLSearchParams(new FormData(form)) // for application/x-www-form-urlencoded
+//       // body: new FormData(form) // for multipart/form-data
+//   });
+// });
+// $('#submit').click(function() {
+//     $.ajax({
+//         url: '../app.py',
+//         type: 'POST',
+//         data: {
+//             email: 'email@example.com',
+//             message: 'hello world!'
+//         },
+//         success: function(msg) {
+//             alert('Email Sent');
+//         }
+//     });
+// });
+// $(".form-request-1").submit(function (e) {
+//   e.preventDefault();
+//   let form = $(this);
+//   let btn = form.find(".btn");
+//
+//   $.ajax({
+//
+//   })
+//
+// });
+$(document).on('submit','#request-f',function(e) {
+  console.log('hello');
+  e.preventDefault();
+  let mes = $(this).find(".mes");
+  let btn = $(this).find(".btn");
+  btn[0].classList.add("but");
+  $.ajax({
+    type:'POST',
+    url:'/',
+    data:{
+      name: $("#name").val(),
+      email: $("#email").val(),
+      number: $("#number").val(),
+      comment: $("#comment").val()
+    },
+    success:function()
+    {
+      btn[0].classList.remove("but");
+      // mes.classList.remove("d-none");
+      if ($("#email").val().indexOf("noreply" || "no.reply" || "no-reply" ) !== -1)  {
+        mes.html("<div class='mes-in d-flex justify-content-start align-items-center' style='background-color: rgb(187,162,21);'><svg style='margin-right: 16px;' xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" fill=\"currentColor\" class=\"bi bi-exclamation-square\" viewBox=\"0 0 16 16\">\n" +
+          "  <path d=\"M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z\"/>\n" +
+          "  <path d=\"M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z\"/>\n" +
+          "</svg><p class='m-0'>Указана неверная почта</p></div>");
+      } else {
+        mes.html("<div class='mes-in d-flex justify-content-start align-items-center' style='background-color: rgb(107,187,21);'><svg style='margin-right: 16px;' xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" fill=\"currentColor\" class=\"bi bi-check-square\" viewBox=\"0 0 16 16\">\n" +
+            "  <path d=\"M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z\"/>\n" +
+            "  <path d=\"M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z\"/>\n" +
+            "</svg><p class='m-0'>Запрос отправлен</p></div>");
+      }
+      // alert('saved');
+    }
+  })
+});
+
+
+$(document).on('submit','#request-f-min',function(e) {
+  console.log('hello');
+  e.preventDefault();
+  let mes = $(this).find(".mes");
+  let btn = $(this).find(".btn");
+  btn[0].classList.add("but");
+  $.ajax({
+    type:'POST',
+    url:'/',
+    data:{
+      name: $("#name1").val(),
+      email: $("#email1").val(),
+      number: $("#number1").val(),
+      comment: $("#comment1").val()
+    },
+    success:function()
+    {
+      btn[0].classList.remove("but");
+      // mes.classList.remove("d-none");
+      if ($("#email1").val().indexOf("noreply" || "no.reply" || "no-reply" ) !== -1)  {
+        mes.html("<div class='mes-in d-flex justify-content-start align-items-center' style='background-color: rgb(187,162,21);'><svg style='margin-right: 16px;' xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" fill=\"currentColor\" class=\"bi bi-exclamation-square\" viewBox=\"0 0 16 16\">\n" +
+          "  <path d=\"M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z\"/>\n" +
+          "  <path d=\"M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z\"/>\n" +
+          "</svg><p class='m-0'>Указана неверная почта</p></div>");
+      } else {
+        mes.html("<div class='mes-in d-flex justify-content-start align-items-center' style='background-color: rgb(107,187,21);'><svg style='margin-right: 16px;' xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" fill=\"currentColor\" class=\"bi bi-check-square\" viewBox=\"0 0 16 16\">\n" +
+            "  <path d=\"M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z\"/>\n" +
+            "  <path d=\"M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z\"/>\n" +
+            "</svg><p class='m-0'>Запрос отправлен</p></div>");
+      }
+      // alert('saved');
+    }
+  })
+});
+
+
+$(document).on('submit','#status-f',function(e) {
+  console.log('hello');
+  e.preventDefault();
+  let mes = $(this).find(".mes");
+  let btn = $(this).find(".btn");
+  btn[0].classList.add("but");
+  $.ajax({
+    type:'POST',
+    url:'/',
+    data:{
+      kod: $("#kod").val()
+    },
+    success:function()
+    {
+      btn[0].classList.remove("but");
+      mes.html("<div class='mes-in d-flex justify-content-start align-items-center' style='background-color: rgb(187,162,21);'><svg style='margin-right: 16px;' xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" fill=\"currentColor\" class=\"bi bi-exclamation-square\" viewBox=\"0 0 16 16\">\n" +
+          "  <path d=\"M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z\"/>\n" +
+          "  <path d=\"M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z\"/>\n" +
+          "</svg><p class='m-0'>Груз не найден</p></div>");
+    }
+  })
+});
+$(document).on('submit','#status-f-min',function(e) {
+  console.log('hello');
+  e.preventDefault();
+  let mes = $(this).find(".mes");
+  let btn = $(this).find(".btn");
+  btn[0].classList.add("but");
+  $.ajax({
+    type:'POST',
+    url:'/',
+    data:{
+      kod: $("#kod").val()
+    },
+    success:function()
+    {
+      btn[0].classList.remove("but");
+      mes.html("<div class='mes-in d-flex justify-content-start align-items-center' style='background-color: rgb(187,162,21);'><svg style='margin-right: 16px;' xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" fill=\"currentColor\" class=\"bi bi-exclamation-square\" viewBox=\"0 0 16 16\">\n" +
+          "  <path d=\"M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z\"/>\n" +
+          "  <path d=\"M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z\"/>\n" +
+          "</svg><p class='m-0'>Груз не найден</p></div>");
+    }
+  })
+});
+
 
 $(function() {
   var $speed = 200;

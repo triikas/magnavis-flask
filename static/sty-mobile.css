@@ -268,6 +268,37 @@ footer h3{
 #mail-btn{
     font-size: 1.6em;
 }
+.but {
+  position: relative;
+  cursor: pointer;
+  border: none;
+  /*width: 300px;*/
+  /*height: 80px;*/
+  /*border-radius: 50px;*/
+  outline: none;
+  background: linear-gradient(90deg, #aa2524, #575a57, #575a57, #aa2524);
+  background-size: 400%;
+  color: #fff;
+  /*font-size: 24px;*/
+  /*letter-spacing: 4px;*/
+    animation: animate 8s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+.mes-in{
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 1rem;
+    padding: 16px;
+    font-weight: bold;
+
+}
 .nav1{
     width: 100%;
 }
