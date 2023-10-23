@@ -20,8 +20,8 @@ mail = Mail(application)
 def home():
     print("fgh: ", str(request.MOBILE))
     if request.method == 'POST':
-        # msg = Message("Запрос с magnavis.ru", recipients=['sales1@magnavis.ru', 'sales2@magnavis.ru', 'cargo@magnavis.ru'])
-        msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
+        msg = Message("Запрос с magnavis.ru", recipients=['sales1@magnavis.ru', 'sales2@magnavis.ru', 'cargo@magnavis.ru'])
+        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
         number = request.form.get('number')
