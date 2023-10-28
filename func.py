@@ -26,3 +26,4 @@ def numbers():
             "cargo_num": [cargo_num[0], contracts_num[1]]
         }, outfile)
     return [contracts_num[0], client_num[0], cargo_num[0]]
+# s = numbers()
