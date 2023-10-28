@@ -180,7 +180,7 @@ def about():
             else:
                 return redirect(url_for('about'))
     if request.MOBILE:
-        return render_template('mobile/about.html')
+        return render_template('mobile/about.html', numbers=numbers)
     else:
         return render_template('about.html', numbers=numbers)
 
