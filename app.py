@@ -16,12 +16,13 @@ application.config['MAIL_DEFAULT_SENDER'] = 'inforder@magnavis.ru'
 # application.config['MAIL_PASSWORD'] = 'RapsodiyaFenseret5'
 application.config['MAIL_PASSWORD'] = 'Kiloper=1224'
 mail = Mail(application)
+mails = ['sales1@magnavis.ru', 'cargo@magnavis.ru', 'marwy@magnavus.ru', 'pvl@magnavis.ru', 'andr@magnavis.ru']
 
 @application.route('/', methods=['post', 'get'])
 def home():
     print("fgh: ", str(request.MOBILE))
     if request.method == 'POST':
-        msg = Message("Запрос с magnavis.ru", recipients=['sales1@magnavis.ru', 'sales2@magnavis.ru', 'cargo@magnavis.ru'])
+        msg = Message("Запрос с magnavis.ru", recipients=mails)
         # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
@@ -53,7 +54,7 @@ def home():
 @application.route('/contacts', methods=['post', 'get'])
 def contacts():
     if request.method == 'POST':
-        msg = Message("Запрос с magnavis.ru", recipients=['sales1@magnavis.ru', 'sales2@magnavis.ru', 'cargo@magnavis.ru'])
+        msg = Message("Запрос с magnavis.ru", recipients=mails)
         # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
@@ -86,7 +87,7 @@ def contacts():
 @application.route('/payment', methods=['post', 'get'])
 def payment():
     if request.method == 'POST':
-        msg = Message("Запрос с magnavis.ru", recipients=['sales1@magnavis.ru', 'sales2@magnavis.ru', 'cargo@magnavis.ru'])
+        msg = Message("Запрос с magnavis.ru", recipients=mails)
         # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
@@ -119,7 +120,7 @@ def payment():
 @application.route('/services', methods=['post', 'get'])
 def services():
     if request.method == 'POST':
-        msg = Message("Запрос с magnavis.ru", recipients=['sales1@magnavis.ru', 'sales2@magnavis.ru', 'cargo@magnavis.ru'])
+        msg = Message("Запрос с magnavis.ru", recipients=mails)
         # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
@@ -153,7 +154,7 @@ def services():
 def about():
     numbers = func.numbers()
     if request.method == 'POST':
-        msg = Message("Запрос с magnavis.ru", recipients=['sales1@magnavis.ru', 'sales2@magnavis.ru', 'cargo@magnavis.ru'])
+        msg = Message("Запрос с magnavis.ru", recipients=mails)
         # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
