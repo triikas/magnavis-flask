@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
 from flask_mail import Mail, Message
 from flask_mobility import Mobility
+import func
 
 application = Flask(__name__)
 Mobility(application)
@@ -150,6 +151,7 @@ def services():
 
 @application.route('/about', methods=['post', 'get'])
 def about():
+    numbers = func.numbers()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=['sales1@magnavis.ru', 'sales2@magnavis.ru', 'cargo@magnavis.ru'])
         # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
@@ -179,7 +181,7 @@ def about():
     if request.MOBILE:
         return render_template('mobile/about.html')
     else:
-        return render_template('about.html')
+        return render_template('about.html', numbers=numbers)
 
 
 if __name__ == '__main__':
