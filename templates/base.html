@@ -36,7 +36,7 @@
     <section class="mb-5 up">
         <div style="margin-left: 5%; margin-right: 5%; padding-top: 2vh;"><nav class="nav1 d-flex justify-content-between w-100" style="margin-right: 20px; margin-left: 20px;">
             <div  class="d-flex align-items-center">
-                <a href="/"><img src="{{ url_for('static', filename='img/logo-white-foo.png') }}" style="height: 34px; width: 249.08px"></a>
+                <a href="/"><img src="{{ url_for('static', filename='img/logo-white-foo.png') }}" style="height: 34px; width: 249.08px" alt="MAGNAVIS"></a>
             </div>
             <div class="d-flex justify-content-start">
                 <a href="javascript:scroll(0,9000)" class="btn btn-danger mr-5 mx-1">Отправить запрос</a>
@@ -47,14 +47,14 @@
                         РУС
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" data-lang-list>
-                        <li><a  content="notranslate" class="dropdown-item" data-ya-lang="ru"><img style="height: 11px; width: 25px;" src="{{ url_for('static', filename='img/ru2.png') }}"></a></li>
-                        <li><a class="dropdown-item" data-ya-lang="en"><img style="height: 11px; width: 29px;" src="../static/img/en2.png"></a></li>
-                        <li><a class="dropdown-item" data-ya-lang="zh"><img style="height: 14px; width: 28px;" src="{{ url_for('static', filename='img/zh2.png') }}"></a></li>
+                        <li><a  content="notranslate" class="dropdown-item" data-ya-lang="ru"><img style="height: 11px; width: 25px;" src="{{ url_for('static', filename='img/ru2.png') }}" alt="ru"></a></li>
+                        <li><a class="dropdown-item" data-ya-lang="en"><img style="height: 11px; width: 29px;" src="../static/img/en2.png" alt="en"></a></li>
+                        <li><a class="dropdown-item" data-ya-lang="zh"><img style="height: 14px; width: 28px;" src="{{ url_for('static', filename='img/zh2.png') }}" alt="zh"></a></li>
                     </ul>
                 </div>
-                <img class="d-none" src="../static/img/en2w.png">
-                <img class="d-none" src="../static/img/ru2w.png">
-                <img class="d-none" src="../static/img/zh2w.png">
+                <img class="d-none" src="../static/img/en2w.png" alt="en">
+                <img class="d-none" src="../static/img/ru2w.png" alt="ru">
+                <img class="d-none" src="../static/img/zh2w.png" alt="zh">
 
                 <div class="c-dropdown mx-1">
                             <button style="height: 38px;" class="btn btn-dark p-1 d-flex align-items-center justify-content-center dropdown-toggle-split"  data-bs-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="26" fill="white" class="bi bi-three-dots" viewBox="0 0 16 16">
@@ -96,7 +96,7 @@
             <div class="container-fluid">
             <div class="row" style="padding-right: 20px; padding-left: 20px;">
                 <div class="col px-0" style="margin-right: 40px; min-width: 372px; max-width: 600px;" >
-                    <a class="mt-1" href="/"><img style="margin-bottom: 40px; width: 372px; padding-right: 20px;" src="{{ url_for('static', filename='img/logo-white-foo.png') }}"></a>
+                    <a class="mt-1" href="/"><img style="margin-bottom: 40px; width: 372px; padding-right: 20px;" src="{{ url_for('static', filename='img/logo-white-foo.png') }}" alt="MAGNAVIS"></a>
                     <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/" >Главная</a></div>
                     <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "services" >Услуги</a></div>
                     <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "about" >О нас</a></div>
