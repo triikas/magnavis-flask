@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col tablo-light d-flex justify-content-between" style="margin-left: 0; margin-right: 10px; padding: 0;">
                     <div style="padding: 40px;">
-                        <h3>Офис<br>Санкт&#x2011;Петербург</h3>
+                        <h3>Офис<br><d style="font-size: 0.8em;">Санкт&#x2011;Петербург</d></h3>
                         <p class="mb-5" style="">191015, Санкт-Петербург,<br>Таврическая ул. 17, литера А, офис 324</p>
                         <div class="d-flex justify-content-start align-items-start" style="height: 20px; margin-bottom: 30px;"><p  style="font-size: large"><img style="height: 32.8px; width: 285.2px;" src="{{ url_for('static', filename='img/pvl.png') }}"  alt="mail-1"></p><img class="coupon-btn" onclick="copyContent1()" src="{{ url_for('static', filename='img/copy.png') }}" style="margin-left: 50px; width: 28px; height: 28px;" alt="copy"></div>
                         <div class="d-flex justify-content-start align-items-start mb-5" style="height: 20px; m"><p  style="font-size: large"><img style="height: 32.8px; width: 315px;" src="{{ url_for('static', filename='img/andr.png') }}" alt="mail-2" ></p><img class="coupon-btn-2" onclick="copyContent2()" src="{{ url_for('static', filename='img/copy.png') }}" style="margin-left: 20px; width: 28px; height: 28px;" alt="copy"></div>
@@ -52,35 +52,53 @@
                 }
             </style>
             <div class="row">
-                <h3 style="padding-left: 0 !important;">Реквизиты</h3>
-                <div class="col tablo-color tt-1" style="margin-left: 0;">
+                <div class="col tablo-color tt-1" style="margin-left: 0; margin-right: 0; min-width: 500px !important;">
                     <p>Юридическое лицо</p>
                     <h4>ООО "МАГНАВИС"</h4>
+                    <h4>ИНН 7840104914</h4>
+                    <h4>КПП 784001001</h4>
+                    <h4 style="margin-bottom: 16px;">ОГРН 1237800029895</h4>
+                    <h4>Адрес: 191015, Санкт-Петербург, Таврическая ул. 17, литера А, офис 324</h4>
                 </div>
-                <div class="col tablo-color tt-2">
-                    <p>ИНН/КПП</p>
-                    <h4>7840104914<br>784001001</h4>
-                </div>
-                <div class="col tablo-color tt-3" style="margin-right: 0;">
-                    <p>ОГРН</p>
-                    <h4>1237800029895 (15.03.2023)</h4>
-                </div>
-            </div>
-            <div class="row mb-5">
-                <div class="col tablo-color tt-1" style="margin-left: 0;">
-                    <p>Юридический адрес</p>
-                    <h4>191028, Санкт-Петербург, ул. Кирочная, д.6, литера А, офис 3</h4>
-                </div>
-                <div class="col tablo-color tt-2">
-                    <p>Банк</p>
+                <div class="col tablo-color tt-2" style="margin-right: 0; margin-left: 0; min-width: 500px !important;">
+                    <p>Реквизиты счета</p>
                     <h4>АО "ТИНЬКОФФ БАНК"</h4>
-                    <h4>Расчетный счет: 4070281081- 0001339296</h4>
                     <h4>БИК банка: 044525974</h4>
+                    <h4 style="margin-bottom: 16px;">Расчетный счет: 40702810810001339296</h4>
+
+                    <p>Оператор ЭДО</p>
+
+                    <h4>НТЦ СТЭК (СТЭК-ТРАСТ)</h4>
+                    <h4>ID участника: 2BA577342</h4>
                 </div>
-                <div class="col tablo-color tt-3" style="margin-right: 0;"><a href="{{  url_for('static', filename='doc/MGNVS - Реквизиты.pdf')  }}" download="MGNVS - Реквизиты.pdf" class="d-block text-decoration-none text-light h-100 w-100">
-                    <h4>Скачать<br>реквизиты</h4>
-                </a></div>
+                <div class="col tt-3 d-flex justify-content-around tablo-color p-0" style="margin-right: 0; margin-left: 0; min-width: 500px !important; padding-right: 40px;">
+                    <a href="{{  url_for('static', filename='doc/MGNVS - Реквизиты.pdf')  }}" download="MGNVS - Реквизиты.pdf" class="text-decoration-none w-100 d-block" style="color: #dad3d3; padding: 20px;"><div>
+                        <div class="d-flex justify-content-center align-items-center" style="border-radius: 30px; width: 60px; height: 60px;"><svg xmlns="http://www.w3.org/2000/svg" width="60" fill="#dad3d3" class="bi bi-filetype-docx" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M14 4.5V11h-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5Zm-6.839 9.688v-.522a1.54 1.54 0 0 0-.117-.641.861.861 0 0 0-.322-.387.862.862 0 0 0-.469-.129.868.868 0 0 0-.471.13.868.868 0 0 0-.32.386 1.54 1.54 0 0 0-.117.641v.522c0 .256.04.47.117.641a.868.868 0 0 0 .32.387.883.883 0 0 0 .471.126.877.877 0 0 0 .469-.126.861.861 0 0 0 .322-.386 1.55 1.55 0 0 0 .117-.642Zm.803-.516v.513c0 .375-.068.7-.205.973a1.47 1.47 0 0 1-.589.627c-.254.144-.56.216-.917.216a1.86 1.86 0 0 1-.92-.216 1.463 1.463 0 0 1-.589-.627 2.151 2.151 0 0 1-.205-.973v-.513c0-.379.069-.704.205-.975.137-.274.333-.483.59-.627.257-.147.564-.22.92-.22.357 0 .662.073.916.22.256.146.452.356.59.63.136.271.204.595.204.972ZM1 15.925v-3.999h1.459c.406 0 .741.078 1.005.235.264.156.46.382.589.68.13.296.196.655.196 1.074 0 .422-.065.784-.196 1.084-.131.301-.33.53-.595.689-.264.158-.597.237-.999.237H1Zm1.354-3.354H1.79v2.707h.563c.185 0 .346-.028.483-.082a.8.8 0 0 0 .334-.252c.088-.114.153-.254.196-.422a2.3 2.3 0 0 0 .068-.592c0-.3-.04-.552-.118-.753a.89.89 0 0 0-.354-.454c-.158-.102-.361-.152-.61-.152Zm6.756 1.116c0-.248.034-.46.103-.633a.868.868 0 0 1 .301-.398.814.814 0 0 1 .475-.138c.15 0 .283.032.398.097a.7.7 0 0 1 .273.26.85.85 0 0 1 .12.381h.765v-.073a1.33 1.33 0 0 0-.466-.964 1.44 1.44 0 0 0-.49-.272 1.836 1.836 0 0 0-.606-.097c-.355 0-.66.074-.911.223-.25.148-.44.359-.571.633-.131.273-.197.6-.197.978v.498c0 .379.065.704.194.976.13.271.321.48.571.627.25.144.555.216.914.216.293 0 .555-.054.785-.164.23-.11.414-.26.551-.454a1.27 1.27 0 0 0 .226-.674v-.076h-.765a.8.8 0 0 1-.117.364.699.699 0 0 1-.273.248.874.874 0 0 1-.401.088.845.845 0 0 1-.478-.131.834.834 0 0 1-.298-.393 1.7 1.7 0 0 1-.103-.627v-.495Zm5.092-1.76h.894l-1.275 2.006 1.254 1.992h-.908l-.85-1.415h-.035l-.852 1.415h-.862l1.24-2.015-1.228-1.984h.932l.832 1.439h.035l.823-1.439Z"/>
+        </svg></div>
+                        <div class="d-flex align-items-center justify-content-center download" style="height: 150px; width: 100%;"><h4 class="m-0 text-center">Скачать реквизиты</h4></div>
+
+                        <div class="d-flex justify-content-center align-items-center float-end" style="border-radius: 8px; width: 60px; height: 60px; background-color: #d9d2d2;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ab2524" class="bi bi-arrow-down-square" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 2.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+    </svg></div>
+                    </div></a>
+                </div>
             </div>
+{#            <div class="row mb-5">#}
+{#                <div class="col tablo-color tt-1" style="margin-left: 0;">#}
+{#                    <p>Юридический адрес</p>#}
+{#                    <h4>191028, Санкт-Петербург, ул. Кирочная, д.6, литера А, офис 3</h4>#}
+{#                </div>#}
+{#                <div class="col tablo-color tt-2">#}
+{#                    <p>Банк</p>#}
+{#                    <h4>АО "ТИНЬКОФФ БАНК"</h4>#}
+{#                    <h4>Расчетный счет: 4070281081- 0001339296</h4>#}
+{#                    <h4>БИК банка: 044525974</h4>#}
+{#                </div>#}
+{#                <div class="col tablo-color tt-3" style="margin-right: 0;"><a href="{{  url_for('static', filename='doc/MGNVS - Реквизиты.pdf')  }}" download="MGNVS - Реквизиты.pdf" class="d-block text-decoration-none text-light h-100 w-100">#}
+{#                    <h4>Скачать<br>реквизиты</h4>#}
+{#                </a></div>#}
+{#            </div>#}
         </div>
 
     </div>
@@ -96,8 +114,8 @@
         <div class="container-fluid px-5">
             <div class="row">
                 <h3 style="padding-left: 0 !important;">Документы</h3>
-                <div class="col t-1 d-flex justify-content-around tablo-light" style="width: 250px; padding: 20px; margin-left: 0;">
-                    <a href="" download="MGNVS - Договор.docx" class="text-decoration-none w-100" style="color: #dad3d3;"><div>
+                <div class="col t-1 d-flex justify-content-around tablo-light p-0" style="width: 250px; padding: 20px; margin-left: 0;">
+                    <a href="" download="MGNVS - Договор.docx" class="text-decoration-none w-100" style="color: #dad3d3; padding: 20px;"><div>
                         <div class="d-flex justify-content-center align-items-center" style="border-radius: 60px; width: 60px; height: 60px;"><svg xmlns="http://www.w3.org/2000/svg" width="60" fill="#dad3d3" class="bi bi-filetype-docx" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M14 4.5V11h-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5Zm-6.839 9.688v-.522a1.54 1.54 0 0 0-.117-.641.861.861 0 0 0-.322-.387.862.862 0 0 0-.469-.129.868.868 0 0 0-.471.13.868.868 0 0 0-.32.386 1.54 1.54 0 0 0-.117.641v.522c0 .256.04.47.117.641a.868.868 0 0 0 .32.387.883.883 0 0 0 .471.126.877.877 0 0 0 .469-.126.861.861 0 0 0 .322-.386 1.55 1.55 0 0 0 .117-.642Zm.803-.516v.513c0 .375-.068.7-.205.973a1.47 1.47 0 0 1-.589.627c-.254.144-.56.216-.917.216a1.86 1.86 0 0 1-.92-.216 1.463 1.463 0 0 1-.589-.627 2.151 2.151 0 0 1-.205-.973v-.513c0-.379.069-.704.205-.975.137-.274.333-.483.59-.627.257-.147.564-.22.92-.22.357 0 .662.073.916.22.256.146.452.356.59.63.136.271.204.595.204.972ZM1 15.925v-3.999h1.459c.406 0 .741.078 1.005.235.264.156.46.382.589.68.13.296.196.655.196 1.074 0 .422-.065.784-.196 1.084-.131.301-.33.53-.595.689-.264.158-.597.237-.999.237H1Zm1.354-3.354H1.79v2.707h.563c.185 0 .346-.028.483-.082a.8.8 0 0 0 .334-.252c.088-.114.153-.254.196-.422a2.3 2.3 0 0 0 .068-.592c0-.3-.04-.552-.118-.753a.89.89 0 0 0-.354-.454c-.158-.102-.361-.152-.61-.152Zm6.756 1.116c0-.248.034-.46.103-.633a.868.868 0 0 1 .301-.398.814.814 0 0 1 .475-.138c.15 0 .283.032.398.097a.7.7 0 0 1 .273.26.85.85 0 0 1 .12.381h.765v-.073a1.33 1.33 0 0 0-.466-.964 1.44 1.44 0 0 0-.49-.272 1.836 1.836 0 0 0-.606-.097c-.355 0-.66.074-.911.223-.25.148-.44.359-.571.633-.131.273-.197.6-.197.978v.498c0 .379.065.704.194.976.13.271.321.48.571.627.25.144.555.216.914.216.293 0 .555-.054.785-.164.23-.11.414-.26.551-.454a1.27 1.27 0 0 0 .226-.674v-.076h-.765a.8.8 0 0 1-.117.364.699.699 0 0 1-.273.248.874.874 0 0 1-.401.088.845.845 0 0 1-.478-.131.834.834 0 0 1-.298-.393 1.7 1.7 0 0 1-.103-.627v-.495Zm5.092-1.76h.894l-1.275 2.006 1.254 1.992h-.908l-.85-1.415h-.035l-.852 1.415h-.862l1.24-2.015-1.228-1.984h.932l.832 1.439h.035l.823-1.439Z"/>
         </svg></div>
@@ -107,8 +125,8 @@
     </svg></div>
                     </div></a>
                 </div>
-                <div class="col t-2 d-flex justify-content-around tablo-light" style="width: 250px; padding: 20px;">
-                    <a href="{{  url_for('static', filename='doc/MGNVS - Заявка на бронирование.docx')  }}" download="MGNVS - Заявка на бронирование.docx" class="text-decoration-none w-100" style="color: #dad3d3;"><div>
+                <div class="col t-2 d-flex justify-content-around tablo-light p-0" style="width: 250px; padding: 20px;">
+                    <a href="{{  url_for('static', filename='doc/MGNVS - Заявка на бронирование.docx')  }}" download="MGNVS - Заявка на бронирование.docx" class="text-decoration-none w-100" style="color: #dad3d3; padding: 20px;"><div>
                         <div class="d-flex justify-content-center align-items-center" style="border-radius: 30px; width: 60px; height: 60px;"><svg xmlns="http://www.w3.org/2000/svg" width="60" fill="#dad3d3" class="bi bi-filetype-docx" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M14 4.5V11h-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5Zm-6.839 9.688v-.522a1.54 1.54 0 0 0-.117-.641.861.861 0 0 0-.322-.387.862.862 0 0 0-.469-.129.868.868 0 0 0-.471.13.868.868 0 0 0-.32.386 1.54 1.54 0 0 0-.117.641v.522c0 .256.04.47.117.641a.868.868 0 0 0 .32.387.883.883 0 0 0 .471.126.877.877 0 0 0 .469-.126.861.861 0 0 0 .322-.386 1.55 1.55 0 0 0 .117-.642Zm.803-.516v.513c0 .375-.068.7-.205.973a1.47 1.47 0 0 1-.589.627c-.254.144-.56.216-.917.216a1.86 1.86 0 0 1-.92-.216 1.463 1.463 0 0 1-.589-.627 2.151 2.151 0 0 1-.205-.973v-.513c0-.379.069-.704.205-.975.137-.274.333-.483.59-.627.257-.147.564-.22.92-.22.357 0 .662.073.916.22.256.146.452.356.59.63.136.271.204.595.204.972ZM1 15.925v-3.999h1.459c.406 0 .741.078 1.005.235.264.156.46.382.589.68.13.296.196.655.196 1.074 0 .422-.065.784-.196 1.084-.131.301-.33.53-.595.689-.264.158-.597.237-.999.237H1Zm1.354-3.354H1.79v2.707h.563c.185 0 .346-.028.483-.082a.8.8 0 0 0 .334-.252c.088-.114.153-.254.196-.422a2.3 2.3 0 0 0 .068-.592c0-.3-.04-.552-.118-.753a.89.89 0 0 0-.354-.454c-.158-.102-.361-.152-.61-.152Zm6.756 1.116c0-.248.034-.46.103-.633a.868.868 0 0 1 .301-.398.814.814 0 0 1 .475-.138c.15 0 .283.032.398.097a.7.7 0 0 1 .273.26.85.85 0 0 1 .12.381h.765v-.073a1.33 1.33 0 0 0-.466-.964 1.44 1.44 0 0 0-.49-.272 1.836 1.836 0 0 0-.606-.097c-.355 0-.66.074-.911.223-.25.148-.44.359-.571.633-.131.273-.197.6-.197.978v.498c0 .379.065.704.194.976.13.271.321.48.571.627.25.144.555.216.914.216.293 0 .555-.054.785-.164.23-.11.414-.26.551-.454a1.27 1.27 0 0 0 .226-.674v-.076h-.765a.8.8 0 0 1-.117.364.699.699 0 0 1-.273.248.874.874 0 0 1-.401.088.845.845 0 0 1-.478-.131.834.834 0 0 1-.298-.393 1.7 1.7 0 0 1-.103-.627v-.495Zm5.092-1.76h.894l-1.275 2.006 1.254 1.992h-.908l-.85-1.415h-.035l-.852 1.415h-.862l1.24-2.015-1.228-1.984h.932l.832 1.439h.035l.823-1.439Z"/>
         </svg></div>

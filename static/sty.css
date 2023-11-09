@@ -830,10 +830,21 @@ li{
         min-width: 700px !important;
     }
 }
+@media (max-width: 1718px) {
+    .download{
+            height: 290px !important;
+    }
+}
+
 @media (max-width: 1318px) {
     .tt-3{
         margin-left: 0;
         min-width: 700px !important;
+        max-width: 1900px !important;
+
+    }
+    .download{
+            height: 150px !important;
     }
     .tt-2{
         margin-right: 0;
