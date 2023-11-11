@@ -3,7 +3,7 @@
 {% block title %}О нас{% endblock %}
 
 {% block content %}
-    <style>.t{margin: 0; margin-top: 32px;}.p-up-s{display: none;}section{ min-height: 0;}body{background-image: linear-gradient(to bottom, #171616, #000000);}.tablo-light{padding-left: 40px;padding-right: 40px;}.window{min-width: 780px;}</style>
+    <style>.t{margin: 0; margin-top: 32px;}.up{height: 200px;}.p-up-s{display: none;}section{ min-height: 0;}body{background-image: linear-gradient(to bottom, #171616, #000000);}.tablo-light{padding-left: 40px;padding-right: 40px;}.window{min-width: 780px;}</style>
     <script>
         document.querySelector("body").classList.remove("asyncImage");
     </script>
@@ -17,13 +17,13 @@
                 <div class="tablo-light d-flex justify-content-between p-0 m-0">
                     <div class="col tablo-light m-0 img-about" style="width: 50%; background-image: url({{ url_for('static', filename='img/container-min1-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
                        <div class=" tablo-light m-0 text-about-2" style="width: 50%; display: none;">
-                            <img alt="MAGNAVIS" src="{{ url_for('static', filename='img/logo-white.webp') }}" class="mb-5" style=" width: 65%; border-radius: 8px;">
+{#                            <img alt="MAGNAVIS" src="{{ url_for('static', filename='img/logo-white.webp') }}" class="mb-5" style=" width: 65%; border-radius: 8px;">#}
                             <p style="text-align: justify;">Мы &mdash; современная, динамично развивающаяся компания в мире логистики. Мы предлагаем услуги по доставке грузов в любую точку мира. Наша компания имеет масштабную сеть партнеров и сотрудничает с ведущими транспортными компаниями, что позволяет предлагать клиентам наиболее оптимальные маршруты, условия доставки и цены.</p>
                             <p style="text-align: justify;">МАГНАВИС &mdash; это не просто компания, а команда молодых профессионалов, готовых сделать всё, чтобы каждая ваша доставка была успешной и эффективной. Мы разрабатываем индивидуальные логистические решения и обеспечиваем высококачественный сервис.</p>
                        </div>
                     </div>
                     <div class="col tablo-light m-0  text-about-1" style="width: 50%; min-width: 579px;">
-                        <img alt="MAGNAVIS" src="{{ url_for('static', filename='img/logo-white.webp') }}" class="mb-5" style=" width: 65%; border-radius: 8px;">
+{#                        <img alt="MAGNAVIS" src="{{ url_for('static', filename='img/logo-white.webp') }}" class="mb-5" style=" width: 65%; border-radius: 8px;">#}
                         <p style="text-align: justify;">Мы &mdash; современная, динамично развивающаяся компания в мире логистики. Мы предлагаем услуги по доставке грузов в любую точку мира. Наша компания имеет масштабную сеть партнеров и сотрудничает с ведущими транспортными компаниями, что позволяет предлагать клиентам наиболее оптимальные маршруты, условия доставки и цены.</p>
                             <p style="text-align: justify;">МАГНАВИС &mdash; это не просто компания, а команда молодых профессионалов, готовых сделать всё, чтобы каждая ваша доставка была успешной и эффективной. Мы разрабатываем индивидуальные логистические решения и обеспечиваем высококачественный сервис.</p>
                     </div>
