@@ -32,10 +32,11 @@ function forms() {
                             <input type="checkbox" name="check" id="check" class="custom-checkbox" required>
                             <label for="check" id="mail-check" style="color: gray; font-size: 0.8em;">Согласие на обработку персональных данных</label>
                         </div>
-                        <button type="submit" id="mail-btn" class="btn btn-danger">Отправить</button>
+                        <button type="submit" id="mail-btn" class="btn btn-danger btnf1">Отправить</button>
                         <div class="mes"></div>
                     </form>`;
-  document.querySelector(".form2").innerHTML = `<form class="text-light" method="post" id="request-f-min" style="padding-top: 15px">
+  try {
+      document.querySelector(".form2").innerHTML = `<form class="text-light" method="post" id="request-f-min" style="padding-top: 15px">
                         <h3 class="mt-3">Отправить запрос</h3>
                         <div class="mb-3 form__group field">
                             <input minlength="2" type="text" class="form__field" name="name" id="name1" placeholder="name" required>
@@ -64,6 +65,20 @@ function forms() {
                         <button type="submit" class="btn btn-danger">Отправить</button>
                         <div class="mes"></div>
                     </form>`;
+
+  } catch (err) {
+
+  }
+
+
+  try {
+    document.querySelector(".pvl").innerHTML = `pvl@magnavis.ru`;
+  document.querySelector(".marwy").innerHTML = `marwy@magnavis.ru`;
+  document.querySelector(".andr").innerHTML = `andr@magnavis.ru`;
+  } catch (err) {
+
+  }
+
   // var dodo = document.querySelectorAll(".comment__text");
   // document.querySelector(".dodo").innerHTML = `${dodo[0]}`;
   // console.log(dodo[0].textContent)
@@ -291,6 +306,8 @@ const copyContent1 = async () => {
     try {
       await navigator.clipboard.writeText("pvl@magnavis.ru");
       console.log('Content copied to clipboard');
+      document.querySelector(".cb-1").src = "static/img/copy-red.png";
+
     } catch (err) {
       console.error('Failed to copy: ', err);
     }
@@ -299,6 +316,18 @@ const copyContent2 = async () => {
     try {
       await navigator.clipboard.writeText("andr@magnavis.ru");
       console.log('Content copied to clipboard');
+      document.querySelector(".cb-2").src = "static/img/copy-red.png";
+
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+}
+const copyContent3 = async () => {
+    try {
+      await navigator.clipboard.writeText("marwy@magnavus.ru");
+      console.log('Content copied to clipboard');
+      document.querySelector(".cb-3").src = "static/img/copy-red.png";
+
     } catch (err) {
       console.error('Failed to copy: ', err);
     }

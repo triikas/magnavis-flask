@@ -16,7 +16,7 @@ application.config['MAIL_DEFAULT_SENDER'] = 'inforder@magnavis.ru'
 # application.config['MAIL_PASSWORD'] = 'RapsodiyaFenseret5'
 application.config['MAIL_PASSWORD'] = 'Kiloper=1224'
 mail = Mail(application)
-mails = ['sales1@magnavis.ru', 'cargo@magnavis.ru', 'marwy@magnavus.ru', 'pvl@magnavis.ru', 'andr@magnavis.ru']
+mails = ['sales1@magnavis.ru', 'cargo@magnavis.ru', 'marwy@magnavis.ru', 'pvl@magnavis.ru', 'andr@magnavis.ru']
 
 @application.route('/', methods=['post', 'get'])
 def home():
