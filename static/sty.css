@@ -835,13 +835,28 @@ li{
             height: 290px !important;
     }
 }
-
-@media (max-width: 1318px) {
+@media (max-width: 1706px) {
+    .tt-4{
+        margin-left: 0;
+    }
+}
+/*@media (max-width: 1749px) {*/
+/*    */
+/*}*/
+@media (max-width: 1749px) {
+    .tt-1, .tt-2{
+        min-width: 500px !important;
+    }
     .tt-3{
         margin-left: 0;
-        min-width: 700px !important;
+        min-width: 500px !important;
         max-width: 1900px !important;
-
+        margin-right: 16px !important;
+    }
+    .tt-4{
+        margin-left: 16px;
+        min-width: 500px !important;
+        max-width: 1900px !important;
     }
     .download{
             height: 150px !important;
@@ -850,11 +865,29 @@ li{
         margin-right: 0;
     }
 }
-@media (max-width: 916px) {
-    .tt-3, .tt-2, .tt-1{
-        margin-left: 0;
-        margin-right: 0;
+@media (max-width: 1285px) {
+    .tt-3, .tt-4{
+        min-width: 300px !important;
+    }
+    .tt-1, .tt-2{
         min-width: 400px !important;
+    }
+}
+@media (max-width: 1064px) {
+    .tt-1, .tt-2{
+        min-width: 300px !important;
+    }
+}
+
+@media (max-width: 916px) {
+    .tt-2, .tt-1{
+        margin-left: 0;
+        margin-right: 0 !important;
+        min-width: 500px !important;
+        /*min-width: 500px !important;*/
+    }
+    .tt-3,  .tt-4{
+        min-width: 200px !important;
     }
 
 }

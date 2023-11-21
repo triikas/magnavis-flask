@@ -14,10 +14,10 @@ def numbers():
             contracts_num[0] = str(int(contracts_num[0])+round((t - contracts_num[1]) // a))
             contracts_num[1] = t
         if t - client_num[1] > b:
-            client_num[0] = str(int(client_num[0])+round((t - client_num[1]) // a))
+            client_num[0] = str(int(client_num[0])+round((t - client_num[1]) // b))
             client_num[1] = t
         if t - cargo_num[1] > c:
-            cargo_num[0] = str(int(cargo_num[0])+round((t - cargo_num[1]) // a))
+            cargo_num[0] = str(int(cargo_num[0])+round((t - cargo_num[1]) // c))
             client_num[1] = t
     with open('numbers.json', 'w') as outfile:
         json.dump({
