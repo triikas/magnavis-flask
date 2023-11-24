@@ -71,13 +71,13 @@ function forms() {
   }
 
 
-  try {
-    document.querySelector(".pvl").innerHTML = `pvl@magnavis.ru`;
-  document.querySelector(".marwy").innerHTML = `marwy@magnavis.ru`;
-  document.querySelector(".andr").innerHTML = `andr@magnavis.ru`;
-  } catch (err) {
-
-  }
+  // try {
+  //   document.querySelector(".pvl").innerHTML = `pvl@magnavis.ru`;
+  // document.querySelector(".marwy").innerHTML = `marwy@magnavis.ru`;
+  // document.querySelector(".andr").innerHTML = `andr@magnavis.ru`;
+  // } catch (err) {
+  //
+  // }
 
   // var dodo = document.querySelectorAll(".comment__text");
   // document.querySelector(".dodo").innerHTML = `${dodo[0]}`;
