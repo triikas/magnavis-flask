@@ -18,6 +18,8 @@ application.config['MAIL_PASSWORD'] = 'Kiloper=1224'
 mail = Mail(application)
 mails = ['sales1@magnavis.ru', 'cargo@magnavis.ru', 'marwy@magnavis.ru', 'pvl@magnavis.ru', 'andr@magnavis.ru']
 
+
+
 @application.route('/', methods=['post', 'get'])
 def home():
     print("fgh: ", str(request.MOBILE))
@@ -50,6 +52,10 @@ def home():
         return render_template('mobile/home.html')
     else:
         return render_template('home.html')
+
+@application.route('/yandex_d8918d0df7f73488.html', methods=['post', 'get'])
+def webmaster():
+    return render_template('yandex_d8918d0df7f73488.html')
 
 @application.route('/contacts', methods=['post', 'get'])
 def contacts():
