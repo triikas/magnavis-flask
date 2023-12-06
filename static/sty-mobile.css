@@ -151,6 +151,27 @@ footer{
 .btn-dark{
     background-color: #373c41;
 }
+
+.bottom-panel{
+    height: 80vh;
+    width: 100vw;
+    background-color: #575a57;
+    border-radius: 16px 16px 0 0;
+    /*display: grid;*/
+    position: fixed;
+    top: 20vh;
+    display: none;
+    z-index: 6;
+    animation: bot_ani 0.5s forwards;
+    transform: translateY(90%);
+
+}
+
+@keyframes bot_ani {
+  0% {transform: translateY(150%);}
+  100% {transform: translateY(0);}
+}
+
 .nav-activ{
     background-color: #575a57;
 }
@@ -571,6 +592,7 @@ li{
   0% {transform: translateY(-150%);}
   100% {transform: translateY(0);}
 }
+
 .fa-start{
     border-radius: 8px 8px 0 0;
 }

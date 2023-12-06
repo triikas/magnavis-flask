@@ -79,13 +79,13 @@
                 <h3 style="padding-left: 0 !important;">Услуги</h3>
                 <div class="col p-0">
                     <div class=" tablo-serv" style="margin-bottom: 16px; min-width: 340px; min-height: 308px; background-image: url({{ url_for('static', filename='img/min/industrial-port-and-container-yard-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
-                        <div class="tablo-serv-in pb-0" style=" min-height: 308px;">
+                        <div class="tablo-serv-in pb-0" style=" min-height: 308px;" onclick="mp()">
                             <h4 style="font-weight: bolder;">Мультимодальные<br>перевозки</h4>
 {#                            <p class="mt-4">Обеспечиваем транспортировку грузов с использованием различных видов транспорта, чтобы доставить ваш заказ точно в срок</p>#}
                         </div>
                     </div>
                     <div class=" tablo-serv" style=" min-height: 308px; min-width: 340px; background-image: url({{ url_for('static', filename='img/min/closeup-of-real-estate-agent-using-calculator-while-his-client-is-signing-a-contract-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
-                        <div class="tablo-serv-in" style="min-height: 308px;">
+                        <div class="tablo-serv-in" style="min-height: 308px;" onclick="st()">
                             <h4 style="font-weight: bolder;">Страхование<br>грузов</h4>
 {#                            <p class="mt-4">Гарантируем защиту ваших ценных грузов на всем пути доставки</p>#}
                         </div>
@@ -93,7 +93,7 @@
                 </div>
                 <div class="col p-0">
                     <div class="tablo-serv tof" style="min-height: 631px;    background-image: url({{ url_for('static', filename='img/min/hand-with-pen-over-application-form.webp') }}); background-repeat: no-repeat; background-size: cover;">
-                        <div class="tablo-serv-in pb-0" style="min-height: 631px;">
+                        <div class="tablo-serv-in pb-0" style="min-height: 631px;" onclick="tog()">
                             <h4 style="font-weight: bolder;">Таможенное<br>оформление<br>грузов</h4>
 {#                            <p class="mt-4">Правильное и быстро оформляем все типы грузов при пересечении таможенной границы, минимизируем риски задержек. Весь комплекс таможенных процедур для физических и юридических лиц: подготовка необходимых документов, заполнение таможенных деклараций, платежи и взаимодействие с таможенным органами. МАГНАВИС сопровождает ваш груз на каждом этапе его прохождения границы</p>#}
                         </div>
@@ -332,5 +332,5 @@
             </div>
         </div>
     </div>
-
+    <script src="{{ url_for('static', filename='bottom-panel.js') }}"></script>
 {% endblock %}
