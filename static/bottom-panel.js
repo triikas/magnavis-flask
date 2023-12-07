@@ -6,29 +6,39 @@ const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeig
 function mp() {
   bottom_panel.style.display = 'block'
   bottom_panel.style.top = "20vh";
-  bottom_text.innerHTML = `<p class="mt-4">Обеспечиваем транспортировку грузов с использованием различных видов транспорта, чтобы доставить ваш заказ точно в срок</p>`;
+  bottom_text.innerHTML = `<h3 style="font-weight: bolder;">Мультимодальные<br>перевозки</h3><p class="mt-4">Обеспечиваем транспортировку грузов с использованием различных видов транспорта, чтобы доставить ваш заказ точно в срок</p>`;
 }
 function st() {
   bottom_panel.style.display = 'block'
   bottom_panel.style.top = "20vh";
-  bottom_text.innerHTML = `<p class="mt-4">Гарантируем защиту ваших ценных грузов на всем пути доставки</p>`;
+  bottom_text.innerHTML = `<h3 style="font-weight: bolder;">Страхование<br>грузов</h3><p class="mt-4">Гарантируем защиту ваших ценных грузов на всем пути доставки</p>`;
 }
 function tog() {
   bottom_panel.style.display = 'block'
   bottom_panel.style.top = "20vh";
   bottom_text.innerHTML = `<h3 style="font-weight: bolder;">Таможенное<br>оформление<br>грузов</h3><p class="mt-4">Правильное и быстро оформляем все типы грузов при пересечении таможенной границы, минимизируем риски задержек. Весь комплекс таможенных процедур для физических и юридических лиц: подготовка необходимых документов, заполнение таможенных деклараций, платежи и взаимодействие с таможенным органами. МАГНАВИС сопровождает ваш груз на каждом этапе его прохождения границы</p>`;
 }
+function ps() {
+  bottom_panel.style.display = 'block'
+  bottom_panel.style.top = "20vh";
+  bottom_text.innerHTML = `<h3 style="font-weight: bolder;">Перевозка<br>спецгрузов</h3><p class="mt-4">Осуществляем профессиональную перевозку специальных грузов: от музейных экспонатов до жирафов. Благодаря нашим специалистам мы доставляем грузы, которым требуется особые условия: температурный режим, специальное оборудование, дополнительные меры безопасности</p>`;
+}
+function su() {
+  bottom_panel.style.display = 'block'
+  bottom_panel.style.top = "20vh";
+  bottom_text.innerHTML = `<h3 style="font-weight: bolder;">Складские<br>услуги</h3><p class="mt-4 mb-0">Хранению любых грузов</p>`;
+}
 var OldY = null;
 var NewY = null;
 var d;
 
-win.addEventListener('touchstart', (e) => {
+bottom_panel.addEventListener('touchstart', (e) => {
   OldY = e.changedTouches[0].clientY;
   NewY = OldY.y;
 })
 
 
-win.addEventListener('touchmove', (e) => {
+bottom_panel.addEventListener('touchmove', (e) => {
   e.preventDefault();
   NewY = e.changedTouches[0].clientY;
   if (NewY > 0.2*vh) {
@@ -44,7 +54,7 @@ win.addEventListener('touchmove', (e) => {
 })
 
 
-win.addEventListener('touchend', (e) => {
+bottom_panel.addEventListener('touchend', (e) => {
   if (NewY > 0.5*vh) {
     EndY = NewY
     // while (EndY < vh) {
