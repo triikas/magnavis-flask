@@ -30,19 +30,26 @@ function su() {
 }
 var OldY = null;
 var NewY = null;
+var OldYBlock = null;
+var NewYBlock = null;
 var d;
 
 bottom_panel.addEventListener('touchstart', (e) => {
   OldY = e.changedTouches[0].clientY;
   NewY = OldY.y;
+  OldYBlock = bottom_panel.getBoundingClientRect().top;
+
 })
 
 
 bottom_panel.addEventListener('touchmove', (e) => {
   e.preventDefault();
   NewY = e.changedTouches[0].clientY;
-  if (NewY > 0.2*vh) {
-    bottom_panel.style.top = String(NewY)+"px";
+  NewYBlock = bottom_panel.getBoundingClientRect().top;
+  if (NewY-OldY > 0) {
+    bottom_panel.style.top = String(OldYBlock+(NewY-OldY))+"px";
+  } else if (NewY-OldY > 0 && NewYBlock > OldYBlock) {
+    bottom_panel.style.top = String(OldYBlock+(NewY-OldY))+"px";
   }
   // console.log(NewY, "   ", 20*vh)
   // if (OldY - NewY < 0) {
@@ -55,8 +62,8 @@ bottom_panel.addEventListener('touchmove', (e) => {
 
 
 bottom_panel.addEventListener('touchend', (e) => {
-  if (NewY > 0.5*vh) {
-    EndY = NewY
+  if (NewYBlock > 0.5*vh) {
+    EndY = NewYBlock
     // while (EndY < vh) {
       let end = setInterval(function () {
         if (EndY < vh) {
@@ -71,7 +78,7 @@ bottom_panel.addEventListener('touchend', (e) => {
       }, 15)
     // }
   } else {
-    EndY = NewY
+    EndY = NewYBlock
     // while (EndY < vh) {
       let end = setInterval(function () {
         if (EndY > 0.2*vh) {
