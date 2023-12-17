@@ -1,0 +1,192 @@
+{% extends "mobile/base.html" %}
+
+{% block title %}Информация | MAGNAVIS{% endblock %}
+
+{% block content %}
+    <style>.t{margin-top: 32px; margin-right: 0 !important;}.up{height: 200px;}h2{margin-bottom: 16px; color: white; font-size: 2.3em;font-weight: bold;}p{margin-bottom: 0; color: rgba(255, 255, 255, 0.68); font-size: 1.7em}  .p-up-s{display: none;}  section{ min-height: 0;}  body{background-image: linear-gradient(to bottom, #171616, #000000);}  .tablo-color{padding-left: 40px;padding-left: 40px;}</style>
+    <script>
+        document.querySelector("body").classList.remove("asyncImage");
+    </script>
+    <div class="tablo-big tablo-invis">
+        <h1 style="font-size: 3.3em" class="text-center m-0">Информация</h1>
+    <div style="width: 50%; margin-left: 25%; height: 2px; background-color: white; margin-top: 20px;"></div>
+    </div>
+    <div class="tablo-big tablo-invis">
+{#        <h3>Преимущества работы с нашей компанией</h3>#}
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col">
+                    <a href="{{ url_for('rgd') }}" style="min-width: 422px; " class="d-block text-decoration-none col t tablo-invis p-0">
+                    <table>
+                        <tr class="">
+                            <td class="h-100 d-flex justify-content-start align-items-center" style=" margin-bottom: 16px;">
+                                <img src="{{ url_for('static', filename='img/rgd.jpg') }}" style=" width: 100%; border-radius: 8px;" alt="MAGNAVIS">
+{#                                <div class="tablo-color m-0" style="background-image: url({{ url_for('static', filename='img/of-min-min.jpg') }}); background-size: 100%; height: 100%; width: 100%"  />#}
+                            </td>
+                        </tr>
+                        <tr class=""><td class="h-100">
+                            <h2 style="font-weight: bold;">Судьба Северо-Сибирской железной дороги зависит от РЖД</h2>
+                            <p>15.12.2023</p>
+                        </td></tr>
+                    </table>
+{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
+{#                    <h4>Доставка любых грузов</h4>#}
+{#                    <p>#}
+{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
+{#                    </p>#}
+                </a>
+                    <a href="{{ url_for('garant') }}" style="min-width: 422px; " class="d-block text-decoration-none col t tablo-invis p-0">
+                    <table>
+                        <tr class="">
+                            <td class="h-100 d-flex justify-content-start align-items-center" style=" margin-bottom: 16px;">
+                                <img src="{{ url_for('static', filename='img/garant.jpg') }}" style=" width: 100%; border-radius: 8px;" alt="MAGNAVIS">
+{#                                <div class="tablo-color m-0" style="background-image: url({{ url_for('static', filename='img/of-min-min.jpg') }}); background-size: 100%; height: 100%; width: 100%"  />#}
+                            </td>
+                        </tr>
+                        <tr class=""><td class="h-100">
+                            <h2 style="font-weight: bold;">Гарантийная поддержка Восточного полигона исчисляется девятью нулями</h2>
+                            <p>15.12.2023</p>
+                        </td></tr>
+                    </table>
+                </a>
+                    <a href="{{ url_for('haynan') }}" style="min-width: 422px; " class="d-block text-decoration-none col t tablo-invis p-0">
+                    <table>
+                        <tr class="">
+                            <td class="h-100 d-flex justify-content-start align-items-center" style=" margin-bottom: 16px;">
+                                <img src="{{ url_for('static', filename='img/haynan.jpg') }}" style=" width: 100%; border-radius: 8px;" alt="MAGNAVIS">
+{#                                <div class="tablo-color m-0" style="background-image: url({{ url_for('static', filename='img/of-min-min.jpg') }}); background-size: 100%; height: 100%; width: 100%"  />#}
+                            </td>
+                        </tr>
+                        <tr class=""><td class="h-100">
+                            <h2 style="font-weight: bold;">Аэрофлот запускает прямой рейс из Москвы на китайский остров Хайнань</h2>
+                            <p>15.12.2023</p>
+                        </td></tr>
+                    </table>
+{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
+{#                    <h4>Доставка любых грузов</h4>#}
+{#                    <p>#}
+{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
+{#                    </p>#}
+                </a>
+                    <a href="{{ url_for('sutochnie') }}" style="min-width: 422px; " class="d-block text-decoration-none col t tablo-invis p-0">
+                    <table>
+                        <tr class="">
+                            <td class="h-100 d-flex justify-content-start align-items-center" style=" margin-bottom: 16px;">
+                                <img src="{{ url_for('static', filename='img/sutochnie.jpg') }}" style=" width: 100%; border-radius: 8px;" alt="MAGNAVIS">
+{#                                <div class="tablo-color m-0" style="background-image: url({{ url_for('static', filename='img/of-min-min.jpg') }}); background-size: 100%; height: 100%; width: 100%"  />#}
+                            </td>
+                        </tr>
+                        <tr class=""><td class="h-100">
+                            <h2 style="font-weight: bold;">Эксперт: на фонд оплаты труда транспортных компаний давят «суточные»</h2>
+                            <p>14.12.2023</p>
+                        </td></tr>
+                    </table>
+{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
+{#                    <h4>Доставка любых грузов</h4>#}
+{#                    <p>#}
+{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
+{#                    </p>#}
+                </a>
+                    <a href="{{ url_for('il96') }}" style="min-width: 422px; " class="d-block text-decoration-none col t tablo-invis p-0">
+                    <table>
+                        <tr class="">
+                            <td class="h-100 d-flex justify-content-start align-items-center" style=" margin-bottom: 16px;">
+                                <img src="{{ url_for('static', filename='img/il-96-1.jpg') }}" style=" width: 100%; border-radius: 8px;" alt="MAGNAVIS">
+{#                                <div class="tablo-color m-0" style="background-image: url({{ url_for('static', filename='img/of-min-min.jpg') }}); background-size: 100%; height: 100%; width: 100%"  />#}
+                            </td>
+                        </tr>
+                        <tr class=""><td class="h-100">
+                            <h2 style="font-weight: bold;">Самолёт Ил-96-400Т выполнил первый коммерческий рейс под флагом авиакомпании SkyGates</h2>
+                            <p>11.12.2023</p>
+                        </td></tr>
+                    </table>
+{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
+{#                    <h4>Доставка любых грузов</h4>#}
+{#                    <p>#}
+{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
+{#                    </p>#}
+                </a>
+                    <a href="{{ url_for('suparna') }}" style="min-width: 422px; " class="d-block text-decoration-none col t tablo-invis p-0">
+                                                            <table>
+                                                                <tr class="">
+                                                                    <td class="h-100 d-flex justify-content-start align-items-center" style=" margin-bottom: 16px;">
+                                                                        <img src="{{ url_for('static', filename='img/suparna.jpg') }}" style=" width: 100%; border-radius: 8px;" alt="MAGNAVIS">
+                                        {#                                <div class="tablo-color m-0" style="background-image: url({{ url_for('static', filename='img/of-min-min.jpg') }}); background-size: 100%; height: 100%; width: 100%"  />#}
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class=""><td class="h-100">
+                                                                    <h2 style="font-weight: bold;">Китайский перевозчик Suparna Airlines выполнил первый рейс из воcточно-китайского Нанкина в подмосковный Жуковский</h2>
+                                                                    <p>08.12.2023</p>
+                                                                </td></tr>
+                                                            </table>
+                                        {#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
+                                        {#                    <h4>Доставка любых грузов</h4>#}
+                                        {#                    <p>#}
+                                        {#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
+                                        {#                    </p>#}
+                                                        </a>
+                    <a href="{{ url_for('kalin') }}" style="min-width: 422px; " class="d-block text-decoration-none col t tablo-invis p-0">
+                                                        <table>
+                                                            <tr class="">
+                                                                <td class="h-100 d-flex justify-content-start align-items-center" style=" margin-bottom: 16px;">
+                                                                    <img src="{{ url_for('static', filename='img/kalin.jpg') }}" style=" width: 100%; border-radius: 8px;" alt="MAGNAVIS">
+                                    {#                                <div class="tablo-color m-0" style="background-image: url({{ url_for('static', filename='img/of-min-min.jpg') }}); background-size: 100%; height: 100%; width: 100%"  />#}
+                                                                </td>
+                                                            </tr>
+                                                            <tr class=""><td class="h-100">
+                                                                <h2 style="font-weight: bold;">Калининградским грузам предлагают не замыкаться на фурах</h2>
+                                                                <p>06.12.2023</p>
+                                                            </td></tr>
+                                                        </table>
+                                    {#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
+                                    {#                    <h4>Доставка любых грузов</h4>#}
+                                    {#                    <p>#}
+                                    {#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
+                                    {#                    </p>#}
+                                                    </a>
+                    <a href="{{ url_for('agro') }}" style="min-width: 422px; " class="d-block text-decoration-none col t tablo-invis p-0">
+                    <table>
+                        <tr class="">
+                            <td class="h-100 d-flex justify-content-start align-items-center" style=" margin-bottom: 16px;">
+                                <img src="{{ url_for('static', filename='img/agro.jpg') }}" style=" width: 100%; border-radius: 8px;" alt="MAGNAVIS">
+{#                                <div class="tablo-color m-0" style="background-image: url({{ url_for('static', filename='img/of-min-min.jpg') }}); background-size: 100%; height: 100%; width: 100%"  />#}
+                            </td>
+                        </tr>
+                        <tr class=""><td class="h-100">
+                            <h2 style="font-weight: bold;">Россия и Узбекистан рассчитывают вдвое удешевить агрологистику</h2>
+                            <p>30.11.2023</p>
+                        </td></tr>
+                    </table>
+{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
+{#                    <h4>Доставка любых грузов</h4>#}
+{#                    <p>#}
+{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
+{#                    </p>#}
+                </a>
+
+                    <a href="{{ url_for('spravochnik') }}" style="min-width: 422px; " class="d-block text-decoration-none col t tablo-invis p-0">
+                    <table>
+                        <tr class="">
+                            <td class="h-100 d-flex justify-content-start align-items-center" style=" margin-bottom: 16px;">
+                                <img src="{{ url_for('static', filename='img/spravochnik.jpg') }}" style=" width: 100%; border-radius: 8px;" alt="MAGNAVIS">
+{#                                <div class="tablo-color m-0" style="background-image: url({{ url_for('static', filename='img/of-min-min.jpg') }}); background-size: 100%; height: 100%; width: 100%"  />#}
+                            </td>
+                        </tr>
+                        <tr class=""><td class="h-100">
+                            <h2 style="font-weight: bold;">Проведению бартерных сделок в трансгране мешает отсутствие «справочника цен»</h2>
+                            <p>30.11.2023</p>
+                        </td></tr>
+                    </table>
+{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
+{#                    <h4>Доставка любых грузов</h4>#}
+{#                    <p>#}
+{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
+{#                    </p>#}
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

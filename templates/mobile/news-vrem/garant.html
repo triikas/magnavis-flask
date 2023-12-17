@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Информация | MAGNAVIS{% endblock %}
+
+{% block content %}
+    <style>p{text-align: justify;}  .p-up-s{display: none;}  section{ min-height: 0;}  body{background-image: linear-gradient(to bottom, #171616, #000000);}  .tablo-color{padding-left: 40px;padding-left: 40px;}</style>
+    <script>
+        document.querySelector("body").classList.remove("asyncImage");
+    </script>
+    <div class="tablo-big tablo-invis py-2">
+        <a class="d-block text-decoration-none" href="{{ url_for('info') }}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-arrow-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+        </svg>
+        </a>
+    </div>
+    <div class="tablo-big tablo-invis">
+        {#<h3>Преимущества работы с нашей компанией</h3>#}
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col p-0">
+                    <h1 style="font-size: 2.2em; margin-bottom: 32px;">Гарантийная поддержка Восточного полигона исчисляется девятью нулями</h1>
+                    <p style="font-weight: bold;">Объем финансирования проекта на будущий год составит более 140 млрд рублей</p>
+                    <p>ВЭБ.РФ предоставил гарантийную поддержку на 40 млрд рублей по проекту создания инфраструктуры Восточного полигона. Эти гарантии обеспечат финансирование реализации проекта в 2024 году на общую сумму более 140 млрд рублей, отметили в пресс-службе госкорпорации.
+</p>
+                    <p>– В рамках реализации проекта «Восточный полигон» ВЭБ.РФ предоставил гарантийную поддержку ООО «УК БСМ» (входит в состав АО «ГК «Нацпроектстрой») в размере 39,45 млрд рублей в обеспечение исполнения обязательств перед ОАО «РЖД» по возврату авансовых платежей, – пояснили в ВЭБ.РФ.
+</p>
+                    <p>В 2023 году ведется активное строительство на объектах Восточного полигона. В рамках инвестиционной программы на 2024 год заложена модернизация и строительство на 94 объектах Восточного полигона, включая станции, перегоны, тупики и разъезды.
+</p>
+                    <p>ВЭБ.РФ установлен лимит выдачи независимых гарантий на общую сумму не более 42 млрд рублей. В рамках указанного лимита ВЭБ.РФ уже выдано 108 гарантий на общую сумму 39,45 млрд рублей. Участие ВЭБ.РФ в проекте путем выдачи гарантии способствует скорейшей реализации важнейшего инфраструктурного проекта.
+l</p>
+                    <p>Источник: logirus.ru</p>
+                </div>
+                <div class="col">
+                    <div style="margin-left: 32px; margin-top: 12px;"><img src="{{ url_for('static', filename='img/garant.jpg') }}" style=" width: 100%; border-radius: 8px;" alt="MAGNAVIS"></div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+{% endblock %}

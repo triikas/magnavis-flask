@@ -74,7 +74,7 @@ footer{
 
 
 
-
+.t{margin: 0 !important; margin-top: 32px !important;}
 .but {
   position: relative;
   cursor: pointer;
@@ -737,6 +737,7 @@ li{
     margin-right: 32px !important;
     margin-left: 32px !important;
 }
+
 .cargo-t{
     min-width: 359px;
     margin-left: 0;
@@ -813,7 +814,7 @@ li{
     }
 }
 
-@media (max-width: 1614px) {
+@media (max-width: 1737px) {
     .tof-about{
         margin-right: 0 !important;
         min-width: 500px !important;
@@ -821,13 +822,18 @@ li{
 }
 @media (max-width: 1293px) {
     .tof-about{
-        min-width: 422px !important;
+        min-width: 459px !important;
     }
 }
-@media (max-width: 1109px) {
+@media (max-width: 1191px) {
     .tof-about{
         margin-left: 0 !important;
         min-width: 700px !important;
+    }
+}
+@media (max-width: 915px) {
+    .tof-about{
+        min-width: 459px !important;
     }
 }
 @media (max-width: 1718px) {

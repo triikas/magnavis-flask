@@ -1,0 +1,46 @@
+{% extends "mobile/base.html" %}
+
+{% block title %}Информация | MAGNAVIS{% endblock %}
+
+{% block content %}
+    <style>p{text-align: justify;} .up{height: 200px;} .p-up-s{display: none;}  section{ min-height: 0;}  body{background-image: linear-gradient(to bottom, #171616, #000000);}  .tablo-color{padding-left: 40px;padding-left: 40px;}</style>
+    <script>
+        document.querySelector("body").classList.remove("asyncImage");
+    </script>
+    <div class="tablo-big tablo-invis py-2">
+        <a class="d-block text-decoration-none" href="{{ url_for('info') }}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="white" class="bi bi-arrow-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+        </svg>
+        </a>
+    </div>
+    <div class="tablo-big tablo-invis">
+        {#<h3>Преимущества работы с нашей компанией</h3>#}
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col p-0">
+                    <div style=" margin-top: 32px; margin-bottom: 32px;"><img src="{{ url_for('static', filename='img/agro.jpg') }}" style=" width: 100%; border-radius: 8px;" alt="MAGNAVIS"></div>
+                    <div>
+                     <h1 style="font-size: 3.2em; margin-bottom: 32px;">Россия и Узбекистан рассчитывают вдвое удешевить агрологистику
+</h1>
+                    <p style="font-weight: bold;">Построенный в Джизакской области хаб позволит в 2 раза сократить сроки поставок
+</p>
+                    <p>В Джизакской области Республики Узбекистан запустили в работу крупный агрологистический комплекс, сообщает пресс-служба Правительства РФ. Он станет частью логистической инфраструктуры для проекта «Агроэкспресс» и позволит организовать поставки не только по направлению «Ташкент-Москва», но и из других регионов Узбекистана.
+</p>
+                    <p>– Джизакская область расположена в географическом центре страны, и город Джизак является крупным транспортным узлом, через который проходят железная и автомобильная дороги. Он расположен в зоне консолидации сельскохозяйственной продукции, – рассказал заместитель председателя Правительства России Алексей Оверчук, который в режиме видеоконференции принял участие в церемонии открытия агрологистического комплекса.
+</p>
+                    <p>Мощность агрологистического комплекса составит до 810 тыс. тонн продукции в год. По предварительным оценкам благодаря его запуску сроки доставки сократятся в 2 раза, логистические издержки – минимум в 1,5 раза, а потеря на качестве товара не превысит более 5%.
+</p>
+                    <p>Источник: logirus.ru</p>
+                    </div>
+
+                </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+{% endblock %}
