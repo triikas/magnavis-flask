@@ -204,7 +204,7 @@ def prob():
         if str(request.form.get('kod')) != "None":
             flash("Груз не найден")
             if request.MOBILE:
-                return redirect(url_for('mobile/prob'))
+                return redirect(url_for('mobile/news-vrem/prob'))
             else:
                 return redirect(url_for('news-vrem/prob'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
@@ -215,11 +215,11 @@ def prob():
             flash("Запрос отправлен")
             # print(str((request.form.get('email'))))
             if request.MOBILE:
-                return redirect(url_for('mobile/prob'))
+                return redirect(url_for('mobile/news-vrem/prob'))
             else:
                 return redirect(url_for('news-vrem/prob'))
     if request.MOBILE:
-        return render_template('mobile/prob.html')
+        return render_template('mobile/news-vrem/prob.html')
     else:
         return render_template('news-vrem/prob.html')
 
@@ -238,7 +238,7 @@ def suparna():
         if str(request.form.get('kod')) != "None":
             flash("Груз не найден")
             if request.MOBILE:
-                return redirect(url_for('mobile/suparna'))
+                return redirect(url_for('mobile/news-vrem/suparna'))
             else:
                 return redirect(url_for('news-vrem/suparna'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
@@ -249,11 +249,11 @@ def suparna():
             flash("Запрос отправлен")
             # print(str((request.form.get('email'))))
             if request.MOBILE:
-                return redirect(url_for('mobile/suparna'))
+                return redirect(url_for('mobile/news-vrem/suparna'))
             else:
                 return redirect(url_for('news-vrem/suparna'))
     if request.MOBILE:
-        return render_template('mobile/suparna.html')
+        return render_template('mobile/news-vrem/suparna.html')
     else:
         return render_template('news-vrem/suparna.html')
 
@@ -272,7 +272,7 @@ def sutochnie():
         if str(request.form.get('kod')) != "None":
             flash("Груз не найден")
             if request.MOBILE:
-                return redirect(url_for('mobile/sutochnie'))
+                return redirect(url_for('mobile/news-vrem/sutochnie'))
             else:
                 return redirect(url_for('news-vrem/sutochnie'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
@@ -283,11 +283,11 @@ def sutochnie():
             flash("Запрос отправлен")
             # print(str((request.form.get('email'))))
             if request.MOBILE:
-                return redirect(url_for('mobile/sutochnie'))
+                return redirect(url_for('mobile/news-vrem/sutochnie'))
             else:
                 return redirect(url_for('news-vrem/sutochnie'))
     if request.MOBILE:
-        return render_template('mobile/sutochnie.html')
+        return render_template('mobile/news-vrem/sutochnie.html')
     else:
         return render_template('news-vrem/sutochnie.html')
 
@@ -340,7 +340,7 @@ def garant():
         if str(request.form.get('kod')) != "None":
             flash("Груз не найден")
             if request.MOBILE:
-                return redirect(url_for('mobile/garant'))
+                return redirect(url_for('mobile/news-vrem/garant'))
             else:
                 return redirect(url_for('news-vrem/garant'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
@@ -351,11 +351,11 @@ def garant():
             flash("Запрос отправлен")
             # print(str((request.form.get('email'))))
             if request.MOBILE:
-                return redirect(url_for('mobile/garant'))
+                return redirect(url_for('mobile/news-vrem/garant'))
             else:
                 return redirect(url_for('news-vrem/garant'))
     if request.MOBILE:
-        return render_template('mobile/garant.html')
+        return render_template('mobile/news-vrem/garant.html')
     else:
         return render_template('news-vrem/garant.html')
 
@@ -375,7 +375,7 @@ def il96():
         if str(request.form.get('kod')) != "None":
             flash("Груз не найден")
             if request.MOBILE:
-                return redirect(url_for('mobile/il96'))
+                return redirect(url_for('mobile/news-vrem/il96'))
             else:
                 return redirect(url_for('news-vrem/il96'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
@@ -386,11 +386,11 @@ def il96():
             flash("Запрос отправлен")
             # print(str((request.form.get('email'))))
             if request.MOBILE:
-                return redirect(url_for('mobile/il96'))
+                return redirect(url_for('mobile/news-vrem/il96'))
             else:
                 return redirect(url_for('news-vrem/il96'))
     if request.MOBILE:
-        return render_template('mobile/il96.html')
+        return render_template('mobile/news-vrem/il96.html')
     else:
         return render_template('news-vrem/il96.html')
 
@@ -409,7 +409,7 @@ def haynan():
         if str(request.form.get('kod')) != "None":
             flash("Груз не найден")
             if request.MOBILE:
-                return redirect(url_for('mobile/haynan'))
+                return redirect(url_for('mobile/news-vrem/haynan'))
             else:
                 return redirect(url_for('news-vrem/haynan'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
@@ -420,11 +420,11 @@ def haynan():
             flash("Запрос отправлен")
             # print(str((request.form.get('email'))))
             if request.MOBILE:
-                return redirect(url_for('mobile/haynan'))
+                return redirect(url_for('mobile/news-vrem/haynan'))
             else:
                 return redirect(url_for('news-vrem/haynan'))
     if request.MOBILE:
-        return render_template('mobile/haynan.html')
+        return render_template('mobile/news-vrem/haynan.html')
     else:
         return render_template('news-vrem/haynan.html')
 
@@ -443,7 +443,7 @@ def kalin():
         if str(request.form.get('kod')) != "None":
             flash("Груз не найден")
             if request.MOBILE:
-                return redirect(url_for('mobile/kalin'))
+                return redirect(url_for('mobile/news-vrem/kalin'))
             else:
                 return redirect(url_for('news-vrem/kalin'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
@@ -454,11 +454,11 @@ def kalin():
             flash("Запрос отправлен")
             # print(str((request.form.get('email'))))
             if request.MOBILE:
-                return redirect(url_for('mobile/kalin'))
+                return redirect(url_for('mobile/news-vrem/kalin'))
             else:
                 return redirect(url_for('news-vrem/kalin'))
     if request.MOBILE:
-        return render_template('mobile/kalin.html')
+        return render_template('mobile/news-vrem/kalin.html')
     else:
         return render_template('news-vrem/kalin.html')
 
@@ -476,7 +476,7 @@ def spravochnik():
         if str(request.form.get('kod')) != "None":
             flash("Груз не найден")
             if request.MOBILE:
-                return redirect(url_for('mobile/spravochnik'))
+                return redirect(url_for('mobile/news-vrem/spravochnik'))
             else:
                 return redirect(url_for('news-vrem/spravochnik'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
@@ -487,11 +487,11 @@ def spravochnik():
             flash("Запрос отправлен")
             # print(str((request.form.get('email'))))
             if request.MOBILE:
-                return redirect(url_for('mobile/spravochnik'))
+                return redirect(url_for('mobile/news-vrem/spravochnik'))
             else:
                 return redirect(url_for('news-vrem/spravochnik'))
     if request.MOBILE:
-        return render_template('mobile/spravochnik.html')
+        return render_template('mobile/news-vrem/spravochnik.html')
     else:
         return render_template('news-vrem/spravochnik.html')
 
@@ -510,7 +510,7 @@ def rgd():
         if str(request.form.get('kod')) != "None":
             flash("Груз не найден")
             if request.MOBILE:
-                return redirect(url_for('mobile/rgd'))
+                return redirect(url_for('mobile/news-vrem/rgd'))
             else:
                 return redirect(url_for('news-vrem/rgd'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
@@ -521,11 +521,11 @@ def rgd():
             flash("Запрос отправлен")
             # print(str((request.form.get('email'))))
             if request.MOBILE:
-                return redirect(url_for('mobile/rgd'))
+                return redirect(url_for('mobile/news-vrem/rgd'))
             else:
                 return redirect(url_for('news-vrem/rgd'))
     if request.MOBILE:
-        return render_template('mobile/rgd.html')
+        return render_template('mobile/news-vrem/rgd.html')
     else:
         return render_template('news-vrem/rgd.html')
 

@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %}Информация | MAGNAVIS{% endblock %}
+{% block title %}Россия и Узбекистан рассчитывают вдвое удешевить агрологистику | MAGNAVIS{% endblock %}
 
 {% block content %}
-    <style>p{text-align: justify;}  .p-up-s{display: none;}  section{ min-height: 0;}  body{background-image: linear-gradient(to bottom, #171616, #000000);}  .tablo-color{padding-left: 40px;padding-left: 40px;}</style>
+    <style>p{text-align: justify;}a:hover{color: #d9d2d6 !important;}  .p-up-s{display: none;}  section{ min-height: 0;}  body{background-image: linear-gradient(to bottom, #171616, #000000);}  .tablo-color{padding-left: 40px;padding-left: 40px;}</style>
     <script>
         document.querySelector("body").classList.remove("asyncImage");
     </script>
@@ -18,7 +18,9 @@
         {#<h3>Преимущества работы с нашей компанией</h3>#}
         <div class="container-fluid px-5">
             <div class="row">
-                <div class="col p-0">
+                <div class="col-7 p-0">
+                    <div style="margin-bottom: 32px; margin-top: 12px;"><img src="{{ url_for('static', filename='img/agro-min.webp') }}" style=" width: 100%; border-radius: 8px;" alt="MAGNAVIS"></div>
+                    <div>
                     <h1 style="font-size: 2.2em; margin-bottom: 32px;">Россия и Узбекистан рассчитывают вдвое удешевить агрологистику
 </h1>
                     <p style="font-weight: bold;">Построенный в Джизакской области хаб позволит в 2 раза сократить сроки поставок
@@ -30,9 +32,66 @@
                     <p>Мощность агрологистического комплекса составит до 810 тыс. тонн продукции в год. По предварительным оценкам благодаря его запуску сроки доставки сократятся в 2 раза, логистические издержки – минимум в 1,5 раза, а потеря на качестве товара не превысит более 5%.
 </p>
                     <p>Источник: logirus.ru</p>
+                    </div>
                 </div>
-                <div class="col">
-                    <div style="margin-left: 32px; margin-top: 12px;"><img src="{{ url_for('static', filename='img/agro.jpg') }}" style=" width: 100%; border-radius: 8px;" alt="MAGNAVIS"></div>
+                <div class="col p-0" style="padding-left: 64px !important;">
+                    <a href="{{ url_for('haynan') }}" style="min-width: 422px; margin: 0 !important; margin-top: 12px !important;" class="d-block text-decoration-none col  tablo-invis p-0">
+                    <table>
+                        <tr class="">
+                            <td class="h-100 d-flex justify-content-start align-items-center" style=" margin-bottom: 16px;">
+                                <img src="{{ url_for('static', filename='img/haynan.webp') }}" style=" width: 100%; border-radius: 8px;" alt="MAGNAVIS">
+{#                                <div class="tablo-color m-0" style="background-image: url({{ url_for('static', filename='img/of-min-min.webp') }}); background-size: 100%; height: 100%; width: 100%"  />#}
+                            </td>
+                        </tr>
+                        <tr class=""><td class="h-100">
+                            <h2 style="font-weight: bold;">Аэрофлот запускает прямой рейс из Москвы на китайский остров Хайнань</h2>
+                            <p>15.12.2023</p>
+                        </td></tr>
+                    </table>
+{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
+{#                    <h4>Доставка любых грузов</h4>#}
+{#                    <p>#}
+{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
+{#                    </p>#}
+                </a>
+                    <a href="{{ url_for('il96') }}" style="min-width: 422px; margin-right: 0px !important;" class="d-block text-decoration-none col t tablo-invis p-0">
+                    <table>
+                        <tr class="">
+                            <td class="h-100 d-flex justify-content-start align-items-center" style=" margin-bottom: 16px;">
+                                <img src="{{ url_for('static', filename='img/il-96-1.webp') }}" style=" width: 100%; border-radius: 8px;" alt="MAGNAVIS">
+{#                                <div class="tablo-color m-0" style="background-image: url({{ url_for('static', filename='img/of-min-min.webp') }}); background-size: 100%; height: 100%; width: 100%"  />#}
+                            </td>
+                        </tr>
+                        <tr class=""><td class="h-100">
+                            <h2 style="font-weight: bold;">Самолёт Ил-96-400Т выполнил первый коммерческий рейс под флагом авиакомпании SkyGates</h2>
+                            <p>11.12.2023</p>
+                        </td></tr>
+                    </table>
+{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
+{#                    <h4>Доставка любых грузов</h4>#}
+{#                    <p>#}
+{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
+{#                    </p>#}
+                </a>
+                    <a href="{{ url_for('spravochnik') }}" style="min-width: 422px; margin-right: 0px !important;" class="d-block text-decoration-none col t tablo-invis p-0">
+                    <table>
+                        <tr class="">
+                            <td class="h-100 d-flex justify-content-start align-items-center" style=" margin-bottom: 16px;">
+                                <img src="{{ url_for('static', filename='img/spravochnik.webp') }}" style=" width: 100%; border-radius: 8px;" alt="MAGNAVIS">
+{#                                <div class="tablo-color m-0" style="background-image: url({{ url_for('static', filename='img/of-min-min.webp') }}); background-size: 100%; height: 100%; width: 100%"  />#}
+                            </td>
+                        </tr>
+                        <tr class=""><td class="h-100">
+                            <h2 style="font-weight: bold;">Проведению бартерных сделок в трансгране мешает отсутствие «справочника цен»</h2>
+                            <p>30.11.2023</p>
+                        </td></tr>
+                    </table>
+{#                    <div class="d-flex justify-content-center mb-3"><img style="width: 140px; height: 140px;" src="{{ url_for('static', filename='img/1.svg') }}"></div>#}
+{#                    <h4>Доставка любых грузов</h4>#}
+{#                    <p>#}
+{#                        <b style="color: #6a1a21">4.2</b>Независимо от того, насколько сложен ваш груз, мы способны организовать его безопасную и эффективную доставку. Мы принимаем на себя ответственность за самые специфичные и ценные грузы.#}
+{#                    </p>#}
+                </a>
                 </div>
                 </div>
 
