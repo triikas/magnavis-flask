@@ -67,41 +67,44 @@
                 <h3 style="padding-left: 0 !important;">Получить счёт онлайн</h3>
                 <div class="col p-0 sp-1" style="min-width: 370px;">
                     <div class="tablo-light frm-how mx-0">
-                        <h4>1. Заполните форму</h4>
+                        <h4>1. Отсканируйте QR-код через приложение вашего банка</h4>
                     </div>
                     <div class="tablo-light frm-how mx-0" style=" margin-top: 16px;">
-                        <h4>2. Нажмите "Получить счёт"</h4>
+                        <h4>2. Введите сумму платежа</h4>
                     </div>
                     <div class="tablo-light frm-how mx-0" style=" margin-top: 16px;">
-                        <h4>3. Счёт придёт на вашу почту</h4>
+                        <h4>3. Введите назначение платежа, которое сообщит вам менеджер</h4>
                     </div>
                     <div class="tablo-light frm-how mx-0" style=" margin-top: 16px;">
-                        <h4>4. Оплатите его через QR-код</h4>
+                        <h4>4. Оплатите счёт</h4>
+                    </div>
+                    <div class="tablo-light frm-how mx-0" style=" margin-top: 16px;">
+                        <h4>5. Менеджер магнавис сообщит вам когда платёж поступит</h4>
                     </div>
                 </div>
-                <div class="col d-flex justify-content-center tablo-color frm sp-2" style="width: 100%; margin-top: 8px;">
+                <div class="col d-flex justify-content-center align-items-center tablo-color frm sp-2" style="width: 100%; margin-top: 8px;">
 {#                    <div class="tablo-invis pt-0">#}
-
-                        <form class="text-light pay-form p-3" style="width: 100% !important;">
-                            <h3 class="m-0">Оплата</h3>
-                            <div class="mb-3 form__group field">
-                                <input type="text" class="form_pay_field" name="sum" id="sum" placeholder="sum" required>
-                                <label class="form_pay_label" for="sum">Сумма оплаты</label>
-                            </div>
-                            <div class="mb-3 form__group field">
-                                <input type="text" class="form_pay_field" name="num" id="num" placeholder="num" required>
-                                <label class="form_pay_label" for="num">Номер накладной</label>
-                            </div>
-                            <div class="mb-3 form__group field">
-                                <input type="email" class="form_pay_field" name="email-pay" id="email-pay" placeholder="email" required aria-describedby="emailHelp">
-                                <label class="form_pay_label" for="email-pay">Email для уведомления</label>
-                            </div>
+                        <img class="qr" src="{{ url_for('static', filename='img/qr.png') }}" alt="qr" style="border-radius: 8px; max-width: 500px;">
+{#                        <form class="text-light pay-form p-3" style="width: 100% !important;">#}
+{#                            <h3 class="m-0">Оплата</h3>#}
+{#                            <div class="mb-3 form__group field">#}
+{#                                <input type="text" class="form_pay_field" name="sum" id="sum" placeholder="sum" required>#}
+{#                                <label class="form_pay_label" for="sum">Сумма оплаты</label>#}
+{#                            </div>#}
+{#                            <div class="mb-3 form__group field">#}
+{#                                <input type="text" class="form_pay_field" name="num" id="num" placeholder="num" required>#}
+{#                                <label class="form_pay_label" for="num">Номер накладной</label>#}
+{#                            </div>#}
+{#                            <div class="mb-3 form__group field">#}
+{#                                <input type="email" class="form_pay_field" name="email-pay" id="email-pay" placeholder="email" required aria-describedby="emailHelp">#}
+{#                                <label class="form_pay_label" for="email-pay">Email для уведомления</label>#}
+{#                            </div>#}
 {#                            <div class="mb-3">#}
 {#                                <input type="checkbox" name="check-pay" id="check-pay" class="custom-checkbox custom-pay-checkbox">#}
 {#                                <label class="form-check-labeL text-light" for="check-pay" style="color: gray; font-size: 1.3em;">Согласие на обработку персональных данных</label>#}
 {#                            </div>#}
-                            <button type="submit" class="btn btn-light mt-4" style="font-size: 1.7em; padding: 20px !important;">Получить счёт</button>
-                        </form>
+{#                            <button type="submit" class="btn btn-light mt-4" style="font-size: 1.7em; padding: 20px !important;">Получить счёт</button>#}
+{#                        </form>#}
 {#                    </div>#}
                 </div>
             </div>

@@ -119,6 +119,14 @@ function forms() {
 //   })
 //
 // });
+$(function(){
+  $('.qr').height($('.qr').width());
+
+  $(window).resize(function(){
+    $('.qr').height($('.qr').width());
+  });
+});
+
 $(document).on('submit','#request-f',function(e) {
   console.log('hello');
   e.preventDefault();
