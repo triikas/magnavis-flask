@@ -247,6 +247,11 @@ footer{
     min-width: 313px;
     margin-right: 0;
 }
+.t-5{
+    /*margin-left: ;*/
+    min-width: 313px;
+    margin-left: 0;
+}
 .reveal{
   position: relative;
   transform: translateY(150px);
@@ -921,8 +926,12 @@ li{
     .t-4{
         margin-left: 0;
         margin-top: 16px;
+        margin-right: 16px !important;
         min-width: 500px;
         /*width: 50vw;*/
+    }
+    .t-5{
+        margin-left: 16px;
     }
 }
 .why-1{margin-left: 0;}
@@ -982,7 +991,12 @@ li{
     }
     .t-4{
         margin-left: 14px;
-        min-width: 240px;
+        margin-right: 0 !important;
+        min-width: 300px;
+    }
+    .t-5{
+        margin-left: 0;
+        min-width: 400px;
     }
 }
 @media (max-width: 1070px) {
