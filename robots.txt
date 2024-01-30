@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /bootstrap-5.1.3-dist
+Disallow: /.gitignore
+Disallow: /app.py
+Disallow: /func.py
+Disallow: /lm-update.py
+Disallow: /numbers.json
+Disallow: /templates/base.html
+Disallow: /templates/mobile/base.html
+Sitemap: http://magnavis.ru/sitemap.xml
