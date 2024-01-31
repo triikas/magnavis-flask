@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}Направления грузоперевозок | MAGNAVIS{% endblock %}
+
+{% block content %}
+    <style>.p-up-s{display: none;}section{ min-height: 0;}body{background-image: linear-gradient(to bottom, #171616, #000000);} .tablo-color{padding-left: 40px;padding-left: 40px;}</style>
+    <script>
+        document.querySelector("body").classList.remove("asyncImage");
+    </script>
+    <div class="tablo-big tablo-invis">
+        <h1 style="font-size: 2.2em" class="text-center m-0">Доставка из китая</h1>
+    <div style="width: 50%; margin-left: 25%; height: 2px; background-color: white; margin-top: 20px;"></div>
+    </div>
+    <div class="tablo-big tablo-invis mt-3">
+        <div class="container-fluid px-5">
+            <div class="row mb-5 p-0">
+                <div class="col-7 tablo-invis" style="margin-left: 0;">
+                    <map name="china">
+                        <area shape="circle" coords="600,620,60" onclick="guan()">
+                    </map>
+                    <img usemap="#china" src="{{ url_for('static', filename='img/ch-grey-1.png') }}" class="ch-img p-0" style="margin-right: 32px;">
+                </div>
+                <div class="col tablo-invis" style="margin-right: 0;">
+                    <div class="ch-text" style="">
+                        <h3>Китай</h3>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
+                        <a class="btn btn-danger">Отправить запрос</a>
+                    </div>
+                    <div class="guan-text" style="display: none;">
+                        <h3>Гуанчжоу</h3>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
+                        <a class="btn btn-danger">Отправить запрос</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis">
+       <h3>Виды и типы грузов для доставкию</h3>
+       <div class="container-fluid px-5">
+
+           <div class="row">
+                <div style="min-height: 125px;" class="col tablo-light cargo-t">
+                    <h4>Перевозка цветов</h4>
+                </div>
+                <div style="min-height: 125px;" class="col tablo-light cargo-t tof-cargo">
+                    <h4>Перевозка предметов искусства</h4>
+                </div>
+                <div style="min-height: 125px;" class="col tablo-light cargo-t">
+                    <h4>Перевозка одежды</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis">
+        <style>
+            .tablo-serv{
+                margin: 16px;
+            }
+        </style>
+        <h3>Дополнительные услуги</h3>
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col tablo-serv p-0 mx-0" style=" background-image: url({{ url_for('static', filename='img/min/mealpro-efgpRGeu9tg-unsplash-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Доставка груза от «двери до двери»</h4>
+                    </div>
+                </div>
+                <div class="col tablo-serv p-0 mx-0 tof-dop-2" style=" background-image: url({{ url_for('static', filename='img/min/adrian-sulyok-sczNLg6rrhQ-unsplash-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Складские услуги</h4>
+                    </div>
+                </div>
+                <div class="col tablo-serv p-0 mx-0" style=" background-image: url({{ url_for('static', filename='img/min/closeup-of-real-estate-agent-using-calculator-while-his-client-is-signing-a-contract-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Страхование грузов</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

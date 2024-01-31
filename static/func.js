@@ -290,6 +290,12 @@ function reveal() {
   }
 }
 
+function guan() {
+  document.querySelector(".ch-img").src = "/static/img/ch-grey-4.png";
+  document.querySelector(".guan-text").style = "";
+  document.querySelector(".ch-text").style = "display: none;";
+}
+
 window.addEventListener("scroll", reveal);
 
 (() => {

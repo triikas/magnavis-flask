@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Направления грузоперевозок | MAGNAVIS{% endblock %}
+
+{% block content %}
+    <style>.p-up-s{display: none;}section{ min-height: 0;}body{background-image: linear-gradient(to bottom, #171616, #000000);} .tablo-color{padding-left: 40px;padding-left: 40px;}</style>
+    <script>
+        document.querySelector("body").classList.remove("asyncImage");
+    </script>
+    <div class="tablo-big tablo-invis">
+        <h1 style="font-size: 2.2em" class="text-center m-0">Направления</h1>
+    <div style="width: 50%; margin-left: 25%; height: 2px; background-color: white; margin-top: 20px;"></div>
+    </div>
+    <div class="tablo-big tablo-invis mt-3">
+        <div class="container-fluid px-5">
+            <div class="row mb-5 p-0">
+                <img src="{{ url_for('static', filename='img/mp.jpeg') }}" class="p-0">
+            </div>
+            <div class="row">
+                <div class="col text-start-1" style="padding-left: 0; padding-right: 16px; min-width: 430px;"><p class="p-0" style="text-align: justify;">
+Логистическая компания МАГНАВИС &mdash; ваш надежный партнер в сфере доставки и управления грузоперевозками. Мы осуществляем перевозку любых видов груза под ключ: от оформления необходимых документов до передачи товара в руки клиента. Наша главная задача — оперативно, безопасно и по доступным ценам доставить ваш груз из любой точки мира.                </p></div>
+                <div class="col text-start-1" style="padding-right: 0; padding-left: 16px; min-width: 430px;"><p class="p-0" style="text-align: justify;">
+Мы разрабатываем наиболее оптимальные логистические решения, которые позволят вам снизить затраты на доставку и обеспечат бесперебойные поставки по всему миру. Миссия МАГНАВИС &mdash; сделать процесс транспортировки груза максимально быстрым, удобным и эффективным для вашего бизнеса.                </p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tablo-big tablo-invis mt-3">
+        <h3>Основные направления</h3>
+        <div class="container-fluid px-5">
+            <div class="row">
+                <a class="d-block col" href="directions/china"><div class=" tablo-invis d-flex justify-content-around" style="margin-left: 0;">
+                    <img src="{{ url_for('static', filename='img/ch.png') }}" class="p-0 w-50" style="margin-right: 32px;">
+                    <div>
+                        <h3>Китай</h3>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
+                    </div>
+                </div></a>
+                <div class="col tablo-invis d-flex justify-content-around" style="margin-right: 0;">
+                    <img src="{{ url_for('static', filename='img/hk.png') }}" class="p-0 w-50" style="margin-right: 32px;">
+                    <div>
+                        <h3>Гонконг</h3>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

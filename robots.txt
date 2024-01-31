@@ -7,4 +7,6 @@ Disallow: /lm-update.py
 Disallow: /numbers.json
 Disallow: /templates/base.html
 Disallow: /templates/mobile/base.html
+Disallow: /static
+Allow: /static/doc
 Sitemap: http://magnavis.ru/sitemap.xml
