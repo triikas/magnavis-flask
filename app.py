@@ -59,6 +59,7 @@ def webmaster():
 
 @application.route('/contacts', methods=['post', 'get'])
 def contacts():
+    func.docs_update()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
         # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])

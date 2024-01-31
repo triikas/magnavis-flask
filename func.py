@@ -1,5 +1,7 @@
 import json
+import shutil
 import time
+import os
 
 
 # 139 57 478
@@ -26,4 +28,20 @@ def numbers():
     #         "cargo_num": [cargo_num[0], contracts_num[1]]
     #     }, outfile)
     return [contracts_num[0], client_num[0], cargo_num[0]]
-# s = numbers()
+
+
+def docs_update():
+    root_p = os.path.join(os.getcwd(), 'docs')
+    static_p = os.path.join(os.getcwd(), 'static', 'docs')
+    root_docs = list(map(lambda t: [os.path.join(root_p, t), t], os.listdir(root_p)))
+    static_docs = list(map(lambda t: [os.path.join(static_p, t), t], os.listdir(static_p)))
+    if len(static_docs) <= len(root_docs):
+        for i in range(len(static_docs)):
+            if static_docs[i][1] == root_docs[i][1] and os.path.getmtime(root_docs[i][0]) > os.path.getmtime(static_docs[i][0]):
+                os.remove(static_docs[i][0])
+                shutil.copy(root_docs[i][0], static_p)
+            else:
+                for j in range(len(root_docs)):
+                    if static_docs[i][1] == root_docs[j][1] and os.path.getmtime(root_docs[j][0]) > os.path.getmtime(static_docs[i][0]):
+                        os.remove(static_docs[i][0])
+                        shutil.copy(root_docs[j][0], static_p)
