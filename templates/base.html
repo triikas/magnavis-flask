@@ -5,7 +5,12 @@
     <meta http-equiv="Last-Modified" content="Mon, 27 Dec 2023 20:05:23 GMT">
 {#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
     <title>{% block title %}{% endblock %}</title>
-    <link rel="shortcut icon" href="{{ url_for('static', filename='img/log.ico') }}">
+{#    <link rel="shortcut icon" href="{{ url_for('static', filename='img/log.ico') }}">#}
+
+    <link rel="icon" href="{{ url_for('static', filename='img/log.ico') }}" sizes="any">
+    <link rel="icon" href="{{ url_for('static', filename='img/logo.svg') }}" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/logo-apple-touch.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.webmanifest') }}">
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};

@@ -1114,6 +1114,12 @@ li{
         display: none;
     }
 }
+@media (max-width: 1107px) {
+    .sea{
+        margin-right: 0 !important;
+        min-width: 700px !important;
+    }
+}
 @media (max-width: 1352px) {
     .text-about-1{
         display: none;
