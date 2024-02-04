@@ -719,6 +719,29 @@ li{
     margin-right: 0;
     margin-left: 32px;
 }
+.country-text {
+    max-width: 293px;
+    min-width: 230px;
+}
+.country-h {
+    padding: 0 !important;
+  display: block;
+  /*max-width:230px;*/
+  max-height:340px;
+  width: auto;
+  height: auto;
+}
+.country{
+    width: 350px !important;
+    height: 340px !important;
+}
+@media (max-width: 1607px) {
+    .country-col{
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        max-width: 2000px !important;
+    }
+}
 @media (max-width: 1069px) {
     .sp-2{
         margin-left: 0;

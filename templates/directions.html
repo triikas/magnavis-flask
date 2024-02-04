@@ -14,13 +14,13 @@
     <div class="tablo-big tablo-invis mt-3">
         <div class="container-fluid px-5">
             <div class="row mb-5 p-0">
-                <img src="{{ url_for('static', filename='img/mp.jpeg') }}" class="p-0">
+                <img src="{{ url_for('static', filename='img/mp.png') }}" class="p-0">
             </div>
             <div class="row">
                 <div class="col text-start-1" style="padding-left: 0; padding-right: 16px; min-width: 430px;"><p class="p-0" style="text-align: justify;">
-Доставляем любые виды грузов по всей России. Везём из Китая, Индии, Гонконга, Кореи, Японии, ОАЭ, Африки и стран Европы. Туда и обратно. Делаем так, чтобы для получения груза, вам нужно было один раз позвонить по телефону, а не самостоятельно составлять маршрут, искать склад хранения и упаковывать товар. Все это МАГНАВИС берёт на себя. Оформляем документы, доставляем грузы от «двери до двери», проходим границы, упаковываем, храним, вручаем в руки и лично сообщаем, где находится ваш груз в конкретный момент времени.</p></div>
+Доставляем любые виды грузов по всей России. Везём из Китая, Индии, Гонконга, Кореи, Японии, ОАЭ, Африки и стран Европы. Туда и обратно. Делаем так, чтобы для получения груза, вам нужно было один раз позвонить по телефону, а не самостоятельно составлять маршрут, искать склад хранения и упаковывать товар. Все это МАГНАВИС берёт на себя.</p></div>
                 <div class="col text-start-1" style="padding-right: 0; padding-left: 16px; min-width: 430px;"><p class="p-0" style="text-align: justify;">
-С МАГНАВИС вы снизите затраты на перевозку ваших грузов по всему миру. С нашей помощью вы можете перевезти килограммы мороженого, станки для тяжелой промышленности, крокодилов и не только. Знаем, как сделать это быстро, качественно и по оптимальным ценам. Масштабная сеть партнёров со всего света, поддержка от личного менеджера 24/7 и опытная команда – то, что ценим мы, и то, что ценят в нас.</p></div>
+Оформляем документы, доставляем грузы от «двери до двери», проходим границы, упаковываем, храним, вручаем в руки и лично сообщаем, где находится ваш груз в конкретный момент времени. Масштабная сеть партнёров со всего света, поддержка от личного менеджера 24/7 и опытная команда – то, что ценим мы, и то, что ценят в нас. </p></div>
             </div>
         </div>
     </div>
@@ -47,53 +47,55 @@
 {#                <div class="col"><img src="{{ url_for('static', filename='img/red/tr.png') }}" class="p-0"></div>#}
 {#            </div>#}
             <div class="row">
-                <a class="d-block col" href="directions/china"><div class=" tablo-invis d-flex justify-content-around" style="margin-left: 0;">
-                    <img src="{{ url_for('static', filename='img/red/ch.png') }}" class="p-0 w-50" style="margin-right: 32px;">
-                    <div>
+                <a class="d-block col p-0" href="directions/china"><div class=" tablo-invis d-flex justify-content-center country-col" style="margin-left: 0;">
+                    <div class="d-flex justify-content-center align-items-center" style="width: 340px; margin-right: 32px"> <img src="{{ url_for('static', filename='img/red/ch.png') }}" style="width: 340px; height:289px;"></div>
+                    <div class="country-text">
                         <h3>Китай</h3>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
                     </div>
                 </div></a>
-                <div class="col tablo-invis d-flex justify-content-around" style="margin-right: 0;">
-                    <img src="{{ url_for('static', filename='img/red/hk.png') }}" class="p-0 w-50" style="margin-right: 32px;">
-                    <div>
+                <a class="d-block col p-0" href="#"><div class=" tablo-invis d-flex justify-content-center country-col" style="margin-right: 0; max-width: 721px">
+                    <div class="d-flex justify-content-center align-items-center" style="width: 340px; margin-right: 32px"><img src="{{ url_for('static', filename='img/red/hk.png') }}" style="width: 340px; height:267px;"></div>
+                    <div class="country-text">
                         <h3>Гонконг</h3>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
                     </div>
-                </div>
+                </div></a>
             </div>
             <div class="row">
-                <a class="d-block col" href="directions/china"><div class="tablo-invis d-flex justify-content-around align-items-center" style="margin-left: 0;">
-                    <img src="{{ url_for('static', filename='img/red/tr.png') }}" class="p-0" style="margin-right: 32px; max-width: 325px; max-height: 163px">
-                    <div>
+                <a class="d-block col p-0" href="#"><div class=" tablo-invis d-flex justify-content-center country-col" style="margin-left: 0;">
+                    <div class="d-flex justify-content-end align-items-center" style="width: 340px !important; height: 340px; margin-right: 32px; padding-left: 40px"><img src="{{ url_for('static', filename='img/red/sk.png') }}" style="width: 300px; height:340px;"></div>
+
+                    <div class="country-text">
+                        <h3>Ю. Корея</h3>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
+                    </div>
+                </div></a>
+                <a class="d-block col p-0" href="#"><div class=" tablo-invis d-flex justify-content-center country-col" style="margin-right: 0; max-width: 721px">
+                    <div class="d-flex justify-content-center align-items-center" style="width: 340px; margin-right: 32px"><img src="{{ url_for('static', filename='img/red/oae.png') }}" style="width: 340px; height:274px;"></div>
+                    <div class="country-text">
+                        <h3>ОАЭ</h3>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
+                    </div>
+                </div></a>
+            </div>
+            <div class="row">
+                <a class="d-block col p-0" href="directions/china"><div class="tablo-invis d-flex justify-content-center align-items-center country-col" style="margin-left: 0;">
+                    <div class="d-flex justify-content-center align-items-center country-col" style="width: 340px; margin-right: 32px"><img src="{{ url_for('static', filename='img/red/tr.png') }}" class="p-0" style="margin-right: 32px; width: 340px; height: 162px"></div>
+                    <div class="country-text">
                         <h3>Турция</h3>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
                     </div>
                 </div></a>
-                <div class="col tablo-invis d-flex justify-content-around" style="margin-right: 0;">
-                    <img src="{{ url_for('static', filename='img/red/in.png') }}" class="p-0 w-50" style="margin-right: 32px;">
-                    <div>
+                <a class="d-block col p-0" href="#"><div class="tablo-invis d-flex justify-content-center align-items-center country-col" style="margin-right: 0; max-width: 721px">
+                    <div class="d-flex justify-content-center align-items-center" style="width: 340px; margin-right: 32px"><img src="{{ url_for('static', filename='img/red/in.png') }}" style="width: 311px; height:340px;"></div>
+                    <div class="country-text">
                         <h3>Индия</h3>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <a class="d-block col" href="directions/china"><div class=" tablo-invis d-flex justify-content-around" style="margin-left: 0;">
-                    <img src="{{ url_for('static', filename='img/red/sk.png') }}" class="p-0 w-50" style="margin-right: 32px;">
-                    <div>
-                        <h3>Южная Корея</h3>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
-                    </div>
                 </div></a>
-                <div class="col tablo-invis d-flex justify-content-around" style="margin-right: 0;">
-                    <img src="{{ url_for('static', filename='img/red/oae.png') }}" class="p-0 w-50" style="margin-right: 32px;">
-                    <div>
-                        <h3>ОАЭ</h3>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
-                    </div>
-                </div>
             </div>
+
         </div>
 
     </div>
