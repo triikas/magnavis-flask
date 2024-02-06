@@ -1,28 +1,36 @@
-{% extends "base.html" %}
+{% extends "mobile/base.html" %}
 
 {% block title %}Направления грузоперевозок | MAGNAVIS{% endblock %}
 
 {% block content %}
-    <style>.p-up-s{display: none;}section{ min-height: 0;}body{background-image: linear-gradient(to bottom, #171616, #000000);} .tablo-color{padding-left: 40px;padding-left: 40px;}</style>
+    <style>.p-up-s{display: none;}.up{height: 200px;}section{ min-height: 0;}body{background-image: linear-gradient(to bottom, #171616, #000000);} .tablo-color{padding-left: 40px;padding-left: 40px;}</style>
     <script>
         document.querySelector("body").classList.remove("asyncImage");
     </script>
     <div class="tablo-big tablo-invis">
-        <h1 style="font-size: 2.2em" class="text-center m-0">Доставка из китая</h1>
+        <h1 style="font-size: 3.3em" class="text-center m-0">Доставка из китая</h1>
     <div style="width: 50%; margin-left: 25%; height: 2px; background-color: white; margin-top: 20px;"></div>
     </div>
     <div class="tablo-big tablo-invis mt-3">
         <div class="container-fluid px-5">
             <div class="row p-0">
-                <div class="col-7 tablo-invis" style="margin-left: 0;">
+                <div class="col tablo-invis mx-0 w-100" style=" padding-bottom: 0; margin-bottom: 0;">
 {#                    <map name="china">#}
 {#                        <area shape="circle" coords="600,620,60" onclick="guan()">#}
 {#                    </map>#}
                     <img usemap="#china" src="{{ url_for('static', filename='img/grey/ch.png') }}" class="ch-img p-0" style="margin-right: 32px;">
                 </div>
-                <div class="col tablo-invis" style="margin-right: 0;">
+
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis mt-3">
+        <h3>Китай</h3>
+        <div class="container-fluid px-5">
+            <div class="row p-0">
+                <div class="col tablo-invis p-0" style="margin-right: 0;">
                     <div class="ch-text" style="">
-                        <h3>Китай</h3>
+
                         <p style="text-align: justify;">МАГНАВИС занимается доставкой любых видов грузов из Китая в Россию и наоборот — из России в Китай. С нами вы сможете снизить затраты на перевозку грузов, а также будете уверены, что ваш товар прибудет в руки в целости и сохранности.</p>
                         <p style="text-align: justify;">Оказываем полный комплекс услуг по организации грузоперевозок из Китая: от забора груза в любой провинции КНР до вручения его в руки получателя по всему миру. Наши специалисты осуществляют выгодную доставку самолётом, железнодорожным, морским и автотранспортом.</p>
                     </div>
@@ -61,7 +69,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col tablo-serv sea" style="margin-right: 16px;min-height: 570px; min-width: 430px; background-image: url({{ url_for('static', filename='img/mika-baumeister-3XjMwxUHx0Q-unsplash-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                <div class="col tablo-serv sea mx-0" style="min-height: 570px; min-width: 730px; background-image: url({{ url_for('static', filename='img/mika-baumeister-3XjMwxUHx0Q-unsplash-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
                     <div class="tablo-serv-in">
                         <h4 style="font-weight: bolder;">Морской транспорт</h4>
                         <p class="mt-4">Этот вид транспорта подходит для перевозки крупногабаритных, тяжеловесных, опасных и наливных грузов, товаров с длительным сроком хранения. В зависимости от вида грузов используется определённый тип контейнеров. Доставка осуществляется из китайских портов: Шанхай, Гуанчжоу-Шэньчжэнь, Тяньцзинь, Далянь, Циньхуандао, Циндао, Нинбо-Чжоушань, Жичжао, Инкоу, Яньтай, Ляньюньган, Чжаньцзян. Грузы переправляются на судах из Китая в российские порты во Владивосток, Санкт-Петербург и Новороссийск.</p>
@@ -81,35 +89,35 @@
        <div class="container-fluid px-5">
 
            <div class="row">
-                <div class="col tablo-light cargo-t">
+                <div class="col tablo-light cargo-t" style="margin-right: 16px; margin-bottom: 16px;">
                     <h4 class="m-0">Оборудование и комплектующие </h4>
                 </div>
-                <div class="col tablo-light cargo-t tof-cargo">
+                <div class="col tablo-light cargo-t" style="margin-bottom: 16px;">
                     <h4 class="m-0">Образцы и пробные партии </h4>
                 </div>
-                <div class="col tablo-light cargo-t">
+                <div class="col tablo-light cargo-t" style="margin-bottom: 0;">
                     <h4 class="m-0">Одежда</h4>
                 </div>
             </div>
            <div class="row" style="margin-top: 16px;">
-                <div class="col tablo-light cargo-t">
+                <div class="col tablo-light cargo-t" style="margin-right: 16px; margin-bottom: 16px;">
                     <h4 class="m-0">Опасные грузы</h4>
                 </div>
-                <div class="col tablo-light cargo-t tof-cargo">
+                <div class="col tablo-light cargo-t" style="margin-bottom: 16px;">
                     <h4 class="m-0">Живые цветы</h4>
                 </div>
-                <div class="col tablo-light cargo-t">
+                <div class="col tablo-light cargo-t" style="margin-bottom: 0;">
                     <h4 class="m-0">Автозапчасти и автомобили</h4>
                 </div>
             </div>
            <div class="row" style="margin-top: 16px;">
-                <div class="col tablo-light cargo-t">
+                <div class="col tablo-light cargo-t" style="margin-right: 16px; margin-bottom: 16px;">
                     <h4 class="m-0">Ценные грузы</h4>
                 </div>
-                <div class="col tablo-light cargo-t tof-cargo">
+                <div class="col tablo-light cargo-t" style="margin-bottom: 16px;">
                     <h4 class="m-0">Техника</h4>
                 </div>
-                <a href="/services" class="d-block col text-decoration-none tablo-color cargo-t" style="padding-left: 20px !important;">
+                <a href="/services" class="d-block col text-decoration-none tablo-color cargo-t" style="padding-left: 20px !important; min-width: 700px;">
                     <h4 class="m-0">Другое</h4>
                 </a>
             </div>
@@ -120,12 +128,12 @@
         <h3>Дополнительные услуги</h3>
         <div class="container-fluid px-5">
             <div class="row">
-                <div class="col tablo-serv p-0 mx-0" style="margin: 16px; background-image: url({{ url_for('static', filename='img/min/mealpro-efgpRGeu9tg-unsplash-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                <div class="col tablo-serv p-0 mx-0" style="margin: 16px; min-width: 700px; background-image: url({{ url_for('static', filename='img/min/mealpro-efgpRGeu9tg-unsplash-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
                     <div class="tablo-serv-in" style="min-height: 308px;">
                     <h4>Доставка груза от «двери до двери»</h4>
                     </div>
                 </div>
-                <div class="col tablo-serv p-0 mx-0 tof-dop-2" style="margin: 16px; background-image: url({{ url_for('static', filename='img/min/adrian-sulyok-sczNLg6rrhQ-unsplash-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                <div class="col tablo-serv p-0 mx-0 my-0" style="margin: 16px; min-width: 700px; background-image: url({{ url_for('static', filename='img/min/adrian-sulyok-sczNLg6rrhQ-unsplash-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
                     <div class="tablo-serv-in" style="min-height: 308px;">
                     <h4>Складские услуги</h4>
                     </div>
@@ -138,7 +146,7 @@
             </div>
             <div class="row">
                 <div class="col p-0 mx-0 d-flex justify-content-end">
-                   <a class="text-light text-decoration-none p-0" href="/services" style="right: -10%">Другие устуги</a>
+                    <a class="text-light text-decoration-none p-0" href="/services" style="right: -10%"><p>Другие устуги</p></a>
                 </div>
 
             </div>
