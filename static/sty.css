@@ -300,6 +300,7 @@ h1{
 .dropdown-item:hover{
     cursor: pointer;
     background-color: #ab2524;
+    color: #ffffff;
 }
 h3{
     margin-bottom: 60px;
