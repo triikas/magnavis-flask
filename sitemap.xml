@@ -2,93 +2,113 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://magnavis.ru</loc>
-        <lastmod>2024-01-29</lastmod>
+        <lastmod>2024-02-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1</priority>
     </url>
     <url>
         <loc>https://magnavis.ru/services</loc>
-        <lastmod>2024-01-29</lastmod>
+        <lastmod>2024-02-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://magnavis.ru/about</loc>
-        <lastmod>2024-01-29</lastmod>
+        <lastmod>2024-02-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://magnavis.ru/info</loc>
-        <lastmod>2024-01-29</lastmod>
+        <lastmod>2024-02-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://magnavis.ru/payment</loc>
-        <lastmod>2024-01-29</lastmod>
+        <lastmod>2024-02-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://magnavis.ru/contacts</loc>
-        <lastmod>2024-01-29</lastmod>
+        <lastmod>2024-02-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1</priority>
     </url>
 
 
     <url>
+        <loc>https://magnavis.ru/directions</loc>
+        <lastmod>2024-02-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://magnavis.ru/directions/china</loc>
+        <lastmod>2024-02-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+
+    <url>
         <loc>https://magnavis.ru/info/rgd</loc>
-        <lastmod>2024-01-29</lastmod>
+        <lastmod>2024-02-07</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.1</priority>
     </url>
     <url>
         <loc>https://magnavis.ru/info/sutochnie</loc>
-        <lastmod>2024-01-29</lastmod>
+        <lastmod>2024-02-07</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.1</priority>
     </url>
     <url>
         <loc>https://magnavis.ru/info/agro</loc>
-        <lastmod>2024-01-29</lastmod>
+        <lastmod>2024-02-07</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.1</priority>
     </url>
     <url>
         <loc>https://magnavis.ru/info/garant</loc>
-        <lastmod>2024-01-29</lastmod>
+        <lastmod>2024-02-07</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.1</priority>
     </url>
     <url>
         <loc>https://magnavis.ru/info/suparna</loc>
-        <lastmod>2024-01-29</lastmod>
+        <lastmod>2024-02-07</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.1</priority>
     </url>
     <url>
         <loc>https://magnavis.ru/info/kalin</loc>
-        <lastmod>2024-01-29</lastmod>
+        <lastmod>2024-02-07</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.1</priority>
     </url>
     <url>
         <loc>https://magnavis.ru/info/haynan</loc>
-        <lastmod>2024-01-29</lastmod>
+        <lastmod>2024-02-07</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.1</priority>
     </url>
     <url>
         <loc>https://magnavis.ru/info/il96</loc>
-        <lastmod>2024-01-29</lastmod>
+        <lastmod>2024-02-07</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.1</priority>
     </url>
     <url>
         <loc>https://magnavis.ru/info/spravochnik</loc>
-        <lastmod>2024-01-29</lastmod>
+        <lastmod>2024-02-07</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.1</priority>
+    </url>
+    <url>
+        <loc>https://magnavis.ru/info/haynan</loc>
+        <lastmod>2024-02-07</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.1</priority>
     </url>
