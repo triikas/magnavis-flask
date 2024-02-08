@@ -30,6 +30,28 @@ textarea{
       border: 3px solid #131212;
     }
 }
+.footer-down{
+    margin-top: 40px;
+    & a{
+       display: block;
+        color: #d9d2d2;
+        text-decoration: none;
+    }
+    & .btn{
+        border-radius: 8px;
+        width: 80%;
+        padding: 10px;
+    }
+    & .btn-danger{
+        background-color: #ab2524 !important;
+    }
+    & .btn-light{
+        background-color: #575a57 !important;
+        border-color:  #575a57;
+        color: #d9d2d2;
+        margin-top: 10px;
+    }
+}
 body{
     background-color: #161617;
     background-color: #131212;

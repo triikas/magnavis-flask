@@ -359,6 +359,40 @@ def shanhai():
         return render_template('news-vrem/shanhai.html')
 
 
+@application.route('/info/g4721', methods=['post', 'get'])
+def g4721():
+    if request.method == 'POST':
+        msg = Message("Запрос с magnavis.ru", recipients=mails)
+        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
+        name = request.form.get('name')
+        email = request.form.get('email')
+        number = request.form.get('number')
+        comment = request.form.get('comment')
+        lovushka = request.form.get('lovushka')
+        kod = request.form.get('kod')
+        if str(request.form.get('kod')) != "None":
+            flash("Груз не найден")
+            if request.MOBILE:
+                return redirect(url_for('mobile/news-vrem/g4721'))
+            else:
+                return redirect(url_for('news-vrem/g4721'))
+        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
+            flash("Вы указали почту, на которую нельзя ответить")
+        else:
+            mail.send(msg)
+            flash("Запрос отправлен")
+            # print(str((request.form.get('email'))))
+            if request.MOBILE:
+                return redirect(url_for('mobile/news-vrem/g4721'))
+            else:
+                return redirect(url_for('news-vrem/g4721'))
+    if request.MOBILE:
+        return render_template('mobile/news-vrem/g4721.html')
+    else:
+        return render_template('news-vrem/g4721.html')
+
+
 @application.route('/info/sutochnie', methods=['post', 'get'])
 def sutochnie():
     if request.method == 'POST':
