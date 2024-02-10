@@ -66,6 +66,44 @@
 
         </div>
     {% endfor %}
+    <div class="form-window frm1">
+        <div>
+            <div class="d-flex justify-content-end out">
+                <div onclick="form1_close()" style="cursor: pointer;"><svg xmlns="http://www.w3.org/2000/svg" width="25" fill="#b9b9b9" class="bi bi-x" viewBox="0 0 16 16">
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                </svg></div>
+            </div>
+            <div class="tablo-light form1">
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="form-window frm2">
+        <div>
+            <div class="d-flex justify-content-end out">
+                <div onclick="form2_close()" style="cursor: pointer;"><svg xmlns="http://www.w3.org/2000/svg" width="25" fill="#b9b9b9" class="bi bi-x" viewBox="0 0 16 16">
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                </svg></div>
+            </div>
+            <div class="tablo-light form1">
+                <form method="post" id="status-f" style="min-width: 500px;">
+                    <h3>Статус груза</h3>
+                    <div class="mb-3 form__group field">
+                        <input minlength="5" type="text" class="form__field" name="kod" id="kod" placeholder="kod" required>
+                        <label class="form__label" for="kod">Код груза</label>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Отправить</button>
+                    <div class="mes"></div>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
     <div class="window">
     <section class="mb-5 up">
         <div style="margin-left: 5%; margin-right: 5%; padding-top: 2vh;"><nav class="nav1 d-flex justify-content-between w-100" style="margin-right: 20px; margin-left: 20px;">
@@ -77,7 +115,7 @@
 
                     <p style="font-size: 1em;" class="text-light m-0 p-0 mx-1">+7 (812) 655-66-41</p>
                 </div>
-                <a href="javascript:scroll(0,9000)" class="btn btn-danger mr-5 mx-1">Отправить запрос</a>
+                <a onclick="form1_open()" class="btn btn-danger mr-5 mx-1">Отправить запрос</a>
 
                 <div class="dropdown">
                     <div id="ytWidget" style="display: none;"></div>
@@ -130,171 +168,172 @@
         </div>
     </section>
     {% block content %}{% endblock %}
-{#    <footer class="tablo-big tablo-invis mt-3 mb-0">#}
-{#        <div class="d-flex justify-content-between align-items-center">#}
-{#            <a class="d-block" href="/"><img style="width: 372px; height: 51px;" src="{{ url_for('static', filename='img/logo-white-foo.png') }}" alt="MAGNAVIS"></a>#}
-{#            <div class="d-flex justify-content-start">#}
-{#                <div>#}
-{#                    <p class="m-0" style="font-size: 1.1em">+7 (812) 655-66-41</p>#}
-{#                    <p class="m-0" style="font-size: 1.1em">&#99;&#97;&#114;&#103;&#111;&#64;&#109;&#97;&#103;&#110;&#97;&#118;&#105;&#115;.&#114;&#117;</p>#}
-{#                </div>#}
-{#                <div class="d-flex justify-content-end align-items-center">#}
-{#                    <div class="mx-3"><a href="https://wa.me/79811003014" target="_blank"><div class="d-flex justify-content-center align-items-center" style="border-radius: 8px; width: 51px; height: 51px; background-color: #575a57;"><svg xmlns="http://www.w3.org/2000/svg" width="26" fill="#dad3d3" class="bi bi-whatsapp" viewBox="0 0 16 16">#}
-{#                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>#}
-{#                    </svg></div></a></div>#}
-{#                    <div><a href="https://t.me/magnavis_pvl" target="_blank"><div class="d-flex justify-content-center align-items-center" style="border-radius: 8px; width: 51px; height: 51px; background-color: #575a57;"><img src="{{ url_for('static', filename='img/telegram2(nowi).svg') }}" style="width: 26px" alt="telegram"></div></a></div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#        <div class="container-fluid footer-down">#}
-{#            <div class="row">#}
-{#                <div class="col p-0">#}
-{#                    <h4>Компания</h4>#}
-{#                    <a href="/about">О нас</a>#}
-{#                    <a href="/directions">Направления</a>#}
-{#                    <a href="/contacts">Контакты</a>#}
-{#                    <a href="/">Тарифы</a>#}
-{#                    <a href="/docs/MAGNAVIS-requisites(RUR).pdf">Реквизиты</a>#}
-{#                    <a href="/payment">Оплата</a>#}
-{#                    <a href="/info">Новости</a>#}
-{#                    <a href="/about#part">Партнёры</a>#}
-{#                </div>#}
-{#                <div class="col p-0">#}
-{#                    <h4>Услуги</h4>#}
-{#                    <a href="/">Прямая ж/д доставка</a>#}
-{#                    <a>Авиадоставка</a>#}
-{##}
-{#                    <a>Автодоставка</a>#}
-{#                    <a>Морской фрахт</a>#}
-{#                    <a>Таможенное оформление</a>#}
-{#                    <a>Экспедирование</a>#}
-{#                    <a>Погрузо-разгрузочные работы</a>#}
-{#                    <a>Отслеживание по AWB</a>#}
-{#                </div>#}
-{#                <div class="col p-0">#}
-{#                    <h4>Что перевозим?</h4>#}
-{#                    <a>Образцы и пробные партии</a>#}
-{#                    <a>Опасные грузы</a>#}
-{#                    <a>Ценные грузы</a>#}
-{#                    <a>Хрупкие грузы</a>#}
-{#                    <a>Зап. части и оборудование</a>#}
-{#                    <a>Техника</a>#}
-{#                    <a>Другое</a>#}
-{##}
-{#                </div>#}
-{#                <div class="col p-0">#}
-{#                    <h4>Сервисы</h4>#}
-{#                    <a class="btn btn-danger">Получить консультацию</a>#}
-{#                    <a class="btn btn-light">Отследить груз</a>#}
-{#                    <h4 class="mt-4">Соцсети</h4>#}
-{#                    <div class="d-flex justify-content-start align-items-center" style="padding-left: 2px;">#}
-{#                        <div><a href="https://wa.me/79811003014" target="_blank"><div class="d-flex justify-content-center align-items-center" style="border-radius: 8px; width: 30px; height: 30px; background-color: rgba(87,90,87,0);"><img src="{{ url_for('static', filename='img/inst.png') }}" style="width: 30px" alt="telegram"></div></a></div>#}
-{#                        <div class="mx-3"><a href="https://t.me/magnavis_pvl" target="_blank"><div class="d-flex justify-content-center align-items-center" style="border-radius: 8px; width: 30px; height: 30px; background-color: rgba(87,90,87,0);"><img src="{{ url_for('static', filename='img/vk.png') }}" style="width: 30px" alt="telegram"></div></a></div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </footer>#}
-    <footer class="text-light mt-5 pt-5 px-0">
-        <div style="margin-right: 5%; margin-left: 5%;">
-            <div class="container-fluid">
-            <div class="row" style="padding-right: 20px; padding-left: 20px;">
-                <div class="col px-0" style="margin-right: 40px; min-width: 372px; max-width: 600px;" >
 
-                    <a class="mt-1" href="/"><img style="margin-bottom: 40px; width: 372px; padding-right: 20px;" src="{{ url_for('static', filename='img/logo-white-foo.png') }}" alt="MAGNAVIS"></a>
-                    <div class="osn-cont">
-                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/" >Главная</a></div>
-                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/services" >Услуги</a></div>
-                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/directions" >Направления</a></div>
-                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/about" >О нас</a></div>
-                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/info" >Новости</a></div>
-                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/payment" >Оплата</a></div>
-                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/contacts" >Контакты</a></div>
-                    </div>
-
-                    <div class="d-flex justify-content-start dop-cont">
-                        <div style="margin-right: 64px">
-                            <h3>Навигация</h3>
-                            <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/" >Главная</a></div>
-                            <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/services" >Услуги</a></div>
-                            <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/directions" >Направления</a></div>
-                            <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/about" >О нас</a></div>
-                            <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/info" >Новости</a></div>
-                            <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/payment" >Оплата</a></div>
-                            <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/contacts" >Контакты</a></div>
-                        </div>
-                        <div>
-                            <a href="/contacts" class="text-decoration-none p-0 text-light"><h3>Контакты</h3></a>
-                            <p>Звоните, наши менеджеры всегда на связи!</p>
-                        <p style="font-size: 1.1em;">+7 (812) 655-66-41</p>
-                        <p class="m-0" style="font-size: 1.1em;">&#99;&#97;&#114;&#103;&#111;&#64;&#109;&#97;&#103;&#110;&#97;&#118;&#105;&#115;.&#114;&#117;</p>
-                        </div>
-                    </div>
+    <footer class="tablo-big tablo-invis mt-3 mb-0">
+        <div class="d-flex justify-content-between align-items-center">
+            <a class="d-block" href="/"><img style="width: 372px; height: 51px;" src="{{ url_for('static', filename='img/logo-white-foo.png') }}" alt="MAGNAVIS"></a>
+            <div class="d-flex justify-content-start">
+                <div>
+                    <p class="m-0" style="font-size: 1.1em">+7 (812) 655-66-41</p>
+                    <p class="m-0" style="font-size: 1.1em">&#99;&#97;&#114;&#103;&#111;&#64;&#109;&#97;&#103;&#110;&#97;&#118;&#105;&#115;.&#114;&#117;</p>
                 </div>
-                <div class="col px-0 max-footer" style=" min-width: 335px;">
-                    <div>
-                        <a href="/contacts" class="text-decoration-none p-0 text-light"><h3 class="mt-3">Контакты</h3></a>
-                        <p STYLE="margin-bottom: 16px;">Звоните, наши менеджеры всегда на связи!</p>
-                        <p class="" style="font-size: 1.3em; margin-bottom: 16px;">+7 (812) 655-66-41</p>
-                        <p class="m-0" style="font-size: 1.1em;">&#99;&#97;&#114;&#103;&#111;&#64;&#109;&#97;&#103;&#110;&#97;&#118;&#105;&#115;.&#114;&#117;</p>
-                    </div>
-                    <form method="post" id="status-f">
-                        <h3 style="margin-top: 68px;">Статус груза</h3>
-                        <div class="mb-3 form__group field">
-                            <input minlength="5" type="text" class="form__field" name="kod" id="kod" placeholder="kod" required>
-                            <label class="form__label" for="kod">Код груза</label>
-                        </div>
-                        <button type="button" class="btn btn-danger" onclick="status()">Отправить</button>
-                        <button type="submit" class="btn btn-danger ">
-                            Отправить
-                        </button>
-                        <div class="mes"></div>
-                    </form>
-                    <div class="status-vrem tablo-color d-none">
-
-                        <table>
-                            <tr><td><H3>Груз с таким кодом не найден</H3></td></tr>
-                            <tr><td class=""><button class="btn btn-light" style="width: 60px;" onclick="status_delete()">ОК</button></td></tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="col px-0 max-footer form1" style="margin-left: 40px; min-width: 335px;" >
-                </div>
-
-                <div class="col px-0 min-footer" style="min-width: 407px;">
-                    <table>
-                        <tr><td style="max-height: 306px">
-                            <div class="col px-0 footform ff-1" style=" margin-bottom: 40px; min-width: 335px; padding-top: 0;">
-                    <form style="padding-top: 5px" method="post" id="status-f-min">
-                        <h3 class="mt-3">Статус груза</h3>
-                        <div class="mb-3 form__group field">
-                            <input minlength="5" type="text" class="form__field" name="kod" id="kod" placeholder="kod" required>
-                            <label class="form__label" for="kod">Код груза</label>
-                        </div>
-                        <button type="submit" class="btn btn-danger">Отправить</button>
-                        <div class="mes"></div>
-                    </form>
-                     <div class="status-vrem tablo-color d-none">
-
-                        <table>
-                            <tr><td><H3>Груз с таким кодом не найден</H3></td></tr>
-                            <tr><td class=""><button class="btn btn-light" style="width: 60px;" onclick="status_delete()">ОК</button></td></tr>
-                        </table>
-                    </div>
-                </div>
-                        </td></tr>
-                        <tr><td>
-                            <div class="col px-0 footform form2" style=" min-width: 335px;" >
-                </div>
-                        </td></tr>
-                    </table>
+                <div class="d-flex justify-content-end align-items-center footer-mes">
+                    <div class="mx-3"><a href="https://wa.me/79811003014" target="_blank"><div class="d-flex justify-content-center align-items-center mes" style="border-radius: 8px; width: 51px; height: 51px; background-color: #575a57;"><svg xmlns="http://www.w3.org/2000/svg" width="26" fill="#dad3d3" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg></div></a></div>
+                    <div><a href="https://t.me/magnavis_pvl" target="_blank"><div class="d-flex justify-content-center align-items-center mes" style="border-radius: 8px; width: 51px; height: 51px; background-color: #575a57;"><img src="{{ url_for('static', filename='img/telegram2(nowi).svg') }}" style="width: 26px" alt="telegram"></div></a></div>
                 </div>
             </div>
         </div>
+        <div class="container-fluid footer-down">
+            <div class="row">
+                <div class="col p-0">
+                    <h4>Компания</h4>
+                    <a href="/about">О нас</a>
+                    <a href="/directions">Направления</a>
+                    <a href="/contacts">Контакты</a>
+                    <a href="/">Тарифы</a>
+                    <a href="/docs/MAGNAVIS-requisites(RUR).pdf">Реквизиты</a>
+                    <a href="/payment">Оплата</a>
+                    <a href="/info">Новости</a>
+                    <a href="/about#part">Партнёры</a>
+                </div>
+                <div class="col p-0">
+                    <h4>Услуги</h4>
+                    <a href="/">Прямая ж/д доставка</a>
+                    <a href="/#transport">Авиадоставка</a>
+
+                    <a href="/#transport">Автодоставка</a>
+                    <a href="/#transport">Морской фрахт</a>
+                    <a href="/services">Таможенное оформление</a>
+                    <a href="/services">Экспедирование</a>
+                    <a href="/services">Погрузо-разгрузочные работы</a>
+                    <a>Отслеживание по AWB</a>
+                </div>
+                <div class="col p-0 footer-min">
+                    <h4>Что перевозим?</h4>
+                    <a href="/services">Образцы и пробные партии</a>
+                    <a href="/services">Опасные грузы</a>
+                    <a href="/services">Ценные грузы</a>
+                    <a href="/services">Хрупкие грузы</a>
+                    <a href="/services">Зап. части и оборудование</a>
+                    <a href="/services">Техника</a>
+                    <a href="/services">Другое</a>
+
+                </div>
+                <div class="col p-0">
+                    <h4>Сервисы</h4>
+                    <a class="btn btn-danger" onclick="form1_open()" style=" color: #d9d2d2 !important;">Получить консультацию</a>
+                    <a class="btn btn-light mes" onclick="form2_open()" style=" color: #d9d2d2 !important;">Отследить груз</a>
+                    <h4 class="mt-4">Соцсети</h4>
+                    <div class="d-flex justify-content-start align-items-center" style="padding-left: 2px;">
+                        <div><a href="https://www.instagram.com/magnavis_logistic?igsh=cWl2YTgzbG51aWl1" target="_blank"><div class="d-flex justify-content-center align-items-center" style="border-radius: 8px; width: 30px; height: 30px; background-color: rgba(87,90,87,0);"><img src="{{ url_for('static', filename='img/inst.png') }}" style="width: 30px" alt="telegram"></div></a></div>
+                        <div class="mx-3"><a href="https://vk.com/magnavis" target="_blank"><div class="d-flex justify-content-center align-items-center" style="border-radius: 8px; width: 30px; height: 30px; background-color: rgba(87,90,87,0);"><img src="{{ url_for('static', filename='img/vk.png') }}" style="width: 30px" alt="telegram"></div></a></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
+{#    <footer class="text-light mt-5 pt-5 px-0">#}
+{#        <div style="margin-right: 5%; margin-left: 5%;">#}
+{#            <div class="container-fluid">#}
+{#            <div class="row" style="padding-right: 20px; padding-left: 20px;">#}
+{#                <div class="col px-0" style="margin-right: 40px; min-width: 372px; max-width: 600px;" >#}
+{##}
+{#                    <a class="mt-1" href="/"><img style="margin-bottom: 40px; width: 372px; padding-right: 20px;" src="{{ url_for('static', filename='img/logo-white-foo.png') }}" alt="MAGNAVIS"></a>#}
+{#                    <div class="osn-cont">#}
+{#                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/" >Главная</a></div>#}
+{#                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/services" >Услуги</a></div>#}
+{#                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/directions" >Направления</a></div>#}
+{#                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/about" >О нас</a></div>#}
+{#                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/info" >Новости</a></div>#}
+{#                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/payment" >Оплата</a></div>#}
+{#                    <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/contacts" >Контакты</a></div>#}
+{#                    </div>#}
+{##}
+{#                    <div class="d-flex justify-content-start dop-cont">#}
+{#                        <div style="margin-right: 64px">#}
+{#                            <h3>Навигация</h3>#}
+{#                            <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/" >Главная</a></div>#}
+{#                            <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/services" >Услуги</a></div>#}
+{#                            <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/directions" >Направления</a></div>#}
+{#                            <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/about" >О нас</a></div>#}
+{#                            <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/info" >Новости</a></div>#}
+{#                            <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/payment" >Оплата</a></div>#}
+{#                            <div class="nav-a" style="font-size: 1.2em;"><a class="nav-link text-light mt-4" href= "/contacts" >Контакты</a></div>#}
+{#                        </div>#}
+{#                        <div>#}
+{#                            <a href="/contacts" class="text-decoration-none p-0 text-light"><h3>Контакты</h3></a>#}
+{#                            <p>Звоните, наши менеджеры всегда на связи!</p>#}
+{#                        <p style="font-size: 1.1em;">+7 (812) 655-66-41</p>#}
+{#                        <p class="m-0" style="font-size: 1.1em;">&#99;&#97;&#114;&#103;&#111;&#64;&#109;&#97;&#103;&#110;&#97;&#118;&#105;&#115;.&#114;&#117;</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col px-0 max-footer" style=" min-width: 335px;">#}
+{#                    <div>#}
+{#                        <a href="/contacts" class="text-decoration-none p-0 text-light"><h3 class="mt-3">Контакты</h3></a>#}
+{#                        <p STYLE="margin-bottom: 16px;">Звоните, наши менеджеры всегда на связи!</p>#}
+{#                        <p class="" style="font-size: 1.3em; margin-bottom: 16px;">+7 (812) 655-66-41</p>#}
+{#                        <p class="m-0" style="font-size: 1.1em;">&#99;&#97;&#114;&#103;&#111;&#64;&#109;&#97;&#103;&#110;&#97;&#118;&#105;&#115;.&#114;&#117;</p>#}
+{#                    </div>#}
+{#                    <form method="post" id="status-f">#}
+{#                        <h3 style="margin-top: 68px;">Статус груза</h3>#}
+{#                        <div class="mb-3 form__group field">#}
+{#                            <input minlength="5" type="text" class="form__field" name="kod" id="kod" placeholder="kod" required>#}
+{#                            <label class="form__label" for="kod">Код груза</label>#}
+{#                        </div>#}
+{#                        <button type="button" class="btn btn-danger" onclick="status()">Отправить</button>#}
+{#                        <button type="submit" class="btn btn-danger ">#}
+{#                            Отправить#}
+{#                        </button>#}
+{#                        <div class="mes"></div>#}
+{#                    </form>#}
+{#                    <div class="status-vrem tablo-color d-none">#}
+{##}
+{#                        <table>#}
+{#                            <tr><td><H3>Груз с таким кодом не найден</H3></td></tr>#}
+{#                            <tr><td class=""><button class="btn btn-light" style="width: 60px;" onclick="status_delete()">ОК</button></td></tr>#}
+{#                        </table>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col px-0 max-footer form1" style="margin-left: 40px; min-width: 335px;" >#}
+{#                </div>#}
+{##}
+{#                <div class="col px-0 min-footer" style="min-width: 407px;">#}
+{#                    <table>#}
+{#                        <tr><td style="max-height: 306px">#}
+{#                            <div class="col px-0 footform ff-1" style=" margin-bottom: 40px; min-width: 335px; padding-top: 0;">#}
+{#                    <form style="padding-top: 5px" method="post" id="status-f-min">#}
+{#                        <h3 class="mt-3">Статус груза</h3>#}
+{#                        <div class="mb-3 form__group field">#}
+{#                            <input minlength="5" type="text" class="form__field" name="kod" id="kod" placeholder="kod" required>#}
+{#                            <label class="form__label" for="kod">Код груза</label>#}
+{#                        </div>#}
+{#                        <button type="submit" class="btn btn-danger">Отправить</button>#}
+{#                        <div class="mes"></div>#}
+{#                    </form>#}
+{#                     <div class="status-vrem tablo-color d-none">#}
+{##}
+{#                        <table>#}
+{#                            <tr><td><H3>Груз с таким кодом не найден</H3></td></tr>#}
+{#                            <tr><td class=""><button class="btn btn-light" style="width: 60px;" onclick="status_delete()">ОК</button></td></tr>#}
+{#                        </table>#}
+{#                    </div>#}
+{#                </div>#}
+{#                        </td></tr>#}
+{#                        <tr><td>#}
+{#                            <div class="col px-0 footform form2" style=" min-width: 335px;" >#}
+{#                </div>#}
+{#                        </td></tr>#}
+{#                    </table>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#        </div>#}
+{#    </footer>#}
     <div class="content__desc" style="margin-left: 5%; padding-left: 20px; margin-bottom: 50px;">
-        <p style="color: rgba(192,192,192,0.66); font-size: 0.9em; margin: 0;">© 2023 Логистическая компания MAGNAVIS</p>
+        <p style="color: rgba(192,192,192,0.66); font-size: 0.9em; margin: 0;">© 2023-2024 Логистическая компания MAGNAVIS</p>
         <p style="color: rgba(84,84,84,0.66); font-size: 0.7em;">Uicons от <a style="color: rgba(84,84,84,0.66);" href="https://www.flaticon.com/uicons">Flaticon</a></p>
     </div>
     <script src="{{ url_for('static', filename='yatranslate.js') }}"></script>

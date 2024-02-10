@@ -3,6 +3,52 @@ const bottom_text = document.querySelector(".bottom-text")
 const win = document.querySelector(".window")
 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
 
+function frm1() {
+  bottom_panel.style.display = 'block'
+  bottom_panel.style.top = "20vh";
+  bottom_text.innerHTML = `<form class="text-light" method="post" id="request-f" style="min-width: 500px;">
+                        <h3>Отправить запрос</h3>
+                        <div class="mb-5 form__group field">
+                            <input minlength="2" type="text" class="form__field" name="name" id="name" placeholder="name" required>
+                            <label class="form__label" for="name">Ваше имя</label>
+                        </div>
+                        <div class="mb-5 form__group field">
+                            <input type="email" class="form__field" name="email" id="email" placeholder="email" required aria-describedby="emailHelp">
+                            <label class="form__label" for="email">Ваш email</label>
+                        </div>
+                        <div class="mb-5 form__group field">
+                            <input minlength="10" type="tel" class="form__field" name="number" id="number" placeholder="number" required aria-describedby="numberHelp">
+                            <label class="form__label" for="number">Ваш телефон</label>
+                        </div>
+                        <div class="mb-5 form__group field d-none">
+                            <input minlength="10" type="tel" class="form__field" name="number" id="lovushka" placeholder="number" aria-describedby="numberHelp">
+                            <label class="form__label" for="lovushka">Ваш телефон</label>
+                        </div>
+                        <div class="mb-5 form__group field">
+                            <textarea cols="40" rows="3" class="form__field" name="comment" id="comment" placeholder="comment"></textarea>
+                            <label class="form__label" for="comment">Комментарий</label>
+                        </div>
+                        <div class="mb-5">
+                            <input type="checkbox" name="check" id="check" class="custom-checkbox" required>
+                            <label for="check" id="mail-check" style="color: #b9b9b9; font-size: 0.8em;">Согласие на обработку персональных данных</label>
+                        </div>
+                        <button type="submit" id="mail-btn" class="btn btn-danger btnf1">Отправить</button>
+                        <div class="mes"></div>
+                    </form>`;
+}
+function frm2() {
+  bottom_panel.style.display = 'block'
+  bottom_panel.style.top = "20vh";
+  bottom_text.innerHTML = `<form method="post" id="status-f" style="min-width: 500px;">
+                    <h3>Статус груза</h3>
+                    <div class="mb-5 form__group field">
+                        <input minlength="5" type="text" class="form__field" name="kod" id="kod" placeholder="kod" required>
+                        <label class="form__label" for="kod">Код груза</label>
+                    </div>
+                    <button type="submit" class="btn btn-danger btnf1" style="font-size: 1.6em">Отправить</button>
+                    <div class="mes"></div>
+                </form>`;
+}
 function mp() {
   bottom_panel.style.display = 'block'
   bottom_panel.style.top = "20vh";

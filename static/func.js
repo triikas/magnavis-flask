@@ -6,8 +6,8 @@
 // items.forEach(item => item.addEventListener('click', toggleAccordion));
 
 function forms() {
-  document.querySelector(".form1").innerHTML = `<form class="text-light" method="post" id="request-f">
-                        <h3 class="mt-3">Отправить запрос</h3>
+  document.querySelector(".form1").innerHTML = `<form class="text-light" method="post" id="request-f" style="min-width: 500px;">
+                        <h3>Отправить запрос</h3>
                         <div class="mb-3 form__group field">
                             <input minlength="2" type="text" class="form__field" name="name" id="name" placeholder="name" required>
                             <label class="form__label" for="name">Ваше имя</label>
@@ -30,7 +30,7 @@ function forms() {
                         </div>
                         <div class="mb-3">
                             <input type="checkbox" name="check" id="check" class="custom-checkbox" required>
-                            <label for="check" id="mail-check" style="color: gray; font-size: 0.8em;">Согласие на обработку персональных данных</label>
+                            <label for="check" id="mail-check" style="color: #b9b9b9; font-size: 0.8em;">Согласие на обработку персональных данных</label>
                         </div>
                         <button type="submit" id="mail-btn" class="btn btn-danger btnf1">Отправить</button>
                         <div class="mes"></div>
@@ -288,6 +288,20 @@ function reveal() {
       reveals[i].classList.remove("active");
     }
   }
+}
+
+
+function form1_open() {
+  document.querySelector(".frm1").style.display = 'flex';
+}
+function form1_close() {
+  document.querySelector(".frm1").style.display = 'none';
+}
+function form2_open() {
+  document.querySelector(".frm2").style.display = 'flex';
+}
+function form2_close() {
+  document.querySelector(".frm2").style.display = 'none';
 }
 
 function guan() {
