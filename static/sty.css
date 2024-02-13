@@ -30,11 +30,14 @@ textarea{
       border: 3px solid #131212;
     }
 }
+.as:hover{
+    color: #a19a9a;
+}
 .footer-down{
     margin-top: 40px;
     & a{
        display: block;
-        color: #d9d2d2;
+        color: #b7b3b3;
         text-decoration: none;
         &:hover{
             color: #a19a9a;
@@ -1162,26 +1165,24 @@ li{
         display: none;
     }
 }
-
-@media (max-width: 1228px) {
-    .map{
-        top:0 !important;
-        height: 100% !important;
-    }
-    .of{
-        display: flex;
-        justify-content: space-between;
-        height: 450px !important;
-        min-width: 800px !important;
-        max-width: 1200px !important;
-        margin-right: 0 !important;
-        margin-left: 0 !important;
-        margin-bottom: 32px;
-    }
-    .b-cot{
+.of{
+    display: flex;
+    justify-content: space-between;
+    height: 450px !important;
+    min-width: 800px !important;
+    max-width: 1900px !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 32px;
+}
+.map{
+    top:0 !important;
+    height: 100% !important;
+}
+.b-cot{
         padding-top: 30px !important;
     }
-}
+
 @media (max-width: 1032px) {
     .map{
         display: none;
