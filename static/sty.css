@@ -1162,22 +1162,39 @@ li{
         display: none;
     }
 }
-.of{
-    display: none;
+
+@media (max-width: 1228px) {
+    .map{
+        top:0 !important;
+        height: 100% !important;
+    }
+    .of{
+        display: flex;
+        justify-content: space-between;
+        height: 450px !important;
+        min-width: 800px !important;
+        max-width: 1200px !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        margin-bottom: 32px;
+    }
+    .b-cot{
+        padding-top: 30px !important;
+    }
 }
-@media (max-width: 1404px) {
+@media (max-width: 1032px) {
     .map{
         display: none;
     }
     .of{
-        display: block;
-        width: 66%;
+        min-width: 400px !important;
     }
 }
+
 @media (max-width: 1030px) {
-    .of{
-        display: none;
-    }
+    /*.of{*/
+    /*    display: none;*/
+    /*}*/
 }
 .frm{
     max-width: 617px;

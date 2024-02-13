@@ -11,13 +11,15 @@ application.config['MAIL_PORT'] = 587
 application.config['MAIL_USE_TLS'] = True
 application.config['MAIL_USE_SSL'] = False
 # application.config['MAIL_USERNAME'] = 'akcarapko@gmail.com'
-application.config['MAIL_USERNAME'] = 'inforder@magnavis.ru'
-application.config['MAIL_DEFAULT_SENDER'] = 'inforder@magnavis.ru'
+# application.config['MAIL_USERNAME'] = 'inforder@magnavis.ru'
+application.config['MAIL_USERNAME'] = 'siteclient@magnavis.ru'
+application.config['MAIL_DEFAULT_SENDER'] = 'siteclient@magnavis.ru'
 # application.config['MAIL_PASSWORD'] = 'RapsodiyaFenseret5'
-application.config['MAIL_PASSWORD'] = 'Kiloper=1224'
+# application.config['MAIL_PASSWORD'] = 'Kiloper=1224'
+application.config['MAIL_PASSWORD'] = 'jG6qK9xK6awY6fS6'
 mail = Mail(application)
-mails = ['cargo@magnavis.ru', 'marwy@magnavis.ru', 'pvl@magnavis.ru', 'andr@magnavis.ru']
-# mails = ['triikas@magnavis.ru']
+# mails = ['cargo@magnavis.ru', 'marwy@magnavis.ru', 'pvl@magnavis.ru', 'andr@magnavis.ru']
+mails = ['triikas@magnavis.ru']
 
 
 
