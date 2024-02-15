@@ -18,39 +18,21 @@ application.config['MAIL_DEFAULT_SENDER'] = 'siteclient@magnavis.ru'
 # application.config['MAIL_PASSWORD'] = 'Kiloper=1224'
 application.config['MAIL_PASSWORD'] = 'jG6qK9xK6awY6fS6'
 mail = Mail(application)
-# mails = ['cargo@magnavis.ru', 'marwy@magnavis.ru', 'pvl@magnavis.ru', 'andr@magnavis.ru']
+# mails = ['inforder@magnavis.ru', 'marwy@magnavis.ru', 'pvl@magnavis.ru', 'andr@magnavis.ru']
 mails = ['triikas@magnavis.ru']
 
 
 
 @application.route('/', methods=['post', 'get'])
 def home():
-    print("fgh: ", str(request.MOBILE))
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
-        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
-        lovushka = request.form.get('lovushka')
-        kod = request.form.get('kod')
-        if str(request.form.get('kod')) != "None":
-            flash("Груз не найден")
-            # if request.MOBILE:
-            #     return redirect(url_for('mobile/home'))
-            # else:
-            return redirect(url_for('home'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
-            flash("Неверные данные")
-        else:
-            mail.send(msg)
-            flash("Запрос отправлен")
-            # if request.MOBILE:
-            #     return redirect(url_for('mobile/home'))
-            # else:
-            return redirect(url_for('home'))
+        mail.send(msg)
     if request.MOBILE:
         return render_template('mobile/home.html')
     else:
@@ -65,30 +47,12 @@ def contacts():
     func.docs_update()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
-        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
-        lovushka = request.form.get('lovushka')
-        kod = request.form.get('kod')
-        if str(request.form.get('kod')) != "None":
-            flash("Груз не найден")
-            if request.MOBILE:
-                return redirect(url_for('mobile/contacts'))
-            else:
-                return redirect(url_for('contacts'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
-            flash("Вы указали почту, на которую нельзя ответить")
-        else:
-            mail.send(msg)
-            flash("Запрос отправлен")
-            # print(str((request.form.get('email'))))
-            if request.MOBILE:
-                return redirect(url_for('mobile/contacts'))
-            else:
-                return redirect(url_for('contacts'))
+        mail.send(msg)
     if request.MOBILE:
         return render_template('mobile/contacts.html')
     else:
@@ -98,30 +62,12 @@ def contacts():
 def directions():
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
-        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
-        lovushka = request.form.get('lovushka')
-        kod = request.form.get('kod')
-        if str(request.form.get('kod')) != "None":
-            flash("Груз не найден")
-            if request.MOBILE:
-                return redirect(url_for('mobile/directions'))
-            else:
-                return redirect(url_for('contacts'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
-            flash("Вы указали почту, на которую нельзя ответить")
-        else:
-            mail.send(msg)
-            flash("Запрос отправлен")
-            # print(str((request.form.get('email'))))
-            if request.MOBILE:
-                return redirect(url_for('mobile/directions'))
-            else:
-                return redirect(url_for('directions'))
+        mail.send(msg)
     if request.MOBILE:
         return render_template('mobile/directions.html')
     else:
@@ -131,30 +77,12 @@ def directions():
 def china():
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
-        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
-        lovushka = request.form.get('lovushka')
-        kod = request.form.get('kod')
-        if str(request.form.get('kod')) != "None":
-            flash("Груз не найден")
-            if request.MOBILE:
-                return redirect(url_for('mobile/dir/china'))
-            else:
-                return redirect(url_for('dir/china'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
-            flash("Вы указали почту, на которую нельзя ответить")
-        else:
-            mail.send(msg)
-            flash("Запрос отправлен")
-            # print(str((request.form.get('email'))))
-            if request.MOBILE:
-                return redirect(url_for('mobile/dir/china'))
-            else:
-                return redirect(url_for('dir/china'))
+        mail.send(msg)
     if request.MOBILE:
         return render_template('mobile/dir/china.html')
     else:
@@ -164,30 +92,12 @@ def china():
 def payment():
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
-        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
-        lovushka = request.form.get('lovushka')
-        kod = request.form.get('kod')
-        if str(request.form.get('kod')) != "None":
-            flash("Груз не найден")
-            if request.MOBILE:
-                return redirect(url_for('mobile/payment'))
-            else:
-                return redirect(url_for('payment'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
-            flash("Вы указали почту, на которую нельзя ответить")
-        else:
-            mail.send(msg)
-            flash("Запрос отправлен")
-            # print(str((request.form.get('email'))))
-            if request.MOBILE:
-                return redirect(url_for('mobile/payment'))
-            else:
-                return redirect(url_for('payment'))
+        mail.send(msg)
     if request.MOBILE:
         return render_template('mobile/payment.html')
     else:
@@ -197,30 +107,12 @@ def payment():
 def services():
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
-        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
-        lovushka = request.form.get('lovushka')
-        kod = request.form.get('kod')
-        if str(request.form.get('kod')) != "None":
-            flash("Груз не найден")
-            if request.MOBILE:
-                return redirect(url_for('mobile/services'))
-            else:
-                return redirect(url_for('services'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
-            flash("Вы указали почту, на которую нельзя ответить")
-        else:
-            mail.send(msg)
-            flash("Запрос отправлен")
-            # print(str((request.form.get('email'))))
-            if request.MOBILE:
-                return redirect(url_for('mobile/services'))
-            else:
-                return redirect(url_for('services'))
+        mail.send(msg)
     if request.MOBILE:
         return render_template('mobile/services.html')
     else:
@@ -230,30 +122,28 @@ def services():
 def info():
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
-        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
-        lovushka = request.form.get('lovushka')
-        kod = request.form.get('kod')
-        if str(request.form.get('kod')) != "None":
-            flash("Груз не найден")
-            if request.MOBILE:
-                return redirect(url_for('mobile/info'))
-            else:
-                return redirect(url_for('info'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
-            flash("Вы указали почту, на которую нельзя ответить")
-        else:
-            mail.send(msg)
-            flash("Запрос отправлен")
-            # print(str((request.form.get('email'))))
-            if request.MOBILE:
-                return redirect(url_for('mobile/info'))
-            else:
-                return redirect(url_for('prob'))
+        mail.send(msg)
+    if request.MOBILE:
+        return render_template('mobile/info.html')
+    else:
+        return render_template('info.html')
+
+
+@application.route('/info/<string:pst>', methods=['post', 'get'])
+def pt(pst):
+    if request.method == 'POST':
+        msg = Message("Запрос с magnavis.ru", recipients=mails)
+        name = request.form.get('name')
+        email = request.form.get('email')
+        number = request.form.get('number')
+        comment = request.form.get('comment')
+        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+        mail.send(msg)
     if request.MOBILE:
         return render_template('mobile/info.html')
     else:
