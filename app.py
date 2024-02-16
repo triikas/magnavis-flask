@@ -88,6 +88,23 @@ def china():
     else:
         return render_template('dir/china.html')
 
+
+@application.route('/directions/oae', methods=['post', 'get'])
+def oae():
+    if request.method == 'POST':
+        msg = Message("Запрос с magnavis.ru", recipients=mails)
+        name = request.form.get('name')
+        email = request.form.get('email')
+        number = request.form.get('number')
+        comment = request.form.get('comment')
+        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+        mail.send(msg)
+    if request.MOBILE:
+        return render_template('mobile/dir/oae.html')
+    else:
+        return render_template('dir/oae.html')
+
+
 @application.route('/payment', methods=['post', 'get'])
 def payment():
     if request.method == 'POST':

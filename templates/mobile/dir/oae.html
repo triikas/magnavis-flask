@@ -1,0 +1,151 @@
+{% extends "mobile/base.html" %}
+
+{% block title %}Направления грузоперевозок | MAGNAVIS{% endblock %}
+
+{% block content %}
+    <style>.p-up-s{display: none;}.up{height: 200px;}section{ min-height: 0;}body{background-image: linear-gradient(to bottom, #171616, #000000);} .tablo-color{padding-left: 40px;padding-left: 40px;}</style>
+    <script>
+        document.querySelector("body").classList.remove("asyncImage");
+    </script>
+    <div class="tablo-big tablo-invis">
+        <h1 style="font-size: 3.3em" class="text-center m-0">Доставка из ОАЭ</h1>
+    <div style="width: 50%; margin-left: 25%; height: 2px; background-color: white; margin-top: 20px;"></div>
+    </div>
+    <div class="tablo-big tablo-invis mt-3">
+        <div class="container-fluid px-5">
+            <div class="row p-0">
+                <div class="col tablo-invis mx-0 w-100" style=" padding-bottom: 0; margin-bottom: 0;">
+{#                    <map name="china">#}
+{#                        <area shape="circle" coords="600,620,60" onclick="guan()">#}
+{#                    </map>#}
+                    <img usemap="#china" src="{{ url_for('static', filename='img/grey/oae.png') }}" class="ch-img p-0" style="margin-right: 32px;">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis mt-3">
+        <h3>Объединённые Арабские Эмираты</h3>
+        <div class="container-fluid px-5">
+            <div class="row p-0">
+                <div class="col tablo-invis p-0" style="margin-right: 0;">
+                    <div class="ch-text" style="">
+                        <img src="{{ url_for('static', filename='img/piotr-chrobot-Bp9hJrDRkf8-unsplash.jpg') }}" style="border-radius: 16px; margin-bottom: 20px">
+                        <p style="text-align: justify;">Дубай — это большой транзитный пункт, одна из основных точек в разнообразных логистических цепочках и важный канал параллельного импорта. В ОАЭ сконцентрированы производства алюминия и других металлов, автомобилей, бытовой техники, химической и парфюмерно-косметической продукции. К тому же здесь — множество компаний, готовых к сотрудничеству с Россией.</p>
+                        <p style="text-align: justify;">МАГНАВИС доставляет грузы напрямую из Объединённых Арабских Эмиратов, а также использует этот пункт, чтобы перевезти грузы из Европы, Америки и Азии. Благодаря широкой агентской сети и прямым договорам с авиакомпаниями мы предлагаем самые разные варианты нашим клиентам. Вдруг вам нужно привезти семью эфиопских ежей на выставку в Москву?</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis mt-3">
+        <h3>Как доставляем?</h3>
+        <div class="container-fluid px-5">
+            <div class="row">
+{#                <div class="col tablo-serv " style="min-height: 570px; min-width: 430px; background-image: url({{ url_for('static', filename='img/andy-holmes-oEIFOoC3gi0-unsplash-min-2.webp') }}); background-repeat: no-repeat; background-position: right center; background-size: cover;">#}
+{#                    <div class="tablo-serv-in">#}
+{#                        <h4 style="font-weight: bolder;">Железнодорожный транспорт</h4>#}
+{#                        <p class="mt-4">Доставка грузов из Китайской Народной Республики в Россию по железной дороге осуществляется через переходы Забайкальск — Маньчжурия и Алашанькоу — Достык. Перевозка таким видом транспорта отлично подходит для негабаритных, жидких, сыпучих и замороженных грузов. Также железная дорога позволяет перевозить до 65 тонн или 138 куб.м в одном вагоне. По наиболее популярным направлениям поезда отправляются до трех раз в неделю. Время в пути — от 15 до 25 дней.</p>#}
+{#                    </div>#}
+{#                </div>#}
+                <div class="col tablo-serv toff" style="min-height: 570px; min-width: 430px; background-image: url({{ url_for('static', filename='img/jakob-rosen-Emvf_emPMdY-unsplash.jpg') }}); background-repeat: no-repeat; background-position: bottom center; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Воздушный транспорт</h4>
+                        <p class="mt-4">Ежедневно по маршруту Дубай-Москва летают большие самолеты широкофюзеляжного типа. Они позволяют перевозить по воздуху автомобили, станки для тяжелой промышленности, длинномерные грузы и другое крупное оборудование. Из эмиратов Абу-Даби, Дубай, Шарджа и Аль-Мактум в Россию отправляются прямые рейсы авиакомпаний Emirates и Etihad Airways, поэтому срок доставки занимает всего 3-4 дня.</p>
+                    </div>
+                </div>
+                <div class="col tablo-serv" style="min-height: 570px;  min-width: 430px; background-image: url({{ url_for('static', filename='img/michael-skopal-ppZ2PnJhOI0-unsplash.jpg') }}); background-repeat: no-repeat; background-position: center bottom; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Автомобильный транспорт</h4>
+                        <p class="mt-4">С помощью вместительных автомобилей разного типа мы доставляем грузы из любого города, который располагается на территории 7 эмиратов. После забора товара в пункте отправления машина прибывает на грузовые терминалы аэропортов, где наши агенты из ОАЭ контролируют разгрузку, погрузку, оформление документов, соответствие всем правилам и подготовку груза к полёту.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col tablo-serv sea mx-0" style="min-height: 570px; min-width: 730px; background-image: url({{ url_for('static', filename='img/william-william-NndKt2kF1L4-unsplash.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Морской транспорт</h4>
+                        <p class="mt-4">Грузы отправляются из крупнейших портов в Персидском заливе — это порт Джебель Али (Jebel Ali), обслуживающий грузы с разных концов света, и порт Хамрия (Al Hamriya), который осуществляет экспорт и реэкспорт грузов, направляющихся на Дальний Восток и в Индию. В среднем путь морского судна до российских портов (в Новороссийск, Санкт-Петербург и другие портовые города) занимает от 30 дней.</p>
+                    </div>
+                </div>
+                <div class="col tablo-serv" style="min-height: 570px; min-width: 430px; background-image: url({{ url_for('static', filename='img/min/industrial-port-and-container-yard-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Мультимодальные перевозки</h4>
+                        <p class="mt-4">Авто+авиа — наиболее популярный вариант перевозки грузов из ОАЭ в Россию. С помощью наших агентов мы заберём ваш груз в любой точке в каждом из семи эмиратов. Доставим до аэропорта. И отправим груз по воздуху. Другой пример мультимодальных перевозок — маршрут ОАЭ-Россия с плечом через Иран. Из хаба Джебель–Али груз отправляется морем до иранского порта Бендер–Аббас, где происходит перетарка контейнеров на сухопутный транспорт. Автомобиль двигается вдоль территории Ирана и пересекает границы Иран-Азербайджан в городе Астра. В пограничных городах Самур-Яраг–Казмаляр груз проходит границу и из Азербайджана въезжает в Российскую Федерацию.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis">
+       <h3>Что перевозим?</h3>
+       <div class="container-fluid px-5">
+
+           <div class="row">
+                <div class="col tablo-light cargo-t" style="margin-right: 16px; margin-bottom: 16px;">
+                    <h4 class="m-0">Оборудование и комплектующие </h4>
+                </div>
+                <div class="col tablo-light cargo-t" style="margin-bottom: 16px;">
+                    <h4 class="m-0">Санкционные товары</h4>
+                </div>
+                <div class="col tablo-light cargo-t" style="margin-bottom: 0;">
+                    <h4 class="m-0">Медикаменты</h4>
+                </div>
+            </div>
+           <div class="row" style="margin-top: 16px;">
+                <div class="col tablo-light cargo-t" style="margin-right: 16px; margin-bottom: 16px;">
+                    <h4 class="m-0">Опасные грузы</h4>
+                </div>
+                <div class="col tablo-light cargo-t" style="margin-bottom: 16px;">
+                    <h4 class="m-0">Косметическую продукцию</h4>
+                </div>
+                <div class="col tablo-light cargo-t" style="margin-bottom: 0;">
+                    <h4 class="m-0">Автозапчасти и автомобили</h4>
+                </div>
+            </div>
+           <div class="row" style="margin-top: 16px;">
+                <div class="col tablo-light cargo-t" style="margin-right: 16px; margin-bottom: 16px;">
+                    <h4 class="m-0">Ценные грузы</h4>
+                </div>
+                <div class="col tablo-light cargo-t" style="margin-bottom: 16px;">
+                    <h4 class="m-0">Техника</h4>
+                </div>
+                <a href="/services" class="d-block col text-decoration-none tablo-color cargo-t" style="padding-left: 20px !important; min-width: 700px;">
+                    <h4 class="m-0">Другое</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis">
+
+        <h3>Дополнительные услуги</h3>
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col tablo-serv p-0 mx-0" style="margin: 16px; min-width: 700px; background-image: url({{ url_for('static', filename='img/min/mealpro-efgpRGeu9tg-unsplash-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Доставка «от двери до двери»</h4>
+                    </div>
+                </div>
+                <div class="col tablo-serv p-0 mx-0 my-0" style="margin: 16px; min-width: 700px; background-image: url({{ url_for('static', filename='img/min/adrian-sulyok-sczNLg6rrhQ-unsplash-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Складские услуги</h4>
+                    </div>
+                </div>
+                <div class="col tablo-serv p-0 mx-0" style="margin: 16px; background-image: url({{ url_for('static', filename='img/min/closeup-of-real-estate-agent-using-calculator-while-his-client-is-signing-a-contract-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Страхование грузов</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col p-0 mx-0 d-flex justify-content-end">
+                    <a class="text-light text-decoration-none p-0" href="/services" style="right: -10%"><p>Другие услуги</p></a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

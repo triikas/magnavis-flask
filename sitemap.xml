@@ -40,13 +40,19 @@
 
     <url>
         <loc>https://magnavis.ru/directions</loc>
-        <lastmod>2024-02-15</lastmod>
+        <lastmod>2024-02-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://magnavis.ru/directions/china</loc>
         <lastmod>2024-02-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://magnavis.ru/directions/oae</loc>
+        <lastmod>2024-02-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>

@@ -6,7 +6,7 @@
 // items.forEach(item => item.addEventListener('click', toggleAccordion));
 
 function forms() {
-  document.querySelector(".form1").innerHTML = `<form class="text-light" method="post" id="request-f" style="min-width: 500px;">
+  document.querySelector(".form1").innerHTML = `<form class="text-light" method="post" id="request-f" style="width: 500px;">
                         <h3>Отправить запрос</h3>
                         <div class="mb-3 form__group field">
                             <input minlength="2" type="text" class="form__field" name="name" id="name" placeholder="name" required>
