@@ -14,6 +14,11 @@ html{
       border: 3px solid #131212;
     }
 }
+.tablo-news{
+    & h1{font-size: 3.3em; margin-bottom: 64px;}
+    & p{ margin-bottom: 64px; font-size: 1.9em;}
+    & img{margin-bottom: 64px; width: 100%; border-radius: 8px;}
+}
 .footer-down{
     margin-top: 40px;
     & h4{

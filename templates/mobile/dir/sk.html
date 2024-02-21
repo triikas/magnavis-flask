@@ -1,0 +1,133 @@
+{% extends "mobile/base.html" %}
+
+{% block title %}Направления грузоперевозок | MAGNAVIS{% endblock %}
+
+{% block content %}
+    <style>.p-up-s{display: none;}.up{height: 200px;}section{ min-height: 0;}body{background-image: linear-gradient(to bottom, #171616, #000000);} .tablo-color{padding-left: 40px;padding-left: 40px;}</style>
+    <script>
+        document.querySelector("body").classList.remove("asyncImage");
+    </script>
+    <div class="tablo-big tablo-invis">
+        <h1 style="font-size: 3.3em" class="text-center m-0">Доставка из Южной Кореи</h1>
+    <div style="width: 50%; margin-left: 25%; height: 2px; background-color: white; margin-top: 20px;"></div>
+    </div>
+    <div class="tablo-big tablo-invis mt-3">
+        <div class="container-fluid px-5">
+            <div class="row p-0">
+                <div class="col tablo-invis mx-0 w-100" style=" padding-bottom: 0; margin-bottom: 0;">
+                    <img usemap="#china" src="{{ url_for('static', filename='img/grey/sk.png') }}" class="ch-img p-0" style="margin-right: 32px;">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis mt-3">
+        <h3>Индия</h3>
+        <div class="container-fluid px-5">
+            <div class="row p-0">
+                <div class="col tablo-invis p-0" style="margin-right: 0;">
+                    <div class="ch-text" style="">
+                        <img src="{{ url_for('static', filename='img/cherryblossom-25-bhkTSbkzZ2I-unsplash.webp') }}" style="border-radius: 16px; margin-bottom: 20px">
+                        <p style="text-align: justify;">Южная Корея — одно из самых удивительных и самобытных мест на Земле. Маски и патчи для ухода за кожей, суп рамен, автомобили Kia и Hyundai — эти товары корейского производства очень популярны в России. И несмотря на то, Республика Корея ввела санкции против России, импорт товаров из этой страны продолжается благодаря построению уникальных логистических схем.</p>
+                        <p style="text-align: justify;">Крупные промышленные предприятия Южной Кореи сосредоточены в провинции Чхунчхон-Пукто и районе Инчхона. Главные экспортируемые товары в Россию: двигатели, металлоконструкции и корм для животных. МАГНАВИС организует доставку грузов из Кореи под ключ от 2.5 USD за кг.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis mt-3">
+        <h3>Как доставляем?</h3>
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col tablo-serv " style="min-height: 570px; min-width: 430px; background-image: url({{ url_for('static', filename='img/sam-lopez-h2z9dGrFUpA-unsplash.webp') }}); background-repeat: no-repeat; background-position: right center; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Воздушный транспорт</h4>
+                        <p class="mt-4">Для отправок грузов в Россию используются порты Пусан и Инчхон. Товары корейского производства доставляются в порты Владивостока за 7-9 дней, Новороссийска за 35-40 дней, Санкт-Петербурга за 50-65 дней. Также организованы регулярные рейсы между Сокчхо и Владивостоком два раза в неделю. В специализированных контейнерах есть возможность перевозить не только сборные грузы любых видов и размеров, но и те, которые требуют особый температурный режим, например, мороженое, морепродукты, рыбу, орехи.</p>
+                    </div>
+                </div>
+                <div class="col tablo-serv toff" style="min-height: 570px; min-width: 430px; background-image: url({{ url_for('static', filename='img/eggbank-1Vi5npjwWmw-unsplash.webp') }}); background-repeat: no-repeat; background-position: center center; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Морской транспорт</h4>
+                        <p class="mt-4">Для отправок грузов в Россию используются порты Пусан и Инчхон. Товары корейского производства доставляются в порты Владивостока за 7-9 дней, Новороссийска за 35-40 дней, Санкт-Петербурга за 50-65 дней. Также организованы регулярные рейсы между Сокчхо и Владивостоком два раза в неделю. В специализированных контейнерах есть возможность перевозить не только сборные грузы любых видов и размеров, но и те, которые требуют особый температурный режим, например, мороженое, морепродукты, рыбу, орехи.</p>
+                    </div>
+                </div>
+                <div class="col tablo-serv" style="min-height: 570px;  min-width: 430px; background-image: url({{ url_for('static', filename='img/darren-lee-0kEvX-9hJyQ-unsplash.webp') }}); background-repeat: no-repeat; background-position: center bottom; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Мультимодальные перевозки</h4>
+                        <p class="mt-4">Комбинируем несколько видов транспорта для оптимизации стоимости и сроков перевозки. Самый распространённый вариант: авиа + авто. Груз отправляется самолетом до ближайшего аэропорта, затем доставляется на автомобиле до конечного пункта назначения. Также используем сложные логистические схемы, например, перевозка авиа, по морю и на автомобиле. Мы заберём ваш груз из любой провинции Южной Кореи и отправим его в любую точку России.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis">
+       <h3>Что перевозим?</h3>
+       <div class="container-fluid px-5">
+
+           <div class="row">
+                <div class="col tablo-light cargo-t" style="margin-right: 16px; margin-bottom: 16px;">
+                    <h4 class="m-0">Оборудование и комплектующие </h4>
+                </div>
+                <div class="col tablo-light cargo-t" style="margin-bottom: 16px;">
+                    <h4 class="m-0">Сельхозсырье </h4>
+                </div>
+                <div class="col tablo-light cargo-t" style="margin-bottom: 0;">
+                    <h4 class="m-0">Одежда</h4>
+                </div>
+            </div>
+           <div class="row" style="margin-top: 16px;">
+                <div class="col tablo-light cargo-t" style="margin-right: 16px; margin-bottom: 16px;">
+                    <h4 class="m-0">Опасные грузы</h4>
+                </div>
+                <div class="col tablo-light cargo-t" style="margin-bottom: 16px;">
+                    <h4 class="m-0">Электроника </h4>
+                </div>
+                <div class="col tablo-light cargo-t" style="margin-bottom: 0;">
+                    <h4 class="m-0">Автозапчасти и автомобили</h4>
+                </div>
+            </div>
+           <div class="row" style="margin-top: 16px;">
+                <div class="col tablo-light cargo-t" style="margin-right: 16px; margin-bottom: 16px;">
+                    <h4 class="m-0">Лекарства </h4>
+                </div>
+                <div class="col tablo-light cargo-t" style="margin-bottom: 16px;">
+                    <h4 class="m-0">Бытовая техника</h4>
+                </div>
+                <a href="/services" class="d-block col text-decoration-none tablo-color cargo-t" style="padding-left: 20px !important; min-width: 700px;">
+                    <h4 class="m-0">Другое</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis">
+
+        <h3>Дополнительные услуги</h3>
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col tablo-serv p-0 mx-0" style="margin: 16px; min-width: 700px; background-image: url({{ url_for('static', filename='img/min/mealpro-efgpRGeu9tg-unsplash-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Доставка «от двери до двери»</h4>
+                    </div>
+                </div>
+                <div class="col tablo-serv p-0 mx-0 my-0" style="margin: 16px; min-width: 700px; background-image: url({{ url_for('static', filename='img/min/adrian-sulyok-sczNLg6rrhQ-unsplash-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Складские услуги</h4>
+                    </div>
+                </div>
+                <div class="col tablo-serv p-0 mx-0" style="margin: 16px; background-image: url({{ url_for('static', filename='img/min/closeup-of-real-estate-agent-using-calculator-while-his-client-is-signing-a-contract-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Страхование грузов</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col p-0 mx-0 d-flex justify-content-end">
+                    <a class="text-light text-decoration-none p-0" href="/services" style="right: -10%"><p>Другие услуги</p></a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

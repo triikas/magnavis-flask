@@ -1,0 +1,133 @@
+{% extends "mobile/base.html" %}
+
+{% block title %}Направления грузоперевозок | MAGNAVIS{% endblock %}
+
+{% block content %}
+    <style>.p-up-s{display: none;}.up{height: 200px;}section{ min-height: 0;}body{background-image: linear-gradient(to bottom, #171616, #000000);} .tablo-color{padding-left: 40px;padding-left: 40px;}</style>
+    <script>
+        document.querySelector("body").classList.remove("asyncImage");
+    </script>
+    <div class="tablo-big tablo-invis">
+        <h1 style="font-size: 3.3em" class="text-center m-0">Доставка из Индии</h1>
+    <div style="width: 50%; margin-left: 25%; height: 2px; background-color: white; margin-top: 20px;"></div>
+    </div>
+    <div class="tablo-big tablo-invis mt-3">
+        <div class="container-fluid px-5">
+            <div class="row p-0">
+                <div class="col tablo-invis mx-0 w-100" style=" padding-bottom: 0; margin-bottom: 0;">
+                    <img usemap="#china" src="{{ url_for('static', filename='img/grey/in.png') }}" class="ch-img p-0" style="margin-right: 32px;">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis mt-3">
+        <h3>Индия</h3>
+        <div class="container-fluid px-5">
+            <div class="row p-0">
+                <div class="col tablo-invis p-0" style="margin-right: 0;">
+                    <div class="ch-text" style="">
+                        <img src="{{ url_for('static', filename='img/jason-leung-2IaZGfBKgMY-unsplash.webp') }}" style="border-radius: 16px; margin-bottom: 20px">
+                        <p style="text-align: justify;">Индия — крупнейший промышленный центр в Южной Азии, а также одно из перспективных направлений для импорта отечественных товаров. МАГНАВИС доставляет грузы от 1 кг до 1000 тонн из всех 28 штатов Индии в любой город России. И в обратном направлении.</p>
+                        <p style="text-align: justify;">Индия занимает 5-е место в рейтинге мировых экономик. Особую ценность имеют уникальные местные изделия: пряности, индийский чай, ароматические масла, ковры, ювелирные украшения и многое другое. Кроме того, через Индию идут отправки товаров в рамках параллельного импорта.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis mt-3">
+        <h3>Как доставляем?</h3>
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col tablo-serv " style="min-height: 570px; min-width: 430px; background-image: url({{ url_for('static', filename='img/sam-lopez-h2z9dGrFUpA-unsplash.webp') }}); background-repeat: no-repeat; background-position: right center; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Воздушный транспорт</h4>
+                        <p class="mt-4">Наиболее быстрый способ доставки — авиаперевозки. Грузы отправляются из индийских городов: Мумбаи, Калькутта, Нью-Дели, ГОА, Лех, Бангалор, Джайпур. В аэропорту агенты МАГНАВИС подготавливают накладную на груз для идентификации его на терминале, экспортные документы для таможни и проверяет, соответствует ли груз правилам перевозки, при необходимости упаковывает и контролирует процесс отправки груза до взлёта воздушного судна. Тариф на авиаперевозку: от 2.5 USD за кг. Доставка занимает 3-5 дней.</p>
+                    </div>
+                </div>
+                <div class="col tablo-serv toff" style="min-height: 570px; min-width: 430px; background-image: url({{ url_for('static', filename='img/raimond-klavins-GCTkAzCCi9E-unsplash.webp') }}); background-repeat: no-repeat; background-position: center center; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Морской транспорт</h4>
+                        <p class="mt-4">Мумбаи — главный морской порт Индии. Основной грузопоток из Индии идёт транзитом через Иран по международному транспортному коридору «Север-Юг». Таким образом доставка груза осуществляется по более низкой стоимости через основные логистические хабы Ирана — морские порты Бендер-Энзели, Бендер-Аббас и Амирабад. Есть и другие транзитные морские маршруты: грузы можно отправить через Китай, Корею, ОАЭ. Также с помощью наших индийских агентов мы организовываем прямые морские перевозки из портов Мундра и Нава-Шева, Тутикорин и Ченнай в порты Новороссийск, Санкт-Петербург, Владивосток и в обратном направлении. Доставка занимает примерно 35 дней.</p>
+                    </div>
+                </div>
+                <div class="col tablo-serv" style="min-height: 570px;  min-width: 430px; background-image: url({{ url_for('static', filename='img/1684562459_ornella-club-p-slon-v-dzhunglyakh-instagram-1.jpg') }}); background-repeat: no-repeat; background-position: center bottom; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Мультимодальные перевозки</h4>
+                        <p class="mt-4">Наша задача — обеспечить максимально комфортный и эффективный для вашего бизнеса маршрут доставки груза. МАГНАВИС заберёт ваш товар, даже если он находится в самом маленьком округе Индии. И доставит его на автомобильном транспорте в морской порт или аэропорт в зависимости от выбранного варианта перевозки. После прибытия в Россию мы отправляем груз в пункт назначения по железной или автомобильной дороге. А также доставляем товар на склад МАГНАВИС, где он ожидает своего получателя. Наши специалисты 24/7 контролируют процесс транспортировки вашего груза в режиме on-line и передают клиенту необходимую информацию.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis">
+       <h3>Что перевозим?</h3>
+       <div class="container-fluid px-5">
+
+           <div class="row">
+                <div class="col tablo-light cargo-t" style="margin-right: 16px; margin-bottom: 16px;">
+                    <h4 class="m-0">Оборудование и комплектующие </h4>
+                </div>
+                <div class="col tablo-light cargo-t" style="margin-bottom: 16px;">
+                    <h4 class="m-0">Сельхозсырье </h4>
+                </div>
+                <div class="col tablo-light cargo-t" style="margin-bottom: 0;">
+                    <h4 class="m-0">Одежда</h4>
+                </div>
+            </div>
+           <div class="row" style="margin-top: 16px;">
+                <div class="col tablo-light cargo-t" style="margin-right: 16px; margin-bottom: 16px;">
+                    <h4 class="m-0">Опасные грузы</h4>
+                </div>
+                <div class="col tablo-light cargo-t" style="margin-bottom: 16px;">
+                    <h4 class="m-0">Электроника </h4>
+                </div>
+                <div class="col tablo-light cargo-t" style="margin-bottom: 0;">
+                    <h4 class="m-0">Автозапчасти и автомобили</h4>
+                </div>
+            </div>
+           <div class="row" style="margin-top: 16px;">
+                <div class="col tablo-light cargo-t" style="margin-right: 16px; margin-bottom: 16px;">
+                    <h4 class="m-0">Лекарства </h4>
+                </div>
+                <div class="col tablo-light cargo-t" style="margin-bottom: 16px;">
+                    <h4 class="m-0">Бытовая техника</h4>
+                </div>
+                <a href="/services" class="d-block col text-decoration-none tablo-color cargo-t" style="padding-left: 20px !important; min-width: 700px;">
+                    <h4 class="m-0">Другое</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis">
+
+        <h3>Дополнительные услуги</h3>
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col tablo-serv p-0 mx-0" style="margin: 16px; min-width: 700px; background-image: url({{ url_for('static', filename='img/min/mealpro-efgpRGeu9tg-unsplash-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Доставка «от двери до двери»</h4>
+                    </div>
+                </div>
+                <div class="col tablo-serv p-0 mx-0 my-0" style="margin: 16px; min-width: 700px; background-image: url({{ url_for('static', filename='img/min/adrian-sulyok-sczNLg6rrhQ-unsplash-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Складские услуги</h4>
+                    </div>
+                </div>
+                <div class="col tablo-serv p-0 mx-0" style="margin: 16px; background-image: url({{ url_for('static', filename='img/min/closeup-of-real-estate-agent-using-calculator-while-his-client-is-signing-a-contract-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Страхование грузов</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col p-0 mx-0 d-flex justify-content-end">
+                    <a class="text-light text-decoration-none p-0" href="/services" style="right: -10%"><p>Другие услуги</p></a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

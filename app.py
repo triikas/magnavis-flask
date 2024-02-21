@@ -105,6 +105,54 @@ def oae():
         return render_template('dir/oae.html')
 
 
+@application.route('/directions/turkey', methods=['post', 'get'])
+def turkey():
+    if request.method == 'POST':
+        msg = Message("Запрос с magnavis.ru", recipients=mails)
+        name = request.form.get('name')
+        email = request.form.get('email')
+        number = request.form.get('number')
+        comment = request.form.get('comment')
+        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+        mail.send(msg)
+    if request.MOBILE:
+        return render_template('mobile/dir/trc.html')
+    else:
+        return render_template('dir/trc.html')
+
+
+@application.route('/directions/india', methods=['post', 'get'])
+def india():
+    if request.method == 'POST':
+        msg = Message("Запрос с magnavis.ru", recipients=mails)
+        name = request.form.get('name')
+        email = request.form.get('email')
+        number = request.form.get('number')
+        comment = request.form.get('comment')
+        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+        mail.send(msg)
+    if request.MOBILE:
+        return render_template('mobile/dir/ind.html')
+    else:
+        return render_template('dir/ind.html')
+
+
+@application.route('/directions/skorea', methods=['post', 'get'])
+def skorea():
+    if request.method == 'POST':
+        msg = Message("Запрос с magnavis.ru", recipients=mails)
+        name = request.form.get('name')
+        email = request.form.get('email')
+        number = request.form.get('number')
+        comment = request.form.get('comment')
+        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+        mail.send(msg)
+    if request.MOBILE:
+        return render_template('mobile/dir/sk.html')
+    else:
+        return render_template('dir/sk.html')
+
+
 @application.route('/payment', methods=['post', 'get'])
 def payment():
     if request.method == 'POST':
@@ -134,6 +182,31 @@ def services():
         return render_template('mobile/services.html')
     else:
         return render_template('services.html')
+
+
+@application.route('/adm', methods=['post', 'get'])
+def adm():
+    if request.method == 'POST':
+        title = request.form.get('title')
+        path = request.form.get('path')
+        data = request.form.get('data')
+        img = request.form.get('img')
+        img2 = request.form.get('img2')
+        pb = request.form.get('pb')
+        # p1 = request.form.get('p1')
+        ps = []
+        i = 1
+        last = False
+        while not last:
+            p = request.form.get('p{}'.format(i))
+            if p is not None:
+                i += 1
+                ps.append(p)
+            else:
+                last = True
+        print(title, ps)
+    return render_template('adm.html')
+
 
 @application.route('/info', methods=['post', 'get'])
 def info():

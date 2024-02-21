@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block title %}Направления грузоперевозок | MAGNAVIS{% endblock %}
+
+{% block content %}
+    <style>.p-up-s{display: none;}section{ min-height: 0;}body{background-image: linear-gradient(to bottom, #171616, #000000);} .tablo-color{padding-left: 40px;padding-left: 40px;}</style>
+    <script>
+        document.querySelector("body").classList.remove("asyncImage");
+    </script>
+    <div class="tablo-big tablo-invis">
+        <h1 style="font-size: 2.2em" class="text-center m-0">Доставка из Турции</h1>
+    <div style="width: 50%; margin-left: 25%; height: 2px; background-color: white; margin-top: 20px;"></div>
+    </div>
+    <div class="tablo-big tablo-invis mt-3">
+        <div class="container-fluid px-5">
+            <div class="row p-0">
+                <div class="col-7 tablo-invis con-img" style="margin-left: 0;">
+{#                    <map name="china">#}
+{#                        <area shape="circle" coords="600,620,60" onclick="guan()">#}
+{#                    </map>#}
+                    <img usemap="#china" src="{{ url_for('static', filename='img/grey/tr.png') }}" class="ch-img p-0" style="margin-right: 32px;">
+                </div>
+                <div class="col tablo-invis p-0 con-text" style="margin-right: 0; min-width: 435px;">
+                    <div class="ch-text" style="">
+                        <h3 class="h3-max">Турция</h3>
+                        <img src="{{ url_for('static', filename='img/ivan-Vot8WuUM4bs-unsplash.webp') }}" style="border-radius: 8px; margin-bottom: 20px">
+                        <div class="con-text-in">
+                            <p style="text-align: justify;">Турция — место, где встречается Европа и Азия. Страна восточных сладостей, красивейших мечетей и пушистых котиков, а ещё один из важнейших торговых партнёров России. МАГНАВИС специализируется на авиадоставке грузов из Турции в Россию и в обратном направлении.</p>
+                            <p style="text-align: justify;">Турция является отличной перевалочной базой, которая позволяет перевозить грузы из Европы и Америки. Также топ-3 в поставках занимает собственная турецкая продукция. Это промышленное оборудование, комплектующие, бытовая химия, текстиль, одежда и детские товары.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis mt-3">
+        <h3>Как доставляем?</h3>
+        <div class="container-fluid px-5">
+            <div class="row">
+{#                <div class="col tablo-serv " style="min-height: 570px; min-width: 430px; background-image: url({{ url_for('static', filename='img/andy-holmes-oEIFOoC3gi0-unsplash-min-2.webp') }}); background-repeat: no-repeat; background-position: right center; background-size: cover;">#}
+{#                    <div class="tablo-serv-in">#}
+{#                        <h4 style="font-weight: bolder;">Железнодорожный транспорт</h4>#}
+{#                        <p class="mt-4">Доставка грузов из Китайской Народной Республики в Россию по железной дороге осуществляется через переходы Забайкальск — Маньчжурия и Алашанькоу — Достык. Перевозка таким видом транспорта отлично подходит для негабаритных, жидких, сыпучих и замороженных грузов. Также железная дорога позволяет перевозить до 65 тонн или 138 куб.м в одном вагоне. По наиболее популярным направлениям поезда отправляются до трех раз в неделю. Время в пути — от 15 до 25 дней.</p>#}
+{#                    </div>#}
+{#                </div>#}
+                <div class="col tablo-serv sea" style="margin-right: 16px;min-height: 570px; min-width: 430px; background-image: url({{ url_for('static', filename='img/david-barajas-LZrYH3MGsM0-unsplash.webp') }}); background-repeat: no-repeat; background-position: bottom center; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Воздушный транспорт</h4>
+                        <p class="mt-4">Все ключевые производства сосредоточены в Стамбуле и на европейской стороне Турции: бытовой техники, электроники и лёгкой промышленности. Также здесь располагаются склады хранения грузов, которые отправляются из Европы и используют Турцию как транзитный пункт, и где ждут переоформления. Поэтому МАГНАВИС напрямую сотрудничает с турецкими агентами и ежедневно отправляет грузы из аэропортов Стамбула в Россию прямыми рейсами авиакомпаний Аэрофлот и Turkish Airlines. Доставка занимает 3-4 дня. Авиаперевозка грузов также осуществляется из других крупных городов: Измира, Антальи, Анкары, Аданы, Бодрума и Муглы.</p>
+                    </div>
+                </div>
+                <div class="col tablo-serv" style="min-height: 570px;  min-width: 430px; background-image: url({{ url_for('static', filename='img/rhys-moult-7eaFIKeo1MQ-unsplash.webp') }}); background-repeat: no-repeat; background-position: center center; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Автомобильный транспорт</h4>
+                        <p class="mt-4">МАГНАВИС заберёт ваш груз из любого из семи регионов Турции: от Мраморного моря до Восточной Анатолии. Доставка автотранспортом подходит для малых и средних грузов, если же партия небольшая, то оптимальным будет вариант отправки сборным грузом. Грузоперевозки из Турции автомобилем, в среднем, занимают 15-20 дней. Мы тщательно продумываем автомобильные маршруты, учитывая специфику груза, его объём и габариты. Забор груза у отправителя, упаковка (при необходимости), подготовка документов, таможенное оформление, экспедирование, хранение на складе — всё берём на себя.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col tablo-serv sea" style="margin-right: 16px;min-height: 570px; min-width: 430px; background-image: url({{ url_for('static', filename='img/omer-serdar-oren-lqLWeMbJgGo-unsplash.webp') }}); background-position: bottom right; background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Морской транспорт</h4>
+                        <p class="mt-4">Грузы отправляются из крупнейших портов в Персидском заливе — это порт Джебель Али (Jebel Ali), обслуживающий грузы с разных концов света, и порт Хамрия (Al Hamriya), который осуществляет экспорт и реэкспорт грузов, направляющихся на Дальний Восток и в Индию. В среднем путь морского судна до российских портов (в Новороссийск, Санкт-Петербург и другие портовые города) занимает от 30 дней.</p>
+                    </div>
+                </div>
+                <div class="col tablo-serv" style="min-height: 570px; min-width: 430px; background-image: url({{ url_for('static', filename='img/darren-lee-0kEvX-9hJyQ-unsplash.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Мультимодальные перевозки</h4>
+                        <p class="mt-4">МАГНАВИС комбинирует разные виды транспорта, что позволяет доставлять грузы из любой точки Турции в любую точку России. Чаще всего перевозка осуществляется автомобилем по территории Турции до наиболее подходящего аэропорта, а дальше по воздуху. Если габариты груза позволяют, то возможна переправка локальными авиакомпаниями между турецкими городами, и так же — доставка международным рейсом из Стамбула и Антальи в Россию. В рамках схем мультимодальных перевозок мы используем перетарку фур в Стамбуле, отправляемых морским паромом Карасу — Туапсе.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis">
+       <h3>Что перевозим?</h3>
+       <div class="container-fluid px-5">
+
+           <div class="row">
+                <div class="col tablo-light cargo-t">
+                    <h4 class="m-0">Оборудование и комплектующие </h4>
+                </div>
+                <div class="col tablo-light cargo-t tof-cargo">
+                    <h4 class="m-0">Санкционные товары</h4>
+                </div>
+                <div class="col tablo-light cargo-t">
+                    <h4 class="m-0">Медикаменты</h4>
+                </div>
+            </div>
+           <div class="row" style="margin-top: 16px;">
+                <div class="col tablo-light cargo-t">
+                    <h4 class="m-0">Продукты питания</h4>
+                </div>
+                <div class="col tablo-light cargo-t tof-cargo">
+                    <h4 class="m-0">Мебель и предметы интерьера</h4>
+                </div>
+                <div class="col tablo-light cargo-t">
+                    <h4 class="m-0">Автозапчасти и автомобили</h4>
+                </div>
+            </div>
+           <div class="row" style="margin-top: 16px;">
+                <div class="col tablo-light cargo-t">
+                    <h4 class="m-0">Бытовая техника</h4>
+                </div>
+                <div class="col tablo-light cargo-t tof-cargo">
+                    <h4 class="m-0">Текстиль </h4>
+                </div>
+                <a href="/services" class="d-block col text-decoration-none tablo-color cargo-t" style="padding-left: 20px !important;">
+                    <h4 class="m-0">Другое</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis">
+
+        <h3>Дополнительные услуги</h3>
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col tablo-serv p-0 mx-0" style="margin: 16px; background-image: url({{ url_for('static', filename='img/min/mealpro-efgpRGeu9tg-unsplash-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Доставка «от двери до двери»</h4>
+                    </div>
+                </div>
+                <div class="col tablo-serv p-0 mx-0 tof-dop-2" style="margin: 16px; background-image: url({{ url_for('static', filename='img/min/adrian-sulyok-sczNLg6rrhQ-unsplash-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Складские услуги</h4>
+                    </div>
+                </div>
+                <div class="col tablo-serv p-0 mx-0" style="margin: 16px; background-image: url({{ url_for('static', filename='img/min/closeup-of-real-estate-agent-using-calculator-while-his-client-is-signing-a-contract-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Страхование грузов</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col p-0 mx-0 d-flex justify-content-end">
+                   <a class="text-light text-decoration-none p-0" href="/services" style="right: -10%">Другие услуги</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
