@@ -46,7 +46,7 @@ function yaTranslateGetCode() {
 
 function yaTranslateHtmlHandler(code) {
     var lang_size = [28, 56, 22, 58, 22, 50];
-    if (!document.querySelector("footer").classList.contains("user-agent")) {
+    if (document.querySelector("footer").classList.contains("dt")) {
         for (let i = 0; i < 6; i++) {
             lang_size[i] /= 2;
         }

@@ -33,6 +33,16 @@ textarea{
 .as:hover{
     color: #a19a9a;
 }
+.nav-out{
+    /*backdrop-filter: blur(106px);*/
+    background-color: rgba(22,21,21);
+}
+.nav-down{
+    height: 50px;
+    background-image: linear-gradient(to bottom, #161515, rgba(22, 21, 21, 0.4), rgba(22, 21, 21, 0));
+    top:78px;
+    z-index: 15;
+}
 .footer-down{
     margin-top: 40px;
     & a{
@@ -40,7 +50,7 @@ textarea{
         color: #b7b3b3;
         text-decoration: none;
         &:hover{
-            color: #a19a9a;
+            color: #989191;
 
         }
     }
@@ -102,7 +112,7 @@ body{
 }
 .window{
     min-width: 700px;
-    max-width: 1798px;
+    /*max-width: 1798px;*/
 }
 .tablo-news{
     & h1{font-size: 2.4em; margin-bottom: 32px;}
@@ -396,11 +406,14 @@ nav>td{
     margin-right: 100px;
 }
 section{
-    padding-top: 20px;
+    /*padding-top: 20px;*/
     min-height: 100vh;
     /*background-image: url("img/p-up-2.PNG");*/
     /*background-repeat: no-repeat;*/
     /*background-size: cover;*/
+}
+.up{
+    min-height: 78px;
 }
 section>div{
     display: flex;

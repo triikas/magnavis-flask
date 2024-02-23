@@ -108,13 +108,32 @@
         </div>
         </nav></div>
                 <div class="px-5">
-                    <p class="mb-4"><a style="font-size: 1.5em; padding-left: 20px; text-decoration: none;" class="text-light" href="/">Главная</a></p>
-                    <p class="mb-4"><a style="font-size: 1.5em; padding-left: 20px; text-decoration: none;" class="text-light" href="/services">Услуги</a></p>
-                    <p class="mb-4"><a style="font-size: 1.5em; padding-left: 20px; text-decoration: none;" class="text-light" href="/directions">Направления</a></p>
-                    <p class="mb-4"><a style="font-size: 1.5em; padding-left: 20px; text-decoration: none;" class="text-light" href="/about">О нас</a></p>
-                    <p class="mb-4"><a style="font-size: 1.5em; padding-left: 20px; text-decoration: none;" class="text-light" href="/info">Новости</a></p>
-                    <p class="mb-4"><a style="font-size: 1.5em; padding-left: 20px; text-decoration: none;" class="text-light" href="/payment">Оплата</a></p>
-                    <p class="mb-4"><a style="font-size: 1.5em; padding-left: 20px; text-decoration: none;" class="text-light" href="/contacts">Контакты</a></p>
+                    <div class="d-flex justify-content-between text-decoration-none footer-down mb-5 mt-0" style="font-size: 1.3em; padding-right: 20px; padding-left: 20px;">
+                        <div>
+                            <a href="/about">О нас</a>
+                            <a href="/payment">Оплата</a>
+                            <a href="/info">Новости</a>
+                        </div>
+
+                        <div>
+                            <a href="/contacts">Контакты</a>
+                            <a href="/">Тарифы</a>
+                            <a href="/about#part">Партнёры</a>
+                        </div>
+                        <div>
+                            <a href="/docs/MAGNAVIS-requisites(RUR).pdf">Реквизиты</a>
+                            <a href="/directions">Направления</a>
+                            <a href="/docs/MAGNAVIS-forwarding.pdf">Экспедирование</a>
+                        </div>
+
+                    </div>
+{#                    <p class="mb-4"><a style="font-size: 1.5em; padding-left: 20px; text-decoration: none;" class="text-light" href="/">Главная</a></p>#}
+{#                    <p class="mb-4"><a style="font-size: 1.5em; padding-left: 20px; text-decoration: none;" class="text-light" href="/services">Услуги</a></p>#}
+{#                    <p class="mb-4"><a style="font-size: 1.5em; padding-left: 20px; text-decoration: none;" class="text-light" href="/directions">Направления</a></p>#}
+{#                    <p class="mb-4"><a style="font-size: 1.5em; padding-left: 20px; text-decoration: none;" class="text-light" href="/about">О нас</a></p>#}
+{#                    <p class="mb-4"><a style="font-size: 1.5em; padding-left: 20px; text-decoration: none;" class="text-light" href="/info">Новости</a></p>#}
+{#                    <p class="mb-4"><a style="font-size: 1.5em; padding-left: 20px; text-decoration: none;" class="text-light" href="/payment">Оплата</a></p>#}
+{#                    <p class="mb-4"><a style="font-size: 1.5em; padding-left: 20px; text-decoration: none;" class="text-light" href="/contacts">Контакты</a></p>#}
                     <table style="margin-left: 20px; margin-bottom: 40px;">
                     <tr>
                         <td>
@@ -124,7 +143,7 @@
                             <div class="dropdown">
                     <div id="ytWidget" style="display: none;"></div>
                     <button style="font-size: 1.5em; height: 75px;" class="btn btn-dark dropdown-toggle d-flex align-items-center px-4" data-lang-active type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img style="height: 22px; width: 50px; padding: 50px;" src="{{ url_for('static', filename='img/ru2.png') }}" alt="ru">
+                        <img style="height: 404px!important; width: 100px!important;" src="{{ url_for('static', filename='img/ru2.png') }}" alt="ru">
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" data-lang-list>
                         <li class="py-3 mx-3"><a class="dropdown-item" data-ya-lang="ru"><img alt="ru" style="height: 22px; width: 50px;" src="{{ url_for('static', filename='img/ru2.png') }}"></a></li>
@@ -136,6 +155,7 @@
                             <img class="d-none" src="../static/img/ru2w.png" alt="ru">
                             <img class="d-none" src="../static/img/zh2w.png" alt="zh">
                         </td>
+                        <td><a href="tel:+78005110514" class="text-decoration-none text-light d-block" style="font-size: 2.2em; margin-left: 20px !important; "><b>8 800 511-05-14</b></a></td>
                     </tr>
                 </table>
                 </div>
@@ -207,20 +227,25 @@
         <div class="container-fluid footer-down">
             <div class="row">
                 <div class="col p-0">
-                    <h4>Компания</h4>
-                    <div class="d-flex justify-content-between">
+                    <h4 style="font-size: 3em">Компания</h4>
+                    <div class="d-flex justify-content-between" style="font-size: 1.3em">
                         <div>
                             <a href="/about">О нас</a>
                             <a href="/payment">Оплата</a>
+                            <a href="/info">Новости</a>
                         </div>
+
                         <div>
                             <a href="/contacts">Контакты</a>
                             <a href="/">Тарифы</a>
+                            <a href="/about#part">Партнёры</a>
                         </div>
-                        <div><a href="/docs/MAGNAVIS-requisites(RUR).pdf">Реквизиты</a>
-                    <a href="/directions">Направления</a></div>
-                        <div><a href="/info">Новости</a>
-                    <a href="/about#part">Партнёры</a></div>
+                        <div>
+                            <a href="/docs/MAGNAVIS-requisites(RUR).pdf">Реквизиты</a>
+                            <a href="/directions">Направления</a>
+                            <a href="/docs/MAGNAVIS-forwarding.pdf">Экспедирование</a>
+                        </div>
+
                     </div>
                 </div>
             </div>

@@ -105,11 +105,13 @@
     </div>
     <div class="window">
     <section class="mb-5 up">
-        <div style="margin-left: 5%; margin-right: 5%; padding-top: 2vh;"><nav class="nav1 d-flex justify-content-between w-100" style="margin-right: 20px; margin-left: 20px;">
-            <div  class="d-flex align-items-center">
-                <a href="/"><img src="{{ url_for('static', filename='img/logo-white-foo.png') }}" style="height: 34px; width: 249.08px" alt="MAGNAVIS"></a>
-            </div>
-            <div class="d-flex justify-content-start">
+
+        <div class="position-fixed nav-out" style="padding-left: 5%; padding-right: 5%; padding-top: 40px;width: 100vw; z-index: 25">
+            <nav class="nav1 d-flex justify-content-between w-100" style="margin-right: 20px; margin-left: 20px;z-index: 26">
+                <div  class="d-flex align-items-center">
+                    <a href="/"><img src="{{ url_for('static', filename='img/logo-white-foo.png') }}" style="height: 34px; width: 249.08px" alt="MAGNAVIS"></a>
+                </div>
+                <div class="d-flex justify-content-start">
                 <div class="d-flex align-items-center up-phone">
 
                     <p style="font-size: 1.2em;" class="text-light m-0 p-0 mx-1">8 800 511-05-14</p>
@@ -147,7 +149,54 @@
                           </ul>
                         </div>
         </div>
-        </nav></div>
+            </nav>
+
+        </div>
+        <div class=" position-fixed w-100 nav-down"></div>
+
+{#        <div style="margin-left: 5%; margin-right: 5%; padding-top: 2vh;"><nav class="nav1 d-flex justify-content-between w-100" style="margin-right: 20px; margin-left: 20px;">#}
+{#            <div  class="d-flex align-items-center">#}
+{#                <a href="/"><img src="{{ url_for('static', filename='img/logo-white-foo.png') }}" style="height: 34px; width: 249.08px" alt="MAGNAVIS"></a>#}
+{#            </div>#}
+{#            <div class="d-flex justify-content-start">#}
+{#                <div class="d-flex align-items-center up-phone">#}
+{##}
+{#                    <p style="font-size: 1.2em;" class="text-light m-0 p-0 mx-1">8 800 511-05-14</p>#}
+{#                </div>#}
+{#                <a onclick="form1_open()" class="btn btn-danger mr-5 mx-1">Отправить запрос</a>#}
+{##}
+{#                <div class="dropdown">#}
+{#                    <div id="ytWidget" style="display: none;"></div>#}
+{#                    <button style="height: 38px;" class="btn btn-dark dropdown-toggle d-flex align-items-center" data-lang-active type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">#}
+{#                        РУС#}
+{#                    </button>#}
+{#                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" data-lang-list>#}
+{#                        <li><a  content="notranslate" class="dropdown-item" data-ya-lang="ru"><img style="height: 11px; width: 25px;" src="{{ url_for('static', filename='img/ru2.png') }}" alt="ru"></a></li>#}
+{#                        <li><a class="dropdown-item" data-ya-lang="en"><img style="height: 11px; width: 29px;" src="../static/img/en2.png" alt="en"></a></li>#}
+{#                        <li><a class="dropdown-item" data-ya-lang="zh"><img style="height: 14px; width: 28px;" src="{{ url_for('static', filename='img/zh2.png') }}" alt="zh"></a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#                <img class="d-none" src="../static/img/en2w.png" alt="en">#}
+{#                <img class="d-none" src="../static/img/ru2w.png" alt="ru">#}
+{#                <img class="d-none" src="../static/img/zh2w.png" alt="zh">#}
+{##}
+{#                <div class="c-dropdown mx-1">#}
+{#                            <button style="height: 38px;" class="btn btn-dark p-1 d-flex align-items-center justify-content-center dropdown-toggle-split"  data-bs-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="26" fill="white" class="bi bi-three-dots" viewBox="0 0 16 16">#}
+{#                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>#}
+{#                            </svg>#}
+{#                        </button>#}
+{#                          <ul id="myDropdown" class="dropdown-menu dropdown-menu-end">#}
+{#                            <li><a class="dropdown-item" href="/">Главная</a></li>#}
+{#                            <li><a class="dropdown-item" href="/services">Услуги</a></li>#}
+{#                            <li><a class="dropdown-item" href="/directions">Направления</a></li>#}
+{#                            <li><a class="dropdown-item" href="/about">О нас</a></li>#}
+{#                            <li><a class="dropdown-item" href="/info">Новости</a></li>#}
+{#                            <li><a class="dropdown-item" href="/payment">Оплата</a></li>#}
+{#                            <li><a class="dropdown-item" href="/contacts">Контакты</a></li>#}
+{#                          </ul>#}
+{#                        </div>#}
+{#        </div>#}
+{#        </nav></div>#}
         <div class="p-up-s">
             <table style="height:100%;" class="d-flex justify-content-start">
                 <tr>
@@ -168,7 +217,7 @@
     </section>
     {% block content %}{% endblock %}
 
-    <footer class="tablo-big tablo-invis mt-3 mb-0">
+    <footer class="tablo-big tablo-invis mt-3 mb-0 dt">
         <div class="d-flex justify-content-between align-items-center">
             <a class="d-block" href="/"><img style="width: 372px; height: 51px;" src="{{ url_for('static', filename='img/logo-white-foo.png') }}" alt="MAGNAVIS"></a>
             <div class="d-flex justify-content-start">
@@ -203,7 +252,7 @@
                     <a href="/#transport">Авиадоставка</a>
 
                     <a href="/#transport">Автодоставка</a>
-                    <a href="/#transport">Морской фрахт</a>
+{#                    <a href="/#transport">Морской фрахт</a>#}
                     <a href="/services">Таможенное оформление</a>
                     <a href="/services">Экспедирование</a>
                     <a href="/services">Погрузо-разгрузочные работы</a>
