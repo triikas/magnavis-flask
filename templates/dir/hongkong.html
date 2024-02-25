@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+
+{% block title %}Направления грузоперевозок | MAGNAVIS{% endblock %}
+
+{% block content %}
+    <style>.p-up-s{display: none;}section{ min-height: 0;}body{background-image: linear-gradient(to bottom, #171616, #000000);} .tablo-color{padding-left: 40px;padding-left: 40px;}</style>
+    <script>
+        document.querySelector("body").classList.remove("asyncImage");
+    </script>
+    <div class="tablo-big tablo-invis">
+        <h1 style="font-size: 2.2em" class="text-center m-0">Доставка из Гонконга</h1>
+    <div style="width: 50%; margin-left: 25%; height: 2px; background-color: white; margin-top: 20px;"></div>
+    </div>
+    <div class="tablo-big tablo-invis mt-3">
+        <div class="container-fluid px-5">
+            <div class="row p-0">
+                <div class="col-7 tablo-invis con-img" style="margin-left: 0;">
+{#                    <map name="china">#}
+{#                        <area shape="circle" coords="600,620,60" onclick="guan()">#}
+{#                    </map>#}
+                    <img usemap="#china" src="{{ url_for('static', filename='img/grey/hk.png') }}" class="ch-img p-0" style="margin-right: 32px;">
+                </div>
+                <div class="col tablo-invis p-0 con-text" style="margin-right: 0;">
+                    <div class="ch-text" style="">
+                        <h3 class="h3-max">Гонконг</h3>
+                        <img src="{{ url_for('static', filename='img/2019-09-Hongkong.webp') }}" style="border-radius: 8px; margin-bottom: 20px">
+                        <div class="con-text-in">
+                            <p style="text-align: justify;">Специальный административный район КНР — ключевой партнёр для многих стран мира. Сегодня это важная торгово-экономическая и инновационная площадка для России. К примеру, по итогам 2023 года Гонконг вошёл топ-5 импортёров российской свинины. Стоит отметить, что интерес к взаимодействию с российскими поставщиками проявляют не только в Гонконге, но и в Макао.</p>
+                            <p style="text-align: justify;">Отдельное законодательство, своя денежная политика, особая налоговая система — учитывая эту специфику, МАГНАВИС предлагает разные опции в организации логистики из Гонконга.</p>
+                        </div>
+                    </div>
+                    <div class="guan-text" style="display: none;">
+                        <h3>Гуанчжоу</h3>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
+{#                        <a class="btn btn-danger">Отправить запрос</a>#}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis mt-3">
+        <h3>Как доставляем?</h3>
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col tablo-serv " style="min-height: 630px; min-width: 430px; background-image: url({{ url_for('static', filename='img/nathan-hobbs-qmWqUl8Uvsc-unsplash.webp') }}); background-repeat: no-repeat; background-position: center center; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Воздушный транспорт</h4>
+                        <p class="mt-4">В настоящее время из Гонконга летают около 120 авиакомпаний примерно в 220 направлениях. Из наиболее выгодных можно отметить маршруты «Uzbekistan Airways» (через Ташкент) с транзитным временем доставки 3-4 дня и «EgyptAir» (через Каир), в этом случае транзитное время составит 1-2 дня. Также популярны варианты перевозки через Таиланд, Китай и ОАЭ. Прямые рейсы из Гонконга в Москву предлагает компания «Аэрофлот», вылеты три раза в неделю. Путь по воздуху подходит для перевозки ценных и скоропортящихся грузов. Это быстро и безопасно.</p>
+                    </div>
+                </div>
+                <div class="col tablo-serv toff" style="min-height: 630px; min-width: 430px; background-image: url({{ url_for('static', filename='img/austin-filippi-m-RK4UxxZrE-unsplash.webp') }}); background-repeat: no-repeat; background-position: center center; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Морской транспорт</h4>
+                        <p class="mt-4">Порт Гонконга расположён в акватории Южно-Китайского моря. Это крупный логистический хаб Южно-Восточной Азии. Гонконгский порт является свободным портом, то есть осуществляет беспошлинный ввоз и вывоз всех товаров, что очень удобно для транзитной торговли. В Гонконге есть не только контейнерные терминалы, но и специализированные терминалы для нефти, угля и цемента. Порт Гонконга имеет более 20 морских путей и обслуживает линии, идущие в более чем 120 стран мира. В порты Владивостока груз идёт 15-25 дней, в Новороссийск от 30 дней, в Санкт-Петербург — от 45 дней.</p>
+                    </div>
+                </div>
+                <div class="col tablo-serv" style="min-height: 630px;  min-width: 430px; background-image: url({{ url_for('static', filename='img/chi-hung-wong-4BxLNwjB_9w-unsplash.webp') }}); background-repeat: no-repeat; background-position: center center; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Мультимодальные перевозки</h4>
+                        <p class="mt-4">МАГНАВИС разрабатывает наиболее удобные маршруты для доставки ваших грузов благодаря совмещению нескольких видов транспорта. Например, наши специалисты заберут ваш груз из любой точки Гонконга на автомобильном транспорте и доставят его в континентальный Китай, а оттуда организуют транспортировку по воздуху. Между о. Сянган и материком построен подводный автодорожный тоннель длиной 1825 метров, который позволяет быстро и безопасно перевозить грузы между районами Китая. Также груз из Гонконга доставляется по железной дороге до материковой части, следовательно, и до всех международных аэропортов на территории Китая.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis">
+       <h3>Что перевозим?</h3>
+       <div class="container-fluid px-5">
+
+           <div class="row">
+                <div class="col tablo-light cargo-t">
+                    <h4 class="m-0">Оборудование и комплектующие </h4>
+                </div>
+                <div class="col tablo-light cargo-t tof-cargo">
+                    <h4 class="m-0">Электроника</h4>
+                </div>
+                <div class="col tablo-light cargo-t">
+                    <h4 class="m-0">Продукты питания</h4>
+                </div>
+            </div>
+           <div class="row" style="margin-top: 16px;">
+                <div class="col tablo-light cargo-t">
+                    <h4 class="m-0">Сельхозсырьё</h4>
+                </div>
+                <div class="col tablo-light cargo-t tof-cargo">
+                    <h4 class="m-0">Парфюмерия и косметика</h4>
+                </div>
+                <div class="col tablo-light cargo-t">
+                    <h4 class="m-0">Автозапчасти и автомобили</h4>
+                </div>
+            </div>
+           <div class="row" style="margin-top: 16px;">
+                <div class="col tablo-light cargo-t">
+                    <h4 class="m-0">Санкционные товары</h4>
+                </div>
+                <div class="col tablo-light cargo-t tof-cargo">
+                    <h4 class="m-0">Минеральные продукты</h4>
+                </div>
+                <a href="/services" class="d-block col text-decoration-none tablo-color cargo-t" style="padding-left: 20px !important;">
+                    <h4 class="m-0">Другое</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis">
+
+        <h3>Дополнительные услуги</h3>
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col tablo-serv p-0 mx-0" style="margin: 16px; background-image: url({{ url_for('static', filename='img/min/mealpro-efgpRGeu9tg-unsplash-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Доставка «от двери до двери»</h4>
+                    </div>
+                </div>
+                <div class="col tablo-serv p-0 mx-0 tof-dop-2" style="margin: 16px; background-image: url({{ url_for('static', filename='img/min/adrian-sulyok-sczNLg6rrhQ-unsplash-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Складские услуги</h4>
+                    </div>
+                </div>
+                <div class="col tablo-serv p-0 mx-0" style="margin: 16px; background-image: url({{ url_for('static', filename='img/min/closeup-of-real-estate-agent-using-calculator-while-his-client-is-signing-a-contract-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Страхование грузов</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col p-0 mx-0 d-flex justify-content-end">
+                   <a class="text-light text-decoration-none p-0" href="/services" style="right: -10%">Другие услуги</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

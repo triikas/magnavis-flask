@@ -153,6 +153,21 @@ def skorea():
         return render_template('dir/sk.html')
 
 
+@application.route('/directions/hongkong', methods=['post', 'get'])
+def hongkong():
+    if request.method == 'POST':
+        msg = Message("Запрос с magnavis.ru", recipients=mails)
+        name = request.form.get('name')
+        email = request.form.get('email')
+        number = request.form.get('number')
+        comment = request.form.get('comment')
+        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+        mail.send(msg)
+    if request.MOBILE:
+        return render_template('mobile/dir/hongkong.html')
+    else:
+        return render_template('dir/hongkong.html')
+
 @application.route('/payment', methods=['post', 'get'])
 def payment():
     if request.method == 'POST':
