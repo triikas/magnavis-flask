@@ -85,40 +85,24 @@ function forms() {
 }
 
 
+function tr(country) {
+  str = document.querySelector(".rb-active").className.split(" ")[1].split("-")[0];
+  same = true;
+  now = document.querySelector("."+country+"-ball").className.split(" ")
+  for (i in now) {
+    if (now[i] === "rb-active") {
+      same = false;
+    }
+  }
+  if (same) {
+    document.querySelector(".rb-active").classList.remove("rb-active");
+    document.querySelector("."+country+"-ball").classList.add("rb-active");
+    document.querySelector("."+country).classList.remove("d-none");
+    document.querySelector("."+str).classList.add("d-none");
+  }
 
+}
 
-// document.querySelector(".form-request-1").addEventListener("submit", function(event){
-//   event.preventDefault();
-//
-//   fetch(form.action, {
-//       method: "post",
-//       body: new URLSearchParams(new FormData(form)) // for application/x-www-form-urlencoded
-//       // body: new FormData(form) // for multipart/form-data
-//   });
-// });
-// $('#submit').click(function() {
-//     $.ajax({
-//         url: '../app.py',
-//         type: 'POST',
-//         data: {
-//             email: 'email@example.com',
-//             message: 'hello world!'
-//         },
-//         success: function(msg) {
-//             alert('Email Sent');
-//         }
-//     });
-// });
-// $(".form-request-1").submit(function (e) {
-//   e.preventDefault();
-//   let form = $(this);
-//   let btn = form.find(".btn");
-//
-//   $.ajax({
-//
-//   })
-//
-// });
 $(function(){
   $('.qr').height($('.qr').width());
 
@@ -493,8 +477,21 @@ function down() {
     }
   }
 }
-
 window.addEventListener("scroll", down);
+
+function fix_nav() {
+  el = document.querySelector(".window").getBoundingClientRect().top;
+  console.log(el);
+  if (el < 0) {
+    document.querySelector(".nav-out").classList.add("nav-out-b");
+  } else {
+    document.querySelector(".nav-out").classList.remove("nav-out-b");
+  }
+}
+
+
+
+window.addEventListener("scroll", fix_nav);
 
 
 // y1.style.cssText = 'background: rgba(87,90,87,0.66);'
