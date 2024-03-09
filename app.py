@@ -1,9 +1,84 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
 from flask_mail import Mail, Message
 from flask_mobility import Mobility
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import ForeignKey
+from sqlalchemy.orm import relationship
+from werkzeug.security import generate_password_hash, check_password_hash
+from flask_login import LoginManager, UserMixin, current_user, login_required, login_user, logout_user
+
 import func
+from datetime import datetime
 
 application = Flask(__name__)
+
+
+application.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(application)
+application.app_context().push()
+login_manager = LoginManager(application)
+login_manager.login_view = 'login'
+class Titles(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    path = db.Column(db.String(50),unique=True, nullable=False)
+    title = db.Column(db.String(300), nullable=False)
+
+    def __repr__(self):
+        return '<Titles %r>' % self.path
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    return db.session.query(Users).get(user_id)
+
+
+class Users(db.Model, UserMixin):
+    # __tablename__ = "users"
+    id = db.Column(db.Integer(), primary_key=True)
+    email = db.Column(db.String(100), nullable=False, unique=True)
+    name = db.Column(db.String(100))
+    password_hash = db.Column(db.String(100), nullable=False)
+    created_on = db.Column(db.DateTime(), default=datetime.utcnow)
+    color = db.Column(db.String(10))
+    # logs = db.relationship('Logs', backref='user')
+
+    def set_password(self, password):
+        self.password_hash = generate_password_hash(password)
+
+
+    def check_password(self, password):
+        return check_password_hash(self.password_hash, password)
+
+
+    def __repr__(self):
+        return "<Users %r>" % self.name
+
+
+class Logs(db.Model):
+    # __tablename__ = "logs"
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(100), nullable=False)
+    info = db.Column(db.String(300))
+    date = db.Column(db.DateTime, default=datetime.utcnow())
+    type = db.Column(db.String(10), nullable=False)
+    # user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    # user = db.relationship("User", back_populates="company")
+    user_name = db.Column(db.String(100), nullable=False)
+    user_color = db.Column(db.String(10), nullable=False)
+
+    def get_color(self):
+        if self.type == "success":
+            return "#146B14"
+        elif self.type == "error":
+            return "#751515"
+        elif self.type == "warning":
+            return "#757315"
+
+    def __repr__(self):
+        return '<Log %r>' % self.id
+
+
 Mobility(application)
 application.secret_key = "Wx4w54bL*7Tzdez(Td;"
 application.config['MAIL_SERVER'] = 'smtp.magnavis.ru'
@@ -18,13 +93,158 @@ application.config['MAIL_DEFAULT_SENDER'] = 'siteclient@magnavis.ru'
 # application.config['MAIL_PASSWORD'] = 'Kiloper=1224'
 application.config['MAIL_PASSWORD'] = 'jG6qK9xK6awY6fS6'
 mail = Mail(application)
-# mails = ['inforder@magnavis.ru', 'marwy@magnavis.ru', 'pvl@magnavis.ru', 'andr@magnavis.ru']
-mails = ['triikas@magnavis.ru']
+mails = ['inforder@magnavis.ru', 'triikas@magnavis.ru']
+# mails = ['triikas@magnavis.ru']
 
+
+@application.route('/adm', methods=['post', 'get'])
+@login_required
+def adm():
+    titles = Titles.query.order_by(Titles.id.desc()).all()
+    logs = Logs.query.order_by(Logs.id.desc()).all()
+    print(titles)
+    if request.method == 'POST':
+        type = request.form.get('type')
+        if type == "add-news":
+            title = request.form.get('title')
+            path = request.form.get('path')
+            data = request.form.get('data')
+            img = request.form.get('img')
+            img2 = request.form.get('img2')
+            pb = request.form.get('pb')
+            # p1 = request.form.get('p1')
+            ps = []
+            i = 1
+            last = False
+            while not last:
+                p = request.form.get('p{}'.format(i))
+                if p is not None:
+                    i += 1
+                    ps.append(p)
+                else:
+                    last = True
+            print(title, path, data, img, pb, ps, type)
+        elif type == "add-titles":
+            title = request.form.get('title')
+            path = request.form.get('path')
+            if db.session.query(Titles).filter(Titles.path == path).first() == None:
+                data = Titles(title=title, path=path)
+                log = Logs(title="Добавлен заголовок (title)", info=(path+"|"+title), type="success", user_name=current_user.name, user_color=current_user.color)
+
+                try:
+                    db.session.add(data)
+                    db.session.commit()
+                except:
+                    log.type = "error"
+                    log.title = "Ошибка при добавлении заголовка (title)"
+                try:
+                    db.session.add(log)
+                    db.session.commit()
+                except:
+                    return "ошибка логгирования, свяжитесь с разработчиком"
+            else:
+                log = Logs(title="Ошибка при добавлении заголовка (title)", info=(path + "|" + title), type="error",
+                           user_name=current_user.name, user_color=current_user.color)
+                try:
+                    db.session.add(log)
+                    db.session.commit()
+                except:
+                    return "ошибка логгирования, свяжитесь с разработчиком"
+            return redirect("adm")
+        elif type == "del-titles":
+            path = request.form.get('path')
+            try:
+                title = db.session.query(Titles).filter(Titles.path == path).first()
+                log = Logs(title="Удалён заголовок (title)", info=(path + "|" + title.title), type="warning",
+                           user_name=current_user.name, user_color=current_user.color)
+            except:
+                log = Logs(title="Ошибка при удалении заголовка (title)", info=(path + "|"), type="error",
+                           user_name=current_user.name, user_color=current_user.color)
+                try:
+                    db.session.add(log)
+                    db.session.commit()
+                except:
+                    return "ошибка логгирования, свяжитесь с разработчиком"
+                return redirect("adm")
+            else:
+
+                try:
+                    data = db.session.query(Titles).filter(Titles.path == path).first()
+                    db.session.delete(data)
+                    db.session.commit()
+                except:
+                    log.type = "error"
+                    log.title = "Ошибка при удалении заголовка (title)"
+                try:
+                    db.session.add(log)
+                    db.session.commit()
+                except:
+                    return "ошибка логгирования, свяжитесь с разработчиком"
+                return redirect("adm")
+        elif type == "ch-titles":
+            title = request.form.get('title')
+            path = request.form.get('path')
+            log = Logs(title="Иззменён заголовок (title)", info=(path + "|" + title), type="success",
+                       user_name=current_user.name, user_color=current_user.color)
+            try:
+                ttl = db.session.query(Titles).filter(Titles.path == path).first()
+                ttl.title = title
+            except:
+                log.type = "error"
+                log.title = "Ошибка при изменении заголовка (title)"
+                try:
+                    db.session.add(log)
+                    db.session.commit()
+                except:
+                    return "ошибка логгирования, свяжитесь с разработчиком"
+                return redirect("adm")
+            else:
+
+                try:
+
+                    db.session.merge(ttl)
+                    db.session.commit()
+                except:
+                    log.type = "error"
+                    log.title = "Ошибка при изменении заголовка (title)"
+                try:
+                    db.session.add(log)
+                    db.session.commit()
+                except:
+                    return "ошибка логгирования, свяжитесь с разработчиком"
+                return redirect("adm")
+
+    return render_template('adm.html', titles=titles, logs=logs)
+
+
+@application.route('/adm/in', methods=['post', 'get'])
+def login():
+    message = ''
+    if request.method == 'POST':
+        mail = request.form.get('mail')
+        password = request.form.get('pass')
+        user = db.session.query(Users).filter(Users.email == mail).first()
+        if user and user.check_password(password):
+            login_user(user)
+            return redirect(url_for('adm'))
+        else:
+            message = "Неверная почта или пароль"
+    return render_template('in.html', message=message)
+
+
+
+@application.route('/adm/out')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('home'))
 
 
 @application.route('/', methods=['post', 'get'])
 def home():
+    titles = db.session.query(Titles).filter(Titles.path=='home').first()
+    # titles = Titles.query.all()
+    print(titles)
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
         name = request.form.get('name')
@@ -34,9 +254,9 @@ def home():
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
         mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/home.html')
+        return render_template('mobile/home.html', titles=titles)
     else:
-        return render_template('home.html')
+        return render_template('home.html', titles=titles)
 
 @application.route('/yandex_d8918d0df7f73488.html', methods=['post', 'get'])
 def webmaster():
@@ -198,29 +418,6 @@ def services():
     else:
         return render_template('services.html')
 
-
-@application.route('/adm', methods=['post', 'get'])
-def adm():
-    if request.method == 'POST':
-        title = request.form.get('title')
-        path = request.form.get('path')
-        data = request.form.get('data')
-        img = request.form.get('img')
-        img2 = request.form.get('img2')
-        pb = request.form.get('pb')
-        # p1 = request.form.get('p1')
-        ps = []
-        i = 1
-        last = False
-        while not last:
-            p = request.form.get('p{}'.format(i))
-            if p is not None:
-                i += 1
-                ps.append(p)
-            else:
-                last = True
-        print(title, ps)
-    return render_template('adm.html')
 
 
 @application.route('/info', methods=['post', 'get'])

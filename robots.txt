@@ -9,5 +9,7 @@ Disallow: /templates/base.html
 Disallow: /templates/mobile/base.html
 Disallow: /static
 Disallow: /adm
+Disallow: /adm/in
+Disallow: /adm/out
 Allow: /static/doc
 Sitemap: http://magnavis.ru/sitemap.xml

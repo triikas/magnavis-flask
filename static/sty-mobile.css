@@ -38,6 +38,19 @@ html{
 
 
 }
+
+.nav-out{
+    /*backdrop-filter: blur(166px);*/
+    backdrop-filter: blur(6px);
+    /*background-color: rgba(22,21,21);*/
+}
+.nav-out-b{
+    backdrop-filter: blur(266px)!important;
+    /*backdrop-filter: blur(6px);*/
+    /*background-color: rgba(22,21,21);*/
+}
+
+
 footer{
     & .btn{
         border-radius: 8px;

@@ -118,7 +118,7 @@ body{
 }
 .window{
     min-width: 700px;
-    /*max-width: 1798px;*/
+    max-width: 2000px;
 }
 .tablo-news{
     & h1{font-size: 2.4em; margin-bottom: 32px;}
