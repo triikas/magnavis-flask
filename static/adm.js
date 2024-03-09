@@ -142,7 +142,7 @@ function but_second (b) {
                     </div>
                     <div class="mb-2 text-light">
                         <p class="mb-1">* Имя новости в ссылке https://magnavis.ru/news/<t class="text-danger">name</t></p>
-                        <p>* Одно слово строчными латинскими буквами</p>
+                        <p>* Cтрочными латинскими буквами</p>
                     </div>
                     <div class="mb-2">
                         <label for="data" class="text-light d-block">Дата</label>
@@ -209,9 +209,9 @@ function but_second (b) {
                         <input type="text" name="path" class="input-group-text text-start w-100" required>
                     </div>
                     <div class="mb-2 text-light">
-                        <p class="mb-1">* Имя страницы в ссылке https://magnavis.ru/<t class="text-danger">news</t></p>
+                        <p class="mb-1">* Имя страницы в ссылке https://magnavis.ru/<t class="text-danger">news/ozon</t></p>
                         <p class="mb-1">* Для главной страницы это "home"</p>
-                        <p>* Одно слово строчными латинскими буквами</p>
+                        <p>* Cтрочными латинскими буквами</p>
                         
                     </div>
                     <div class="my-3 buttons">
@@ -229,12 +229,13 @@ function but_second (b) {
                     <h2 class="text-light px-0">Удалить title</h2>
                     <div class="mb-2">
                         <label for="path" class="text-light d-block">Ссылка</label>
-                        <input type="text" name="path" class="input-group-text text-start w-100" value="${fle[1]}" required disabled>
+                        <input type="text" class="input-group-text text-start w-100" value="${fle[1]}" required disabled>
+                        <input type="hidden" name="path" class="input-group-text text-start w-100" value="${fle[1]}" required>
                     </div>
                     <div class="mb-2 text-light">
-                        <p class="mb-1">* Имя страницы в ссылке https://magnavis.ru/<t class="text-danger">news</t></p>
+                        <p class="mb-1">* Имя страницы в ссылке https://magnavis.ru/<t class="text-danger">news/ozon</t></p>
                         <p class="mb-1">* Для главной страницы это "home"</p>
-                        <p class="mb-1">* Одно слово строчными латинскими буквами</p>
+                        <p class="mb-1">* Cтрочными латинскими буквами</p>
                         <p class="text-danger">* После удаления заголовка страницы следует тут же добавить новый, иначе заголовок страницы будет пустым</p>
                     </div>
                     <div class="my-3 buttons">
@@ -253,9 +254,9 @@ function but_second (b) {
                         <input type="text" name="path" class="input-group-text text-start w-100" required>
                     </div>
                     <div class="mb-2 text-light">
-                        <p class="mb-1">* Имя страницы в ссылке https://magnavis.ru/<t class="text-danger">news</t></p>
+                        <p class="mb-1">* Имя страницы в ссылке https://magnavis.ru/<t class="text-danger">news/ozon</t></p>
                         <p class="mb-1">* Для главной страницы это "home"</p>
-                        <p class="mb-1">* Одно слово строчными латинскими буквами</p>
+                        <p class="mb-1">* Cтрочными латинскими буквами</p>
                         <p class="text-danger">* После удаления заголовка страницы следует тут же добавить новый, иначе заголовок страницы будет пустым</p>
                     </div>
                     <div class="my-3 buttons">
@@ -280,12 +281,13 @@ function but_second (b) {
                     </div>
                     <div class="mb-2">
                         <label for="path" class="text-light d-block">Ссылка</label>
-                        <input type="text" name="path" class="input-group-text text-start w-100" value="${fle[1]}" required disabled>
+                        <input type="text" class="input-group-text text-start w-100" value="${fle[1]}" required disabled>
+                        <input type="hidden" name="path" class="input-group-text text-start w-100" value="${fle[1]}" required>
                     </div>
                     <div class="mb-2 text-light">
-                        <p class="mb-1">* Имя страницы в ссылке https://magnavis.ru/<t class="text-danger">news</t></p>
+                        <p class="mb-1">* Имя страницы в ссылке https://magnavis.ru/<t class="text-danger">news/ozon</t></p>
                         <p class="mb-1">* Для главной страницы это "home"</p>
-                        <p>* Одно слово строчными латинскими буквами</p>
+                        <p>* Cтрочными латинскими буквами</p>
                         
                     </div>
                     <div class="my-3 buttons">
@@ -308,9 +310,9 @@ function but_second (b) {
                         <input type="text" name="path" class="input-group-text text-start w-100" required>
                     </div>
                     <div class="mb-2 text-light">
-                        <p class="mb-1">* Имя страницы в ссылке https://magnavis.ru/<t class="text-danger">news</t></p>
+                        <p class="mb-1">* Имя страницы в ссылке https://magnavis.ru/<t class="text-danger">news/ozon</t></p>
                         <p class="mb-1">* Для главной страницы это "home"</p>
-                        <p>* Одно слово строчными латинскими буквами</p>
+                        <p>* Cтрочными латинскими буквами</p>
                         
                     </div>
                     <div class="my-3 buttons">
@@ -332,9 +334,9 @@ function but_second (b) {
         //                 <input type="text" name="path" class="input-group-text text-start w-100" required>
         //             </div>
         //             <div class="mb-2 text-light">
-        //                 <p class="mb-1">* Имя страницы в ссылке https://magnavis.ru/<t class="text-danger">news</t></p>
+        //                 <p class="mb-1">* Имя страницы в ссылке https://magnavis.ru/<t class="text-danger">news/ozon</t></p>
         //                 <p class="mb-1">* Для главной страницы это "home"</p>
-        //                 <p class="mb-1">* Одно слово строчными латинскими буквами</p>
+        //                 <p class="mb-1">* Cтрочными латинскими буквами</p>
         //                 <p class="text-danger">* После удаления заголовка страницы следует тут же добавить новый, иначе заголовок страницы будет пустым</p>
         //             </div>
         //             <div class="my-3 buttons">

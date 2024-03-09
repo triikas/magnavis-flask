@@ -184,6 +184,7 @@ def adm():
         elif type == "ch-titles":
             title = request.form.get('title')
             path = request.form.get('path')
+            print(title, path)
             log = Logs(title="Иззменён заголовок (title)", info=(path + "|" + title), type="success",
                        user_name=current_user.name, user_color=current_user.color)
             try:
