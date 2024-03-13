@@ -1,0 +1,156 @@
+{% extends "mobile/base.html" %}
+
+{% block title %}Направления грузоперевозок | MAGNAVIS{% endblock %}
+
+{% block content %}
+    <style>.p-up-s{display: none;}.up{height: 200px;}section{ min-height: 0;}body{background-image: linear-gradient(to bottom, #171616, #000000);} .tablo-color{padding-left: 40px;padding-left: 40px;}</style>
+    <script>
+        document.querySelector("body").classList.remove("asyncImage");
+    </script>
+    <div class="tablo-big tablo-invis">
+        <h1 style="font-size: 3.3em" class="text-center m-0">Доставка из России</h1>
+    <div style="width: 50%; margin-left: 25%; height: 2px; background-color: white; margin-top: 20px;"></div>
+    </div>
+    <div class="tablo-big tablo-invis mt-3">
+        <div class="container-fluid px-5">
+            <div class="row p-0">
+                <div class="col tablo-invis mx-0 w-100" style=" padding-bottom: 0; margin-bottom: 0;">
+{#                    <map name="china">#}
+{#                        <area shape="circle" coords="600,620,60" onclick="guan()">#}
+{#                    </map>#}
+                    <img usemap="#china" src="{{ url_for('static', filename='img/grey/ru.png') }}" class="ch-img p-0" style="margin-right: 32px;">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis mt-3">
+        <h3>Китай</h3>
+        <div class="container-fluid px-5">
+            <div class="row p-0">
+                <div class="col tablo-invis p-0" style="margin-right: 0;">
+                    <div class="ch-text" style="">
+                        <img src="{{ url_for('static', filename='img/artem-shuba-51ZWho_sWyA-unsplash.jpg') }}" style="border-radius: 16px; margin-bottom: 20px">
+                        <p style="text-align: justify;">МАГНАВИС осуществляет доставку любых видов грузов «от двери до двери» во все регионы России. Мы используем различные виды транспорта, чтобы перевезти ваш груз быстро, безопасно и эффективно для вашего бизнеса. Мы сотрудничаем с крупными российскими авиакомпаниями, морскими и ж/д перевозчиками, имеем собственный автопарк, способный транспортировать грузы с температурным режимом, спецгрузы и грузы разных размеров.</p>
+                        <p style="text-align: justify;">Берём на себя подготовку необходимых документов, отвечаем за погрузочно-разгрузочные работы и оказываем экспедиторские услуги. Подбираем самые быстрые и оптимальные по цене маршруты доставки. Срок перевозки — от 1-2 дней. Филиалы МАГНАВИС в Санкт-Петербурге и Москве также оказывают дополнительные услуги по консолидации, упаковке, маркировке и ответственному хранению грузов на собственном складе. Закажи доставку в один клик!</p>
+                    </div>
+                    <div class="guan-text" style="display: none;">
+                        <h3>Гуанчжоу</h3>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
+{#                        <a class="btn btn-danger">Отправить запрос</a>#}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis mt-3">
+        <h3>Как доставляем?</h3>
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col tablo-serv " style="min-height: 570px; min-width: 430px; background-image: url({{ url_for('static', filename='img/ivan-lopatin-k9N5Dzh8LA8-unsplash.jpg') }}); background-repeat: no-repeat; background-position: right center; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Железнодорожный транспорт</h4>
+                        <p class="mt-4">Организуем перевозку грузов по железной дороге на всей территории России. 17 железных дорог связывают более 1000 населённых пунктов нашей страны. Ежегодно российские железные дороги перевозят 1,3 млрд т грузов: это быстрый, универсальный и наименее затратный способ доставки. Отправляем железнодорожным транспортом грузы разных типов: тяжеловесные, габаритные, специальные, сборные. Для этого мы используем полувагоны, крытые вагоны, фитинговые вагоны, платформы и контейнеры, которые оборудованы рефрижераторами и изотермами для перевозки грузов, требующих специальный температурный режим. Наша команда подготовит необходимые документы,  консолидирует грузы на складе,  организует перевозку до станции отправления, выгрузку/погрузку и доставку до получателя. Популярные направления ж/д перевозок: Москва – Магадан, Москва – Екатеринбург, Москва – Благовещенск, Москва – Якутск.</p>
+                    </div>
+                </div>
+                <div class="col tablo-serv toff" style="min-height: 570px; min-width: 430px; background-image: url({{ url_for('static', filename='img/egor-myznik-21B8UIaWaKI-unsplash.jpg') }}); background-repeat: no-repeat; background-position: center center; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Воздушный транспорт</h4>
+                        <p class="mt-4">МАГНАВИС доставляет в любую точку России грузы любой сложности: от станков для тяжёлой промышленности до пчёл. Мы работаем по прямым договорам с российскими авиакомпаниями: Аэрофлот, Smartavia, Азимут, S7, Северный ветер. Это позволяет подбирать для вас ближайшие даты вылета. Наши специалисты осуществляют доставку во все регионы «от двери до двери». И это за 1-2 дня! Схема работы такая: забираем груз в точке отправления на машине и привозим на терминал, сдаём груз на рейс, обрабатываем и отправляем. По прилёте груз вывозим на свой склад, доставляем на авто по нужному адресу или передаём в руки получателя сразу в аэропорту. Сегодня самые востребованные направления — это регионы на Дальнем Востоке: Владивосток, Магадан, Южно-Сахалинск, Благовещенск. Туда летают большие самолёты, позволяющие перевозить до 22 тонн грузов.</p>
+                    </div>
+                </div>
+                <div class="col tablo-serv" style="min-height: 570px;  min-width: 430px; background-image: url({{ url_for('static', filename='img/alexey-turenkov-gNOSIQ4mKiU-unsplash.jpg') }}); background-repeat: no-repeat; background-position: center bottom; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Автомобильный транспорт</h4>
+                        <p class="mt-4">Мы осуществляем перевозку автомобильным транспортом любых видов грузов по территории России там, где проложены дороги. Самый практичный вид доставки — доставка сборного груза, которая подходит для автоперевозки небольшого количества малогабаритных грузов. Наша команда организует доставку «под ключ»: это значит, что все этапы перевозки мы берём на себя от забора груза до вручения его получателю. Мы предоставляем машины с рефрижераторами и термологгерами для поддержания нужной температуры для ваших грузов. Также в рамках автоперевозок доступны дополнительные услуги: погрузо-разгрузочные работы, упаковка, сортировка и хранение грузов на собственном складе. Стоимость автоперевозки рассчитывается исходя из расстояния между пунктами отправки и назначения, а также параметров грузов.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col tablo-serv sea mx-0" style="min-height: 570px; min-width: 730px; background-image: url({{ url_for('static', filename='img/anton-kraev-6vvaMtQeqV8-unsplash.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Морской транспорт</h4>
+                        <p class="mt-4">Мы организуем перевозки грузов по морю. Доставка доступна в контейнерах по 20 и 40 футов, контейнерах-рефрижераторах и танк-контейнерах. Чаще всего этот тип перевозок используется для навалочных грузов: уголь, песок, руда и другие полезные ископаемые. Наиболее распространённый маршрут — из морского порта, который располагается вблизи месторождений, до российских перерабатывающих комбинатов. А также в отдалённые регионы России. В порту грузы перегружаются в вагоны и следуют до точки назначения по местным железным дорогам. Однако для перевозки стандартных видов грузов этот способ нерентабельный, оптимальнее использовать доставку авиа или автотранспортом.</p>
+                    </div>
+                </div>
+                <div class="col tablo-serv" style="min-height: 570px; min-width: 430px; background-image: url({{ url_for('static', filename='img/egor-myznik-xJ1dSG8eTUw-unsplash.jpg') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in">
+                        <h4 style="font-weight: bolder;">Мультимодальные перевозки</h4>
+                        <p class="mt-4">Мы доставляем грузы даже в самые труднодоступные уголки нашей страны. Чтобы достичь пункта назначения комбинируем нескольких видов транспорта — авиа, авто, ж/д, морской фрахт. Наши специалисты для каждого разрабатывают индивидуальный маршрут в зависимости от пункта назначения, погодных условий, характеристик груза и пожеланий заказчика. Для нас нет неразрешимой задачи — отвезём белого медведя на побережье Берингова моря, доставим буровую установку в Ханты-Мансийск на крупнейшее месторождение нефти или переправим янтарь, добытый в Калининградской области, в ювелирные бутики России. Мы продумываем каждый этап логистической цепочки, чтобы ваши грузы прибыли к вам точно в срок.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis">
+       <h3>Что перевозим?</h3>
+       <div class="container-fluid px-5">
+
+           <div class="row">
+                <div class="col tablo-light cargo-t" style="margin-right: 16px; margin-bottom: 16px;">
+                    <h4 class="m-0">Оборудование и комплектующие </h4>
+                </div>
+                <div class="col tablo-light cargo-t" style="margin-bottom: 16px;">
+                    <h4 class="m-0">Образцы и пробные партии </h4>
+                </div>
+                <div class="col tablo-light cargo-t" style="margin-bottom: 0;">
+                    <h4 class="m-0">Одежда</h4>
+                </div>
+            </div>
+           <div class="row" style="margin-top: 16px;">
+                <div class="col tablo-light cargo-t" style="margin-right: 16px; margin-bottom: 16px;">
+                    <h4 class="m-0">Опасные грузы</h4>
+                </div>
+                <div class="col tablo-light cargo-t" style="margin-bottom: 16px;">
+                    <h4 class="m-0">Живые цветы</h4>
+                </div>
+                <div class="col tablo-light cargo-t" style="margin-bottom: 0;">
+                    <h4 class="m-0">Автозапчасти и автомобили</h4>
+                </div>
+            </div>
+           <div class="row" style="margin-top: 16px;">
+                <div class="col tablo-light cargo-t" style="margin-right: 16px; margin-bottom: 16px;">
+                    <h4 class="m-0">Ценные грузы</h4>
+                </div>
+                <div class="col tablo-light cargo-t" style="margin-bottom: 16px;">
+                    <h4 class="m-0">Техника</h4>
+                </div>
+                <a href="/services" class="d-block col text-decoration-none tablo-color cargo-t" style="padding-left: 20px !important; min-width: 700px;">
+                    <h4 class="m-0">Другое</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis">
+
+        <h3>Дополнительные услуги</h3>
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col tablo-serv p-0 mx-0" style="margin: 16px; min-width: 700px; background-image: url({{ url_for('static', filename='img/min/mealpro-efgpRGeu9tg-unsplash-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Доставка «от двери до двери»</h4>
+                    </div>
+                </div>
+                <div class="col tablo-serv p-0 mx-0 my-0" style="margin: 16px; min-width: 700px; background-image: url({{ url_for('static', filename='img/min/adrian-sulyok-sczNLg6rrhQ-unsplash-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Складские услуги</h4>
+                    </div>
+                </div>
+                <div class="col tablo-serv p-0 mx-0" style="margin: 16px; background-image: url({{ url_for('static', filename='img/min/closeup-of-real-estate-agent-using-calculator-while-his-client-is-signing-a-contract-min.webp') }}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="tablo-serv-in" style="min-height: 308px;">
+                    <h4>Страхование грузов</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col p-0 mx-0 d-flex justify-content-end">
+                    <a class="text-light text-decoration-none p-0" href="/services" style="right: -10%"><p>Другие услуги</p></a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

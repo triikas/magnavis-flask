@@ -326,6 +326,22 @@ def oae():
         return render_template('dir/oae.html')
 
 
+@application.route('/directions/russia', methods=['post', 'get'])
+def russia():
+    if request.method == 'POST':
+        msg = Message("Запрос с magnavis.ru", recipients=mails)
+        name = request.form.get('name')
+        email = request.form.get('email')
+        number = request.form.get('number')
+        comment = request.form.get('comment')
+        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+        mail.send(msg)
+    if request.MOBILE:
+        return render_template('mobile/dir/ru.html')
+    else:
+        return render_template('dir/ru.html')
+
+
 @application.route('/directions/turkey', methods=['post', 'get'])
 def turkey():
     if request.method == 'POST':
