@@ -21,7 +21,7 @@ login_manager = LoginManager(application)
 login_manager.login_view = 'login'
 class Titles(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    path = db.Column(db.String(50),unique=True, nullable=False)
+    path = db.Column(db.String(150),unique=True, nullable=False)
     title = db.Column(db.String(300), nullable=False)
 
     def __repr__(self):
@@ -243,7 +243,7 @@ def logout():
 
 @application.route('/', methods=['post', 'get'])
 def home():
-    titles = db.session.query(Titles).filter(Titles.path=='home').first()
+    titles = db.session.query(Titles).filter(Titles.path=='https://magnavis.ru').first()
     # titles = Titles.query.all()
     print(titles)
     if request.method == 'POST':
@@ -265,6 +265,7 @@ def webmaster():
 
 @application.route('/contacts', methods=['post', 'get'])
 def contacts():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/contacts').first()
     func.docs_update()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
@@ -275,12 +276,13 @@ def contacts():
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
         mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/contacts.html')
+        return render_template('mobile/contacts.html', titles=titles)
     else:
-        return render_template('contacts.html')
+        return render_template('contacts.html', titles=titles)
 
 @application.route('/directions', methods=['post', 'get'])
 def directions():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/directions').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
         name = request.form.get('name')
@@ -290,12 +292,13 @@ def directions():
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
         mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/directions.html')
+        return render_template('mobile/directions.html', titles=titles)
     else:
-        return render_template('directions.html')
+        return render_template('directions.html', titles=titles)
 
 @application.route('/directions/china', methods=['post', 'get'])
 def china():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/directions/china').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
         name = request.form.get('name')
@@ -305,13 +308,14 @@ def china():
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
         mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/dir/china.html')
+        return render_template('mobile/dir/china.html', titles=titles)
     else:
-        return render_template('dir/china.html')
+        return render_template('dir/china.html', titles=titles)
 
 
 @application.route('/directions/oae', methods=['post', 'get'])
 def oae():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/directions/oae').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
         name = request.form.get('name')
@@ -321,13 +325,14 @@ def oae():
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
         mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/dir/oae.html')
+        return render_template('mobile/dir/oae.html', titles=titles)
     else:
-        return render_template('dir/oae.html')
+        return render_template('dir/oae.html', titles=titles)
 
 
 @application.route('/directions/russia', methods=['post', 'get'])
 def russia():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/directions/russia').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
         name = request.form.get('name')
@@ -337,13 +342,14 @@ def russia():
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
         mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/dir/ru.html')
+        return render_template('mobile/dir/ru.html', titles=titles)
     else:
-        return render_template('dir/ru.html')
+        return render_template('dir/ru.html', titles=titles)
 
 
 @application.route('/directions/turkey', methods=['post', 'get'])
 def turkey():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/directions/turkey').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
         name = request.form.get('name')
@@ -353,13 +359,14 @@ def turkey():
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
         mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/dir/trc.html')
+        return render_template('mobile/dir/trc.html', titles=titles)
     else:
-        return render_template('dir/trc.html')
+        return render_template('dir/trc.html', titles=titles)
 
 
 @application.route('/directions/india', methods=['post', 'get'])
 def india():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/directions/india').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
         name = request.form.get('name')
@@ -369,13 +376,14 @@ def india():
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
         mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/dir/ind.html')
+        return render_template('mobile/dir/ind.html', titles=titles)
     else:
-        return render_template('dir/ind.html')
+        return render_template('dir/ind.html', titles=titles)
 
 
 @application.route('/directions/skorea', methods=['post', 'get'])
 def skorea():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/directions/skorea').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
         name = request.form.get('name')
@@ -385,13 +393,14 @@ def skorea():
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
         mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/dir/sk.html')
+        return render_template('mobile/dir/sk.html', titles=titles)
     else:
-        return render_template('dir/sk.html')
+        return render_template('dir/sk.html', titles=titles)
 
 
 @application.route('/directions/hongkong', methods=['post', 'get'])
 def hongkong():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/directions/hongkong').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
         name = request.form.get('name')
@@ -401,12 +410,13 @@ def hongkong():
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
         mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/dir/hongkong.html')
+        return render_template('mobile/dir/hongkong.html', titles=titles)
     else:
-        return render_template('dir/hongkong.html')
+        return render_template('dir/hongkong.html', titles=titles)
 
 @application.route('/payment', methods=['post', 'get'])
 def payment():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/directions/hongkong').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
         name = request.form.get('name')
@@ -416,12 +426,13 @@ def payment():
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
         mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/payment.html')
+        return render_template('mobile/payment.html', titles=titles)
     else:
-        return render_template('payment.html')
+        return render_template('payment.html', titles=titles)
 
 @application.route('/services', methods=['post', 'get'])
 def services():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/services').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
         name = request.form.get('name')
@@ -431,14 +442,15 @@ def services():
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
         mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/services.html')
+        return render_template('mobile/services.html', titles=titles)
     else:
-        return render_template('services.html')
+        return render_template('services.html', titles=titles)
 
 
 
 @application.route('/info', methods=['post', 'get'])
 def info():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
         name = request.form.get('name')
@@ -448,13 +460,14 @@ def info():
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
         mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/info.html')
+        return render_template('mobile/info.html', titles=titles)
     else:
-        return render_template('info.html')
+        return render_template('info.html', titles=titles)
 
 
 @application.route('/info/<string:pst>', methods=['post', 'get'])
 def pt(pst):
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/{}'.format(pst)).first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
         name = request.form.get('name')
@@ -464,9 +477,9 @@ def pt(pst):
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
         mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/info.html')
+        return render_template('mobile/info.html', titles=titles)
     else:
-        return render_template('info.html')
+        return render_template('info.html', titles=titles)
 
 
 @application.route('/info/prob', methods=['post', 'get'])
@@ -505,411 +518,224 @@ def prob():
 
 @application.route('/info/suparna', methods=['post', 'get'])
 def suparna():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/suparna').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
-        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
-        lovushka = request.form.get('lovushka')
-        kod = request.form.get('kod')
-        if str(request.form.get('kod')) != "None":
-            flash("Груз не найден")
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/suparna'))
-            else:
-                return redirect(url_for('news-vrem/suparna'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
-            flash("Вы указали почту, на которую нельзя ответить")
-        else:
-            mail.send(msg)
-            flash("Запрос отправлен")
-            # print(str((request.form.get('email'))))
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/suparna'))
-            else:
-                return redirect(url_for('news-vrem/suparna'))
+        mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/news-vrem/suparna.html')
+        return render_template('mobile/news-vrem/suparna.html', titles=titles)
     else:
-        return render_template('news-vrem/suparna.html')
+        return render_template('news-vrem/suparna.html', titles=titles)
+
+
+@application.route('/info/msc-spb', methods=['post', 'get'])
+def msc_spb():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/msc-spb').first()
+    if request.method == 'POST':
+        msg = Message("Запрос с magnavis.ru", recipients=mails)
+        name = request.form.get('name')
+        email = request.form.get('email')
+        number = request.form.get('number')
+        comment = request.form.get('comment')
+        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+        mail.send(msg)
+    if request.MOBILE:
+        return render_template('mobile/news-vrem/msc-spb.html', titles=titles)
+    else:
+        return render_template('news-vrem/msc-spb.html', titles=titles)
 
 
 @application.route('/info/shanhai', methods=['post', 'get'])
 def shanhai():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/shanhai').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
-        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
-        lovushka = request.form.get('lovushka')
-        kod = request.form.get('kod')
-        if str(request.form.get('kod')) != "None":
-            flash("Груз не найден")
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/shanhai'))
-            else:
-                return redirect(url_for('news-vrem/shanhai'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
-            flash("Вы указали почту, на которую нельзя ответить")
-        else:
-            mail.send(msg)
-            flash("Запрос отправлен")
-            # print(str((request.form.get('email'))))
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/shanhai'))
-            else:
-                return redirect(url_for('news-vrem/shanhai'))
+        mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/news-vrem/shanhai.html')
+        return render_template('mobile/news-vrem/shanhai.html', titles=titles)
     else:
-        return render_template('news-vrem/shanhai.html')
+        return render_template('news-vrem/shanhai.html', titles=titles)
 
 
 @application.route('/info/g4721', methods=['post', 'get'])
 def g4721():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/g4721').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
-        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
-        lovushka = request.form.get('lovushka')
-        kod = request.form.get('kod')
-        if str(request.form.get('kod')) != "None":
-            flash("Груз не найден")
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/g4721'))
-            else:
-                return redirect(url_for('news-vrem/g4721'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
-            flash("Вы указали почту, на которую нельзя ответить")
-        else:
-            mail.send(msg)
-            flash("Запрос отправлен")
-            # print(str((request.form.get('email'))))
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/g4721'))
-            else:
-                return redirect(url_for('news-vrem/g4721'))
+        mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/news-vrem/g4721.html')
+        return render_template('mobile/news-vrem/g4721.html', titles=titles)
     else:
-        return render_template('news-vrem/g4721.html')
+        return render_template('news-vrem/g4721.html', titles=titles)
 
 
 @application.route('/info/sutochnie', methods=['post', 'get'])
 def sutochnie():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/sutochnie').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
-        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
-        lovushka = request.form.get('lovushka')
-        kod = request.form.get('kod')
-        if str(request.form.get('kod')) != "None":
-            flash("Груз не найден")
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/sutochnie'))
-            else:
-                return redirect(url_for('news-vrem/sutochnie'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
-            flash("Вы указали почту, на которую нельзя ответить")
-        else:
-            mail.send(msg)
-            flash("Запрос отправлен")
-            # print(str((request.form.get('email'))))
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/sutochnie'))
-            else:
-                return redirect(url_for('news-vrem/sutochnie'))
+        mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/news-vrem/sutochnie.html')
+        return render_template('mobile/news-vrem/sutochnie.html', titles=titles)
     else:
-        return render_template('news-vrem/sutochnie.html')
+        return render_template('news-vrem/sutochnie.html', titles=titles)
 
 
 @application.route('/info/agro', methods=['post', 'get'])
 def agro():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/agro').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
-        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
-        lovushka = request.form.get('lovushka')
-        kod = request.form.get('kod')
-        if str(request.form.get('kod')) != "None":
-            flash("Груз не найден")
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/agro'))
-            else:
-                return redirect(url_for('news-vrem/agro'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
-            flash("Вы указали почту, на которую нельзя ответить")
-        else:
-            mail.send(msg)
-            flash("Запрос отправлен")
-            # print(str((request.form.get('email'))))
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/agro'))
-            else:
-                return redirect(url_for('news-vrem/agro'))
+        mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/news-vrem/agro.html')
+        return render_template('mobile/news-vrem/agro.html', titles=titles)
     else:
-        return render_template('news-vrem/agro.html')
+        return render_template('news-vrem/agro.html', titles=titles)
 
 
 @application.route('/info/garant', methods=['post', 'get'])
 def garant():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/garant').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
-        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
-        lovushka = request.form.get('lovushka')
-        kod = request.form.get('kod')
-        if str(request.form.get('kod')) != "None":
-            flash("Груз не найден")
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/garant'))
-            else:
-                return redirect(url_for('news-vrem/garant'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
-            flash("Вы указали почту, на которую нельзя ответить")
-        else:
-            mail.send(msg)
-            flash("Запрос отправлен")
-            # print(str((request.form.get('email'))))
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/garant'))
-            else:
-                return redirect(url_for('news-vrem/garant'))
+        mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/news-vrem/garant.html')
+        return render_template('mobile/news-vrem/garant.html', titles=titles)
     else:
-        return render_template('news-vrem/garant.html')
+        return render_template('news-vrem/garant.html', titles=titles)
 
 
 
 @application.route('/info/il96', methods=['post', 'get'])
 def il96():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/garant').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
-        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
-        lovushka = request.form.get('lovushka')
-        kod = request.form.get('kod')
-        if str(request.form.get('kod')) != "None":
-            flash("Груз не найден")
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/il96'))
-            else:
-                return redirect(url_for('news-vrem/il96'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
-            flash("Вы указали почту, на которую нельзя ответить")
-        else:
-            mail.send(msg)
-            flash("Запрос отправлен")
-            # print(str((request.form.get('email'))))
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/il96'))
-            else:
-                return redirect(url_for('news-vrem/il96'))
+        mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/news-vrem/il96.html')
+        return render_template('mobile/news-vrem/il96.html', titles=titles)
     else:
-        return render_template('news-vrem/il96.html')
+        return render_template('news-vrem/il96.html', titles=titles)
 
 
 @application.route('/info/haynan', methods=['post', 'get'])
 def haynan():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/haynan').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
-        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
-        lovushka = request.form.get('lovushka')
-        kod = request.form.get('kod')
-        if str(request.form.get('kod')) != "None":
-            flash("Груз не найден")
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/haynan'))
-            else:
-                return redirect(url_for('news-vrem/haynan'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
-            flash("Вы указали почту, на которую нельзя ответить")
-        else:
-            mail.send(msg)
-            flash("Запрос отправлен")
-            # print(str((request.form.get('email'))))
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/haynan'))
-            else:
-                return redirect(url_for('news-vrem/haynan'))
+        mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/news-vrem/haynan.html')
+        return render_template('mobile/news-vrem/haynan.html', titles=titles)
     else:
-        return render_template('news-vrem/haynan.html')
+        return render_template('news-vrem/haynan.html', titles=titles)
 
 
 @application.route('/info/kalin', methods=['post', 'get'])
 def kalin():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/kalin').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
-        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
-        lovushka = request.form.get('lovushka')
-        kod = request.form.get('kod')
-        if str(request.form.get('kod')) != "None":
-            flash("Груз не найден")
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/kalin'))
-            else:
-                return redirect(url_for('news-vrem/kalin'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
-            flash("Вы указали почту, на которую нельзя ответить")
-        else:
-            mail.send(msg)
-            flash("Запрос отправлен")
-            # print(str((request.form.get('email'))))
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/kalin'))
-            else:
-                return redirect(url_for('news-vrem/kalin'))
+        mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/news-vrem/kalin.html')
+        return render_template('mobile/news-vrem/kalin.html', titles=titles)
     else:
-        return render_template('news-vrem/kalin.html')
+        return render_template('news-vrem/kalin.html', titles=titles)
 
 @application.route('/info/spravochnik', methods=['post', 'get'])
 def spravochnik():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/spravochnik').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
-        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
-        lovushka = request.form.get('lovushka')
-        kod = request.form.get('kod')
-        if str(request.form.get('kod')) != "None":
-            flash("Груз не найден")
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/spravochnik'))
-            else:
-                return redirect(url_for('news-vrem/spravochnik'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
-            flash("Вы указали почту, на которую нельзя ответить")
-        else:
-            mail.send(msg)
-            flash("Запрос отправлен")
-            # print(str((request.form.get('email'))))
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/spravochnik'))
-            else:
-                return redirect(url_for('news-vrem/spravochnik'))
+        mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/news-vrem/spravochnik.html')
+        return render_template('mobile/news-vrem/spravochnik.html', titles=titles)
     else:
-        return render_template('news-vrem/spravochnik.html')
+        return render_template('news-vrem/spravochnik.html', titles=titles)
 
 
 @application.route('/info/rgd', methods=['post', 'get'])
 def rgd():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/rgd').first()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
-        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
-        lovushka = request.form.get('lovushka')
-        kod = request.form.get('kod')
-        if str(request.form.get('kod')) != "None":
-            flash("Груз не найден")
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/rgd'))
-            else:
-                return redirect(url_for('news-vrem/rgd'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
-            flash("Вы указали почту, на которую нельзя ответить")
-        else:
-            mail.send(msg)
-            flash("Запрос отправлен")
-            # print(str((request.form.get('email'))))
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/rgd'))
-            else:
-                return redirect(url_for('news-vrem/rgd'))
+        mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/news-vrem/rgd.html')
+        return render_template('mobile/news-vrem/rgd.html', titles=titles)
     else:
-        return render_template('news-vrem/rgd.html')
+        return render_template('news-vrem/rgd.html', titles=titles)
 
 
 @application.route('/about', methods=['post', 'get'])
 def about():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/about').first()
     numbers = func.numbers()
     if request.method == 'POST':
         msg = Message("Запрос с magnavis.ru", recipients=mails)
-        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
         name = request.form.get('name')
         email = request.form.get('email')
         number = request.form.get('number')
         comment = request.form.get('comment')
-        lovushka = request.form.get('lovushka')
-        kod = request.form.get('kod')
-        if str(request.form.get('kod')) != "None":
-            flash("Груз не найден")
-            if request.MOBILE:
-                return redirect(url_for('mobile/about'))
-            else:
-                return redirect(url_for('about'))
         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
-            flash("Вы указали почту, на которую нельзя ответить")
-        else:
-            # mail.send(msg)               //механизм формы тут не нужен
-            flash("Запрос отправлен")
-            # print(str((request.form.get('email'))))
-            if request.MOBILE:
-                return redirect(url_for('mobile/about'))
-            else:
-                return redirect(url_for('about'))
+        mail.send(msg)
     if request.MOBILE:
-        return render_template('mobile/about.html', numbers=numbers)
+        return render_template('mobile/about.html', numbers=numbers, titles=titles)
     else:
-        return render_template('about.html', numbers=numbers)
+        return render_template('about.html', numbers=numbers, titles=titles)
 
 
 if __name__ == '__main__':

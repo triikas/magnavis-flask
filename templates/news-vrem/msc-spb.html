@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}{{ titles.title }}{% endblock %}
+
+{% block content %}
+    <style>p{text-align: justify;}  .p-up-s{display: none;}  section{ min-height: 0;}  body{background-image: linear-gradient(to bottom, #171616, #000000);}  .tablo-color{padding-left: 40px;padding-left: 40px;}</style>
+    <script>
+        document.querySelector("body").classList.remove("asyncImage");
+    </script>
+    <div class="tablo-big tablo-invis py-2">
+        <a class="d-block text-decoration-none" href="{{ url_for('info') }}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-arrow-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+        </svg>
+        </a>
+    </div>
+    <div class="tablo-big tablo-invis">
+        {#<h3>Преимущества работы с нашей компанией</h3>#}
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col p-0">
+                    <h1 style="font-size: 2.2em; margin-bottom: 32px;">Владимир Путин дал старт строительству высокоскоростной ж/д Москва — Петербург
+</h1>
+                    <p>«Флагманским стартовым этапом станет магистраль между Москвой и Санкт-Петербургом, она пройдет по территории шести субъектов федерации, в которых проживает около 30 млн человек, это порядка 20% всего населения России», — заявил президент России во время видеоконференции.</p>
+                    <p>Таким образом строительство ВСМ позволит повысить скорость перевозки грузов, а также вывезти из почти 18 регионов России на Северо-Запад дополнительные грузы в объёме 30 млн тонн. Как отметил Владимир Путин, в строительстве данного экономически важного для страны объекта будут применяться отечественные разработки и оборудование.</p>
+                    <p>Министр транспорта Виталий Савельев подчеркнул, что проезд из Москвы в Петербург после завершения строительства сократится до двух часов 15 минут, а дорога между Москвой и Тверью займёт 35 минут.</p>
+                    <p>Ранее глава РЖД Олег Белозеров отметил, что запуск движения по высокоскоростной магистрали между Москвой и Петербургом планируется в 2028 году. </p>
+                    <p>Источник: интерфакс</p>
+                </div>
+                <div class="col">
+                    <div style="margin-left: 32px; margin-top: 12px;"><img src="{{ url_for('static', filename='img/dmitrii-vaccinium-Q47eNv_UvfM-unsplash.webp') }}" style=" width: 100%; border-radius: 8px;" alt="MAGNAVIS"></div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+{% endblock %}
