@@ -613,242 +613,242 @@ def services():
 
 
 
-@application.route('/info/prob', methods=['post', 'get'])
-def prob():
-    if request.method == 'POST':
-        msg = Message("Запрос с magnavis.ru", recipients=mails)
-        # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
-        name = request.form.get('name')
-        email = request.form.get('email')
-        number = request.form.get('number')
-        comment = request.form.get('comment')
-        lovushka = request.form.get('lovushka')
-        kod = request.form.get('kod')
-        if str(request.form.get('kod')) != "None":
-            flash("Груз не найден")
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/prob'))
-            else:
-                return redirect(url_for('news-vrem/prob'))
-        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
-            flash("Вы указали почту, на которую нельзя ответить")
-        else:
-            mail.send(msg)
-            flash("Запрос отправлен")
-            # print(str((request.form.get('email'))))
-            if request.MOBILE:
-                return redirect(url_for('mobile/news-vrem/prob'))
-            else:
-                return redirect(url_for('news-vrem/prob'))
-    if request.MOBILE:
-        return render_template('mobile/news-vrem/prob.html')
-    else:
-        return render_template('news-vrem/prob.html')
-
-
-@application.route('/info/suparna', methods=['post', 'get'])
-def suparna():
-    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/suparna').first()
-    if request.method == 'POST':
-        msg = Message("Запрос с magnavis.ru", recipients=mails)
-        name = request.form.get('name')
-        email = request.form.get('email')
-        number = request.form.get('number')
-        comment = request.form.get('comment')
-        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        mail.send(msg)
-    if request.MOBILE:
-        return render_template('mobile/news-vrem/suparna.html', titles=titles)
-    else:
-        return render_template('news-vrem/suparna.html', titles=titles)
-
-
-@application.route('/info/msc-spb', methods=['post', 'get'])
-def msc_spb():
-    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/msc-spb').first()
-    if request.method == 'POST':
-        msg = Message("Запрос с magnavis.ru", recipients=mails)
-        name = request.form.get('name')
-        email = request.form.get('email')
-        number = request.form.get('number')
-        comment = request.form.get('comment')
-        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        mail.send(msg)
-    if request.MOBILE:
-        return render_template('mobile/news-vrem/msc-spb.html', titles=titles)
-    else:
-        return render_template('news-vrem/msc-spb.html', titles=titles)
-
-
-@application.route('/info/shanhai', methods=['post', 'get'])
-def shanhai():
-    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/shanhai').first()
-    if request.method == 'POST':
-        msg = Message("Запрос с magnavis.ru", recipients=mails)
-        name = request.form.get('name')
-        email = request.form.get('email')
-        number = request.form.get('number')
-        comment = request.form.get('comment')
-        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        mail.send(msg)
-    if request.MOBILE:
-        return render_template('mobile/news-vrem/shanhai.html', titles=titles)
-    else:
-        return render_template('news-vrem/shanhai.html', titles=titles)
-
-
-@application.route('/info/g4721', methods=['post', 'get'])
-def g4721():
-    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/g4721').first()
-    if request.method == 'POST':
-        msg = Message("Запрос с magnavis.ru", recipients=mails)
-        name = request.form.get('name')
-        email = request.form.get('email')
-        number = request.form.get('number')
-        comment = request.form.get('comment')
-        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        mail.send(msg)
-    if request.MOBILE:
-        return render_template('mobile/news-vrem/g4721.html', titles=titles)
-    else:
-        return render_template('news-vrem/g4721.html', titles=titles)
-
-
-@application.route('/info/sutochnie', methods=['post', 'get'])
-def sutochnie():
-    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/sutochnie').first()
-    if request.method == 'POST':
-        msg = Message("Запрос с magnavis.ru", recipients=mails)
-        name = request.form.get('name')
-        email = request.form.get('email')
-        number = request.form.get('number')
-        comment = request.form.get('comment')
-        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        mail.send(msg)
-    if request.MOBILE:
-        return render_template('mobile/news-vrem/sutochnie.html', titles=titles)
-    else:
-        return render_template('news-vrem/sutochnie.html', titles=titles)
-
-
-@application.route('/info/agro', methods=['post', 'get'])
-def agro():
-    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/agro').first()
-    if request.method == 'POST':
-        msg = Message("Запрос с magnavis.ru", recipients=mails)
-        name = request.form.get('name')
-        email = request.form.get('email')
-        number = request.form.get('number')
-        comment = request.form.get('comment')
-        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        mail.send(msg)
-    if request.MOBILE:
-        return render_template('mobile/news-vrem/agro.html', titles=titles)
-    else:
-        return render_template('news-vrem/agro.html', titles=titles)
-
-
-@application.route('/info/garant', methods=['post', 'get'])
-def garant():
-    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/garant').first()
-    if request.method == 'POST':
-        msg = Message("Запрос с magnavis.ru", recipients=mails)
-        name = request.form.get('name')
-        email = request.form.get('email')
-        number = request.form.get('number')
-        comment = request.form.get('comment')
-        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        mail.send(msg)
-    if request.MOBILE:
-        return render_template('mobile/news-vrem/garant.html', titles=titles)
-    else:
-        return render_template('news-vrem/garant.html', titles=titles)
-
-
-
-@application.route('/info/il96', methods=['post', 'get'])
-def il96():
-    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/garant').first()
-    if request.method == 'POST':
-        msg = Message("Запрос с magnavis.ru", recipients=mails)
-        name = request.form.get('name')
-        email = request.form.get('email')
-        number = request.form.get('number')
-        comment = request.form.get('comment')
-        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        mail.send(msg)
-    if request.MOBILE:
-        return render_template('mobile/news-vrem/il96.html', titles=titles)
-    else:
-        return render_template('news-vrem/il96.html', titles=titles)
-
-
-@application.route('/info/haynan', methods=['post', 'get'])
-def haynan():
-    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/haynan').first()
-    if request.method == 'POST':
-        msg = Message("Запрос с magnavis.ru", recipients=mails)
-        name = request.form.get('name')
-        email = request.form.get('email')
-        number = request.form.get('number')
-        comment = request.form.get('comment')
-        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        mail.send(msg)
-    if request.MOBILE:
-        return render_template('mobile/news-vrem/haynan.html', titles=titles)
-    else:
-        return render_template('news-vrem/haynan.html', titles=titles)
-
-
-@application.route('/info/kalin', methods=['post', 'get'])
-def kalin():
-    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/kalin').first()
-    if request.method == 'POST':
-        msg = Message("Запрос с magnavis.ru", recipients=mails)
-        name = request.form.get('name')
-        email = request.form.get('email')
-        number = request.form.get('number')
-        comment = request.form.get('comment')
-        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        mail.send(msg)
-    if request.MOBILE:
-        return render_template('mobile/news-vrem/kalin.html', titles=titles)
-    else:
-        return render_template('news-vrem/kalin.html', titles=titles)
-
-@application.route('/info/spravochnik', methods=['post', 'get'])
-def spravochnik():
-    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/spravochnik').first()
-    if request.method == 'POST':
-        msg = Message("Запрос с magnavis.ru", recipients=mails)
-        name = request.form.get('name')
-        email = request.form.get('email')
-        number = request.form.get('number')
-        comment = request.form.get('comment')
-        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        mail.send(msg)
-    if request.MOBILE:
-        return render_template('mobile/news-vrem/spravochnik.html', titles=titles)
-    else:
-        return render_template('news-vrem/spravochnik.html', titles=titles)
-
-
-@application.route('/info/rgd', methods=['post', 'get'])
-def rgd():
-    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/rgd').first()
-    if request.method == 'POST':
-        msg = Message("Запрос с magnavis.ru", recipients=mails)
-        name = request.form.get('name')
-        email = request.form.get('email')
-        number = request.form.get('number')
-        comment = request.form.get('comment')
-        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        mail.send(msg)
-    if request.MOBILE:
-        return render_template('mobile/news-vrem/rgd.html', titles=titles)
-    else:
-        return render_template('news-vrem/rgd.html', titles=titles)
+# @application.route('/info/prob', methods=['post', 'get'])
+# def prob():
+#     if request.method == 'POST':
+#         msg = Message("Запрос с magnavis.ru", recipients=mails)
+#         # msg = Message("Запрос с magnavis.ru", recipients=['q1113p@mail.ru'])
+#         name = request.form.get('name')
+#         email = request.form.get('email')
+#         number = request.form.get('number')
+#         comment = request.form.get('comment')
+#         lovushka = request.form.get('lovushka')
+#         kod = request.form.get('kod')
+#         if str(request.form.get('kod')) != "None":
+#             flash("Груз не найден")
+#             if request.MOBILE:
+#                 return redirect(url_for('mobile/news-vrem/prob'))
+#             else:
+#                 return redirect(url_for('news-vrem/prob'))
+#         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+#         if ("noreply" or "no.reply" or "no-reply") in str(request.form.get('email')) or str(request.form.get('lovushka')) != "None" or (str(request.form.get('name')) or str(request.form.get('email')) or str(request.form.get('number'))) == "None":
+#             flash("Вы указали почту, на которую нельзя ответить")
+#         else:
+#             mail.send(msg)
+#             flash("Запрос отправлен")
+#             # print(str((request.form.get('email'))))
+#             if request.MOBILE:
+#                 return redirect(url_for('mobile/news-vrem/prob'))
+#             else:
+#                 return redirect(url_for('news-vrem/prob'))
+#     if request.MOBILE:
+#         return render_template('mobile/news-vrem/prob.html')
+#     else:
+#         return render_template('news-vrem/prob.html')
+#
+#
+# @application.route('/info/suparna', methods=['post', 'get'])
+# def suparna():
+#     titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/suparna').first()
+#     if request.method == 'POST':
+#         msg = Message("Запрос с magnavis.ru", recipients=mails)
+#         name = request.form.get('name')
+#         email = request.form.get('email')
+#         number = request.form.get('number')
+#         comment = request.form.get('comment')
+#         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+#         mail.send(msg)
+#     if request.MOBILE:
+#         return render_template('mobile/news-vrem/suparna.html', titles=titles)
+#     else:
+#         return render_template('news-vrem/suparna.html', titles=titles)
+#
+#
+# @application.route('/info/msc-spb', methods=['post', 'get'])
+# def msc_spb():
+#     titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/msc-spb').first()
+#     if request.method == 'POST':
+#         msg = Message("Запрос с magnavis.ru", recipients=mails)
+#         name = request.form.get('name')
+#         email = request.form.get('email')
+#         number = request.form.get('number')
+#         comment = request.form.get('comment')
+#         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+#         mail.send(msg)
+#     if request.MOBILE:
+#         return render_template('mobile/news-vrem/msc-spb.html', titles=titles)
+#     else:
+#         return render_template('news-vrem/msc-spb.html', titles=titles)
+#
+#
+# @application.route('/info/shanhai', methods=['post', 'get'])
+# def shanhai():
+#     titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/shanhai').first()
+#     if request.method == 'POST':
+#         msg = Message("Запрос с magnavis.ru", recipients=mails)
+#         name = request.form.get('name')
+#         email = request.form.get('email')
+#         number = request.form.get('number')
+#         comment = request.form.get('comment')
+#         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+#         mail.send(msg)
+#     if request.MOBILE:
+#         return render_template('mobile/news-vrem/shanhai.html', titles=titles)
+#     else:
+#         return render_template('news-vrem/shanhai.html', titles=titles)
+#
+#
+# @application.route('/info/g4721', methods=['post', 'get'])
+# def g4721():
+#     titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/g4721').first()
+#     if request.method == 'POST':
+#         msg = Message("Запрос с magnavis.ru", recipients=mails)
+#         name = request.form.get('name')
+#         email = request.form.get('email')
+#         number = request.form.get('number')
+#         comment = request.form.get('comment')
+#         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+#         mail.send(msg)
+#     if request.MOBILE:
+#         return render_template('mobile/news-vrem/g4721.html', titles=titles)
+#     else:
+#         return render_template('news-vrem/g4721.html', titles=titles)
+#
+#
+# @application.route('/info/sutochnie', methods=['post', 'get'])
+# def sutochnie():
+#     titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/sutochnie').first()
+#     if request.method == 'POST':
+#         msg = Message("Запрос с magnavis.ru", recipients=mails)
+#         name = request.form.get('name')
+#         email = request.form.get('email')
+#         number = request.form.get('number')
+#         comment = request.form.get('comment')
+#         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+#         mail.send(msg)
+#     if request.MOBILE:
+#         return render_template('mobile/news-vrem/sutochnie.html', titles=titles)
+#     else:
+#         return render_template('news-vrem/sutochnie.html', titles=titles)
+#
+#
+# @application.route('/info/agro', methods=['post', 'get'])
+# def agro():
+#     titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/agro').first()
+#     if request.method == 'POST':
+#         msg = Message("Запрос с magnavis.ru", recipients=mails)
+#         name = request.form.get('name')
+#         email = request.form.get('email')
+#         number = request.form.get('number')
+#         comment = request.form.get('comment')
+#         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+#         mail.send(msg)
+#     if request.MOBILE:
+#         return render_template('mobile/news-vrem/agro.html', titles=titles)
+#     else:
+#         return render_template('news-vrem/agro.html', titles=titles)
+#
+#
+# @application.route('/info/garant', methods=['post', 'get'])
+# def garant():
+#     titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/garant').first()
+#     if request.method == 'POST':
+#         msg = Message("Запрос с magnavis.ru", recipients=mails)
+#         name = request.form.get('name')
+#         email = request.form.get('email')
+#         number = request.form.get('number')
+#         comment = request.form.get('comment')
+#         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+#         mail.send(msg)
+#     if request.MOBILE:
+#         return render_template('mobile/news-vrem/garant.html', titles=titles)
+#     else:
+#         return render_template('news-vrem/garant.html', titles=titles)
+#
+#
+#
+# @application.route('/info/il96', methods=['post', 'get'])
+# def il96():
+#     titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/garant').first()
+#     if request.method == 'POST':
+#         msg = Message("Запрос с magnavis.ru", recipients=mails)
+#         name = request.form.get('name')
+#         email = request.form.get('email')
+#         number = request.form.get('number')
+#         comment = request.form.get('comment')
+#         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+#         mail.send(msg)
+#     if request.MOBILE:
+#         return render_template('mobile/news-vrem/il96.html', titles=titles)
+#     else:
+#         return render_template('news-vrem/il96.html', titles=titles)
+#
+#
+# @application.route('/info/haynan', methods=['post', 'get'])
+# def haynan():
+#     titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/haynan').first()
+#     if request.method == 'POST':
+#         msg = Message("Запрос с magnavis.ru", recipients=mails)
+#         name = request.form.get('name')
+#         email = request.form.get('email')
+#         number = request.form.get('number')
+#         comment = request.form.get('comment')
+#         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+#         mail.send(msg)
+#     if request.MOBILE:
+#         return render_template('mobile/news-vrem/haynan.html', titles=titles)
+#     else:
+#         return render_template('news-vrem/haynan.html', titles=titles)
+#
+#
+# @application.route('/info/kalin', methods=['post', 'get'])
+# def kalin():
+#     titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/kalin').first()
+#     if request.method == 'POST':
+#         msg = Message("Запрос с magnavis.ru", recipients=mails)
+#         name = request.form.get('name')
+#         email = request.form.get('email')
+#         number = request.form.get('number')
+#         comment = request.form.get('comment')
+#         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+#         mail.send(msg)
+#     if request.MOBILE:
+#         return render_template('mobile/news-vrem/kalin.html', titles=titles)
+#     else:
+#         return render_template('news-vrem/kalin.html', titles=titles)
+#
+# @application.route('/info/spravochnik', methods=['post', 'get'])
+# def spravochnik():
+#     titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/spravochnik').first()
+#     if request.method == 'POST':
+#         msg = Message("Запрос с magnavis.ru", recipients=mails)
+#         name = request.form.get('name')
+#         email = request.form.get('email')
+#         number = request.form.get('number')
+#         comment = request.form.get('comment')
+#         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+#         mail.send(msg)
+#     if request.MOBILE:
+#         return render_template('mobile/news-vrem/spravochnik.html', titles=titles)
+#     else:
+#         return render_template('news-vrem/spravochnik.html', titles=titles)
+#
+#
+# @application.route('/info/rgd', methods=['post', 'get'])
+# def rgd():
+#     titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/rgd').first()
+#     if request.method == 'POST':
+#         msg = Message("Запрос с magnavis.ru", recipients=mails)
+#         name = request.form.get('name')
+#         email = request.form.get('email')
+#         number = request.form.get('number')
+#         comment = request.form.get('comment')
+#         msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+#         mail.send(msg)
+#     if request.MOBILE:
+#         return render_template('mobile/news-vrem/rgd.html', titles=titles)
+#     else:
+#         return render_template('news-vrem/rgd.html', titles=titles)
 
 
 @application.route('/about', methods=['post', 'get'])
