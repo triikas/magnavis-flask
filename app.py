@@ -354,7 +354,7 @@ def info2(pst):
     news = News.query.all()
     nws = -1
     for i in news:
-        if i.path == 'https://magnavis.ru/info/{}'.format(pst):
+        if i.path == f'https://magnavis.ru/info/{pst}':
             nws = i
             print("nonono")
             break
@@ -374,7 +374,7 @@ def info2(pst):
         else:
             return render_template('news/news-base.html', titles=titles, nws=nws, nws_ps=nws.ps.split('@'))
     else:
-        return redirect("info")
+        return redirect("/info")
 
 
 @application.route('/adm/in', methods=['post', 'get'])

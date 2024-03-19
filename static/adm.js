@@ -147,7 +147,7 @@ function but_second (b) {
                         <input type="text" name="path" class="input-group-text text-start w-100" required>
                     </div>
                     <div class="mb-2 text-light">
-                        <p class="mb-1">* Ссылка на новость <t class="text-danger">https://magnavis.ru/news/name</t></p>
+                        <p class="mb-1">* Ссылка на новость <t class="text-danger">https://magnavis.ru/info/name</t></p>
                         <p>* Никогда не ставить / в конце</p>
                     </div>
                     <div class="mb-2">
@@ -198,7 +198,7 @@ function but_second (b) {
                         <input type="text" name="path" class="input-group-text text-start w-100" value="${fle[1]}" required>
                     </div>
                     <div class="mb-2 text-light">
-                        <p class="mb-1">* Ссылка на новость <t class="text-danger">https://magnavis.ru/news/ozon</t></p>
+                        <p class="mb-1">* Ссылка на новость <t class="text-danger">https://magnavis.ru/info/ozon</t></p>
                         <p class="mb-1">* Никогда не ставить / в конце</p>
                     </div>
                     <div class="my-3 buttons">
@@ -217,7 +217,7 @@ function but_second (b) {
                         <input type="text" name="path" class="input-group-text text-start w-100" required>
                     </div>
                     <div class="mb-2 text-light">
-                        <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/news/ozon</t></p>
+                        <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/info/ozon</t></p>
                         <p class="mb-1">* Никогда не ставить / в конце</p>
                     </div>
                     <div class="my-3 buttons">
@@ -244,7 +244,7 @@ function but_second (b) {
                         <input type="text" name="path" class="input-group-text text-start w-100" required>
                     </div>
                     <div class="mb-2 text-light">
-                        <p class="mb-1">* Ссылка на новость <t class="text-danger">https://magnavis.ru/news/name</t></p>
+                        <p class="mb-1">* Ссылка на новость <t class="text-danger">https://magnavis.ru/info/name</t></p>
                         <p>* Никогда не ставить / в конце</p>
                     </div>
                     <div class="mb-2">
@@ -313,7 +313,7 @@ function but_second (b) {
                         <input type="text" name="path" class="input-group-text text-start w-100" required>
                     </div>
                     <div class="mb-2 text-light">
-                        <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/news/ozon</t></p>
+                        <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/info/ozon</t></p>
                         <p class="mb-1">* Для главной страницы это "home"</p>
                         <p>* Никогда не ставить / в конце</p>
                         
@@ -337,7 +337,7 @@ function but_second (b) {
                         <input type="hidden" name="path" class="input-group-text text-start w-100" value="${fle[1]}" required>
                     </div>
                     <div class="mb-2 text-light">
-                        <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/news/ozon</t></p>
+                        <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/info/ozon</t></p>
                         <p class="mb-1">* Для главной страницы это "home"</p>
                         <p class="mb-1">* Никогда не ставить / в конце</p>
                         <p class="text-danger">* После удаления заголовка страницы следует тут же добавить новый, иначе заголовок страницы будет пустым</p>
@@ -358,7 +358,7 @@ function but_second (b) {
                         <input type="text" name="path" class="input-group-text text-start w-100" required>
                     </div>
                     <div class="mb-2 text-light">
-                        <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/news/ozon</t></p>
+                        <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/info/ozon</t></p>
                         <p class="mb-1">* Для главной страницы это "home"</p>
                         <p class="mb-1">* Никогда не ставить / в конце</p>
                         <p class="text-danger">* После удаления заголовка страницы следует тут же добавить новый, иначе заголовок страницы будет пустым</p>
@@ -389,7 +389,7 @@ function but_second (b) {
                         <input type="hidden" name="path_old" class="input-group-text text-start w-100" value="${fle[1]}" required>
                     </div>
                     <div class="mb-2 text-light">
-                        <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/news/ozon</t></p>
+                        <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/info/ozon</t></p>
                         <p class="mb-1">* Для главной страницы это "home"</p>
                         <p>* Никогда не ставить / в конце</p>
                         
@@ -414,7 +414,7 @@ function but_second (b) {
                         <input type="text" name="path" class="input-group-text text-start w-100" required>
                     </div>
                     <div class="mb-2 text-light">
-                        <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/news/ozon</t></p>
+                        <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/info/ozon</t></p>
                         <p class="mb-1">* Для главной страницы это "home"</p>
                         <p>* Никогда не ставить / в конце</p>
                         
