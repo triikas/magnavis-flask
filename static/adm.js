@@ -74,7 +74,7 @@ function focus_list_el(data) {
         document.getElementById(fle[0]).style.backgroundColor = "rgba(0, 0, 0, 0)"
     }
     fle = data
-    // console.log(fle)
+    console.log(fle)
     try {
        console.log(getStyle(document.getElementById(data[0]), "background-color"))
         if (getStyle(document.getElementById(data[0]), "background-color") === "rgba(44, 145, 81, 0.55)") {
@@ -94,7 +94,9 @@ function but (b) {
             data_update("news-data");
             document.querySelector(".but-second").innerHTML = `<a onclick="but_second('add_news')" class="btn btn-success">Добавить</a>
             <a onclick="but_second('del_news')" class="btn btn-danger mx-2">Удалить</a>
-            <a onclick="but_second('ch_news')" class="btn btn-warning">Редактировать</a>`;
+            <a onclick="but_second('ch_news')" class="btn btn-warning">Редактировать</a>
+            <a onclick="but_second('redirect')" class="btn btn-light mx-2">Перейти</a>
+            <a class="btn btn-info">Помощь</a>`;
             but_recolor("news");
             break;
         case "titles":
@@ -102,7 +104,8 @@ function but (b) {
             document.querySelector(".but-second").innerHTML = `<a onclick="but_second('add_titles')" class="btn btn-success">Добавить</a>
             <a onclick="but_second('del_titles')" class="btn btn-danger mx-2">Удалить</a>
             <a onclick="but_second('ch_titles')" class="btn btn-warning">Редактировать</a>
-            <a onclick="but_second('ch_titles')" class="btn btn-info mx-2">Помощь</a>`;
+            <a onclick="but_second('redirect')" class="btn btn-light mx-2">Перейти</a>
+            <a class="btn btn-info">Помощь</a>`;
             but_recolor("titles");
             break;
         case "logs":
@@ -126,10 +129,13 @@ function but_second (b) {
 
     data_update("no");
     switch (b) {
+        case "redirect":
+            window.location.replace(fle[1]);
+            break;
         case "add_news":
             focus_list_el(["no"])
             document.querySelector(".main").innerHTML = `<div class="d-flex justify-content-center"><div style="width: 600px">
-                <form method="post" id="add-news">
+                <form method="post" id="add-news" enctype="multipart/form-data">
                     <input type="hidden"  name="type" value="add-news"  />
                     <h2 class="text-light px-0">Новая новость</h2>
                     <div class="mb-2">
@@ -141,16 +147,16 @@ function but_second (b) {
                         <input type="text" name="path" class="input-group-text text-start w-100" required>
                     </div>
                     <div class="mb-2 text-light">
-                        <p class="mb-1">* Имя новости в ссылке https://magnavis.ru/news/<t class="text-danger">name</t></p>
-                        <p>* Cтрочными латинскими буквами</p>
+                        <p class="mb-1">* Ссылка на новость <t class="text-danger">https://magnavis.ru/news/name</t></p>
+                        <p>* Никогда не ставить / в конце</p>
                     </div>
                     <div class="mb-2">
-                        <label for="data" class="text-light d-block">Дата</label>
-                        <input type="date" name="data" class="input-group-text text-start w-100" required>
+                        <label for="date" class="text-light d-block">Дата</label>
+                        <input type="date" name="date" class="input-group-text text-start w-100">
                     </div>
                     <div class="mb-2">
                         <label for="img" class="text-light d-block">Изображение</label>
-                        <input type="file" name="img" class="input-group-text text-start w-100" required>
+                        <input type="file" name="img" class="input-group-text text-start w-100">
                     </div>
                     <div class="mb-2">
                         <label for="img2" class="text-light d-block">Изображение 2</label>
@@ -181,11 +187,109 @@ function but_second (b) {
                 </form>
             </div></div>`;
             break;
+        case "del_news":
+            if (fle[0] !== "no") {
+                document.querySelector(".main").innerHTML = `<div class="d-flex justify-content-center"><div style="width: 600px">
+                <form method="post" id="del-news">
+                    <input type="hidden"  name="type" value="del-news"  />
+                    <h2 class="text-light px-0">Удалить новость</h2>
+                    <div class="mb-2">
+                        <label for="path" class="text-light d-block">Ссылка</label>
+                        <input type="text" name="path" class="input-group-text text-start w-100" value="${fle[1]}" required>
+                    </div>
+                    <div class="mb-2 text-light">
+                        <p class="mb-1">* Ссылка на новость <t class="text-danger">https://magnavis.ru/news/ozon</t></p>
+                        <p class="mb-1">* Никогда не ставить / в конце</p>
+                    </div>
+                    <div class="my-3 buttons">
+                        <div onclick="but_second('news_out')" class="btn btn-danger">Назад</div>
+                        <button type="submit" class="btn btn-danger float-end">Удалить</button>
+                    </div>
+                </form>
+            </div></div>`;
+            } else {
+                document.querySelector(".main").innerHTML = `<div class="d-flex justify-content-center"><div style="width: 600px">
+                <form method="post" id="del-news">
+                    <input type="hidden"  name="type" value="del-news"  />
+                    <h2 class="text-light px-0">Удалить новость</h2>
+                    <div class="mb-2">
+                        <label for="path" class="text-light d-block">Ссылка</label>
+                        <input type="text" name="path" class="input-group-text text-start w-100" required>
+                    </div>
+                    <div class="mb-2 text-light">
+                        <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/news/ozon</t></p>
+                        <p class="mb-1">* Никогда не ставить / в конце</p>
+                    </div>
+                    <div class="my-3 buttons">
+                        <div onclick="but_second('news_out')" class="btn btn-danger">Назад</div>
+                        <button type="submit" class="btn btn-danger float-end">Удалить</button>
+                    </div>
+                </form>
+            </div></div>`;
+            }
+            focus_list_el(["no"])
+            break;
+        case "ch_news":
+            focus_list_el(["no"])
+            document.querySelector(".main").innerHTML = `<div class="d-flex justify-content-center"><div style="width: 600px">
+                <form method="post" id="ch-news" enctype="multipart/form-data">
+                    <input type="hidden"  name="type" value="ch-news"  />
+                    <h2 class="text-light px-0">Новая новость</h2>
+                    <div class="mb-2">
+                        <label for="title" class="text-light d-block">Заголовок</label>
+                        <input type="text" name="title" class="input-group-text text-start w-100" required>
+                    </div>
+                    <div class="mb-2">
+                        <label for="path" class="text-light d-block">Ссылка</label>
+                        <input type="text" name="path" class="input-group-text text-start w-100" required>
+                    </div>
+                    <div class="mb-2 text-light">
+                        <p class="mb-1">* Ссылка на новость <t class="text-danger">https://magnavis.ru/news/name</t></p>
+                        <p>* Никогда не ставить / в конце</p>
+                    </div>
+                    <div class="mb-2">
+                        <label for="date" class="text-light d-block">Дата</label>
+                        <input type="date" name="date" class="input-group-text text-start w-100">
+                    </div>
+                    <div class="mb-2">
+                        <label for="img" class="text-light d-block">Изображение</label>
+                        <input type="file" name="img" class="input-group-text text-start w-100">
+                    </div>
+                    <div class="mb-2">
+                        <label for="img2" class="text-light d-block">Изображение 2</label>
+                        <input type="file" name="img2" class="input-group-text text-start w-100">
+                    </div>
+                    <div class="mb-2 text-light">
+                        <p class="mb-1">* Второе изображение (горизонтальная версия) нужно если основное сильно вытянуто по высоте для лучшего отображения статьи</p>
+                        <p>* Все изображения должны быть в формате .webp и не более 1000 пикселей в ширину; преобразовать можно <a href="https://image.online-convert.com/ru/convert-to-wbmp">здесь</a>, изменить размер <a href="https://www.iloveimg.com/ru/resize-image">здесь</a></p>
+                    </div>
+                    <div class="mb-2">
+                        <label for="pb" class="text-light d-block">Жирный абзац</label>
+                        <textarea type="text" name="pb" class="form-control text-start w-100"></textarea>
+                    </div>
+                    <div class="mb-2 text-light">
+                        <p>* Находится между заголовком и изображением; необязательный элемент</p>
+                    </div>
+                    <div class="mb-2 p1">
+                        <label for="p1" class="text-light d-block">Абзац 1</label>
+                        <textarea type="text" name="p1" class="input-group-text text-start w-100"  required></textarea>
+                    </div>
+                    <div class="my-3 buttons">
+                        <div class="d-none num-p" id="1"></div>
+                        <div onclick="but_second('news_out')" class="btn btn-danger">Назад</div>
+                        <button type="submit" class="btn btn-success float-end">Отправить</button>
+                        <div onclick="new_p()" class="btn btn-light float-end mx-2">Добавить абзац</div>
+                        <div onclick="del_p()" class="btn btn-light float-end">Удалить абзац</div>
+                    </div>
+                </form>
+            </div></div>`;
+            break;
         case "news_out":
             focus_list_el(["no"])
             // document.querySelector(".main").innerHTML = `<h1 class="text-light">список новостей</h1>`;
-
+            data_update("news-data");
             break;
+
         // case "del_news":
         //     document.querySelector(".main").classList.add("d-none");
         //     document.querySelector(".del-news").classList.remove("d-none");
@@ -209,9 +313,9 @@ function but_second (b) {
                         <input type="text" name="path" class="input-group-text text-start w-100" required>
                     </div>
                     <div class="mb-2 text-light">
-                        <p class="mb-1">* Имя страницы в ссылке https://magnavis.ru/<t class="text-danger">news/ozon</t></p>
+                        <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/news/ozon</t></p>
                         <p class="mb-1">* Для главной страницы это "home"</p>
-                        <p>* Cтрочными латинскими буквами</p>
+                        <p>* Никогда не ставить / в конце</p>
                         
                     </div>
                     <div class="my-3 buttons">
@@ -233,9 +337,9 @@ function but_second (b) {
                         <input type="hidden" name="path" class="input-group-text text-start w-100" value="${fle[1]}" required>
                     </div>
                     <div class="mb-2 text-light">
-                        <p class="mb-1">* Имя страницы в ссылке https://magnavis.ru/<t class="text-danger">news/ozon</t></p>
+                        <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/news/ozon</t></p>
                         <p class="mb-1">* Для главной страницы это "home"</p>
-                        <p class="mb-1">* Cтрочными латинскими буквами</p>
+                        <p class="mb-1">* Никогда не ставить / в конце</p>
                         <p class="text-danger">* После удаления заголовка страницы следует тут же добавить новый, иначе заголовок страницы будет пустым</p>
                     </div>
                     <div class="my-3 buttons">
@@ -254,9 +358,9 @@ function but_second (b) {
                         <input type="text" name="path" class="input-group-text text-start w-100" required>
                     </div>
                     <div class="mb-2 text-light">
-                        <p class="mb-1">* Имя страницы в ссылке https://magnavis.ru/<t class="text-danger">news/ozon</t></p>
+                        <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/news/ozon</t></p>
                         <p class="mb-1">* Для главной страницы это "home"</p>
-                        <p class="mb-1">* Cтрочными латинскими буквами</p>
+                        <p class="mb-1">* Никогда не ставить / в конце</p>
                         <p class="text-danger">* После удаления заголовка страницы следует тут же добавить новый, иначе заголовок страницы будет пустым</p>
                     </div>
                     <div class="my-3 buttons">
@@ -281,13 +385,13 @@ function but_second (b) {
                     </div>
                     <div class="mb-2">
                         <label for="path" class="text-light d-block">Ссылка</label>
-                        <input type="text" class="input-group-text text-start w-100" value="${fle[1]}" required disabled>
-                        <input type="hidden" name="path" class="input-group-text text-start w-100" value="${fle[1]}" required>
+                        <input type="text" name="path" class="input-group-text text-start w-100" value="${fle[1]}" required>
+                        <input type="hidden" name="path_old" class="input-group-text text-start w-100" value="${fle[1]}" required>
                     </div>
                     <div class="mb-2 text-light">
-                        <p class="mb-1">* Имя страницы в ссылке https://magnavis.ru/<t class="text-danger">news/ozon</t></p>
+                        <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/news/ozon</t></p>
                         <p class="mb-1">* Для главной страницы это "home"</p>
-                        <p>* Cтрочными латинскими буквами</p>
+                        <p>* Никогда не ставить / в конце</p>
                         
                     </div>
                     <div class="my-3 buttons">
@@ -310,9 +414,9 @@ function but_second (b) {
                         <input type="text" name="path" class="input-group-text text-start w-100" required>
                     </div>
                     <div class="mb-2 text-light">
-                        <p class="mb-1">* Имя страницы в ссылке https://magnavis.ru/<t class="text-danger">news/ozon</t></p>
+                        <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/news/ozon</t></p>
                         <p class="mb-1">* Для главной страницы это "home"</p>
-                        <p>* Cтрочными латинскими буквами</p>
+                        <p>* Никогда не ставить / в конце</p>
                         
                     </div>
                     <div class="my-3 buttons">
@@ -334,9 +438,9 @@ function but_second (b) {
         //                 <input type="text" name="path" class="input-group-text text-start w-100" required>
         //             </div>
         //             <div class="mb-2 text-light">
-        //                 <p class="mb-1">* Имя страницы в ссылке https://magnavis.ru/<t class="text-danger">news/ozon</t></p>
+        //                 <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/news/ozon</t></p>
         //                 <p class="mb-1">* Для главной страницы это "home"</p>
-        //                 <p class="mb-1">* Cтрочными латинскими буквами</p>
+        //                 <p class="mb-1">* Никогда не ставить / в конце</p>
         //                 <p class="text-danger">* После удаления заголовка страницы следует тут же добавить новый, иначе заголовок страницы будет пустым</p>
         //             </div>
         //             <div class="my-3 buttons">

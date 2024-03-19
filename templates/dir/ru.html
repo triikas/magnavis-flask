@@ -14,30 +14,32 @@
     <div class="tablo-big tablo-invis mt-3">
         <div class="container-fluid px-5">
             <div class="row p-0">
-                <div class="col-7 tablo-invis con-img" style="margin-left: 0;">
+                <div class="col tablo-invis d-flex justify-content-center" style="margin-left: 0;">
 {#                    <map name="china">#}
 {#                        <area shape="circle" coords="600,620,60" onclick="guan()">#}
 {#                    </map>#}
-                    <img usemap="#china" src="{{ url_for('static', filename='img/grey/ru.png') }}" class="ch-img p-0" style="margin-right: 32px;">
+                    <img usemap="#china" src="{{ url_for('static', filename='img/grey/ru.png') }}" class="ru-img p-0" style=" max-width: 80%">
                 </div>
-                <div class="col tablo-invis p-0 con-text" style="margin-right: 0;">
+            </div>
+            <div class="row p-0">
+                <dov class="col con-img-ru">
+                    <img src="{{ url_for('static', filename='img/nikita-karimov-lvJZhHOIJJ4-unsplash.jpg') }}" style="border-radius: 8px; margin-bottom: 20px">
+                </dov>
+                <div class="col tablo-invis p-0 con-text-ru" style="margin-right: 0;">
                     <div class="ch-text" style=" min-width: 438px;">
-                        <h3 class="h3-max">Россия</h3>
-                        <img src="{{ url_for('static', filename='img/artem-shuba-51ZWho_sWyA-unsplash.jpg') }}" style="border-radius: 8px; margin-bottom: 20px">
-                        <div class="con-text-in">
+                        <h3 class="">Россия</h3>
+
+                        <div class="con-text-in-ru">
                             <p style="text-align: justify;">МАГНАВИС осуществляет доставку любых видов грузов «от двери до двери» во все регионы России. Мы используем различные виды транспорта, чтобы перевезти ваш груз быстро, безопасно и эффективно для вашего бизнеса. Мы сотрудничаем с крупными российскими авиакомпаниями, морскими и ж/д перевозчиками, имеем собственный автопарк, способный транспортировать грузы с температурным режимом, спецгрузы и грузы разных размеров.</p>
                             <p style="text-align: justify;">Берём на себя подготовку необходимых документов, отвечаем за погрузочно-разгрузочные работы и оказываем экспедиторские услуги. Подбираем самые быстрые и оптимальные по цене маршруты доставки. Срок перевозки — от 1-2 дней. Филиалы МАГНАВИС в Санкт-Петербурге и Москве также оказывают дополнительные услуги по консолидации, упаковке, маркировке и ответственному хранению грузов на собственном складе. Закажи доставку в один клик!</p>
                         </div>
                     </div>
-                    <div class="guan-text" style="display: none;">
-                        <h3>Гуанчжоу</h3>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
-{#                        <a class="btn btn-danger">Отправить запрос</a>#}
-                    </div>
 
                 </div>
             </div>
+
+
+
         </div>
     </div>
     <div class="tablo-big tablo-invis mt-3">

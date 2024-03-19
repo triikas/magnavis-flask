@@ -2,16 +2,25 @@ from flask import Flask, render_template, request, flash, redirect, url_for
 from flask_mail import Mail, Message
 from flask_mobility import Mobility
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager, UserMixin, current_user, login_required, login_user, logout_user
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import relationship
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import LoginManager, UserMixin, current_user, login_required, login_user, logout_user
+from datetime import datetime
+import os
+from werkzeug.utils import secure_filename
 
 import func
-from datetime import datetime
+
+
+
+
+UPLOAD_FOLDER = 'static/img/upload'
+ALLOWED_EXTENSIONS = {'webp'}
+
 
 application = Flask(__name__)
-
+application.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 application.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -19,40 +28,12 @@ db = SQLAlchemy(application)
 application.app_context().push()
 login_manager = LoginManager(application)
 login_manager.login_view = 'login'
-class Titles(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    path = db.Column(db.String(150),unique=True, nullable=False)
-    title = db.Column(db.String(300), nullable=False)
 
-    def __repr__(self):
-        return '<Titles %r>' % self.path
 
 
 @login_manager.user_loader
 def load_user(user_id):
     return db.session.query(Users).get(user_id)
-
-
-class Users(db.Model, UserMixin):
-    # __tablename__ = "users"
-    id = db.Column(db.Integer(), primary_key=True)
-    email = db.Column(db.String(100), nullable=False, unique=True)
-    name = db.Column(db.String(100))
-    password_hash = db.Column(db.String(100), nullable=False)
-    created_on = db.Column(db.DateTime(), default=datetime.utcnow)
-    color = db.Column(db.String(10))
-    # logs = db.relationship('Logs', backref='user')
-
-    def set_password(self, password):
-        self.password_hash = generate_password_hash(password)
-
-
-    def check_password(self, password):
-        return check_password_hash(self.password_hash, password)
-
-
-    def __repr__(self):
-        return "<Users %r>" % self.name
 
 
 class Logs(db.Model):
@@ -79,6 +60,54 @@ class Logs(db.Model):
         return '<Log %r>' % self.id
 
 
+class Users(db.Model, UserMixin):
+    # __tablename__ = "users"
+    id = db.Column(db.Integer(), primary_key=True)
+    email = db.Column(db.String(100), nullable=False, unique=True)
+    name = db.Column(db.String(100))
+    password_hash = db.Column(db.String(100), nullable=False)
+    created_on = db.Column(db.DateTime(), default=datetime.utcnow)
+    color = db.Column(db.String(10))
+    # logs = db.relationship('Logs', backref='user')
+
+    def set_password(self, password):
+        self.password_hash = generate_password_hash(password)
+
+
+    def check_password(self, password):
+        return check_password_hash(self.password_hash, password)
+
+
+    def __repr__(self):
+        return "<Users %r>" % self.name
+
+
+class Titles(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    path = db.Column(db.String(150),unique=True, nullable=False)
+    title = db.Column(db.String(300), nullable=False)
+
+    def __repr__(self):
+        return '<Titles %r>' % self.path
+
+
+class News(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    path = db.Column(db.String(150),unique=True, nullable=False)
+    title = db.Column(db.String(300), nullable=False)
+    date = db.Column(db.DateTime, default=datetime.utcnow())
+    img = db.Column(db.String(150), nullable=False)
+    img2 = db.Column(db.String(150), nullable=False)
+    pb = db.Column(db.Text)
+    ps = db.Column(db.Text)
+
+    def __repr__(self):
+        return '<News %r>' % self.path
+
+
+
+
+
 Mobility(application)
 application.secret_key = "Wx4w54bL*7Tzdez(Td;"
 application.config['MAIL_SERVER'] = 'smtp.magnavis.ru'
@@ -102,17 +131,36 @@ mails = ['inforder@magnavis.ru', 'triikas@magnavis.ru']
 def adm():
     titles = Titles.query.order_by(Titles.id.desc()).all()
     logs = Logs.query.order_by(Logs.id.desc()).all()
-    print(titles)
+    news = News.query.order_by(News.id.desc()).all()
+    print(news)
+
     if request.method == 'POST':
+        print(request.files)
         type = request.form.get('type')
         if type == "add-news":
             title = request.form.get('title')
             path = request.form.get('path')
-            data = request.form.get('data')
-            img = request.form.get('img')
-            img2 = request.form.get('img2')
+            date = request.form.get('date')
+            # img = request.form.get('img')
+            # img2 = request.form.get('img2')
             pb = request.form.get('pb')
-            # p1 = request.form.get('p1')
+            filename = "no"
+            filename2 = "no"
+            # print(request.files)
+            # if 'img' in request.files:
+            file_img = request.files['img']
+            print(file_img, "ghj")
+            if file_img.filename != '' and file_img and func.allowed_file(file_img.filename):
+                filename = "{}.webp".format(news[0].id+1)
+                file_img.save(os.path.join(application.config['UPLOAD_FOLDER'], filename))
+                filename2 = filename
+                print("file ok")
+            if 'img2' in request.files:
+                file_img2 = request.files['img2']
+                if file_img2.filename != '' and file_img2 and func.allowed_file(file_img2.filename):
+                    filename2 = "{}2.webp".format(news[0].id+1)
+                    file_img2.save(os.path.join(application.config['UPLOAD_FOLDER'], filename2))
+
             ps = []
             i = 1
             last = False
@@ -123,7 +171,59 @@ def adm():
                     ps.append(p)
                 else:
                     last = True
-            print(title, path, data, img, pb, ps, type)
+            if date != "":
+                data = News(path=path, title=title, date=datetime.strptime(date, "%Y-%m-%d").date(), img=filename, img2=filename2, pb=pb, ps='@'.join(ps))
+            else:
+                data = News(path=path, title=title, img=filename, img2=filename2, pb=pb, ps='@'.join(ps))
+
+            log = Logs(title="Добавлена новость", info=(path + "|" + title), type="success", user_name=current_user.name, user_color=current_user.color)
+
+            try:
+                db.session.add(data)
+                db.session.commit()
+            except:
+                log.type = "error"
+                log.title = "Ошибка при добавлении новости"
+                print("ex data")
+            try:
+                db.session.add(log)
+                db.session.commit()
+            except:
+                return "ошибка логгирования, свяжитесь с разработчиком"
+            return redirect("adm")
+        elif type == "del-news":
+            path = request.form.get('path')
+            try:
+                nws = db.session.query(News).filter(News.path == path).first()
+                log = Logs(title="Удалена новость", info=(path + "|" + nws.title), type="warning",
+                           user_name=current_user.name, user_color=current_user.color)
+            except:
+                log = Logs(title="Ошибка при удалении новости", info=(path + "|"), type="error",
+                           user_name=current_user.name, user_color=current_user.color)
+                try:
+                    db.session.add(log)
+                    db.session.commit()
+                except:
+                    return "ошибка логгирования, свяжитесь с разработчиком"
+                return redirect("adm")
+            else:
+
+                try:
+                    os.remove(os.path.join(application.config['UPLOAD_FOLDER'], nws.img))
+                    if nws.img != nws.img2:
+                        os.remove(os.path.join(application.config['UPLOAD_FOLDER'], nws.img))
+                    nws = db.session.query(News).filter(News.path == path).first()
+                    db.session.delete(nws)
+                    db.session.commit()
+                except:
+                    log.type = "error"
+                    log.title = "Ошибка при удалении новости"
+                try:
+                    db.session.add(log)
+                    db.session.commit()
+                except:
+                    return "ошибка логгирования, свяжитесь с разработчиком"
+                return redirect("adm")
         elif type == "add-titles":
             title = request.form.get('title')
             path = request.form.get('path')
@@ -184,12 +284,14 @@ def adm():
         elif type == "ch-titles":
             title = request.form.get('title')
             path = request.form.get('path')
+            path_old = request.form.get('path_old')
             print(title, path)
-            log = Logs(title="Иззменён заголовок (title)", info=(path + "|" + title), type="success",
+            log = Logs(title="Иззменён заголовок (title)", info=(path_old + "|" + title), type="success",
                        user_name=current_user.name, user_color=current_user.color)
             try:
-                ttl = db.session.query(Titles).filter(Titles.path == path).first()
+                ttl = db.session.query(Titles).filter(Titles.path == path_old).first()
                 ttl.title = title
+                ttl.path = path
             except:
                 log.type = "error"
                 log.title = "Ошибка при изменении заголовка (title)"
@@ -215,7 +317,64 @@ def adm():
                     return "ошибка логгирования, свяжитесь с разработчиком"
                 return redirect("adm")
 
-    return render_template('adm.html', titles=titles, logs=logs)
+    return render_template('adm.html', titles=titles, logs=logs, news=news)
+
+
+@application.route('/info', methods=['post', 'get'])
+def info():
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info').first()
+    news_data = News.query.order_by(News.date.desc()).all()
+    news = [[], [], []]
+    for i in range(0, len(news_data), 3):
+        news[0].append(news_data[i])
+        try:
+            news[1].append(news_data[i+1])
+        except:
+            pass
+        try:
+            news[2].append(news_data[i+2])
+        except:
+            pass
+    if request.method == 'POST':
+        msg = Message("Запрос с magnavis.ru", recipients=mails)
+        name = request.form.get('name')
+        email = request.form.get('email')
+        number = request.form.get('number')
+        comment = request.form.get('comment')
+        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+        mail.send(msg)
+    if request.MOBILE:
+        return render_template('mobile/info.html', titles=titles, news=news_data)
+    else:
+        return render_template('info.html', titles=titles, news=news)
+
+
+@application.route('/info/<string:pst>', methods=['post', 'get'])
+def info2(pst):
+    news = News.query.all()
+    nws = -1
+    for i in news:
+        if i.path == 'https://magnavis.ru/info/{}'.format(pst):
+            nws = i
+            print("nonono")
+            break
+
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/{}'.format(pst)).first()
+    if request.method == 'POST':
+        msg = Message("Запрос с magnavis.ru", recipients=mails)
+        name = request.form.get('name')
+        email = request.form.get('email')
+        number = request.form.get('number')
+        comment = request.form.get('comment')
+        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
+        mail.send(msg)
+    if nws != -1:
+        if request.MOBILE:
+            return render_template('mobile/news/news-base.html', titles=titles, nws=nws, nws_ps=nws.ps.split('@'))
+        else:
+            return render_template('news/news-base.html', titles=titles, nws=nws, nws_ps=nws.ps.split('@'))
+    else:
+        return redirect("info")
 
 
 @application.route('/adm/in', methods=['post', 'get'])
@@ -243,7 +402,7 @@ def logout():
 
 @application.route('/', methods=['post', 'get'])
 def home():
-    titles = db.session.query(Titles).filter(Titles.path=='https://magnavis.ru').first()
+    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru').first()
     # titles = Titles.query.all()
     print(titles)
     if request.method == 'POST':
@@ -448,38 +607,10 @@ def services():
 
 
 
-@application.route('/info', methods=['post', 'get'])
-def info():
-    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info').first()
-    if request.method == 'POST':
-        msg = Message("Запрос с magnavis.ru", recipients=mails)
-        name = request.form.get('name')
-        email = request.form.get('email')
-        number = request.form.get('number')
-        comment = request.form.get('comment')
-        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        mail.send(msg)
-    if request.MOBILE:
-        return render_template('mobile/info.html', titles=titles)
-    else:
-        return render_template('info.html', titles=titles)
 
 
-@application.route('/info/<string:pst>', methods=['post', 'get'])
-def pt(pst):
-    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru/info/{}'.format(pst)).first()
-    if request.method == 'POST':
-        msg = Message("Запрос с magnavis.ru", recipients=mails)
-        name = request.form.get('name')
-        email = request.form.get('email')
-        number = request.form.get('number')
-        comment = request.form.get('comment')
-        msg.body = "Имя: {}\nПочта: {}\nТелефон: {}\nКомментарий: {}".format(name, email, number, comment)
-        mail.send(msg)
-    if request.MOBILE:
-        return render_template('mobile/info.html', titles=titles)
-    else:
-        return render_template('info.html', titles=titles)
+
+
 
 
 @application.route('/info/prob', methods=['post', 'get'])

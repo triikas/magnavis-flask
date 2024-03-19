@@ -4,6 +4,15 @@ import time
 import os
 
 
+ALLOWED_EXTENSIONS = {'webp'}
+
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+
 # 139 57 478
 def numbers():
     with open('numbers.json') as infile:

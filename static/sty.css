@@ -939,6 +939,16 @@ li{
         }
     }
 }
+@media (max-width: 1543px) {
+    .con-img-ru{;
+        display: none;
+    }
+}
+@media (max-width: 1448px) {
+    .ru-img{;
+        max-width: 100% !important;
+    }
+}
 @media (max-width: 1175px) {
     .con-img{;
         padding-right: 5%;

@@ -42,7 +42,13 @@
     </div>
     <div id="news-data" class="data w-100 px-5 my-5" style="display: none">
         <h1 class="text-light mb-5">Список новостей</h1>
+        {% for i in news %}
 
+            <div id="news-{{ i.path }}" onclick="focus_list_el({{ ["news-"+i.path, i.path, i.title, i.img, i.img2, i.pb, i.ps] }})" class="text-light  p-2 mb-2 border-bottom">
+                <h3>{{ i.path }}</h3>
+                <p>{{ i.title }}</p>
+            </div>
+        {% endfor %}
     </div>
     <div id="logs-data" class="data w-100 px-5 my-5">
         <h1 class="text-light mb-5">Журнал</h1>
