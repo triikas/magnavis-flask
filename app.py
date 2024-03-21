@@ -17,6 +17,7 @@ import func
 
 UPLOAD_FOLDER = 'static/img/upload'
 ALLOWED_EXTENSIONS = {'webp'}
+DEFAULT_TITLE = "Логистическая компания МАГНАВИС — перевозка грузов по всему миру"
 
 
 application = Flask(__name__)
@@ -141,25 +142,34 @@ def adm():
             title = request.form.get('title')
             path = request.form.get('path')
             date = request.form.get('date')
-            # img = request.form.get('img')
-            # img2 = request.form.get('img2')
             pb = request.form.get('pb')
             filename = "no"
             filename2 = "no"
+            if path == "https://magnavis.ru/info/" or path[-1] == '/' or "https://magnavis.ru/info/" not in path or path.count('/') != 4:
+                log = Logs(title="Ошибка при добавлении новости", info=(path + "|" + title), type="error",
+                           user_name=current_user.name, user_color=current_user.color)
+                try:
+                    db.session.add(log)
+                    db.session.commit()
+                except:
+                    return "ошибка логгирования, свяжитесь с разработчиком"
+                return redirect("adm")
             # print(request.files)
             # if 'img' in request.files:
             file_img = request.files['img']
             print(file_img, "ghj")
             if file_img.filename != '' and file_img and func.allowed_file(file_img.filename):
-                filename = "{}.webp".format(news[0].id+1)
+                filename = "img{}-1.webp".format(news[0].id+1)
                 file_img.save(os.path.join(application.config['UPLOAD_FOLDER'], filename))
                 filename2 = filename
                 print("file ok")
             if 'img2' in request.files:
                 file_img2 = request.files['img2']
                 if file_img2.filename != '' and file_img2 and func.allowed_file(file_img2.filename):
-                    filename2 = "{}2.webp".format(news[0].id+1)
+                    filename2 = "img{}-2.webp".format(news[0].id+1)
                     file_img2.save(os.path.join(application.config['UPLOAD_FOLDER'], filename2))
+                    if filename == "no":
+                        filename2 = filename
 
             ps = []
             i = 1
@@ -402,7 +412,10 @@ def logout():
 
 @application.route('/', methods=['post', 'get'])
 def home():
-    titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru').first()
+    try:
+        titles = db.session.query(Titles).filter(Titles.path == 'https://magnavis.ru').first()
+    except:
+        titles = DEFAULT_TITLE
     # titles = Titles.query.all()
     print(titles)
     if request.method == 'POST':

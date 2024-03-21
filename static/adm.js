@@ -144,7 +144,7 @@ function but_second (b) {
                     </div>
                     <div class="mb-2">
                         <label for="path" class="text-light d-block">Ссылка</label>
-                        <input type="text" name="path" class="input-group-text text-start w-100" required>
+                        <input type="text" name="path" class="input-group-text text-start w-100" required value="https://magnavis.ru/info/">
                     </div>
                     <div class="mb-2 text-light">
                         <p class="mb-1">* Ссылка на новость <t class="text-danger">https://magnavis.ru/info/name</t></p>
@@ -289,15 +289,6 @@ function but_second (b) {
             // document.querySelector(".main").innerHTML = `<h1 class="text-light">список новостей</h1>`;
             data_update("news-data");
             break;
-
-        // case "del_news":
-        //     document.querySelector(".main").classList.add("d-none");
-        //     document.querySelector(".del-news").classList.remove("d-none");
-        //     break;
-        // case "del_news_main":
-        //     document.querySelector(".del-news").classList.add("d-none");
-        //     document.querySelector(".main").classList.remove("d-none");
-        //     break;
         case "add_titles":
             focus_list_el(["no"])
             document.querySelector(".main").innerHTML = `<div class="d-flex justify-content-center"><div style="width: 600px">
@@ -310,11 +301,10 @@ function but_second (b) {
                     </div>
                     <div class="mb-2">
                         <label for="path" class="text-light d-block">Ссылка</label>
-                        <input type="text" name="path" class="input-group-text text-start w-100" required>
+                        <input type="text" name="path" class="input-group-text text-start w-100" required  value="https://magnavis.ru/info/">
                     </div>
                     <div class="mb-2 text-light">
                         <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/info/ozon</t></p>
-                        <p class="mb-1">* Для главной страницы это "home"</p>
                         <p>* Никогда не ставить / в конце</p>
                         
                     </div>
@@ -428,29 +418,6 @@ function but_second (b) {
             }
             focus_list_el(["no"])
             break;
-        // case "del_titles":
-        //     document.querySelector(".main").innerHTML = `<div class="d-flex justify-content-center"><div style="width: 600px">
-        //         <form method="post" id="del-titles">
-        //             <input type="hidden"  name="type" value="del-titles"  />
-        //             <h2 class="text-light px-0">Удалить title</h2>
-        //             <div class="mb-2">
-        //                 <label for="path" class="text-light d-block">Ссылка</label>
-        //                 <input type="text" name="path" class="input-group-text text-start w-100" required>
-        //             </div>
-        //             <div class="mb-2 text-light">
-        //                 <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/news/ozon</t></p>
-        //                 <p class="mb-1">* Для главной страницы это "home"</p>
-        //                 <p class="mb-1">* Никогда не ставить / в конце</p>
-        //                 <p class="text-danger">* После удаления заголовка страницы следует тут же добавить новый, иначе заголовок страницы будет пустым</p>
-        //             </div>
-        //             <div class="my-3 buttons">
-        //                 <div onclick="but_second('titles_out')" class="btn btn-danger">Назад</div>
-        //                 <button type="submit" class="btn btn-danger float-end">Удалить</button>
-        //             </div>
-        //         </form>
-        //     </div></div>`;
-        //     break;
-
         case "titles_out":
             focus_list_el(["no"])
             // document.querySelector(".main").innerHTML = `<h1 class="text-light">список заголовков</h1>`;
