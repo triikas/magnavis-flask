@@ -3,7 +3,7 @@ function new_p () {
     document.querySelector(".num-p").id = num_p;
     p = document.createElement("div");
     p.classList.add(`mb-2`, `p${num_p}`);
-    p.innerHTML = `<label for="${num_p}" class="text-light d-block">Абзац ${num_p}</label><textarea type="text" name="p${num_p}" class="input-group-text text-start w-100"></textarea>`
+    p.innerHTML = `<label for="${num_p}" class="text-light d-block">Абзац ${num_p}</label><textarea type="text" name="p${num_p}" class="p_${num_p} input-group-text text-start w-100"></textarea>`
     buttons = document.querySelector(`.buttons`);
     buttons.parentNode.insertBefore(p, buttons)
 }
@@ -230,10 +230,76 @@ function but_second (b) {
             focus_list_el(["no"])
             break;
         case "ch_news":
-            focus_list_el(["no"])
-            document.querySelector(".main").innerHTML = `<div class="d-flex justify-content-center"><div style="width: 600px">
-                <form method="post" id="ch-news" enctype="multipart/form-data">
-                    <input type="hidden"  name="type" value="ch-news"  />
+            console.log(fle)
+            ps = fle[6].split("@");
+            if (ps.length < 1) {ps = [""]}
+            console.log(ps)
+            if (fle[0] !== "no") {
+                document.querySelector(".main").innerHTML = `<div class="d-flex justify-content-center"><div style="width: 600px">
+                <form method="post" id="add-news" enctype="multipart/form-data">
+                    <input type="hidden"  name="type" value="add-news"  />
+                    <h2 class="text-light px-0">Новая новость</h2>
+                    <div class="mb-2">
+                        <label for="title" class="text-light d-block">Заголовок</label>
+                        <input type="text" name="title" class="input-group-text text-start w-100" required value="${fle[2]}">
+                    </div>
+                    <div class="mb-2">
+                        <label for="path" class="text-light d-block">Ссылка</label>
+                        <input type="text" name="path" class="input-group-text text-start w-100" required value="${fle[1]}">
+                    </div>
+                    <div class="mb-2 text-light">
+                        <p class="mb-1">* Ссылка на новость <t class="text-danger">https://magnavis.ru/info/name</t></p>
+                        <p>* Никогда не ставить / в конце</p>
+                    </div>
+                    <div class="mb-2">
+                        <label for="date" class="text-light d-block">Дата</label>
+                        <input type="date" name="date" class="input-group-text text-start w-100">
+                    </div>
+                    <div class="mb-2">
+                        <label for="img" class="text-light d-block">Изображение</label>
+                        <input type="file" name="img" class="input-group-text text-start w-100" value="${fle[3]}">
+                    </div>
+                    <div class="mb-2">
+                        <label for="img2" class="text-light d-block">Изображение 2</label>
+                        <input type="file" name="img2" class="input-group-text text-start w-100" value="${fle[4]}">
+                    </div>
+                    <div class="mb-2 text-light">
+                        <p class="mb-1">* Второе изображение (горизонтальная версия) нужно если основное сильно вытянуто по высоте для лучшего отображения статьи</p>
+                        <p>* Все изображения должны быть в формате .webp и не более 1000 пикселей в ширину; преобразовать можно <a href="https://image.online-convert.com/ru/convert-to-wbmp">здесь</a>, изменить размер <a href="https://www.iloveimg.com/ru/resize-image">здесь</a></p>
+                    </div>
+                    <div class="mb-2">
+                        <label for="pb" class="text-light d-block">Жирный абзац</label>
+                        <textarea type="text" name="pb" class="form-control text-start w-100">${fle[5]}</textarea>
+                    </div>
+                    <div class="mb-2 text-light">
+                        <p>* Находится между заголовком и изображением; необязательный элемент</p>
+                    </div>
+                    <div class="mb-2 p1">
+                        <label for="p1" class="text-light d-block">Абзац 1</label>
+                        <textarea type="text" name="p1" class="input-group-text text-start w-100" required>${ps[0]}</textarea>
+                    </div>
+                    <div class="my-3 buttons">
+                        <div class="d-none num-p" id="1"></div>
+                        <div onclick="but_second('news_out')" class="btn btn-danger">Назад</div>
+                        <button type="submit" class="btn btn-success float-end">Отправить</button>
+                        <div onclick="new_p()" class="btn btn-light float-end mx-2">Добавить абзац</div>
+                        <div onclick="del_p()" class="btn btn-light float-end">Удалить абзац</div>
+                    </div>
+                </form>
+            </div></div>`;
+            if (ps.length > 1) {
+                for (let i = 1; i < ps.length; i++) {
+                    new_p();
+                    console.log((document.getElementsByName("p" + String(i + 1))), "p"+String(i+1), ps[i]);
+                    // document.getElementsByName("p"+String(i+1)).value += `${ps[i]}`;
+                    // document.getElementsByName("p"+String(i+1)).value += 'kjhkjhkjhkjhkjhk';
+                    document.querySelector(`p_${i+1}`).value += `${ps[i]}`;
+                }
+            }
+            } else {
+                document.querySelector(".main").innerHTML = `<div class="d-flex justify-content-center"><div style="width: 600px">
+                <form method="post" id="add-news" enctype="multipart/form-data">
+                    <input type="hidden"  name="type" value="add-news"  />
                     <h2 class="text-light px-0">Новая новость</h2>
                     <div class="mb-2">
                         <label for="title" class="text-light d-block">Заголовок</label>
@@ -241,7 +307,7 @@ function but_second (b) {
                     </div>
                     <div class="mb-2">
                         <label for="path" class="text-light d-block">Ссылка</label>
-                        <input type="text" name="path" class="input-group-text text-start w-100" required>
+                        <input type="text" name="path" class="input-group-text text-start w-100" required value="https://magnavis.ru/info/">
                     </div>
                     <div class="mb-2 text-light">
                         <p class="mb-1">* Ссылка на новость <t class="text-danger">https://magnavis.ru/info/name</t></p>
@@ -272,7 +338,7 @@ function but_second (b) {
                     </div>
                     <div class="mb-2 p1">
                         <label for="p1" class="text-light d-block">Абзац 1</label>
-                        <textarea type="text" name="p1" class="input-group-text text-start w-100"  required></textarea>
+                        <textarea type="text" name="p1" class="input-group-text text-start w-100" required></textarea>
                     </div>
                     <div class="my-3 buttons">
                         <div class="d-none num-p" id="1"></div>
@@ -283,6 +349,8 @@ function but_second (b) {
                     </div>
                 </form>
             </div></div>`;
+            }
+            focus_list_el(["no"])
             break;
         case "news_out":
             focus_list_el(["no"])

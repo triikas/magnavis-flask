@@ -234,6 +234,41 @@ def adm():
                 except:
                     return "ошибка логгирования, свяжитесь с разработчиком"
                 return redirect("adm")
+        elif type == "ch-titles":
+            title = request.form.get('title')
+            path = request.form.get('path')
+            path_old = request.form.get('path_old')
+            print(title, path)
+            log = Logs(title="Иззменён заголовок (title)", info=(path_old + "|" + title), type="success",
+                       user_name=current_user.name, user_color=current_user.color)
+            try:
+                ttl = db.session.query(Titles).filter(Titles.path == path_old).first()
+                ttl.title = title
+                ttl.path = path
+            except:
+                log.type = "error"
+                log.title = "Ошибка при изменении заголовка (title)"
+                try:
+                    db.session.add(log)
+                    db.session.commit()
+                except:
+                    return "ошибка логгирования, свяжитесь с разработчиком"
+                return redirect("adm")
+            else:
+
+                try:
+
+                    db.session.merge(ttl)
+                    db.session.commit()
+                except:
+                    log.type = "error"
+                    log.title = "Ошибка при изменении заголовка (title)"
+                try:
+                    db.session.add(log)
+                    db.session.commit()
+                except:
+                    return "ошибка логгирования, свяжитесь с разработчиком"
+                return redirect("adm")
         elif type == "add-titles":
             title = request.form.get('title')
             path = request.form.get('path')
