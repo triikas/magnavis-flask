@@ -3,7 +3,7 @@
 {% block title %}{{ titles.title }}{% endblock %}
 
 {% block content %}
-    <style>.p-up-s{display: none;}section{ min-height: 0;}body{background-color: rgb(5, 5, 5); background-image: none}  .tablo-color{padding-left: 40px;padding-left: 40px;}</style>
+    <style>.p-up-s{display: none;}section{ min-height: 0;}body{background-color: rgb(5, 5, 5); background-image: none}.cargo-t>h4{margin-bottom: 0}.cargo-t{display: flex; align-items: center;}  .tablo-color{padding-left: 40px;padding-left: 40px;}</style>
     <script>
         document.querySelector("body").classList.remove("asyncImage");
     </script>
@@ -23,7 +23,7 @@
             </div>
             <div class="row p-0">
                 <dov class="col con-img-ru">
-                    <img src="{{ url_for('static', filename='img/nikita-karimov-lvJZhHOIJJ4-unsplash.jpg') }}" style="border-radius: 8px; margin-bottom: 20px">
+                    <img src="{{ url_for('static', filename='img/nikita-karimov-lvJZhHOIJJ4-unsplash.webp') }}" style="border-radius: 8px; margin-bottom: 20px">
                 </dov>
                 <div class="col tablo-invis p-0 con-text-ru" style="margin-right: 0;">
                     <div class="ch-text" style=" min-width: 438px;">
@@ -80,35 +80,35 @@
                                 <h4 style="font-weight: bolder;">Железнодорожный транспорт</h4>
                                 <p class="mt-4">Организуем перевозку грузов по железной дороге на всей территории России. 17 железных дорог связывают более 1000 населённых пунктов нашей страны. Ежегодно российские железные дороги перевозят 1,3 млрд т грузов: это быстрый, универсальный и наименее затратный способ доставки. Отправляем железнодорожным транспортом грузы разных типов: тяжеловесные, габаритные, специальные, сборные. Для этого мы используем полувагоны, крытые вагоны, фитинговые вагоны, платформы и контейнеры, которые оборудованы рефрижераторами и изотермами для перевозки грузов, требующих специальный температурный режим. Наша команда подготовит необходимые документы,  консолидирует грузы на складе,  организует перевозку до станции отправления, выгрузку/погрузку и доставку до получателя. Популярные направления ж/д перевозок: Москва – Магадан, Москва – Екатеринбург, Москва – Благовещенск, Москва – Якутск.</p>
                             </div>
-                            <div class="h-100 img-tr" style="min-width:600px;background-image: url({{ url_for('static', filename='img/ivan-lopatin-k9N5Dzh8LA8-unsplash.jpg') }}); background-repeat: no-repeat; background-position: right center; background-size: cover; border-radius: 8px"></div>
+                            <div class="h-100 img-tr" style="min-width:600px;background-image: url({{ url_for('static', filename='img/ivan-lopatin-k9N5Dzh8LA8-unsplash.webp') }}); background-repeat: no-repeat; background-position: left center; background-size: cover; border-radius: 8px"></div>
                         </div>
                         <div class="avia d-flex justify-content-star d-none">
                             <div class="tablo-light">
                                 <h4 style="font-weight: bolder;">Воздушный транспорт</h4>
                                 <p class="mt-4">МАГНАВИС доставляет в любую точку России грузы любой сложности: от станков для тяжёлой промышленности до пчёл. Мы работаем по прямым договорам с российскими авиакомпаниями: Аэрофлот, Smartavia, Азимут, S7, Северный ветер. Это позволяет подбирать для вас ближайшие даты вылета. Наши специалисты осуществляют доставку во все регионы «от двери до двери». И это за 1-2 дня! Схема работы такая: забираем груз в точке отправления на машине и привозим на терминал, сдаём груз на рейс, обрабатываем и отправляем. По прилёте груз вывозим на свой склад, доставляем на авто по нужному адресу или передаём в руки получателя сразу в аэропорту. Сегодня самые востребованные направления — это регионы на Дальнем Востоке: Владивосток, Магадан, Южно-Сахалинск, Благовещенск. Туда летают большие самолёты, позволяющие перевозить до 22 тонн грузов.</p>
                             </div>
-                            <div class="h-100 img-tr" style="min-width:600px;background-image: url({{ url_for('static', filename='img/egor-myznik-21B8UIaWaKI-unsplash.jpg') }}); background-repeat: no-repeat; background-position: right center; background-size: cover; border-radius: 8px"></div>
+                            <div class="h-100 img-tr" style="min-width:600px;background-image: url({{ url_for('static', filename='img/egor-myznik-21B8UIaWaKI-unsplash.webp') }}); background-repeat: no-repeat; background-position: right center; background-size: cover; border-radius: 8px"></div>
                         </div>
                         <div class="avto d-flex justify-content-star d-none">
                             <div class="tablo-light">
                                 <h4 style="font-weight: bolder;">Автомобильный транспорт</h4>
                                 <p class="mt-4">Мы осуществляем перевозку автомобильным транспортом любых видов грузов по территории России там, где проложены дороги. Самый практичный вид доставки — доставка сборного груза, которая подходит для автоперевозки небольшого количества малогабаритных грузов. Наша команда организует доставку «под ключ»: это значит, что все этапы перевозки мы берём на себя от забора груза до вручения его получателю. Мы предоставляем машины с рефрижераторами и термологгерами для поддержания нужной температуры для ваших грузов. Также в рамках автоперевозок доступны дополнительные услуги: погрузо-разгрузочные работы, упаковка, сортировка и хранение грузов на собственном складе. Стоимость автоперевозки рассчитывается исходя из расстояния между пунктами отправки и назначения, а также параметров грузов.</p>
                             </div>
-                            <div class="h-100 img-tr" style="min-width:600px;background-image: url({{ url_for('static', filename='img/alexey-turenkov-gNOSIQ4mKiU-unsplash.jpg') }}); background-repeat: no-repeat; background-position: right center; background-size: cover; border-radius: 8px"></div>
+                            <div class="h-100 img-tr" style="min-width:600px;background-image: url({{ url_for('static', filename='img/alexey-turenkov-gNOSIQ4mKiU-unsplash.webp') }}); background-repeat: no-repeat; background-position: right center; background-size: cover; border-radius: 8px"></div>
                         </div>
                         <div class="mor d-flex justify-content-star d-none">
                             <div class="tablo-light">
                                 <h4 style="font-weight: bolder;">Морской транспорт</h4>
                                 <p class="mt-4">Мы организуем перевозки грузов по морю. Доставка доступна в контейнерах по 20 и 40 футов, контейнерах-рефрижераторах и танк-контейнерах. Чаще всего этот тип перевозок используется для навалочных грузов: уголь, песок, руда и другие полезные ископаемые. Наиболее распространённый маршрут — из морского порта, который располагается вблизи месторождений, до российских перерабатывающих комбинатов. А также в отдалённые регионы России. В порту грузы перегружаются в вагоны и следуют до точки назначения по местным железным дорогам. Однако для перевозки стандартных видов грузов этот способ нерентабельный, оптимальнее использовать доставку авиа или автотранспортом.</p>
                             </div>
-                            <div class="h-100 img-tr" style="min-width:600px;background-image: url({{ url_for('static', filename='img/anton-kraev-6vvaMtQeqV8-unsplash.jpg') }}); background-repeat: no-repeat; background-position: right center; background-size: cover; border-radius: 8px"></div>
+                            <div class="h-100 img-tr" style="min-width:600px;background-image: url({{ url_for('static', filename='img/anton-kraev-6vvaMtQeqV8-unsplash.webp') }}); background-repeat: no-repeat; background-position: right center; background-size: cover; border-radius: 8px"></div>
                         </div>
                         <div class="multi d-flex justify-content-star d-none">
                             <div class="tablo-light">
                                 <h4 style="font-weight: bolder;">Мультимодальные перевозки</h4>
                                 <p class="mt-4">Мы доставляем грузы даже в самые труднодоступные уголки нашей страны. Чтобы достичь пункта назначения комбинируем нескольких видов транспорта — авиа, авто, ж/д, морской фрахт. Наши специалисты для каждого разрабатывают индивидуальный маршрут в зависимости от пункта назначения, погодных условий, характеристик груза и пожеланий заказчика. Для нас нет неразрешимой задачи — отвезём белого медведя на побережье Берингова моря, доставим буровую установку в Ханты-Мансийск на крупнейшее месторождение нефти или переправим янтарь, добытый в Калининградской области, в ювелирные бутики России. Мы продумываем каждый этап логистической цепочки, чтобы ваши грузы прибыли к вам точно в срок.</p>
                             </div>
-                            <div class="h-100 img-tr" style="min-width:600px;background-image: url({{ url_for('static', filename='img/egor-myznik-xJ1dSG8eTUw-unsplash.jpg') }}); background-repeat: no-repeat; background-position: right center; background-size: cover; border-radius: 8px"></div>
+                            <div class="h-100 img-tr" style="min-width:600px;background-image: url({{ url_for('static', filename='img/egor-myznik-xJ1dSG8eTUw-unsplash.webp') }}); background-repeat: no-repeat; background-position: right center; background-size: cover; border-radius: 8px"></div>
                         </div>
                     </div>
                 </div>
@@ -116,6 +116,7 @@
             </div>
         </div>
     </div>
+
     <div class="tablo-big tablo-invis">
        <h3>Что перевозим?</h3>
        <div class="container-fluid px-5">
@@ -184,5 +185,223 @@
             </div>
         </div>
 
+    </div>
+    <div class="tablo-big tablo-invis">
+       <h3>Популярные маршруты </h3>
+       <div class="container-fluid px-5">
+            <div class="row">
+                <div style="" class="col tablo-light cargo-t">
+                    <h4>Москва – Санкт-Петербург</h4>
+                </div>
+                <div style="" class="col tablo-light cargo-t tof-cargo">
+                    <h4>Москва – Сочи</h4>
+                </div>
+                <div style="" class="col tablo-light cargo-t">
+                    <h4>Москва – Норильск</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div style="min-height: 125px;" class="col tablo-light cargo-t">
+                    <h4>Москва – Магадан</h4>
+                </div>
+                <div style="min-height: 125px;" class="col tablo-light cargo-t tof-cargo">
+                    <h4>Москва – Владивосток </h4>
+                </div>
+                <div style="min-height: 125px;" class="col tablo-light cargo-t">
+                    <h4>Москва – Южно-Сахалинск</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div style="min-height: 125px;" class="col tablo-light cargo-t">
+                    <h4>Санкт-Петербург – Новосибирск</h4>
+                </div>
+                <div style="min-height: 125px;" class="col tablo-light cargo-t tof-cargo">
+                    <h4>Санкт-Петербург – Казань</h4>
+                </div>
+                <div style="min-height: 125px;" class="col tablo-light cargo-t">
+                    <h4>Санкт-Петербург – Магадан</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis mt-3">
+        <h3>С комфортом для бизнеса </h3>
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div style="background-color: #ab2524;" class="col tablo-light d-flex justify-content-start why-1">
+                    <div class="d-flex align-items-center" style="margin-left: 20px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                            <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z"/>
+                            <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+                        </svg>
+                    </div>
+                    <div class="gal d-flex align-items-center">
+                        <p class="mb-0">Поддержка личного менеджера 24/7</p>
+                    </div>
+                </div>
+                <div style="background-color: #ab2524;" class="col tablo-light d-flex justify-content-start why-2">
+                    <div class="d-flex align-items-center" style="margin-left: 20px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                            <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z"/>
+                            <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+                        </svg>
+                    </div>
+                    <div class="gal d-flex align-items-center">
+                        <p class="mb-0">Контроль на всех этапах доставки</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div style="background-color: #ab2524;" class="col tablo-light d-flex justify-content-start why-3">
+                    <div class="d-flex align-items-center" style="margin-left: 20px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                            <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z"/>
+                            <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+                        </svg>
+                    </div>
+                    <div class="gal d-flex align-items-center">
+                        <p class="mb-0">Перевозка грузов под ключ</p>
+                    </div>
+                </div>
+                <div style="background-color: #ab2524;" class="col tablo-light d-flex justify-content-start why-4">
+                    <div class="d-flex align-items-center" style="margin-left: 20px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                            <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z"/>
+                            <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+                        </svg>
+                    </div>
+                    <div class="gal d-flex align-items-center">
+                        <p class="mb-0">Работаем с НДС и без</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div style="background-color: #ab2524;" class="col tablo-light d-flex justify-content-start why-3">
+                    <div class="d-flex align-items-center" style="margin-left: 20px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                            <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z"/>
+                            <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+                        </svg>
+                    </div>
+                    <div class="gal d-flex align-items-center">
+                        <p class="mb-0">Электронный документооборот</p>
+                    </div>
+                </div>
+                <div style="background-color: #ab2524;" class="col tablo-light d-flex justify-content-start why-4">
+                    <div class="d-flex align-items-center" style="margin-left: 20px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                            <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z"/>
+                            <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+                        </svg>
+                    </div>
+                    <div class="gal d-flex align-items-center">
+                        <p class="mb-0">Для юридических и физических лиц</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tablo-big tablo-invis">
+        <h3>Вопросы ответы:</h3>
+        <div class="container-fluid px-5">
+            <div class="row"><div class="col px-0">
+                <ul class="list-unstyled">
+                <li>
+                    <div class="d-flex justify-content-between align-items-center faq-question fa-start que1">
+                        <h4 class="mt-2">Сколько стоит доставка груза по России?</h4>
+                        <div style="width: 40px!important;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-plus-circle plus" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+</svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-dash-circle minus" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+</svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Стоимость доставки рассчитывается индивидуально. Она зависит от габаритов и параметров груза, направления доставки, расстояния между пунктами и пожеланий заказчика. Например, стоимость авиадоставки формируется из следующих параметров: бронирование места, сам перелёт, топливный сбор, сдача груза на терминале отправления, изготовление авианакладной, получение груза на терминале прибытия. В рамках доставки «от двери до двери» к этой стоимости также добавляются услуги забора груза и передачи по адресу получателю.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between align-items-center faq-question que2">
+                        <h4 class="mt-2">Какое среднее время доставки по России?</h4>
+                        <div style="width: 40px!important;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-plus-circle plus" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+</svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-dash-circle minus" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+</svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Срок доставки по России авиационным транспортом — 1-2 дня. В это время входит забор груза у отправителя, доставка в аэропорт, подготовка и сдача груза на рейс, фрахт, получение груза на терминале и доставка до получателя. Груз должен быть сдан за 4-6 часов до вылета. Время доставки автотранспортом зависит от расстояния между субъектами. К примеру, грузы из Москвы в Санкт-Петербург или в обратном направлении доставляются в течение суток на собственном автотранспорте. </p>
+                        <p>А из Москвы в Новосибирск за 4 дня.</p>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between align-items-center faq-question que2">
+                        <h4 class="mt-2">Какие документы нужны для доставки груза по России?</h4>
+                        <div style="width: 40px!important;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-plus-circle plus" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+</svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-dash-circle minus" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+</svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Для доставки грузов по России нам потребуется заполненная заявка, которую мы направляем вам после обсуждения заказа. В ней отражены: название, категория, габариты груза, откуда забрать и куда привезти, контактные данные. При доставке грузов авиа, мы изготавливаем авианакладную. Если же доставка осуществляется автотранспортом, всю необходимую для перевозчика информацию мы берём из заявки. При перевозке спецгрузов потребуются и другие документы, например, для опасного груза нужен паспорт безопасности, для ценных грузов — инвойс и пакинг. О том, какие именно документы должны быть, наши менеджеры сообщают на консультации.</p>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between align-items-center faq-question que2">
+                        <h4 class="mt-2">Можете ли вы забрать груз с моего склада/из дома?</h4>
+                        <div style="width: 40px!important;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-plus-circle plus" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+</svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-dash-circle minus" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+</svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Мы организовываем полный сервис по доставке «от двери до двери». Это значит, что наши специалисты могут забрать ваш груз из любой точки России: будь это ваш склад, квартира, дом, магазин или производство. Водитель подъезжает к указанному месту, где отправитель самостоятельно загружает посылку в автотранспорт. При необходимости погрузку и разгрузку может произвести водитель — нужно заранее сообщить об этом менеджеру и заказать данную услугу.</p>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between align-items-center faq-question fa-end que2">
+                        <h4 class="mt-2">Как отследить статус доставки груза?</h4>
+                        <div style="width: 40px!important;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-plus-circle plus" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+</svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45" fill="currentColor" class="bi bi-dash-circle minus" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+</svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer" style="border-radius: 0 0 8px 8px;">
+                        <p>Если вы выбрали способ доставки воздушным транспортом, то отследить статус груза можно по авианакладной. Для этого нужно зайти на сайт авиакомпании и ввести номер накладной. Если же груз отправлен автотранспортом, то статус обновляется в ручном режиме. Наши менеджеры по логистике неустанно следят за вашими грузами и своевременно сообщают об их месторасположении по телефону или в мессенджере. Также вы можете в любой момент позвонить нам и уточнить, где находится груз и когда его ждать.</p>
+                    </div>
+                </li>
+            </ul></div>
+            </div>
+        </div>
     </div>
 {% endblock %}

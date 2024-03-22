@@ -728,7 +728,7 @@ li{
 .faq-answer{
     padding: 20px;
     display: none;
-    background-color: rgba(234,227,227,0.66);
+    background-color: rgba(87, 90, 87, 0.61);
     /*z-index: 1;*/
 }
 .list-unstyled>li{

@@ -301,7 +301,7 @@ function but_second (b) {
                     </div>
                     <div class="mb-2">
                         <label for="path" class="text-light d-block">Ссылка</label>
-                        <input type="text" name="path" class="input-group-text text-start w-100" required  value="https://magnavis.ru/info/">
+                        <input type="text" name="path" class="input-group-text text-start w-100" required  value="https://magnavis.ru/">
                     </div>
                     <div class="mb-2 text-light">
                         <p class="mb-1">* Имя страницы в ссылке <t class="text-danger">https://magnavis.ru/info/ozon</t></p>
@@ -365,7 +365,7 @@ function but_second (b) {
         case "ch_titles":
             console.log(fle)
             if (fle[0] !== "no") {
-                document.querySelector(".main").innerHTML = `div class="d-flex justify-content-center"><div style="width: 600px">
+                document.querySelector(".main").innerHTML = `<div class="d-flex justify-content-center"><div style="width: 600px">
                 <form method="post" id="ch-titles">
                     <input type="hidden"  name="type" value="ch-titles"  />
                     <h2 class="text-light px-0">Редактировать title</h2>
@@ -391,7 +391,7 @@ function but_second (b) {
                 </form>
             </div></div>`;
             } else {
-                document.querySelector(".main").innerHTML = `div class="d-flex justify-content-center"><div style="width: 600px">
+                document.querySelector(".main").innerHTML = `<div class="d-flex justify-content-center"><div style="width: 600px">
                 <form method="post" id="ch-titles">
                     <input type="hidden"  name="type" value="ch-titles"  />
                     <h2 class="text-light px-0">Редактировать title</h2>

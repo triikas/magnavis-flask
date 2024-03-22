@@ -638,6 +638,9 @@ li{
   background-color: gray;
 }
 .faq-question{
+    &>h4{
+        font-size: 1.2em!important;
+    }
     background-color: rgb(86, 92, 86);
     /*box-shadow: 3px 7px 5px rgba(1, 1, 2, 0.79);*/
     padding: 20px;
@@ -653,10 +656,10 @@ li{
 }
 
 .fa-start{
-    border-radius: 8px 8px 0 0;
+    border-radius: 16px 16px 0 0;
 }
 .fa-end{
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 16px 16px;
 }
 .opened>.fa-end{
     border-radius: 0 0 0 0;
@@ -702,7 +705,10 @@ li{
 .faq-answer{
     padding: 20px;
     display: none;
-    background-color: rgba(234,227,227,0.66);
+    background-color: rgba(87, 90, 87, 0.49);
+    & p{
+        font-size: 1em!important;
+    }
     /*z-index: 1;*/
 }
 .list-unstyled>li{
